@@ -131,6 +131,16 @@ const notasDeMarCategories = [
   { value: "Conservación", label: "Conservación" },
 ]
 
+const saludCategories = [
+  { value: "todas", label: "Todas las Categorías" },
+  { value: "Nutrición", label: "Nutrición" },
+  { value: "Comparación", label: "Comparación" },
+  { value: "Familia", label: "Familia" },
+  { value: "Deporte", label: "Deporte" },
+  { value: "Salud", label: "Salud" },
+  { value: "Embarazo", label: "Embarazo" },
+]
+
 const notasDeMarArticles = [
   {
     id: 1,
@@ -215,6 +225,22 @@ const saludArticles = [
     readTime: "5 min",
     description: "Cómo el pescado puede mejorar tu rendimiento deportivo y recuperación muscular.",
   },
+  {
+    id: 5,
+    title: "Pescado Durante el Embarazo: Guía Segura",
+    category: "Embarazo",
+    image: "/fish-pregnancy-guide.png",
+    readTime: "9 min",
+    description: "Qué pescados son seguros durante el embarazo y cuáles evitar para una gestación saludable.",
+  },
+  {
+    id: 6,
+    title: "Pescado Azul vs Blanco: Diferencias Nutricionales",
+    category: "Comparación",
+    image: "/blue-vs-white-fish.png",
+    readTime: "6 min",
+    description: "Conoce las diferencias nutricionales entre pescado azul y blanco para elegir mejor.",
+  },
 ]
 
 const pescados = [
@@ -266,6 +292,7 @@ export default function HomePage() {
   const [selectedFish, setSelectedFish] = useState<string>("todos")
   const [selectedCookingMethod, setSelectedCookingMethod] = useState<string>("todos")
   const [selectedNotasCategory, setSelectedNotasCategory] = useState<string>("todas")
+  const [selectedSaludCategory, setSelectedSaludCategory] = useState<string>("todas")
 
   const filteredRecipes = recipes.filter((recipe) => {
     const fishMatch = selectedFish === "todos" || recipe.fishType === selectedFish
@@ -275,6 +302,11 @@ export default function HomePage() {
 
   const filteredNotasArticles = notasDeMarArticles.filter((article) => {
     const categoryMatch = selectedNotasCategory === "todas" || article.category === selectedNotasCategory
+    return categoryMatch
+  })
+
+  const filteredSaludArticles = saludArticles.filter((article) => {
+    const categoryMatch = selectedSaludCategory === "todas" || article.category === selectedSaludCategory
     return categoryMatch
   })
 
@@ -576,8 +608,28 @@ export default function HomePage() {
             </p>
           </div>
 
+          {/* Category Filters for Salud */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-slate-700 mb-3 text-center">Categorías</h3>
+            <div className="flex flex-wrap justify-center gap-2 mb-6">
+              {saludCategories.map((category) => (
+                <button
+                  key={category.value}
+                  onClick={() => setSelectedSaludCategory(category.value)}
+                  className={`px-3 py-2 rounded-full text-sm font-medium transition-colors ${
+                    selectedSaludCategory === category.value
+                      ? "bg-green-600 text-white"
+                      : "bg-green-100 text-green-700 hover:bg-green-200"
+                  }`}
+                >
+                  {category.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {saludArticles.map((article) => (
+            {filteredSaludArticles.map((article) => (
               <div
                 key={article.id}
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
