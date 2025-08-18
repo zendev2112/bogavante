@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 36 24% 14%; /* Potluck dark text color */
+    --card: 0 0% 100%;
+    --card-foreground: 36 24% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 36 24% 14%;
+    --primary: 63 94% 47%; /* Potluck yellow */
+    --primary-foreground: 36 24% 14%;
+    --secondary: 75 25% 33%; /* Potluck olive */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 63 94% 90%;
+    --muted-foreground: 36 24% 30%;
+    --accent: 318 89% 74%; /* Potluck pink */
+    --accent-foreground: 36 24% 14%;
+    --destructive: 10 71% 37%; /* Potluck red */
+    --destructive-foreground: 0 0% 100%;
+    --border: 63 94% 47%;
+    --input: 36 24% 90%;
+    --ring: 63 94% 47%;
+    --radius: 0rem; /* Potluck uses square corners */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 36 24% 14%;
+    --foreground: 0 0% 98%;
+    --card: 36 24% 14%;
+    --card-foreground: 0 0% 98%;
+    --popover: 36 24% 14%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 63 94% 47%;
+    --primary-foreground: 36 24% 14%;
+    --secondary: 75 25% 33%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 36 24% 24%;
+    --muted-foreground: 36 24% 64%;
+    --accent: 318 89% 74%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 10 71% 37%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 63 94% 47%;
+    --input: 36 24% 24%;
+    --ring: 63 94% 47%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Arial', sans-serif; /* Approximating their sans-serif font */
+  }
+}
+
+/* Custom Potluck styles */
+@layer components {
+  .potluck-container {
+    @apply max-w-screen-xl mx-auto px-4 md:px-8;
+  }
+
+  .potluck-button {
+    @apply bg-potluck-yellow text-potluck-darkText uppercase font-bold py-2 px-4 text-sm tracking-wide;
+  }
+
+  .newsletter-input {
+    @apply border-b border-potluck-darkText bg-transparent px-0 py-2 focus:outline-none focus:ring-0;
+  }
+}
