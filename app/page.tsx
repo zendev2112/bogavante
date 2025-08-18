@@ -48,6 +48,7 @@ const recipes = [
     image: "/grilled-tuna-steak.png",
     cookTime: "12 min",
     cookingMethod: "A la Plancha",
+    season: "verano",
     description: "Filete de atún sellado con costra de sésamo, una delicia",
   },
   {
@@ -57,6 +58,7 @@ const recipes = [
     image: "/hake-green-sauce.png",
     cookTime: "18 min",
     cookingMethod: "Hervido",
+    season: "primavera",
     description: "Merluza fresca en salsa verde con arvejas, un plato de lujo",
   },
   {
@@ -66,6 +68,7 @@ const recipes = [
     image: "/steamed-corvina-ginger.png",
     cookTime: "20 min",
     cookingMethod: "Al Vapor",
+    season: "otoño",
     description: "Corvina al vapor con jengibre y cebollita de verdeo, súper saludable",
   },
   {
@@ -75,6 +78,7 @@ const recipes = [
     image: "/fried-calamari.png",
     cookTime: "8 min",
     cookingMethod: "Frito",
+    season: "verano",
     description: "Anillos de calamar fritos bien crocantes con limón",
   },
   {
@@ -84,6 +88,7 @@ const recipes = [
     image: "/breaded-sole.png",
     cookTime: "15 min",
     cookingMethod: "Empanado",
+    season: "invierno",
     description: "Filete de lenguado empanado doradito, un clásico que no falla",
   },
   {
@@ -102,7 +107,7 @@ const recipes = [
     image: "/corvina-ceviche-lime.png",
     cookTime: "30 min",
     cookingMethod: "Crudo",
-    description: "Corvina marinada en limón con cebolla morada y cilantro",
+    description: "Corvina fresca marinada en limón con cebolla morada y cilantro",
   },
   {
     id: 12,
@@ -111,8 +116,19 @@ const recipes = [
     image: "/mussels-escabeche.png",
     cookTime: "25 min",
     cookingMethod: "En Escabeche",
+    season: "primavera",
     description: "Mejillones frescos en escabeche con laurel y pimienta",
   },
+]
+
+const notasDeMarCategories = [
+  { value: "todas", label: "Todas las Categorías" },
+  { value: "Compras", label: "Compras" },
+  { value: "Preparación", label: "Preparación" },
+  { value: "Cocción", label: "Cocción" },
+  { value: "Sabores", label: "Sabores" },
+  { value: "Técnicas", label: "Técnicas" },
+  { value: "Conservación", label: "Conservación" },
 ]
 
 const notasDeMarArticles = [
@@ -147,6 +163,22 @@ const notasDeMarArticles = [
     image: "/fish-marinades.png",
     readTime: "4 min",
     description: "Recetas de marinadas que realzan el sabor natural del pescado y mariscos.",
+  },
+  {
+    id: 5,
+    title: "Conservación y Almacenamiento de Pescado",
+    category: "Conservación",
+    image: "/fresh-fish-selection.png",
+    readTime: "6 min",
+    description: "Cómo conservar el pescado fresco por más tiempo manteniendo su calidad.",
+  },
+  {
+    id: 6,
+    title: "Técnicas Avanzadas de Fileteado",
+    category: "Técnicas",
+    image: "/cleaning-fish-technique.png",
+    readTime: "10 min",
+    description: "Domina el arte del fileteado con técnicas profesionales paso a paso.",
   },
 ]
 
@@ -233,11 +265,17 @@ const cookingMethods = [
 export default function HomePage() {
   const [selectedFish, setSelectedFish] = useState<string>("todos")
   const [selectedCookingMethod, setSelectedCookingMethod] = useState<string>("todos")
+  const [selectedNotasCategory, setSelectedNotasCategory] = useState<string>("todas")
 
   const filteredRecipes = recipes.filter((recipe) => {
     const fishMatch = selectedFish === "todos" || recipe.fishType === selectedFish
     const cookingMatch = selectedCookingMethod === "todos" || recipe.cookingMethod === selectedCookingMethod
     return fishMatch && cookingMatch
+  })
+
+  const filteredNotasArticles = notasDeMarArticles.filter((article) => {
+    const categoryMatch = selectedNotasCategory === "todas" || article.category === selectedNotasCategory
+    return categoryMatch
   })
 
   return (
@@ -474,8 +512,28 @@ export default function HomePage() {
             </p>
           </div>
 
+          {/* Category Filters for Notas de Mar */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-slate-700 mb-3 text-center">Categorías</h3>
+            <div className="flex flex-wrap justify-center gap-2 mb-6">
+              {notasDeMarCategories.map((category) => (
+                <button
+                  key={category.value}
+                  onClick={() => setSelectedNotasCategory(category.value)}
+                  className={`px-3 py-2 rounded-full text-sm font-medium transition-colors ${
+                    selectedNotasCategory === category.value
+                      ? "bg-blue-600 text-white"
+                      : "bg-blue-100 text-blue-700 hover:bg-blue-200"
+                  }`}
+                >
+                  {category.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {notasDeMarArticles.map((article) => (
+            {filteredNotasArticles.map((article) => (
               <div
                 key={article.id}
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
