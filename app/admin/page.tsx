@@ -18,9 +18,11 @@ interface ProductoAgrupado {
     disponible: boolean
     precio: string
     ejemplos_notas: string
+    enStock: boolean
   }[]
   unidadSeleccionada: string
   id: string
+  enStock: boolean
 }
 
 const unidadLabels: { [key: string]: string } = {
@@ -33,12 +35,33 @@ const unidadLabels: { [key: string]: string } = {
   'litro': '/litro'
 }
 
+// Standard presentations for all fish
+const presentacionesPescado = [
+  { nombre: 'Entero eviscerado', unidad: 'kg' },
+  { nombre: 'Filete con piel', unidad: 'kg' },
+  { nombre: 'Filete sin piel', unidad: 'kg' },
+  { nombre: 'Lomo', unidad: 'kg' },
+  { nombre: 'Medallón', unidad: 'kg' },
+  { nombre: 'Trozo', unidad: 'kg' }
+]
+
+// Standard presentations for all seafood
+const presentacionesMarisco = [
+  { nombre: 'Entero crudo', unidad: 'kg' },
+  { nombre: 'Entero cocido', unidad: 'kg' },
+  { nombre: 'Pelado crudo', unidad: 'kg' },
+  { nombre: 'Pelado cocido', unidad: 'kg' },
+  { nombre: 'Vivo', unidad: 'kg' },
+  { nombre: 'Por unidad', unidad: 'unidad' },
+  { nombre: 'Por docena', unidad: 'docena' }
+]
+
 export default function AdminStockPage() {
   const [productos, setProductos] = useState<ProductoAgrupado[]>([])
   const [filtroCategoria, setFiltroCategoria] = useState<string>('all')
   const [busqueda, setBusqueda] = useState<string>('')
   
-  // Initialize products from JSON - Group by product name
+  // Initialize products from JSON - Group by product name with standard presentations
   useEffect(() => {
     const productosAgrupados: { [key: string]: ProductoAgrupado } = {}
     
@@ -46,29 +69,41 @@ export default function AdminStockPage() {
       const key = `${item.categoria}-${item.producto}`
       
       if (!productosAgrupados[key]) {
+        // Determine standard presentations based on subcategory
+        let presentacionesEstandar = []
+        if (item.subcategoria === 'Pescado') {
+          presentacionesEstandar = presentacionesPescado
+        } else if (item.subcategoria === 'Marisco') {
+          presentacionesEstandar = presentacionesMarisco
+        } else {
+          // For other categories, use what's in the JSON
+          const presentacionesUnicas = stockData
+            .filter(p => p.categoria === item.categoria && p.producto === item.producto)
+            .map(p => ({ nombre: p.presentacion, unidad: p.unidad }))
+          presentacionesEstandar = presentacionesUnicas
+        }
+
         // Get all possible units for this product
-        const unidadesDisponibles = stockData
-          .filter(p => p.categoria === item.categoria && p.producto === item.producto)
-          .map(p => p.unidad)
+        const unidadesDisponibles = presentacionesEstandar.map(p => p.unidad)
         const uniqueUnidades = [...new Set(unidadesDisponibles)]
         
         productosAgrupados[key] = {
           categoria: item.categoria,
           subcategoria: item.subcategoria,
           producto: item.producto,
-          presentaciones: [],
-          unidadSeleccionada: uniqueUnidades[0] || 'kg', // Default to first available unit
-          id: key
+          presentaciones: presentacionesEstandar.map(pres => ({
+            nombre: pres.nombre,
+            unidad: pres.unidad,
+            disponible: false,
+            precio: '',
+            ejemplos_notas: '',
+            enStock: false
+          })),
+          unidadSeleccionada: uniqueUnidades[0] || 'kg',
+          id: key,
+          enStock: false
         }
       }
-      
-      productosAgrupados[key].presentaciones.push({
-        nombre: item.presentacion,
-        unidad: item.unidad,
-        disponible: false,
-        precio: '',
-        ejemplos_notas: item.ejemplos_notas
-      })
     })
     
     setProductos(Object.values(productosAgrupados))
@@ -84,6 +119,12 @@ export default function AdminStockPage() {
     return matchCategoria && matchBusqueda
   })
 
+  const cambiarStockProducto = (productId: string) => {
+    setProductos(productos.map(p => 
+      p.id === productId ? { ...p, enStock: !p.enStock } : p
+    ))
+  }
+
   const cambiarUnidad = (productId: string, nuevaUnidad: string) => {
     setProductos(productos.map(p => 
       p.id === productId ? { ...p, unidadSeleccionada: nuevaUnidad } : p
@@ -97,6 +138,20 @@ export default function AdminStockPage() {
         newPresentaciones[presentacionIndex] = {
           ...newPresentaciones[presentacionIndex],
           disponible
+        }
+        return { ...p, presentaciones: newPresentaciones }
+      }
+      return p
+    }))
+  }
+
+  const cambiarStockPresentacion = (productId: string, presentacionIndex: number) => {
+    setProductos(productos.map(p => {
+      if (p.id === productId) {
+        const newPresentaciones = [...p.presentaciones]
+        newPresentaciones[presentacionIndex] = {
+          ...newPresentaciones[presentacionIndex],
+          enStock: !newPresentaciones[presentacionIndex].enStock
         }
         return { ...p, presentaciones: newPresentaciones }
       }
@@ -122,19 +177,21 @@ export default function AdminStockPage() {
     const productosDisponibles: any[] = []
     
     productos.forEach(producto => {
-      producto.presentaciones.forEach(presentacion => {
-        if (presentacion.disponible && presentacion.precio) {
-          productosDisponibles.push({
-            categoria: producto.categoria,
-            subcategoria: producto.subcategoria,
-            producto: producto.producto,
-            presentacion: presentacion.nombre,
-            unidad: producto.unidadSeleccionada,
-            precio: presentacion.precio,
-            ejemplos_notas: presentacion.ejemplos_notas
-          })
-        }
-      })
+      if (producto.enStock) {
+        producto.presentaciones.forEach(presentacion => {
+          if (presentacion.disponible && presentacion.precio && presentacion.enStock) {
+            productosDisponibles.push({
+              categoria: producto.categoria,
+              subcategoria: producto.subcategoria,
+              producto: producto.producto,
+              presentacion: presentacion.nombre,
+              unidad: producto.unidadSeleccionada,
+              precio: presentacion.precio,
+              ejemplos_notas: presentacion.ejemplos_notas
+            })
+          }
+        })
+      }
     })
     
     console.log('Stock guardado:', productosDisponibles)
@@ -161,8 +218,9 @@ export default function AdminStockPage() {
     return colores[categoria] || 'bg-gray-100 text-gray-800'
   }
 
-  const totalProductosDisponibles = productos.reduce((total, producto) => {
-    return total + producto.presentaciones.filter(p => p.disponible && p.precio).length
+  const totalProductosDisponibles = productos.filter(p => p.enStock).length
+  const totalPresentacionesDisponibles = productos.reduce((total, producto) => {
+    return total + producto.presentaciones.filter(p => p.disponible && p.precio && p.enStock).length
   }, 0)
 
   return (
@@ -178,7 +236,10 @@ export default function AdminStockPage() {
               Total: {productos.length} productos
             </Badge>
             <Badge variant="default" className="px-4 py-2 bg-green-500">
-              Disponibles: {totalProductosDisponibles}
+              En Stock: {totalProductosDisponibles}
+            </Badge>
+            <Badge variant="default" className="px-4 py-2 bg-blue-500">
+              Disponibles: {totalPresentacionesDisponibles}
             </Badge>
           </div>
         </div>
@@ -216,7 +277,7 @@ export default function AdminStockPage() {
             )
             
             return (
-              <Card key={producto.id} className="shadow-sm">
+              <Card key={producto.id} className={`shadow-sm transition-all ${producto.enStock ? 'ring-2 ring-blue-300' : ''}`}>
                 <CardContent className="p-6">
                   {/* Product Header */}
                   <div className="flex flex-col lg:flex-row lg:items-start gap-4 mb-4">
@@ -228,6 +289,19 @@ export default function AdminStockPage() {
                         <Badge className={getCategoriaColor(producto.categoria)} variant="secondary">
                           {producto.categoria}
                         </Badge>
+                        
+                        {/* STOCK BUTTON */}
+                        <Button
+                          variant={producto.enStock ? "default" : "outline"}
+                          onClick={() => cambiarStockProducto(producto.id)}
+                          className={`ml-4 ${
+                            producto.enStock 
+                              ? 'bg-blue-500 hover:bg-blue-600' 
+                              : 'bg-gray-400 hover:bg-gray-500 text-white border-gray-400'
+                          }`}
+                        >
+                          {producto.enStock ? '✅ EN STOCK' : '❌ SIN STOCK'}
+                        </Button>
                       </div>
                       <p className="text-sm text-gray-600">
                         <span className="font-medium">Subcategoría:</span> {producto.subcategoria}
@@ -241,6 +315,7 @@ export default function AdminStockPage() {
                         value={producto.unidadSeleccionada}
                         onChange={(e) => cambiarUnidad(producto.id, e.target.value)}
                         className="p-2 border rounded-md bg-white min-w-[120px]"
+                        disabled={!producto.enStock}
                       >
                         {unidadesDisponibles.map(unidad => (
                           <option key={unidad} value={unidad}>
@@ -251,83 +326,84 @@ export default function AdminStockPage() {
                     </div>
                   </div>
 
-                  {/* Presentations */}
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-gray-700 border-b pb-2">
-                      Presentaciones disponibles:
-                    </h4>
-                    
-                    {presentacionesFiltradas.length === 0 && (
-                      <p className="text-gray-500 italic">
-                        No hay presentaciones disponibles para la unidad seleccionada
-                      </p>
-                    )}
-                    
-                    {presentacionesFiltradas.map((presentacion, index) => {
-                      const originalIndex = producto.presentaciones.findIndex(p => 
-                        p.nombre === presentacion.nombre && p.unidad === presentacion.unidad
-                      )
+                  {/* Presentations - Only show if product is in stock */}
+                  {producto.enStock && (
+                    <div className="space-y-3">
+                      <h4 className="text-lg font-semibold text-gray-700 border-b pb-2">
+                        Presentaciones disponibles:
+                      </h4>
                       
-                      return (
-                        <div key={`${presentacion.nombre}-${index}`} 
-                             className={`flex items-center gap-4 p-3 rounded-lg border transition-all ${
-                               presentacion.disponible ? 'bg-green-50 border-green-200' : 'bg-gray-50 border-gray-200'
-                             }`}>
-                          
-                          {/* Checkbox */}
-                          <Checkbox
-                            checked={presentacion.disponible}
-                            onCheckedChange={(checked) => 
-                              cambiarPresentacion(producto.id, originalIndex, checked as boolean)
-                            }
-                            className="w-5 h-5"
-                          />
-                          
-                          {/* Presentation Info */}
-                          <div className="flex-1">
-                            <p className="font-medium text-gray-800">
-                              {presentacion.nombre}
-                            </p>
-                            {presentacion.ejemplos_notas && (
-                              <p className="text-xs text-gray-500">
-                                {presentacion.ejemplos_notas}
-                              </p>
-                            )}
-                          </div>
-                          
-                          {/* Price Input */}
-                          <div className="flex items-center gap-2">
-                            <span className="text-sm text-gray-600">$</span>
-                            <Input
-                              type="number"
-                              placeholder="0000"
-                              value={presentacion.precio}
-                              onChange={(e) => actualizarPrecio(producto.id, originalIndex, e.target.value)}
-                              className="w-24 text-center"
-                              disabled={!presentacion.disponible}
+                      {presentacionesFiltradas.length === 0 && (
+                        <p className="text-gray-500 italic">
+                          No hay presentaciones disponibles para la unidad seleccionada
+                        </p>
+                      )}
+                      
+                      {presentacionesFiltradas.map((presentacion, index) => {
+                        const originalIndex = producto.presentaciones.findIndex(p => 
+                          p.nombre === presentacion.nombre && p.unidad === presentacion.unidad
+                        )
+                        
+                        return (
+                          <div key={`${presentacion.nombre}-${index}`} 
+                               className={`flex items-center gap-4 p-3 rounded-lg border transition-all ${
+                                 presentacion.enStock ? (presentacion.disponible ? 'bg-green-50 border-green-200' : 'bg-blue-50 border-blue-200') : 'bg-gray-50 border-gray-200'
+                               }`}>
+                            
+                            {/* Stock Checkbox */}
+                            <Checkbox
+                              checked={presentacion.enStock}
+                              onCheckedChange={() => 
+                                cambiarStockPresentacion(producto.id, originalIndex)
+                              }
+                              className="w-5 h-5"
                             />
-                            <span className="text-sm text-gray-600 whitespace-nowrap min-w-[50px]">
-                              {unidadLabels[producto.unidadSeleccionada] || `/${producto.unidadSeleccionada}`}
-                            </span>
+                            
+                            {/* Sell Checkbox */}
+                            <Checkbox
+                              checked={presentacion.disponible}
+                              onCheckedChange={(checked) => 
+                                cambiarPresentacion(producto.id, originalIndex, checked as boolean)
+                              }
+                              className="w-5 h-5"
+                              disabled={!presentacion.enStock}
+                            />
+                            
+                            {/* Presentation Info */}
+                            <div className="flex-1">
+                              <p className="font-medium text-gray-800">
+                                {presentacion.nombre}
+                              </p>
+                              <p className="text-xs text-gray-500">
+                                🔵 En stock | ✅ A la venta
+                              </p>
+                            </div>
+                            
+                            {/* Price Input */}
+                            <div className="flex items-center gap-2">
+                              <span className="text-sm text-gray-600">$</span>
+                              <Input
+                                type="number"
+                                placeholder="0000"
+                                value={presentacion.precio}
+                                onChange={(e) => actualizarPrecio(producto.id, originalIndex, e.target.value)}
+                                className="w-24 text-center"
+                                disabled={!presentacion.disponible || !presentacion.enStock}
+                              />
+                              <span className="text-sm text-gray-600 whitespace-nowrap min-w-[50px]">
+                                {unidadLabels[producto.unidadSeleccionada] || `/${producto.unidadSeleccionada}`}
+                              </span>
+                            </div>
                           </div>
-                        </div>
-                      )
-                    })}
-                  </div>
+                        )
+                      })}
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             )
           })}
         </div>
-
-        {/* No results message */}
-        {productosFiltrados.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">
-              No se encontraron productos con los filtros seleccionados
-            </p>
-          </div>
-        )}
 
         {/* Save Button - Fixed at bottom */}
         <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
@@ -335,7 +411,7 @@ export default function AdminStockPage() {
             onClick={guardarStock}
             className="bg-green-600 hover:bg-green-700 text-white text-xl py-4 px-8 shadow-lg rounded-full"
           >
-            💾 GUARDAR STOCK ({totalProductosDisponibles})
+            💾 GUARDAR STOCK ({totalPresentacionesDisponibles})
           </Button>
         </div>
 
