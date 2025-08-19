@@ -3,7 +3,15 @@
     "categoria": "Fresco - Marino",
     "subcategoria": "Pescado",
     "producto": "Abadejo",
-    "presentacion": "Entero eviscerado",
+    "presentacion": "Entero eviscerado con cabeza",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Abadejo",
+    "presentacion": "Entero eviscerado sin cabeza",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
@@ -26,6 +34,46 @@
   {
     "categoria": "Fresco - Marino",
     "subcategoria": "Pescado",
+    "producto": "Abadejo",
+    "presentacion": "Rodajas (tipo bife)",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Abadejo",
+    "presentacion": "Lomos",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Abadejo",
+    "presentacion": "Porciones en dados",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Abadejo",
+    "presentacion": "Molido",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Abadejo",
+    "presentacion": "Subproductos: cabeza, espinas, cachetes, huevas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
     "producto": "Besugo",
     "presentacion": "Entero eviscerado",
     "unidad": "kg",
@@ -41,26 +89,26 @@
   },
   {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Marisco",
-    "producto": "Almeja",
-    "presentacion": "Vivo",
+    "subcategoria": "Pescado",
+    "producto": "Besugo",
+    "presentacion": "Filete sin piel",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
   {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Marisco",
-    "producto": "Almeja",
-    "presentacion": "Entero crudo",
+    "subcategoria": "Pescado",
+    "producto": "Besugo",
+    "presentacion": "Porciones en dados",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
   {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Marisco",
-    "producto": "Almeja",
-    "presentacion": "Media valva cruda",
-    "unidad": "docena",
+    "subcategoria": "Pescado",
+    "producto": "Besugo",
+    "presentacion": "Molido",
+    "unidad": "kg",
     "ejemplos_notas": ""
   },
   {
@@ -68,6 +116,14 @@
     "subcategoria": "Pescado",
     "producto": "Brótola",
     "presentacion": "Entero eviscerado",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Brótola",
+    "presentacion": "Filete con piel",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
@@ -82,6 +138,22 @@
   {
     "categoria": "Fresco - Marino",
     "subcategoria": "Pescado",
+    "producto": "Brótola",
+    "presentacion": "Porciones en dados",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Brótola",
+    "presentacion": "Molido",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
     "producto": "Bonito",
     "presentacion": "Entero eviscerado",
     "unidad": "kg",
@@ -91,7 +163,39 @@
     "categoria": "Fresco - Marino",
     "subcategoria": "Pescado",
     "producto": "Bonito",
-    "presentacion": "Lomo",
+    "presentacion": "Filete con piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Bonito",
+    "presentacion": "Filete sin piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Bonito",
+    "presentacion": "Rodajas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Pescados",
+    "producto": "Bonito",
+    "presentacion": "Conserva en lata",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Anchoa de banco",
+    "presentacion": "Entero",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
@@ -99,7 +203,39 @@
     "categoria": "Fresco - Marino",
     "subcategoria": "Pescado",
     "producto": "Anchoa de banco",
-    "presentacion": "Entero eviscerado",
+    "presentacion": "Filete fresco",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Anchoas",
+    "producto": "Anchoa de banco",
+    "presentacion": "Filete en salazón",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Anchoas",
+    "producto": "Anchoa de banco",
+    "presentacion": "Conserva en aceite",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Anchoas",
+    "producto": "Anchoa de banco",
+    "presentacion": "Conserva en escabeche",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Anchoíta",
+    "presentacion": "Entero",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
@@ -107,7 +243,903 @@
     "categoria": "Fresco - Marino",
     "subcategoria": "Pescado",
     "producto": "Anchoíta",
+    "presentacion": "Filete fresco",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Anchoas",
+    "producto": "Anchoíta",
+    "presentacion": "Filete en salazón",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Anchoas",
+    "producto": "Anchoíta",
+    "presentacion": "Conserva en aceite",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Anchoas",
+    "producto": "Anchoíta",
+    "presentacion": "Conserva en escabeche",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Castañeta",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Castañeta",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Corvina",
     "presentacion": "Entero eviscerado",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Corvina",
+    "presentacion": "Filete con piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Corvina",
+    "presentacion": "Filete sin piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Corvina",
+    "presentacion": "Rodajas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Corvina",
+    "presentacion": "Porciones",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Corvina",
+    "presentacion": "Molido",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Corvina",
+    "presentacion": "Huevas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Cazón",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Cazón",
+    "presentacion": "Rodajas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Cazón",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Cazón",
+    "presentacion": "Subproductos: aletas, hígado",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Lenguado",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Lenguado",
+    "presentacion": "Filete con piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Lenguado",
+    "presentacion": "Filete sin piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Lenguado",
+    "presentacion": "Lomos",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Lenguado",
+    "presentacion": "Porciones",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Chernia",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Chernia",
+    "presentacion": "Filete con piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Chernia",
+    "presentacion": "Filete sin piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Chernia",
+    "presentacion": "Rodajas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Chernia",
+    "presentacion": "Lomos",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Congrio",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Congrio",
+    "presentacion": "Rodajas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Congrio",
+    "presentacion": "Filete con piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Congrio",
+    "presentacion": "Filete sin piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Congrio",
+    "presentacion": "Lomos",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Gatuzo",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Gatuzo",
+    "presentacion": "Rodajas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Gatuzo",
+    "presentacion": "Filete con piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Gatuzo",
+    "presentacion": "Filete sin piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Merluza común",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Merluza común",
+    "presentacion": "Filete con piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Merluza común",
+    "presentacion": "Filete sin piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Merluza común",
+    "presentacion": "Lomos",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Merluza común",
+    "presentacion": "Porciones",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Merluza común",
+    "presentacion": "Molido",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Palometa",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Palometa",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Palometa",
+    "presentacion": "Rodajas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Pejerrey de mar",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Pejerrey de mar",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Escabeches",
+    "producto": "Pejerrey de mar",
+    "presentacion": "Escabeche",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Pez ángel",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Pez ángel",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Pez gallo",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Pez gallo",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Pez palo",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Pez palo",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Pescadilla",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Pescadilla",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Pescadilla",
+    "presentacion": "Porciones",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Robalo",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Robalo",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Robalo",
+    "presentacion": "Porciones",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Salmón blanco",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Salmón blanco",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Salmón blanco",
+    "presentacion": "Lomos",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Salmonete",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Salmonete",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Saraca",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Saraca",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Savorín",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Savorín",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Rayas",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Rayas",
+    "presentacion": "Aletas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Rayas",
+    "presentacion": "Trozado",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Caballa",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado",
+    "producto": "Caballa",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Pescados",
+    "producto": "Caballa",
+    "presentacion": "Conserva en lata",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Pejerrey",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Pejerrey",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Escabeches",
+    "producto": "Pejerrey",
+    "presentacion": "Escabeche",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Armado",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Armado",
+    "presentacion": "Rodajas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Armado",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Bagre",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Bagre",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Boga",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Boga",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Carpa",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Carpa",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Patí",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Patí",
+    "presentacion": "Rodajas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Patí",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Sábalo",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Sábalo",
+    "presentacion": "Rodajas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Sábalo",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Curados",
+    "producto": "Sábalo",
+    "presentacion": "Salazón",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Surubí",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Surubí",
+    "presentacion": "Rodajas",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Surubí",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Surubí",
+    "presentacion": "Lomos",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Ahumados/Curados",
+    "subcategoria": "Ahumados",
+    "producto": "Surubí",
+    "presentacion": "Ahumado",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Tararira",
+    "presentacion": "Entero",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Tararira",
+    "presentacion": "Filete",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Acuicultura",
+    "subcategoria": "Pescado",
+    "producto": "Pacú",
+    "presentacion": "Entero congelado",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Acuicultura",
+    "subcategoria": "Pescado",
+    "producto": "Pacú",
+    "presentacion": "Filete con piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Acuicultura",
+    "subcategoria": "Pescado",
+    "producto": "Pacú",
+    "presentacion": "Filete sin piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Acuicultura",
+    "subcategoria": "Pescado",
+    "producto": "Pacú",
+    "presentacion": "Lomos",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Ahumados/Curados",
+    "subcategoria": "Ahumados",
+    "producto": "Pacú",
+    "presentacion": "Ahumado",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Acuicultura",
+    "subcategoria": "Pescado",
+    "producto": "Trucha",
+    "presentacion": "Entero fresco",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Acuicultura",
+    "subcategoria": "Pescado",
+    "producto": "Trucha",
+    "presentacion": "Entero congelado",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Acuicultura",
+    "subcategoria": "Pescado",
+    "producto": "Trucha",
+    "presentacion": "Filete con piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Acuicultura",
+    "subcategoria": "Pescado",
+    "producto": "Trucha",
+    "presentacion": "Filete sin piel",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Acuicultura",
+    "subcategoria": "Pescado",
+    "producto": "Trucha",
+    "presentacion": "Lomos",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Ahumados/Curados",
+    "subcategoria": "Ahumados",
+    "producto": "Trucha",
+    "presentacion": "Ahumado",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Calamar",
+    "presentacion": "Entero crudo",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
@@ -123,7 +1155,7 @@
     "categoria": "Fresco - Marino",
     "subcategoria": "Marisco",
     "producto": "Calamar",
-    "presentacion": "Tubo",
+    "presentacion": "Tubos",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
@@ -137,58 +1169,42 @@
   },
   {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Corvina",
-    "presentacion": "Entero eviscerado",
+    "subcategoria": "Marisco",
+    "producto": "Calamar",
+    "presentacion": "Tiritas",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
   {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Corvina",
-    "presentacion": "Filete sin piel",
+    "subcategoria": "Marisco",
+    "producto": "Calamar",
+    "presentacion": "Tentáculos",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
   {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Corvina",
-    "presentacion": "Lomo",
+    "categoria": "Elaborados - Mariscos",
+    "subcategoria": "Precocidos",
+    "producto": "Calamar",
+    "presentacion": "Aros precocidos",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
   {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Cazón",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
+    "categoria": "Complementos",
+    "subcategoria": "Condimentos",
+    "producto": "Calamar",
+    "presentacion": "Tinta en sachet",
+    "unidad": "unidad",
     "ejemplos_notas": ""
   },
   {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Cazón",
-    "presentacion": "Filete sin piel",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Lenguado",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Lenguado",
-    "presentacion": "Filete sin piel",
-    "unidad": "kg",
+    "subcategoria": "Marisco",
+    "producto": "Centolla",
+    "presentacion": "Entera congelada",
+    "unidad": "unidad",
     "ejemplos_notas": ""
   },
   {
@@ -203,7 +1219,7 @@
     "categoria": "Fresco - Marino",
     "subcategoria": "Marisco",
     "producto": "Centolla",
-    "presentacion": "Carne desmenuzada",
+    "presentacion": "Carne desmenuzada al vacío",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
@@ -233,143 +1249,71 @@
   },
   {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Merluza común",
-    "presentacion": "Entero eviscerado",
+    "subcategoria": "Marisco",
+    "producto": "Langostino",
+    "presentacion": "Pelado y desvenado (PD)",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
   {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Merluza común",
-    "presentacion": "Filete sin piel",
+    "subcategoria": "Marisco",
+    "producto": "Langostino",
+    "presentacion": "Pelado sin cabeza y desvenado (HPD)",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
   {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Merluza común",
-    "presentacion": "Lomo",
+    "subcategoria": "Marisco",
+    "producto": "Langostino",
+    "presentacion": "Colas congeladas",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
   {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Palometa",
-    "presentacion": "Entero eviscerado",
+    "subcategoria": "Marisco",
+    "producto": "Almeja",
+    "presentacion": "Entera viva",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
   {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Palometa",
-    "presentacion": "Filete sin piel",
+    "subcategoria": "Marisco",
+    "producto": "Almeja",
+    "presentacion": "Congelada entera",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
   {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Pejerrey de mar",
-    "presentacion": "Entero eviscerado",
+    "subcategoria": "Marisco",
+    "producto": "Almeja",
+    "presentacion": "Carne sola",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
   {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Pez ángel",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Pez gallo",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Pez palo",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Pescadilla",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Robalo",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Salmón blanco",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Salmonete",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Saraca",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Savorín",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Rayas",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
-    "producto": "Vieira",
-    "presentacion": "Viva",
+    "subcategoria": "Marisco",
+    "producto": "Almeja",
+    "presentacion": "Media valva",
     "unidad": "docena",
     "ejemplos_notas": ""
   },
   {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Moluscos",
+    "producto": "Almeja",
+    "presentacion": "Conserva",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
     "categoria": "Fresco - Marino",
-    "subcategoria": "Pescado",
+    "subcategoria": "Marisco",
     "producto": "Vieira",
     "presentacion": "Media valva",
     "unidad": "docena",
@@ -378,8 +1322,80 @@
   {
     "categoria": "Fresco - Marino",
     "subcategoria": "Marisco",
+    "producto": "Vieira",
+    "presentacion": "Carne congelada",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Vieira",
+    "presentacion": "Entera congelada",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Caracoles de mar",
+    "presentacion": "Enteros crudos",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Caracoles de mar",
+    "presentacion": "Enteros cocidos",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Caracoles de mar",
+    "presentacion": "Carne sola",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Cholga",
+    "presentacion": "Entera viva",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Cholga",
+    "presentacion": "Media valva",
+    "unidad": "docena",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Cholga",
+    "presentacion": "Carne congelada",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Moluscos",
+    "producto": "Cholga",
+    "presentacion": "Conserva",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
     "producto": "Mejillón",
-    "presentacion": "Vivo",
+    "presentacion": "Entero vivo",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
@@ -387,7 +1403,71 @@
     "categoria": "Fresco - Marino",
     "subcategoria": "Marisco",
     "producto": "Mejillón",
-    "presentacion": "Carne sin valva",
+    "presentacion": "Media valva",
+    "unidad": "docena",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Mejillón",
+    "presentacion": "Carne congelada",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Mariscos",
+    "subcategoria": "Escabeches",
+    "producto": "Mejillón",
+    "presentacion": "Escabeche",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Berberecho",
+    "presentacion": "Entero vivo",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Berberecho",
+    "presentacion": "Carne congelada",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Moluscos",
+    "producto": "Berberecho",
+    "presentacion": "Conserva",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Ostra",
+    "presentacion": "Entera viva",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Ostra",
+    "presentacion": "Media valva",
+    "unidad": "unidad",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Ostra",
+    "presentacion": "Congelada",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
@@ -403,55 +1483,23 @@
     "categoria": "Fresco - Marino",
     "subcategoria": "Marisco",
     "producto": "Pulpo",
+    "presentacion": "Entero cocido",
+    "unidad": "kg",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Pulpo",
     "presentacion": "Tentáculos",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
   {
-    "categoria": "Fresco - Continental (río)",
-    "subcategoria": "Pescado",
-    "producto": "Pejerrey",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Continental (río)",
-    "subcategoria": "Pescado",
-    "producto": "Surubí",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Continental (río)",
-    "subcategoria": "Pescado",
-    "producto": "Surubí",
-    "presentacion": "Filete sin piel",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Acuicultura",
-    "subcategoria": "Pescado",
-    "producto": "Pacú",
-    "presentacion": "Entero eviscerado congelado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Acuicultura",
-    "subcategoria": "Pescado",
-    "producto": "Trucha",
-    "presentacion": "Entero eviscerado",
-    "unidad": "kg",
-    "ejemplos_notas": ""
-  },
-  {
-    "categoria": "Fresco - Acuicultura",
-    "subcategoria": "Pescado",
-    "producto": "Trucha",
-    "presentacion": "Filete sin piel",
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco",
+    "producto": "Pulpo",
+    "presentacion": "Trozado al vacío",
     "unidad": "kg",
     "ejemplos_notas": ""
   },
@@ -494,14 +1542,6 @@
     "presentacion": "Congelado",
     "unidad": "docena",
     "ejemplos_notas": "Merluza, atún, salmón"
-  },
-  {
-    "categoria": "Elaborados - Pescado",
-    "subcategoria": "Escabeches",
-    "producto": "Pescado en escabeche",
-    "presentacion": "Frasco",
-    "unidad": "unidad",
-    "ejemplos_notas": "Cornalitos, pejerrey, caballa"
   },
   {
     "categoria": "Elaborados - Pescado",
