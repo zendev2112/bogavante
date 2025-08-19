@@ -11,37 +11,52 @@ interface StockItem {
   categoria: string
   subcategoria: string
   producto: string
-  presentacion_formato: string
+  presentacion: string
+  unidad: string
   ejemplos_notas: string
   precio?: string
   disponible?: boolean
   id?: string
 }
 
+const unidadLabels: { [key: string]: string } = {
+  'kg': '/kg',
+  'unidad': '/unidad',
+  'docena': '/docena',
+  'porción': '/porción',
+  'bandeja': '/bandeja',
+  'paquete': '/paquete',
+  'litro': '/litro'
+}
+
 export default function AdminStockPage() {
   const [productos, setProductos] = useState<StockItem[]>([])
   const [filtroCategoria, setFiltroCategoria] = useState<string>('all')
+  const [filtroUnidad, setFiltroUnidad] = useState<string>('all')
   const [busqueda, setBusqueda] = useState<string>('')
   
   // Initialize products from JSON
   useEffect(() => {
     const productosConEstado = stockData.map((item, index) => ({
       ...item,
-      id: `${item.categoria}-${item.producto}-${index}`,
+      id: `${item.categoria}-${item.producto}-${item.presentacion}-${index}`,
       precio: '',
       disponible: false
     }))
     setProductos(productosConEstado)
   }, [])
 
-  // Get unique categories
+  // Get unique categories and units
   const categorias = ['all', ...Array.from(new Set(stockData.map(item => item.categoria)))]
+  const unidades = ['all', ...Array.from(new Set(stockData.map(item => item.unidad)))]
 
   // Filter products
   const productosFiltrados = productos.filter(producto => {
     const matchCategoria = filtroCategoria === 'all' || producto.categoria === filtroCategoria
-    const matchBusqueda = producto.producto.toLowerCase().includes(busqueda.toLowerCase())
-    return matchCategoria && matchBusqueda
+    const matchUnidad = filtroUnidad === 'all' || producto.unidad === filtroUnidad
+    const matchBusqueda = producto.producto.toLowerCase().includes(busqueda.toLowerCase()) ||
+                         producto.presentacion.toLowerCase().includes(busqueda.toLowerCase())
+    return matchCategoria && matchUnidad && matchBusqueda
   })
 
   const actualizarPrecio = (id: string, precio: string) => {
@@ -61,7 +76,7 @@ export default function AdminStockPage() {
     console.log('Stock guardado:', productosDisponibles)
     alert(`¡Stock guardado! ${productosDisponibles.length} productos disponibles`)
     
-    // Aquí guardarías en tu base de datos o localStorage
+    // Save to localStorage (can be upgraded to database later)
     localStorage.setItem('bogavante-stock', JSON.stringify(productosDisponibles))
   }
 
@@ -84,11 +99,24 @@ export default function AdminStockPage() {
     return colores[categoria] || 'bg-gray-100 text-gray-800'
   }
 
+  const getUnidadColor = (unidad: string) => {
+    const colores: { [key: string]: string } = {
+      'kg': 'bg-green-500 text-white',
+      'unidad': 'bg-blue-500 text-white',
+      'docena': 'bg-purple-500 text-white',
+      'porción': 'bg-orange-500 text-white',
+      'bandeja': 'bg-pink-500 text-white',
+      'paquete': 'bg-indigo-500 text-white',
+      'litro': 'bg-cyan-500 text-white'
+    }
+    return colores[unidad] || 'bg-gray-500 text-white'
+  }
+
   const productosDisponibles = productos.filter(p => p.disponible).length
 
   return (
     <div className="min-h-screen bg-gray-50 p-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-blue-900 mb-2">
@@ -106,86 +134,104 @@ export default function AdminStockPage() {
 
         {/* Filters */}
         <div className="mb-6 space-y-4">
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Search */}
             <Input
-              placeholder="🔍 Buscar producto..."
+              placeholder="🔍 Buscar producto o presentación..."
               value={busqueda}
               onChange={(e) => setBusqueda(e.target.value)}
-              className="md:w-1/3"
             />
             
             {/* Category Filter */}
             <select
               value={filtroCategoria}
               onChange={(e) => setFiltroCategoria(e.target.value)}
-              className="md:w-1/3 p-2 border rounded-md"
+              className="p-2 border rounded-md"
             >
               <option value="all">📋 Todas las categorías</option>
               {categorias.slice(1).map(categoria => (
                 <option key={categoria} value={categoria}>{categoria}</option>
               ))}
             </select>
+
+            {/* Unit Filter */}
+            <select
+              value={filtroUnidad}
+              onChange={(e) => setFiltroUnidad(e.target.value)}
+              className="p-2 border rounded-md"
+            >
+              <option value="all">⚖️ Todas las unidades</option>
+              {unidades.slice(1).map(unidad => (
+                <option key={unidad} value={unidad}>{unidad}</option>
+              ))}
+            </select>
           </div>
         </div>
 
         {/* Products Grid */}
-        <div className="grid gap-4 mb-8">
+        <div className="grid gap-3 mb-8">
           {productosFiltrados.map((producto) => (
-            <Card key={producto.id} className={`shadow-sm transition-all ${producto.disponible ? 'ring-2 ring-green-200' : ''}`}>
+            <Card key={producto.id} className={`shadow-sm transition-all hover:shadow-md ${producto.disponible ? 'ring-2 ring-green-300 bg-green-50' : 'bg-white'}`}>
               <CardContent className="p-4">
                 <div className="flex flex-col lg:flex-row lg:items-center gap-4">
                   
                   {/* Product Info */}
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 mb-2">
-                      <h3 className="text-xl font-semibold text-gray-800">
+                      <h3 className="text-lg font-semibold text-gray-800 truncate">
                         {producto.producto}
                       </h3>
-                      <Badge className={getCategoriaColor(producto.categoria)}>
+                      <Badge className={getCategoriaColor(producto.categoria)} variant="secondary">
                         {producto.categoria}
+                      </Badge>
+                      <Badge className={getUnidadColor(producto.unidad)}>
+                        {producto.unidad}
                       </Badge>
                     </div>
                     
-                    <p className="text-sm text-gray-600 mb-1">
-                      <span className="font-medium">Subcategoría:</span> {producto.subcategoria}
-                    </p>
-                    
-                    <p className="text-sm text-gray-600">
-                      <span className="font-medium">Presentaciones:</span> {producto.presentacion_formato}
-                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-1 text-sm text-gray-600">
+                      <p>
+                        <span className="font-medium">Subcategoría:</span> {producto.subcategoria}
+                      </p>
+                      <p>
+                        <span className="font-medium">Presentación:</span> {producto.presentacion}
+                      </p>
+                    </div>
                     
                     {producto.ejemplos_notas && (
-                      <p className="text-xs text-gray-500 mt-1">
+                      <p className="text-xs text-gray-500 mt-1 truncate">
                         <span className="font-medium">Notas:</span> {producto.ejemplos_notas}
                       </p>
                     )}
                   </div>
 
                   {/* Controls */}
-                  <div className="flex items-center space-x-4 lg:justify-end">
+                  <div className="flex items-center space-x-3 lg:justify-end">
                     {/* Price Input */}
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center space-x-1">
                       <span className="text-sm text-gray-600">$</span>
                       <Input
                         type="number"
                         placeholder="0000"
                         value={producto.precio}
                         onChange={(e) => actualizarPrecio(producto.id!, e.target.value)}
-                        className="w-24 text-center"
+                        className="w-20 text-center text-sm"
                         disabled={!producto.disponible}
                       />
-                      <span className="text-sm text-gray-600">/kg</span>
+                      <span className="text-xs text-gray-600 whitespace-nowrap">
+                        {unidadLabels[producto.unidad] || `/${producto.unidad}`}
+                      </span>
                     </div>
                     
                     {/* Availability Toggle */}
                     <Button
                       variant={producto.disponible ? "default" : "outline"}
                       onClick={() => cambiarDisponibilidad(producto.id!)}
-                      className={`w-28 ${
+                      size="sm"
+                      className={`whitespace-nowrap ${
                         producto.disponible 
                           ? 'bg-green-500 hover:bg-green-600' 
-                          : 'bg-gray-400 hover:bg-gray-500 text-white'
+                          : 'bg-gray-400 hover:bg-gray-500 text-white border-gray-400'
                       }`}
                     >
                       {producto.disponible ? '✅ DISPONIBLE' : '❌ NO DISP.'}
@@ -197,15 +243,27 @@ export default function AdminStockPage() {
           ))}
         </div>
 
-        {/* Save Button */}
-        <div className="text-center sticky bottom-4">
+        {/* No results message */}
+        {productosFiltrados.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-500 text-lg">
+              No se encontraron productos con los filtros seleccionados
+            </p>
+          </div>
+        )}
+
+        {/* Save Button - Fixed at bottom */}
+        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
           <Button 
             onClick={guardarStock}
-            className="w-full max-w-md bg-green-600 hover:bg-green-700 text-white text-xl py-4 shadow-lg"
+            className="bg-green-600 hover:bg-green-700 text-white text-xl py-4 px-8 shadow-lg rounded-full"
           >
-            💾 GUARDAR STOCK ({productosDisponibles} productos)
+            💾 GUARDAR STOCK ({productosDisponibles})
           </Button>
         </div>
+
+        {/* Spacer for fixed button */}
+        <div className="h-20"></div>
       </div>
     </div>
   )
