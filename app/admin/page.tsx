@@ -72,24 +72,31 @@ export default function AdminStockPage() {
     })
 
     // Process sushi ingredients from insumos_sushi.json
-    if (sushiData && sushiData.ingredientes) {
-      sushiData.ingredientes.forEach((ingredient: any) => {
-        const key = `Sushi-${ingredient.nombre}`
-        
-        groupedProducts[key] = {
-          category: 'Sushi',
-          subcategory: ingredient.categoria || 'Ingredientes',
-          product: ingredient.nombre,
-          presentations: [{
-            name: ingredient.presentacion || 'Estándar',
-            unit: ingredient.unidad || 'unidad',
-            available: false,
-            price: '',
-            notes: ingredient.descripcion || ''
-          }],
-          selectedUnit: ingredient.unidad || 'unidad',
-          id: key,
-          inStock: false
+    if (sushiData && (sushiData as any).insumos_para_sushi) {
+      const sushiInsumos = (sushiData as any).insumos_para_sushi
+      
+      // Process each category of sushi ingredients
+      Object.entries(sushiInsumos).forEach(([category, items]: [string, any]) => {
+        if (Array.isArray(items)) {
+          items.forEach((item: string) => {
+            const key = `Sushi-${item}`
+            
+            groupedProducts[key] = {
+              category: 'Sushi',
+              subcategory: category.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+              product: item,
+              presentations: [{
+                name: 'Estándar',
+                unit: 'unidad',
+                available: false,
+                price: '',
+                notes: `Ingrediente para sushi - ${category}`
+              }],
+              selectedUnit: 'unidad',
+              id: key,
+              inStock: false
+            }
+          })
         }
       })
     }
