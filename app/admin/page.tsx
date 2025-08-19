@@ -19,7 +19,6 @@ interface GroupedProduct {
     available: boolean
     price: string
     notes: string
-    inStock: boolean
   }[]
   selectedUnit: string
   id: string
@@ -38,38 +37,6 @@ const unitLabels: { [key: string]: string } = {
   'ml': '/ml'
 }
 
-// Standard presentations for all fish
-const fishPresentations = [
-  { name: 'Entero eviscerado', unit: 'kg' },
-  { name: 'Filete con piel', unit: 'kg' },
-  { name: 'Filete sin piel', unit: 'kg' },
-  { name: 'Lomo', unit: 'kg' },
-  { name: 'Medallón', unit: 'kg' },
-  { name: 'Trozo', unit: 'kg' }
-]
-
-// Standard presentations for all seafood
-const seafoodPresentations = [
-  { name: 'Entero crudo', unit: 'kg' },
-  { name: 'Entero cocido', unit: 'kg' },
-  { name: 'Pelado crudo', unit: 'kg' },
-  { name: 'Pelado cocido', unit: 'kg' },
-  { name: 'Vivo', unit: 'kg' },
-  { name: 'Por unidad', unit: 'unidad' },
-  { name: 'Por docena', unit: 'docena' }
-]
-
-// Special presentations for Langostinos only
-const shrimpPresentations = [
-  { name: 'Entero', unit: 'kg' },
-  { name: 'Entero crudo', unit: 'kg' },
-  { name: 'Entero cocido', unit: 'kg' },
-  { name: 'Pelado crudo (PUD)', unit: 'kg' },
-  { name: 'Pelado, sin desvenar', unit: 'kg' },
-  { name: 'Pelado y desvenado', unit: 'kg' },
-  { name: 'Sin cabeza, pelado y desvenado', unit: 'kg' }
-]
-
 export default function AdminStockPage() {
   const [products, setProducts] = useState<GroupedProduct[]>([])
   const [categoryFilter, setCategoryFilter] = useState<string>('all')
@@ -78,57 +45,35 @@ export default function AdminStockPage() {
   useEffect(() => {
     const groupedProducts: { [key: string]: GroupedProduct } = {}
     
-    // Process main stock data ONLY from stock.json
-    stockData.forEach((item, index) => {
+    // Process ALL data from stock.json - NO FILTERING OR MODIFICATION
+    stockData.forEach((item) => {
       const key = `${item.categoria}-${item.producto}`
       
       if (!groupedProducts[key]) {
-        let standardPresentations = []
-        
-        if (item.producto === 'Langostino') {
-          standardPresentations = shrimpPresentations
-        } else if (item.subcategoria === 'Pescado') {
-          standardPresentations = fishPresentations
-        } else if (item.subcategoria === 'Marisco') {
-          standardPresentations = seafoodPresentations
-        } else {
-          // For other categories, use what's in the stock.json
-          const uniquePresentations = stockData
-            .filter(p => p.categoria === item.categoria && p.producto === item.producto)
-            .map(p => ({ name: p.presentacion, unit: p.unidad }))
-          
-          // Remove duplicates
-          const filteredPresentations = uniquePresentations.filter((p, index, self) =>
-            index === self.findIndex((t) => t.name === p.name && t.unit === p.unit)
-          )
-          standardPresentations = filteredPresentations
-        }
-
-        const availableUnits = standardPresentations.map(p => p.unit)
-        const uniqueUnits = [...new Set(availableUnits)]
-        
         groupedProducts[key] = {
           category: item.categoria,
           subcategory: item.subcategoria,
           product: item.producto,
-          presentations: standardPresentations.map(pres => ({
-            name: pres.name,
-            unit: pres.unit,
-            available: false,
-            price: '',
-            notes: item.ejemplos_notas || '',
-            inStock: false
-          })),
-          selectedUnit: uniqueUnits[0] || 'kg',
+          presentations: [],
+          selectedUnit: item.unidad,
           id: key,
           inStock: false
         }
       }
+      
+      // Add this presentation to the product
+      groupedProducts[key].presentations.push({
+        name: item.presentacion,
+        unit: item.unidad,
+        available: false,
+        price: '',
+        notes: item.ejemplos_notas || ''
+      })
     })
 
-    // Process sushi ingredients ONLY from insumos_sushi.json
+    // Process sushi ingredients from insumos_sushi.json
     if (sushiData && sushiData.ingredientes) {
-      sushiData.ingredientes.forEach((ingredient: any, index: number) => {
+      sushiData.ingredientes.forEach((ingredient: any) => {
         const key = `Sushi-${ingredient.nombre}`
         
         groupedProducts[key] = {
@@ -140,8 +85,7 @@ export default function AdminStockPage() {
             unit: ingredient.unidad || 'unidad',
             available: false,
             price: '',
-            notes: ingredient.descripcion || '',
-            inStock: false
+            notes: ingredient.descripcion || ''
           }],
           selectedUnit: ingredient.unidad || 'unidad',
           id: key,
@@ -153,7 +97,7 @@ export default function AdminStockPage() {
     setProducts(Object.values(groupedProducts))
   }, [])
 
-  // Get unique categories from the actual data
+  // Get ALL unique categories from the actual data
   const categories = ['all', ...Array.from(new Set(products.map(item => item.category)))]
 
   // Filter products
@@ -189,20 +133,6 @@ export default function AdminStockPage() {
     }))
   }
 
-  const togglePresentationStock = (productId: string, presentationIndex: number) => {
-    setProducts(products.map(p => {
-      if (p.id === productId) {
-        const newPresentations = [...p.presentations]
-        newPresentations[presentationIndex] = {
-          ...newPresentations[presentationIndex],
-          inStock: !newPresentations[presentationIndex].inStock
-        }
-        return { ...p, presentations: newPresentations }
-      }
-      return p
-    }))
-  }
-
   const updatePrice = (productId: string, presentationIndex: number, price: string) => {
     setProducts(products.map(p => {
       if (p.id === productId) {
@@ -223,13 +153,13 @@ export default function AdminStockPage() {
     products.forEach(product => {
       if (product.inStock) {
         product.presentations.forEach(presentation => {
-          if (presentation.available && presentation.price && presentation.inStock) {
+          if (presentation.available && presentation.price) {
             availableProducts.push({
               category: product.category,
               subcategory: product.subcategory,
               product: product.product,
               presentation: presentation.name,
-              unit: product.selectedUnit,
+              unit: presentation.unit,
               price: presentation.price,
               notes: presentation.notes
             })
@@ -265,7 +195,7 @@ export default function AdminStockPage() {
 
   const totalInStock = products.filter(p => p.inStock).length
   const totalAvailable = products.reduce((total, product) => {
-    return total + product.presentations.filter(p => p.available && p.price && p.inStock).length
+    return total + product.presentations.filter(p => p.available && p.price).length
   }, 0)
 
   return (
@@ -304,7 +234,7 @@ export default function AdminStockPage() {
               className="p-2 border rounded-md"
             >
               <option value="all">📋 Todas las categorías</option>
-              {categories.slice(1).map(category => (
+              {categories.slice(1).sort().map(category => (
                 <option key={category} value={category}>{category}</option>
               ))}
             </select>
@@ -333,13 +263,6 @@ export default function AdminStockPage() {
                           {product.category}
                         </Badge>
                         
-                        {/* Special indicators */}
-                        {product.product === 'Langostino' && (
-                          <Badge variant="secondary" className="bg-orange-100 text-orange-800">
-                            🦐 Presentaciones Especiales
-                          </Badge>
-                        )}
-                        
                         {product.category === 'Sushi' && (
                           <Badge variant="secondary" className="bg-rose-100 text-rose-800">
                             🍣 Ingrediente Sushi
@@ -362,24 +285,29 @@ export default function AdminStockPage() {
                       <p className="text-sm text-gray-600">
                         <span className="font-medium">Subcategoría:</span> {product.subcategory}
                       </p>
+                      <p className="text-xs text-gray-500">
+                        {product.presentations.length} presentaciones disponibles
+                      </p>
                     </div>
 
                     {/* Unit Selector */}
-                    <div className="flex flex-col items-start lg:items-end gap-2">
-                      <label className="text-sm font-medium text-gray-700">Unidad de venta:</label>
-                      <select
-                        value={product.selectedUnit}
-                        onChange={(e) => changeUnit(product.id, e.target.value)}
-                        className="p-2 border rounded-md bg-white min-w-[120px]"
-                        disabled={!product.inStock}
-                      >
-                        {availableUnits.map(unit => (
-                          <option key={unit} value={unit}>
-                            {unit} ({unitLabels[unit] || `/${unit}`})
-                          </option>
-                        ))}
-                      </select>
-                    </div>
+                    {availableUnits.length > 1 && (
+                      <div className="flex flex-col items-start lg:items-end gap-2">
+                        <label className="text-sm font-medium text-gray-700">Unidad de venta:</label>
+                        <select
+                          value={product.selectedUnit}
+                          onChange={(e) => changeUnit(product.id, e.target.value)}
+                          className="p-2 border rounded-md bg-white min-w-[120px]"
+                          disabled={!product.inStock}
+                        >
+                          {availableUnits.map(unit => (
+                            <option key={unit} value={unit}>
+                              {unit} ({unitLabels[unit] || `/${unit}`})
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
                   </div>
 
                   {/* Presentations - Only show if product is in stock */}
@@ -387,16 +315,6 @@ export default function AdminStockPage() {
                     <div className="space-y-3">
                       <h4 className="text-lg font-semibold text-gray-700 border-b pb-2">
                         Presentaciones disponibles:
-                        {product.product === 'Langostino' && (
-                          <span className="text-sm font-normal text-orange-600 ml-2">
-                            (Presentaciones específicas para langostinos)
-                          </span>
-                        )}
-                        {product.category === 'Sushi' && (
-                          <span className="text-sm font-normal text-rose-600 ml-2">
-                            (Ingrediente de sushi)
-                          </span>
-                        )}
                       </h4>
                       
                       {filteredPresentations.length === 0 && (
@@ -405,70 +323,51 @@ export default function AdminStockPage() {
                         </p>
                       )}
                       
-                      {filteredPresentations.map((presentation, index) => {
-                        const originalIndex = product.presentations.findIndex(p => 
-                          p.name === presentation.name && p.unit === presentation.unit
-                        )
-                        
-                        return (
-                          <div key={`${presentation.name}-${index}`} 
-                               className={`flex items-center gap-4 p-3 rounded-lg border transition-all ${
-                                 presentation.inStock ? (presentation.available ? 'bg-green-50 border-green-200' : 'bg-blue-50 border-blue-200') : 'bg-gray-50 border-gray-200'
-                               }`}>
-                            
-                            {/* Stock Checkbox */}
-                            <Checkbox
-                              checked={presentation.inStock}
-                              onCheckedChange={() => 
-                                togglePresentationStock(product.id, originalIndex)
-                              }
-                              className="w-5 h-5"
-                            />
-                            
-                            {/* Available Checkbox */}
-                            <Checkbox
-                              checked={presentation.available}
-                              onCheckedChange={(checked) => 
-                                togglePresentation(product.id, originalIndex, checked as boolean)
-                              }
-                              className="w-5 h-5"
-                              disabled={!presentation.inStock}
-                            />
-                            
-                            {/* Presentation Info */}
-                            <div className="flex-1">
-                              <p className="font-medium text-gray-800">
-                                {presentation.name}
-                                {product.product === 'Langostino' && presentation.name.includes('desven') && (
-                                  <span className="text-xs text-orange-600 ml-1">🦐</span>
-                                )}
-                              </p>
-                              {presentation.notes && (
-                                <p className="text-xs text-gray-500">{presentation.notes}</p>
-                              )}
-                              <p className="text-xs text-gray-500">
-                                🔵 En stock | ✅ A la venta
-                              </p>
-                            </div>
-                            
-                            {/* Price Input */}
-                            <div className="flex items-center gap-2">
-                              <span className="text-sm text-gray-600">$</span>
-                              <Input
-                                type="number"
-                                placeholder="0000"
-                                value={presentation.price}
-                                onChange={(e) => updatePrice(product.id, originalIndex, e.target.value)}
-                                className="w-24 text-center"
-                                disabled={!presentation.available || !presentation.inStock}
-                              />
-                              <span className="text-sm text-gray-600 whitespace-nowrap min-w-[50px]">
-                                {unitLabels[product.selectedUnit] || `/${product.selectedUnit}`}
-                              </span>
-                            </div>
+                      {filteredPresentations.map((presentation, index) => (
+                        <div key={`${presentation.name}-${index}`} 
+                             className={`flex items-center gap-4 p-3 rounded-lg border transition-all ${
+                               presentation.available ? 'bg-green-50 border-green-200' : 'bg-gray-50 border-gray-200'
+                             }`}>
+                          
+                          {/* Single Available Checkbox */}
+                          <Checkbox
+                            checked={presentation.available}
+                            onCheckedChange={(checked) => 
+                              togglePresentation(product.id, index, checked as boolean)
+                            }
+                            className="w-5 h-5"
+                          />
+                          
+                          {/* Presentation Info */}
+                          <div className="flex-1">
+                            <p className="font-medium text-gray-800">
+                              {presentation.name}
+                            </p>
+                            {presentation.notes && (
+                              <p className="text-xs text-gray-500">{presentation.notes}</p>
+                            )}
+                            <p className="text-xs text-gray-500">
+                              Unidad: {presentation.unit}
+                            </p>
                           </div>
-                        )
-                      })}
+                          
+                          {/* Price Input */}
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm text-gray-600">$</span>
+                            <Input
+                              type="number"
+                              placeholder="0000"
+                              value={presentation.price}
+                              onChange={(e) => updatePrice(product.id, index, e.target.value)}
+                              className="w-24 text-center"
+                              disabled={!presentation.available}
+                            />
+                            <span className="text-sm text-gray-600 whitespace-nowrap min-w-[50px]">
+                              {unitLabels[presentation.unit] || `/${presentation.unit}`}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   )}
                 </CardContent>
