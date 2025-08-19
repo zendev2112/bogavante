@@ -1,60 +1,45 @@
 # Dependencies
-/node_modules
+node_modules/
 /.pnp
 .pnp.js
 
-# Production
-/build
-/dist
+# Testing
+/coverage
+
+# Next.js
 /.next/
 /out/
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
+# Production
+/build
 
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# Misc
+.DS_Store
+*.pem
 
-# Logs
+# Debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-# OS
-.DS_Store
-Thumbs.db
+# Local env files
+.env*.local
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Testing
-/coverage
-/.nyc_output
-
-# Misc
-*.tgz
-*.tar.gz
-
-# Ignore everything outside the project directory
-../*
-../../*
-../../../*
+# Vercel
 .vercel
 
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
 
-# Supastarter folder
+# Supastarter folder (complete exclusion)
 Supastarter*
-"Supastarter - SaaS Starter Kit For Next.js (2025-6)"/Supastarter*
-"Supastarter - SaaS Starter Kit For Next.js (2025-6)/"
+**/Supastarter*
+"Supastarter - SaaS Starter Kit For Next.js (2025-6)"/
+**/cypress/
+**/e2e/
+*.cy.ts
+*.cy.js
+
+# Stock folder if not needed in production
+bogavante-stock/
