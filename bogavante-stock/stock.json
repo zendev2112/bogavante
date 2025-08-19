@@ -1,0 +1,856 @@
+[
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Abadejo",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Besugo",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Almeja",
+    "presentacion_formato": "Vivo; Entero crudo; Entero cocido; Media valva cruda; Media valva cocida; Carne sin valva",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Brótola",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Bonito",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Anchoa de banco",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Anchoíta",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Castañeta",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Calamar",
+    "presentacion_formato": "Entero crudo/limpio; Tubo; Anillas (rabas); Tiritas; Tentáculos; Aros precocidos; Tinta en sachet",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Corvina",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Cazón",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Lenguado",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Centolla",
+    "presentacion_formato": "Patas (congeladas); Carne desmenuzada al vacío; Entera (congelada)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Chernia",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Congrio",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Gatuzo",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Langostino",
+    "presentacion_formato": "Entero crudo; Entero cocido; Pelado crudo (PUD); Pelado cocido (PUD); Pelado y desvenado (PD); Cola; Carne",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Merluza común",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Palometa",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Pejerrey de mar",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Pez ángel",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Pez gallo",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Pez palo",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Pescadilla",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Robalo",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Salmón blanco",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Salmonete",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Saraca",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Savorín",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Rayas",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Vieira",
+    "presentacion_formato": "Vivo; Entero crudo; Entero cocido; Media valva cruda; Media valva cocida; Carne sin valva",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Caracoles de mar",
+    "presentacion_formato": "Vivo; Entero crudo; Entero cocido; Media valva cruda; Media valva cocida; Carne sin valva",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Cholga",
+    "presentacion_formato": "Vivo; Entero crudo; Entero cocido; Media valva cruda; Media valva cocida; Carne sin valva",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Pescado/Marisco",
+    "producto": "Caballa",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Pejerrey",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Armado",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Bagre",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Boga",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Carpa",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Patí",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Sábalo",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Surubí",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Continental (río)",
+    "subcategoria": "Pescado",
+    "producto": "Tararira",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Acuicultura",
+    "subcategoria": "Pescado",
+    "producto": "Pacú (congelado)",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Acuicultura",
+    "subcategoria": "Pescado",
+    "producto": "Trucha (fresco y congelado)",
+    "presentacion_formato": "Entero eviscerado; Filete con piel; Filete sin piel; Lomo; Bife/Rodaja; Porciones; Dados; Mariposa (según especie); Molida; Carpaccio/Sashimi (según especie); Cachetes/Collar; Cabeza y espinas (caldo); Piel (crujiente); Huevas (según especie)",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco/Molusco",
+    "producto": "Mejillón",
+    "presentacion_formato": "Vivo; Entero crudo; Entero cocido; Media valva cruda; Media valva cocida; Carne sin valva",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco/Molusco",
+    "producto": "Berberecho",
+    "presentacion_formato": "Vivo; Entero crudo; Entero cocido; Media valva cruda; Media valva cocida; Carne sin valva",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco/Molusco",
+    "producto": "Ostra",
+    "presentacion_formato": "Vivo; Entero crudo; Entero cocido; Media valva cruda; Media valva cocida; Carne sin valva",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Fresco - Marino",
+    "subcategoria": "Marisco/Molusco",
+    "producto": "Pulpo",
+    "presentacion_formato": "Entero crudo; Entero cocido; Tentáculos; Trozado al vacío",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Empanados y molidos",
+    "producto": "Milanesas / filetes empanados",
+    "presentacion_formato": "Congelado IQF; Listo para freír/hornear",
+    "ejemplos_notas": "Merluza, corvina, pejerrey, trucha, surubí, dorado"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Preparaciones",
+    "producto": "Hamburguesas de pescado",
+    "presentacion_formato": "Congelado; Crudo/cocido; Individual o pack",
+    "ejemplos_notas": "Merluza, corvina, salmón rosado, trucha, surubí, pacú"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Preparaciones",
+    "producto": "Bastones / nuggets / fingers",
+    "presentacion_formato": "Congelado IQF",
+    "ejemplos_notas": "Merluza, brótola"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Preparaciones",
+    "producto": "Croquetas / buñuelos / medallones",
+    "presentacion_formato": "Congelado; Listo para freír/hornear",
+    "ejemplos_notas": "Merluza, atún, salmón"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Preparaciones",
+    "producto": "Albóndigas de pescado",
+    "presentacion_formato": "Congelado; Listo para salsas",
+    "ejemplos_notas": "Merluza, corvina"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Preparaciones",
+    "producto": "Arrollados de pescado",
+    "presentacion_formato": "Crudo o cocido; Rellenos vegetales/mariscos",
+    "ejemplos_notas": "Merluza, brótola"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Preparaciones",
+    "producto": "Rellenos listos para empanadas/tartas",
+    "presentacion_formato": "Refrigerado o congelado",
+    "ejemplos_notas": "Pescado picado con vegetales"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Preparaciones",
+    "producto": "Pasteles y tartas de pescado",
+    "presentacion_formato": "Refrigerado; Listo para hornear",
+    "ejemplos_notas": "Merluza, atún, salmón"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Preparaciones",
+    "producto": "Tortillas de pescado",
+    "presentacion_formato": "Refrigerado/listo; Porciones",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Listos para condimentar",
+    "producto": "Pack para ceviche",
+    "presentacion_formato": "Cortes en cubos + aderezo",
+    "ejemplos_notas": "Merluza, salmón blanco, corvina (según aptitud)"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Escabeches",
+    "producto": "Pescado en escabeche",
+    "presentacion_formato": "Frasco",
+    "ejemplos_notas": "Cornalitos, pejerrey, caballa, merluza"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Salados/Curados",
+    "producto": "Bacalao seco y salado",
+    "presentacion_formato": "En paquetes; Desalado opcional",
+    "ejemplos_notas": "Gadidae importado"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Salados/Curados",
+    "producto": "Pescado en salazón",
+    "presentacion_formato": "Entero o filetes",
+    "ejemplos_notas": "Lisa, corvina, sábalo"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Curados/Marinados",
+    "producto": "Gravlax / marinado",
+    "presentacion_formato": "Refrigerado al vacío",
+    "ejemplos_notas": "Salmón, trucha"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Subproductos",
+    "producto": "Huevas saladas / ahumadas",
+    "presentacion_formato": "Enteras/curadas",
+    "ejemplos_notas": "Lisa, merluza, sábalo"
+  },
+  {
+    "categoria": "Elaborados - Pescado",
+    "subcategoria": "Subproductos",
+    "producto": "Cachetes, collar, piel crocante",
+    "presentacion_formato": "Porcionado/listo",
+    "ejemplos_notas": "Según especie"
+  },
+  {
+    "categoria": "Elaborados - Mariscos",
+    "subcategoria": "Rebozados",
+    "producto": "Rabas (anillas de calamar)",
+    "presentacion_formato": "Congelado; Listo para freír",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Mariscos",
+    "subcategoria": "Rebozados",
+    "producto": "Tiritas de calamar rebozadas",
+    "presentacion_formato": "Congelado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Mariscos",
+    "subcategoria": "Precocidos",
+    "producto": "Aros de calamar precocidos",
+    "presentacion_formato": "Congelado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Mariscos",
+    "subcategoria": "Pelados y listos",
+    "producto": "Langostinos pelados crudos/cocidos",
+    "presentacion_formato": "PUD/PD/HPD; Congelado IQF",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Mariscos",
+    "subcategoria": "Pelados y listos",
+    "producto": "Camarones pelados crudos/cocidos",
+    "presentacion_formato": "PUD/PD; Congelado IQF",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Mariscos",
+    "subcategoria": "Envasados",
+    "producto": "Pulpo trozado al vacío",
+    "presentacion_formato": "Refrigerado/congelado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Mariscos",
+    "subcategoria": "Envasados",
+    "producto": "Centolla desmenuzada",
+    "presentacion_formato": "Al vacío; Congelado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Mariscos",
+    "subcategoria": "Mitades/valvas",
+    "producto": "Vieira en mitades o enteras",
+    "presentacion_formato": "Media valva; Congelado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Mariscos",
+    "subcategoria": "Mitades/valvas",
+    "producto": "Ostras",
+    "presentacion_formato": "Media valva; Frescas o congeladas",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Mariscos",
+    "subcategoria": "Mix",
+    "producto": "Mix de mariscos (paella/cazuela)",
+    "presentacion_formato": "Congelado IQF",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Elaborados - Mariscos",
+    "subcategoria": "Escabeches",
+    "producto": "Escabeches de mariscos",
+    "presentacion_formato": "Frasco",
+    "ejemplos_notas": "Mejillón, calamar, langostino"
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Pescados",
+    "producto": "Atún en lata",
+    "presentacion_formato": "Natural; En aceite; En escabeche",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Pescados",
+    "producto": "Caballa en lata",
+    "presentacion_formato": "Natural; En aceite; En escabeche",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Pescados",
+    "producto": "Sardinas en lata",
+    "presentacion_formato": "Natural; En aceite; En tomate",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Pescados",
+    "producto": "Bonito/Jurel en conserva",
+    "presentacion_formato": "Natural; En aceite",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Pescados",
+    "producto": "Ventresca de atún/bonito",
+    "presentacion_formato": "En aceite",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Anchoas",
+    "producto": "Anchoas en sal / filetes en aceite",
+    "presentacion_formato": "Frasco/lata",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Cefalópodos",
+    "producto": "Calamares en su tinta / en aceite",
+    "presentacion_formato": "Lata",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Moluscos",
+    "producto": "Mejillones en escabeche / al natural",
+    "presentacion_formato": "Lata/frasco",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Moluscos",
+    "producto": "Berberechos / almejas en conserva",
+    "presentacion_formato": "Lata",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Crustáceos",
+    "producto": "Centolla en conserva",
+    "presentacion_formato": "Frasco/lata",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Moluscos",
+    "producto": "Cholga / navajas (según disponibilidad)",
+    "presentacion_formato": "Lata",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Conservas/Latas/Frascos",
+    "subcategoria": "Marinos varios",
+    "producto": "Escabeches artesanales",
+    "presentacion_formato": "Frascos",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Ahumados/Curados",
+    "subcategoria": "Ahumados",
+    "producto": "Trucha ahumado",
+    "presentacion_formato": "Feteado al vacío; Por pieza",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Ahumados/Curados",
+    "subcategoria": "Ahumados",
+    "producto": "Salmón ahumado",
+    "presentacion_formato": "Feteado al vacío; Por pieza",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Ahumados/Curados",
+    "subcategoria": "Ahumados",
+    "producto": "Pejerrey ahumado",
+    "presentacion_formato": "Feteado al vacío; Por pieza",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Ahumados/Curados",
+    "subcategoria": "Ahumados",
+    "producto": "Lisa ahumado",
+    "presentacion_formato": "Feteado al vacío; Por pieza",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Ahumados/Curados",
+    "subcategoria": "Ahumados",
+    "producto": "Corvina ahumado",
+    "presentacion_formato": "Feteado al vacío; Por pieza",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Ahumados/Curados",
+    "subcategoria": "Ahumados",
+    "producto": "Surubí ahumado",
+    "presentacion_formato": "Feteado al vacío; Por pieza",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Ahumados/Curados",
+    "subcategoria": "Ahumados",
+    "producto": "Dorado ahumado",
+    "presentacion_formato": "Feteado al vacío; Por pieza",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Ahumados/Curados",
+    "subcategoria": "Ahumados",
+    "producto": "Merluza negra ahumado",
+    "presentacion_formato": "Feteado al vacío; Por pieza",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Ahumados/Curados",
+    "subcategoria": "Curados",
+    "producto": "Mojama (lomos curados)",
+    "presentacion_formato": "Por pieza/feteado",
+    "ejemplos_notas": "Atún/bonito según disponibilidad"
+  },
+  {
+    "categoria": "Ahumados/Curados",
+    "subcategoria": "Curados",
+    "producto": "Botarga/hueva seca de lisa (según disponibilidad)",
+    "presentacion_formato": "Entera o rallada",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Listos para comer",
+    "subcategoria": "Platos",
+    "producto": "Paella lista para calentar",
+    "presentacion_formato": "Congelado/refrigerado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Listos para comer",
+    "subcategoria": "Platos",
+    "producto": "Cazuela de mariscos",
+    "presentacion_formato": "Congelado/refrigerado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Listos para comer",
+    "subcategoria": "Platos",
+    "producto": "Sopa de pescado / crema de mariscos",
+    "presentacion_formato": "Congelado/refrigerado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Listos para comer",
+    "subcategoria": "Platos",
+    "producto": "Empanadas de pescado/mariscos",
+    "presentacion_formato": "Crudas listas para horno; Cocidas",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Listos para comer",
+    "subcategoria": "Platos",
+    "producto": "Tartas de pescado/mariscos",
+    "presentacion_formato": "Crudas listas; Cocidas",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Listos para comer",
+    "subcategoria": "Sushi y afines",
+    "producto": "Sushi (rolls, nigiri, sashimi)",
+    "presentacion_formato": "Bandejas listas",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Listos para comer",
+    "subcategoria": "Sándwiches/otros",
+    "producto": "Sándwich de salmón ahumado",
+    "presentacion_formato": "Refrigerado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Listos para comer",
+    "subcategoria": "Ensaladas",
+    "producto": "Ensalada de mar (pulpo, calamar, langostinos)",
+    "presentacion_formato": "Refrigerado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Pastas y panificados",
+    "subcategoria": "Pastas rellenas",
+    "producto": "Ravioles / sorrentinos de salmón o trucha",
+    "presentacion_formato": "Congelado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Pastas y panificados",
+    "subcategoria": "Pastas rellenas",
+    "producto": "Agnolotti/capelettis de merluza/mariscos",
+    "presentacion_formato": "Congelado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Pastas y panificados",
+    "subcategoria": "Platos con pescado",
+    "producto": "Lasaña de pescado",
+    "presentacion_formato": "Congelado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Pastas y panificados",
+    "subcategoria": "Pizzas",
+    "producto": "Pizza de mar / con atún",
+    "presentacion_formato": "Congelado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Pastas y panificados",
+    "subcategoria": "Tapas y rellenos",
+    "producto": "Tapas de empanadas con relleno de pescado",
+    "presentacion_formato": "Congelado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Untables y salsas",
+    "subcategoria": "Patés",
+    "producto": "Paté de atún / caballa / salmón / merluza",
+    "presentacion_formato": "Frasco/tarro",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Untables y salsas",
+    "subcategoria": "Mousses/Rillettes",
+    "producto": "Mousse/rillette de salmón o mariscos",
+    "presentacion_formato": "Frasco/tarro",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Untables y salsas",
+    "subcategoria": "Brandade",
+    "producto": "Brandade de bacalao",
+    "presentacion_formato": "Frasco/tarro",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Untables y salsas",
+    "subcategoria": "Salsas marinas",
+    "producto": "Salsa de anchoas / de mejillones / de camarones",
+    "presentacion_formato": "Frasco/botella",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Caldos y bases",
+    "subcategoria": "Caldos/Fondos",
+    "producto": "Fumet de pescado concentrado",
+    "presentacion_formato": "Líquido, en pasta o cubo",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Caldos y bases",
+    "subcategoria": "Cremas y bisques",
+    "producto": "Base de bisque de mariscos",
+    "presentacion_formato": "Refrigerado/congelado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Caldos y bases",
+    "subcategoria": "Glace",
+    "producto": "Glace de pescado (reducción)",
+    "presentacion_formato": "Refrigerado/congelado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Otros procesados",
+    "subcategoria": "Surimi",
+    "producto": "Palitos de cangrejo (kanikama)",
+    "presentacion_formato": "Refrigerado/congelado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Complementos",
+    "subcategoria": "Algas",
+    "producto": "Nori (láminas) / wakame rehidratada",
+    "presentacion_formato": "Seco/refrigerado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Complementos",
+    "subcategoria": "Condimentos marinos",
+    "producto": "Salsa de soja, wasabi, jengibre encurtido (para sushi)",
+    "presentacion_formato": "No perecedero/refrigerado",
+    "ejemplos_notas": ""
+  },
+  {
+    "categoria": "Complementos",
+    "subcategoria": "Aceites y especias",
+    "producto": "Aceites saborizados con mariscos / sal marina / panko",
+    "presentacion_formato": "Varios",
+    "ejemplos_notas": ""
+  }
+]
