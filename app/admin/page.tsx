@@ -5,18 +5,22 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Checkbox } from "@/components/ui/checkbox"
 import stockData from '../../bogavante-stock/stock.json'
 
-interface StockItem {
+interface ProductoAgrupado {
   categoria: string
   subcategoria: string
   producto: string
-  presentacion: string
-  unidad: string
-  ejemplos_notas: string
-  precio?: string
-  disponible?: boolean
-  id?: string
+  presentaciones: {
+    nombre: string
+    unidad: string
+    disponible: boolean
+    precio: string
+    ejemplos_notas: string
+  }[]
+  unidadSeleccionada: string
+  id: string
 }
 
 const unidadLabels: { [key: string]: string } = {
@@ -30,53 +34,111 @@ const unidadLabels: { [key: string]: string } = {
 }
 
 export default function AdminStockPage() {
-  const [productos, setProductos] = useState<StockItem[]>([])
+  const [productos, setProductos] = useState<ProductoAgrupado[]>([])
   const [filtroCategoria, setFiltroCategoria] = useState<string>('all')
-  const [filtroUnidad, setFiltroUnidad] = useState<string>('all')
   const [busqueda, setBusqueda] = useState<string>('')
   
-  // Initialize products from JSON
+  // Initialize products from JSON - Group by product name
   useEffect(() => {
-    const productosConEstado = stockData.map((item, index) => ({
-      ...item,
-      id: `${item.categoria}-${item.producto}-${item.presentacion}-${index}`,
-      precio: '',
-      disponible: false
-    }))
-    setProductos(productosConEstado)
+    const productosAgrupados: { [key: string]: ProductoAgrupado } = {}
+    
+    stockData.forEach((item, index) => {
+      const key = `${item.categoria}-${item.producto}`
+      
+      if (!productosAgrupados[key]) {
+        // Get all possible units for this product
+        const unidadesDisponibles = stockData
+          .filter(p => p.categoria === item.categoria && p.producto === item.producto)
+          .map(p => p.unidad)
+        const uniqueUnidades = [...new Set(unidadesDisponibles)]
+        
+        productosAgrupados[key] = {
+          categoria: item.categoria,
+          subcategoria: item.subcategoria,
+          producto: item.producto,
+          presentaciones: [],
+          unidadSeleccionada: uniqueUnidades[0] || 'kg', // Default to first available unit
+          id: key
+        }
+      }
+      
+      productosAgrupados[key].presentaciones.push({
+        nombre: item.presentacion,
+        unidad: item.unidad,
+        disponible: false,
+        precio: '',
+        ejemplos_notas: item.ejemplos_notas
+      })
+    })
+    
+    setProductos(Object.values(productosAgrupados))
   }, [])
 
-  // Get unique categories and units
+  // Get unique categories
   const categorias = ['all', ...Array.from(new Set(stockData.map(item => item.categoria)))]
-  const unidades = ['all', ...Array.from(new Set(stockData.map(item => item.unidad)))]
 
   // Filter products
   const productosFiltrados = productos.filter(producto => {
     const matchCategoria = filtroCategoria === 'all' || producto.categoria === filtroCategoria
-    const matchUnidad = filtroUnidad === 'all' || producto.unidad === filtroUnidad
-    const matchBusqueda = producto.producto.toLowerCase().includes(busqueda.toLowerCase()) ||
-                         producto.presentacion.toLowerCase().includes(busqueda.toLowerCase())
-    return matchCategoria && matchUnidad && matchBusqueda
+    const matchBusqueda = producto.producto.toLowerCase().includes(busqueda.toLowerCase())
+    return matchCategoria && matchBusqueda
   })
 
-  const actualizarPrecio = (id: string, precio: string) => {
+  const cambiarUnidad = (productId: string, nuevaUnidad: string) => {
     setProductos(productos.map(p => 
-      p.id === id ? { ...p, precio } : p
+      p.id === productId ? { ...p, unidadSeleccionada: nuevaUnidad } : p
     ))
   }
 
-  const cambiarDisponibilidad = (id: string) => {
-    setProductos(productos.map(p => 
-      p.id === id ? { ...p, disponible: !p.disponible } : p
-    ))
+  const cambiarPresentacion = (productId: string, presentacionIndex: number, disponible: boolean) => {
+    setProductos(productos.map(p => {
+      if (p.id === productId) {
+        const newPresentaciones = [...p.presentaciones]
+        newPresentaciones[presentacionIndex] = {
+          ...newPresentaciones[presentacionIndex],
+          disponible
+        }
+        return { ...p, presentaciones: newPresentaciones }
+      }
+      return p
+    }))
+  }
+
+  const actualizarPrecio = (productId: string, presentacionIndex: number, precio: string) => {
+    setProductos(productos.map(p => {
+      if (p.id === productId) {
+        const newPresentaciones = [...p.presentaciones]
+        newPresentaciones[presentacionIndex] = {
+          ...newPresentaciones[presentacionIndex],
+          precio
+        }
+        return { ...p, presentaciones: newPresentaciones }
+      }
+      return p
+    }))
   }
 
   const guardarStock = () => {
-    const productosDisponibles = productos.filter(p => p.disponible && p.precio)
+    const productosDisponibles: any[] = []
+    
+    productos.forEach(producto => {
+      producto.presentaciones.forEach(presentacion => {
+        if (presentacion.disponible && presentacion.precio) {
+          productosDisponibles.push({
+            categoria: producto.categoria,
+            subcategoria: producto.subcategoria,
+            producto: producto.producto,
+            presentacion: presentacion.nombre,
+            unidad: producto.unidadSeleccionada,
+            precio: presentacion.precio,
+            ejemplos_notas: presentacion.ejemplos_notas
+          })
+        }
+      })
+    })
+    
     console.log('Stock guardado:', productosDisponibles)
     alert(`¡Stock guardado! ${productosDisponibles.length} productos disponibles`)
-    
-    // Save to localStorage (can be upgraded to database later)
     localStorage.setItem('bogavante-stock', JSON.stringify(productosDisponibles))
   }
 
@@ -99,24 +161,13 @@ export default function AdminStockPage() {
     return colores[categoria] || 'bg-gray-100 text-gray-800'
   }
 
-  const getUnidadColor = (unidad: string) => {
-    const colores: { [key: string]: string } = {
-      'kg': 'bg-green-500 text-white',
-      'unidad': 'bg-blue-500 text-white',
-      'docena': 'bg-purple-500 text-white',
-      'porción': 'bg-orange-500 text-white',
-      'bandeja': 'bg-pink-500 text-white',
-      'paquete': 'bg-indigo-500 text-white',
-      'litro': 'bg-cyan-500 text-white'
-    }
-    return colores[unidad] || 'bg-gray-500 text-white'
-  }
-
-  const productosDisponibles = productos.filter(p => p.disponible).length
+  const totalProductosDisponibles = productos.reduce((total, producto) => {
+    return total + producto.presentaciones.filter(p => p.disponible && p.precio).length
+  }, 0)
 
   return (
     <div className="min-h-screen bg-gray-50 p-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-blue-900 mb-2">
@@ -127,17 +178,17 @@ export default function AdminStockPage() {
               Total: {productos.length} productos
             </Badge>
             <Badge variant="default" className="px-4 py-2 bg-green-500">
-              Disponibles: {productosDisponibles}
+              Disponibles: {totalProductosDisponibles}
             </Badge>
           </div>
         </div>
 
         {/* Filters */}
         <div className="mb-6 space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Search */}
             <Input
-              placeholder="🔍 Buscar producto o presentación..."
+              placeholder="🔍 Buscar producto..."
               value={busqueda}
               onChange={(e) => setBusqueda(e.target.value)}
             />
@@ -153,94 +204,120 @@ export default function AdminStockPage() {
                 <option key={categoria} value={categoria}>{categoria}</option>
               ))}
             </select>
-
-            {/* Unit Filter */}
-            <select
-              value={filtroUnidad}
-              onChange={(e) => setFiltroUnidad(e.target.value)}
-              className="p-2 border rounded-md"
-            >
-              <option value="all">⚖️ Todas las unidades</option>
-              {unidades.slice(1).map(unidad => (
-                <option key={unidad} value={unidad}>{unidad}</option>
-              ))}
-            </select>
           </div>
         </div>
 
         {/* Products Grid */}
-        <div className="grid gap-3 mb-8">
-          {productosFiltrados.map((producto) => (
-            <Card key={producto.id} className={`shadow-sm transition-all hover:shadow-md ${producto.disponible ? 'ring-2 ring-green-300 bg-green-50' : 'bg-white'}`}>
-              <CardContent className="p-4">
-                <div className="flex flex-col lg:flex-row lg:items-center gap-4">
-                  
-                  {/* Product Info */}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-center gap-2 mb-2">
-                      <h3 className="text-lg font-semibold text-gray-800 truncate">
-                        {producto.producto}
-                      </h3>
-                      <Badge className={getCategoriaColor(producto.categoria)} variant="secondary">
-                        {producto.categoria}
-                      </Badge>
-                      <Badge className={getUnidadColor(producto.unidad)}>
-                        {producto.unidad}
-                      </Badge>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-1 text-sm text-gray-600">
-                      <p>
+        <div className="grid gap-4 mb-8">
+          {productosFiltrados.map((producto) => {
+            const unidadesDisponibles = [...new Set(producto.presentaciones.map(p => p.unidad))]
+            const presentacionesFiltradas = producto.presentaciones.filter(p => 
+              p.unidad === producto.unidadSeleccionada
+            )
+            
+            return (
+              <Card key={producto.id} className="shadow-sm">
+                <CardContent className="p-6">
+                  {/* Product Header */}
+                  <div className="flex flex-col lg:flex-row lg:items-start gap-4 mb-4">
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-center gap-2 mb-2">
+                        <h3 className="text-2xl font-bold text-gray-800">
+                          {producto.producto}
+                        </h3>
+                        <Badge className={getCategoriaColor(producto.categoria)} variant="secondary">
+                          {producto.categoria}
+                        </Badge>
+                      </div>
+                      <p className="text-sm text-gray-600">
                         <span className="font-medium">Subcategoría:</span> {producto.subcategoria}
                       </p>
-                      <p>
-                        <span className="font-medium">Presentación:</span> {producto.presentacion}
-                      </p>
                     </div>
-                    
-                    {producto.ejemplos_notas && (
-                      <p className="text-xs text-gray-500 mt-1 truncate">
-                        <span className="font-medium">Notas:</span> {producto.ejemplos_notas}
-                      </p>
-                    )}
+
+                    {/* Unit Selector */}
+                    <div className="flex flex-col items-start lg:items-end gap-2">
+                      <label className="text-sm font-medium text-gray-700">Unidad de venta:</label>
+                      <select
+                        value={producto.unidadSeleccionada}
+                        onChange={(e) => cambiarUnidad(producto.id, e.target.value)}
+                        className="p-2 border rounded-md bg-white min-w-[120px]"
+                      >
+                        {unidadesDisponibles.map(unidad => (
+                          <option key={unidad} value={unidad}>
+                            {unidad} ({unidadLabels[unidad] || `/${unidad}`})
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
 
-                  {/* Controls */}
-                  <div className="flex items-center space-x-3 lg:justify-end">
-                    {/* Price Input */}
-                    <div className="flex items-center space-x-1">
-                      <span className="text-sm text-gray-600">$</span>
-                      <Input
-                        type="number"
-                        placeholder="0000"
-                        value={producto.precio}
-                        onChange={(e) => actualizarPrecio(producto.id!, e.target.value)}
-                        className="w-20 text-center text-sm"
-                        disabled={!producto.disponible}
-                      />
-                      <span className="text-xs text-gray-600 whitespace-nowrap">
-                        {unidadLabels[producto.unidad] || `/${producto.unidad}`}
-                      </span>
-                    </div>
+                  {/* Presentations */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-gray-700 border-b pb-2">
+                      Presentaciones disponibles:
+                    </h4>
                     
-                    {/* Availability Toggle */}
-                    <Button
-                      variant={producto.disponible ? "default" : "outline"}
-                      onClick={() => cambiarDisponibilidad(producto.id!)}
-                      size="sm"
-                      className={`whitespace-nowrap ${
-                        producto.disponible 
-                          ? 'bg-green-500 hover:bg-green-600' 
-                          : 'bg-gray-400 hover:bg-gray-500 text-white border-gray-400'
-                      }`}
-                    >
-                      {producto.disponible ? '✅ DISPONIBLE' : '❌ NO DISP.'}
-                    </Button>
+                    {presentacionesFiltradas.length === 0 && (
+                      <p className="text-gray-500 italic">
+                        No hay presentaciones disponibles para la unidad seleccionada
+                      </p>
+                    )}
+                    
+                    {presentacionesFiltradas.map((presentacion, index) => {
+                      const originalIndex = producto.presentaciones.findIndex(p => 
+                        p.nombre === presentacion.nombre && p.unidad === presentacion.unidad
+                      )
+                      
+                      return (
+                        <div key={`${presentacion.nombre}-${index}`} 
+                             className={`flex items-center gap-4 p-3 rounded-lg border transition-all ${
+                               presentacion.disponible ? 'bg-green-50 border-green-200' : 'bg-gray-50 border-gray-200'
+                             }`}>
+                          
+                          {/* Checkbox */}
+                          <Checkbox
+                            checked={presentacion.disponible}
+                            onCheckedChange={(checked) => 
+                              cambiarPresentacion(producto.id, originalIndex, checked as boolean)
+                            }
+                            className="w-5 h-5"
+                          />
+                          
+                          {/* Presentation Info */}
+                          <div className="flex-1">
+                            <p className="font-medium text-gray-800">
+                              {presentacion.nombre}
+                            </p>
+                            {presentacion.ejemplos_notas && (
+                              <p className="text-xs text-gray-500">
+                                {presentacion.ejemplos_notas}
+                              </p>
+                            )}
+                          </div>
+                          
+                          {/* Price Input */}
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm text-gray-600">$</span>
+                            <Input
+                              type="number"
+                              placeholder="0000"
+                              value={presentacion.precio}
+                              onChange={(e) => actualizarPrecio(producto.id, originalIndex, e.target.value)}
+                              className="w-24 text-center"
+                              disabled={!presentacion.disponible}
+                            />
+                            <span className="text-sm text-gray-600 whitespace-nowrap min-w-[50px]">
+                              {unidadLabels[producto.unidadSeleccionada] || `/${producto.unidadSeleccionada}`}
+                            </span>
+                          </div>
+                        </div>
+                      )
+                    })}
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                </CardContent>
+              </Card>
+            )
+          })}
         </div>
 
         {/* No results message */}
@@ -258,7 +335,7 @@ export default function AdminStockPage() {
             onClick={guardarStock}
             className="bg-green-600 hover:bg-green-700 text-white text-xl py-4 px-8 shadow-lg rounded-full"
           >
-            💾 GUARDAR STOCK ({productosDisponibles})
+            💾 GUARDAR STOCK ({totalProductosDisponibles})
           </Button>
         </div>
 
