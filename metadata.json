@@ -1,0 +1,969 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-01-03",
+    "description": "Content filtering schema for Bogavante app - maps fish species to content categories",
+    "location": "Argentina"
+  },
+
+  "especies": {
+    "pescados": [
+      {
+        "id": "abadejo",
+        "nombre": "Abadejo",
+        "nombre_cientifico": "Genypterus blacodes",
+        "tipo": "pescado",
+        "categoria": "Blanco de profundidad",
+        "aliases": ["pollack", "pollock", "abadejo", "coalfish"],
+        "presentaciones": [
+          "Filete sin piel",
+          "Filete con piel",
+          "Entero eviscerado",
+          "Tronco",
+          "Medallones"
+        ],
+        "caracteristicas": {
+          "textura": "Firme",
+          "sabor": "Suave",
+          "grasa": "Bajo",
+          "color_carne": "Blanco"
+        },
+        "metodos_coccion_recomendados": ["Horno", "Plancha", "Vapor", "Frito"],
+        "temporada_mejor": ["Mayo", "Junio", "Julio", "Agosto"],
+        "precio_rango": "medio",
+        "popular_argentina": true
+      },
+      {
+        "id": "anchoa",
+        "nombre": "Anchoa de banco / Anchoíta",
+        "nombre_cientifico": "Engraulis anchoita",
+        "tipo": "pescado",
+        "categoria": "Azul pequeño",
+        "aliases": ["anchovy", "anchoa", "anchoíta", "anchovy fillet"],
+        "presentaciones": ["Entero fresco", "Filetes", "En conserva", "Salado"],
+        "caracteristicas": {
+          "textura": "Delicada",
+          "sabor": "Intenso",
+          "grasa": "Alto",
+          "color_carne": "Oscuro"
+        },
+        "metodos_coccion_recomendados": [
+          "Frito",
+          "Marinado",
+          "Escabeche",
+          "Conserva"
+        ],
+        "temporada_mejor": ["Marzo", "Abril", "Mayo", "Septiembre"],
+        "precio_rango": "bajo",
+        "popular_argentina": true
+      },
+      {
+        "id": "besugo",
+        "nombre": "Besugo",
+        "nombre_cientifico": "Pagrus pagrus",
+        "tipo": "pescado",
+        "categoria": "Blanco noble",
+        "aliases": ["sea bream", "besugo", "porgy", "bream"],
+        "presentaciones": ["Entero", "Filete", "Mariposa"],
+        "caracteristicas": {
+          "textura": "Firme",
+          "sabor": "Delicado",
+          "grasa": "Medio",
+          "color_carne": "Blanco rosado"
+        },
+        "metodos_coccion_recomendados": ["Horno", "Parrilla", "Sal", "Vapor"],
+        "temporada_mejor": ["Diciembre", "Enero", "Febrero"],
+        "precio_rango": "alto",
+        "popular_argentina": true
+      },
+      {
+        "id": "bonito",
+        "nombre": "Bonito",
+        "nombre_cientifico": "Sarda sarda",
+        "tipo": "pescado",
+        "categoria": "Azul medio",
+        "aliases": ["bonito", "skipjack", "little tunny"],
+        "presentaciones": ["Filete", "Rodajas", "Entero"],
+        "caracteristicas": {
+          "textura": "Firme",
+          "sabor": "Intenso",
+          "grasa": "Alto",
+          "color_carne": "Rojo oscuro"
+        },
+        "metodos_coccion_recomendados": [
+          "Plancha",
+          "Parrilla",
+          "Crudo",
+          "Conserva"
+        ],
+        "temporada_mejor": ["Octubre", "Noviembre", "Diciembre", "Enero"],
+        "precio_rango": "medio",
+        "popular_argentina": true
+      },
+      {
+        "id": "brotola",
+        "nombre": "Brótola",
+        "nombre_cientifico": "Salilota australis",
+        "tipo": "pescado",
+        "categoria": "Blanco de profundidad",
+        "aliases": ["cusk", "ling", "brótola"],
+        "presentaciones": ["Filete sin piel", "Tronco", "Cola"],
+        "caracteristicas": {
+          "textura": "Muy firme",
+          "sabor": "Suave",
+          "grasa": "Bajo",
+          "color_carne": "Blanco"
+        },
+        "metodos_coccion_recomendados": [
+          "Horno",
+          "Parrilla",
+          "Plancha",
+          "Guisos"
+        ],
+        "temporada_mejor": ["Todo el año"],
+        "precio_rango": "medio",
+        "popular_argentina": true
+      },
+      {
+        "id": "caballa",
+        "nombre": "Caballa",
+        "nombre_cientifico": "Scomber japonicus",
+        "tipo": "pescado",
+        "categoria": "Azul pequeño",
+        "aliases": ["mackerel", "caballa", "scomber"],
+        "presentaciones": ["Entero", "Filete", "En conserva"],
+        "caracteristicas": {
+          "textura": "Firme",
+          "sabor": "Intenso",
+          "grasa": "Alto",
+          "color_carne": "Oscuro"
+        },
+        "metodos_coccion_recomendados": [
+          "Plancha",
+          "Horno",
+          "Escabeche",
+          "Ahumado"
+        ],
+        "temporada_mejor": ["Abril", "Mayo", "Junio"],
+        "precio_rango": "bajo",
+        "popular_argentina": true
+      },
+      {
+        "id": "cazon",
+        "nombre": "Cazón",
+        "nombre_cientifico": "Galeorhinus galeus",
+        "tipo": "pescado",
+        "categoria": "Cazón/Tiburón",
+        "aliases": ["dogfish", "cazón", "school shark", "tope shark"],
+        "presentaciones": ["Tronco sin piel", "Filete", "Trozos"],
+        "caracteristicas": {
+          "textura": "Muy firme",
+          "sabor": "Suave",
+          "grasa": "Bajo",
+          "color_carne": "Blanco rosado"
+        },
+        "metodos_coccion_recomendados": [
+          "Frito",
+          "Guisos",
+          "Escabeche",
+          "Empanadas"
+        ],
+        "temporada_mejor": ["Todo el año"],
+        "precio_rango": "medio-bajo",
+        "popular_argentina": true
+      },
+      {
+        "id": "congrio",
+        "nombre": "Congrio",
+        "nombre_cientifico": "Conger conger",
+        "tipo": "pescado",
+        "categoria": "Blanco alargado",
+        "aliases": ["conger", "congrio", "conger eel"],
+        "presentaciones": ["Rodajas", "Trozos", "Filetes"],
+        "caracteristicas": {
+          "textura": "Gelatinosa",
+          "sabor": "Delicado",
+          "grasa": "Medio",
+          "color_carne": "Blanco"
+        },
+        "metodos_coccion_recomendados": [
+          "Caldos",
+          "Guisos",
+          "Sopas",
+          "Estofados"
+        ],
+        "temporada_mejor": ["Invierno"],
+        "precio_rango": "bajo",
+        "popular_argentina": false
+      },
+      {
+        "id": "corvina",
+        "nombre": "Corvina",
+        "nombre_cientifico": "Micropogonias furnieri",
+        "tipo": "pescado",
+        "categoria": "Blanco noble",
+        "aliases": ["croaker", "drum", "corvina", "sea bass", "corvina negra"],
+        "presentaciones": [
+          "Filete sin piel",
+          "Filete con piel",
+          "Entero",
+          "Suprema"
+        ],
+        "caracteristicas": {
+          "textura": "Firme",
+          "sabor": "Delicado",
+          "grasa": "Bajo",
+          "color_carne": "Blanco"
+        },
+        "metodos_coccion_recomendados": [
+          "Plancha",
+          "Horno",
+          "Parrilla",
+          "Vapor"
+        ],
+        "temporada_mejor": ["Verano"],
+        "precio_rango": "alto",
+        "popular_argentina": true
+      },
+      {
+        "id": "gatuzo",
+        "nombre": "Gatuzo",
+        "nombre_cientifico": "Mustelus schmitti",
+        "tipo": "pescado",
+        "categoria": "Cazón/Tiburón",
+        "aliases": ["smoothhound", "gatuzo", "mustelus"],
+        "presentaciones": ["Tronco sin piel", "Trozos", "Filete"],
+        "caracteristicas": {
+          "textura": "Muy firme",
+          "sabor": "Suave",
+          "grasa": "Bajo",
+          "color_carne": "Blanco rosado"
+        },
+        "metodos_coccion_recomendados": [
+          "Frito",
+          "Milanesa",
+          "Guisos",
+          "Empanadas"
+        ],
+        "temporada_mejor": ["Todo el año"],
+        "precio_rango": "bajo",
+        "popular_argentina": true
+      },
+      {
+        "id": "lenguado",
+        "nombre": "Lenguado",
+        "nombre_cientifico": "Paralichthys spp",
+        "tipo": "pescado",
+        "categoria": "Blanco plano premium",
+        "aliases": ["sole", "flounder", "lenguado"],
+        "presentaciones": ["Filete sin piel", "Entero", "Mariposa"],
+        "caracteristicas": {
+          "textura": "Delicada",
+          "sabor": "Muy suave",
+          "grasa": "Muy bajo",
+          "color_carne": "Blanco"
+        },
+        "metodos_coccion_recomendados": [
+          "Plancha",
+          "Vapor",
+          "Horno",
+          "Meuniere"
+        ],
+        "temporada_mejor": ["Invierno"],
+        "precio_rango": "muy-alto",
+        "popular_argentina": true
+      },
+      {
+        "id": "merluza",
+        "nombre": "Merluza común",
+        "nombre_cientifico": "Merluccius hubbsi",
+        "tipo": "pescado",
+        "categoria": "Blanco universal",
+        "aliases": ["hake", "merluza", "merlusa", "pescada"],
+        "presentaciones": [
+          "Filete sin piel",
+          "Filete con piel",
+          "Entero eviscerado",
+          "Rodajas",
+          "Tronco",
+          "Cola"
+        ],
+        "caracteristicas": {
+          "textura": "Delicada",
+          "sabor": "Suave",
+          "grasa": "Bajo",
+          "color_carne": "Blanco"
+        },
+        "metodos_coccion_recomendados": [
+          "Horno",
+          "Plancha",
+          "Vapor",
+          "Frito",
+          "Rebozado"
+        ],
+        "temporada_mejor": ["Todo el año"],
+        "precio_rango": "medio",
+        "popular_argentina": true
+      },
+      {
+        "id": "pejerrey",
+        "nombre": "Pejerrey de mar",
+        "nombre_cientifico": "Odontesthes spp",
+        "tipo": "pescado",
+        "categoria": "Blanco pequeño",
+        "aliases": ["sea silverside", "pejerrey de mar", "silverside"],
+        "presentaciones": ["Entero", "Filete"],
+        "caracteristicas": {
+          "textura": "Delicada",
+          "sabor": "Suave",
+          "grasa": "Bajo",
+          "color_carne": "Blanco plateado"
+        },
+        "metodos_coccion_recomendados": ["Plancha", "Frito", "Escabeche"],
+        "temporada_mejor": ["Verano"],
+        "precio_rango": "medio",
+        "popular_argentina": true
+      },
+      {
+        "id": "pescadilla",
+        "nombre": "Pescadilla",
+        "nombre_cientifico": "Cynoscion guatucupa",
+        "tipo": "pescado",
+        "categoria": "Blanco mediano",
+        "aliases": ["whiting", "pescadilla", "silver hake"],
+        "presentaciones": ["Filete", "Entero", "Tronco"],
+        "caracteristicas": {
+          "textura": "Delicada",
+          "sabor": "Suave",
+          "grasa": "Bajo",
+          "color_carne": "Blanco"
+        },
+        "metodos_coccion_recomendados": [
+          "Frito",
+          "Plancha",
+          "Horno",
+          "Rebozado"
+        ],
+        "temporada_mejor": ["Verano"],
+        "precio_rango": "medio-bajo",
+        "popular_argentina": true
+      },
+      {
+        "id": "salmon",
+        "nombre": "Salmón blanco",
+        "nombre_cientifico": "Salmo salar (cultivado)",
+        "tipo": "pescado",
+        "categoria": "Rosado premium",
+        "aliases": ["salmon", "salmón", "white salmon", "atlantic salmon"],
+        "presentaciones": [
+          "Filete sin piel",
+          "Filete con piel",
+          "Suprema",
+          "Ahumado",
+          "Entero"
+        ],
+        "caracteristicas": {
+          "textura": "Firme",
+          "sabor": "Rico",
+          "grasa": "Alto",
+          "color_carne": "Rosado-naranja"
+        },
+        "metodos_coccion_recomendados": [
+          "Plancha",
+          "Horno",
+          "Parrilla",
+          "Crudo",
+          "Ahumado"
+        ],
+        "temporada_mejor": ["Todo el año (cultivado)"],
+        "precio_rango": "alto",
+        "popular_argentina": true
+      },
+      {
+        "id": "trucha",
+        "nombre": "Trucha (fresco y congelado)",
+        "nombre_cientifico": "Oncorhynchus mykiss",
+        "tipo": "pescado",
+        "categoria": "Rosado cultivado",
+        "aliases": ["trout", "trucha", "rainbow trout", "trucha arcoíris"],
+        "presentaciones": [
+          "Entero",
+          "Filete sin piel",
+          "Filete con piel",
+          "Ahumado"
+        ],
+        "caracteristicas": {
+          "textura": "Firme",
+          "sabor": "Delicado",
+          "grasa": "Medio",
+          "color_carne": "Rosado"
+        },
+        "metodos_coccion_recomendados": [
+          "Plancha",
+          "Horno",
+          "Parrilla",
+          "Ahumado"
+        ],
+        "temporada_mejor": ["Todo el año (cultivado)"],
+        "precio_rango": "medio",
+        "popular_argentina": true
+      }
+    ],
+
+    "mariscos": [
+      {
+        "id": "langostino",
+        "nombre": "Langostino",
+        "nombre_cientifico": "Pleoticus muelleri",
+        "tipo": "marisco",
+        "categoria": "Crustáceo premium",
+        "aliases": [
+          "prawn",
+          "shrimp",
+          "langostino",
+          "langostinos",
+          "camarón",
+          "gambas"
+        ],
+        "presentaciones": [
+          "Entero con cáscara",
+          "Pelado crudo",
+          "Pelado cocido",
+          "Cola con cáscara",
+          "Argentino extra grande"
+        ],
+        "caracteristicas": {
+          "textura": "Firme",
+          "sabor": "Dulce",
+          "color_cocido": "Rosado-naranja"
+        },
+        "metodos_coccion_recomendados": [
+          "Plancha",
+          "Salteado",
+          "Parrilla",
+          "Hervido",
+          "Al ajillo"
+        ],
+        "temporada_mejor": ["Marzo", "Abril", "Mayo", "Junio"],
+        "precio_rango": "alto",
+        "popular_argentina": true
+      },
+      {
+        "id": "calamar",
+        "nombre": "Calamar",
+        "nombre_cientifico": "Illex argentinus",
+        "tipo": "marisco",
+        "categoria": "Cefalópodo",
+        "aliases": ["squid", "calamari", "calamar", "calamares"],
+        "presentaciones": [
+          "Entero limpio",
+          "Tubo",
+          "Anillos",
+          "Tentáculos",
+          "Rabas (rebozadas)"
+        ],
+        "caracteristicas": {
+          "textura": "Firme-elástica",
+          "sabor": "Suave marino",
+          "color": "Blanco translúcido"
+        },
+        "metodos_coccion_recomendados": [
+          "Frito",
+          "Plancha",
+          "Parrilla",
+          "Relleno",
+          "Guisos"
+        ],
+        "temporada_mejor": ["Verano"],
+        "precio_rango": "medio",
+        "popular_argentina": true
+      },
+      {
+        "id": "pulpo",
+        "nombre": "Pulpo",
+        "nombre_cientifico": "Octopus vulgaris",
+        "tipo": "marisco",
+        "categoria": "Cefalópodo premium",
+        "aliases": ["octopus", "pulpo"],
+        "presentaciones": ["Entero", "Tentáculos", "Precocido congelado"],
+        "caracteristicas": {
+          "textura": "Firme (si bien cocido)",
+          "sabor": "Intenso marino",
+          "color": "Púrpura (crudo), blanco-rosado (cocido)"
+        },
+        "metodos_coccion_recomendados": [
+          "Hervido",
+          "Parrilla",
+          "A la gallega",
+          "Guisos"
+        ],
+        "temporada_mejor": ["Todo el año"],
+        "precio_rango": "alto",
+        "popular_argentina": true
+      },
+      {
+        "id": "mejillon",
+        "nombre": "Mejillón",
+        "nombre_cientifico": "Mytilus edulis platensis",
+        "tipo": "marisco",
+        "categoria": "Molusco bivalvo",
+        "aliases": ["mussel", "mejillón", "mejillones", "mussels"],
+        "presentaciones": [
+          "Vivo con concha",
+          "Cocido sin concha",
+          "Media concha"
+        ],
+        "caracteristicas": {
+          "textura": "Tierna",
+          "sabor": "Marino intenso",
+          "color": "Naranja-amarillo"
+        },
+        "metodos_coccion_recomendados": [
+          "Vapor",
+          "Marinera",
+          "Escabeche",
+          "Guisos"
+        ],
+        "temporada_mejor": ["Otoño", "Invierno"],
+        "precio_rango": "bajo",
+        "popular_argentina": true
+      },
+      {
+        "id": "almeja",
+        "nombre": "Almeja",
+        "nombre_cientifico": "Ameghinomya antiqua",
+        "tipo": "marisco",
+        "categoria": "Molusco bivalvo",
+        "aliases": ["clam", "almeja", "almejas", "clams"],
+        "presentaciones": ["Viva con concha", "Carne limpia"],
+        "caracteristicas": {
+          "textura": "Tierna",
+          "sabor": "Marino suave",
+          "color": "Blanco-crema"
+        },
+        "metodos_coccion_recomendados": ["Vapor", "Guisos", "Pasta", "Caldos"],
+        "temporada_mejor": ["Verano"],
+        "precio_rango": "medio",
+        "popular_argentina": false
+      },
+      {
+        "id": "vieira",
+        "nombre": "Vieira",
+        "nombre_cientifico": "Zygochlamys patagonica",
+        "tipo": "marisco",
+        "categoria": "Molusco bivalvo premium",
+        "aliases": ["scallop", "vieira", "vieiras", "scallops"],
+        "presentaciones": ["Músculo limpio", "Con coral", "En concha"],
+        "caracteristicas": {
+          "textura": "Muy tierna",
+          "sabor": "Dulce delicado",
+          "color": "Blanco-crema"
+        },
+        "metodos_coccion_recomendados": [
+          "Plancha",
+          "Gratinadas",
+          "Crudo",
+          "Salteadas"
+        ],
+        "temporada_mejor": ["Invierno"],
+        "precio_rango": "muy-alto",
+        "popular_argentina": true
+      },
+      {
+        "id": "centolla",
+        "nombre": "Centolla",
+        "nombre_cientifico": "Lithodes santolla",
+        "tipo": "marisco",
+        "categoria": "Crustáceo premium patagónico",
+        "aliases": [
+          "king crab",
+          "centolla",
+          "spider crab",
+          "southern king crab"
+        ],
+        "presentaciones": ["Entera cocida", "Carne limpia", "Patas"],
+        "caracteristicas": {
+          "textura": "Muy firme",
+          "sabor": "Dulce intenso",
+          "color": "Blanco rosado"
+        },
+        "metodos_coccion_recomendados": ["Hervida", "Al vapor", "Gratinada"],
+        "temporada_mejor": ["Julio", "Agosto", "Septiembre"],
+        "precio_rango": "muy-alto",
+        "popular_argentina": true
+      }
+    ]
+  },
+
+  "categorias_contenido": {
+    "recetas": {
+      "metodos_coccion": [
+        {
+          "id": "horno",
+          "nombre": "Horno",
+          "descripcion": "Cocción en horno convencional o a la parrilla",
+          "especies_ideales": [
+            "merluza",
+            "salmon",
+            "besugo",
+            "corvina",
+            "brotola",
+            "abadejo"
+          ]
+        },
+        {
+          "id": "plancha",
+          "nombre": "Plancha",
+          "descripcion": "Cocción rápida en plancha o sartén",
+          "especies_ideales": [
+            "salmon",
+            "trucha",
+            "lenguado",
+            "corvina",
+            "langostino",
+            "vieira"
+          ]
+        },
+        {
+          "id": "parrilla",
+          "nombre": "Parrilla",
+          "descripcion": "A la parrilla o BBQ",
+          "especies_ideales": [
+            "salmon",
+            "besugo",
+            "bonito",
+            "langostino",
+            "pulpo",
+            "calamar"
+          ]
+        },
+        {
+          "id": "frito",
+          "nombre": "Frito",
+          "descripcion": "Fritura en aceite, rebozado o empanado",
+          "especies_ideales": [
+            "merluza",
+            "pescadilla",
+            "cazon",
+            "gatuzo",
+            "calamar",
+            "anchoa"
+          ]
+        },
+        {
+          "id": "vapor",
+          "nombre": "Vapor",
+          "descripcion": "Cocción al vapor",
+          "especies_ideales": [
+            "lenguado",
+            "merluza",
+            "corvina",
+            "mejillon",
+            "vieira"
+          ]
+        },
+        {
+          "id": "crudo",
+          "nombre": "Crudo",
+          "descripcion": "Preparaciones en crudo (ceviche, tiradito, sashimi)",
+          "especies_ideales": ["salmon", "bonito", "vieira", "langostino"]
+        },
+        {
+          "id": "guiso",
+          "nombre": "Guisos y estofados",
+          "descripcion": "Cocciones largas en líquido",
+          "especies_ideales": [
+            "congrio",
+            "cazon",
+            "gatuzo",
+            "calamar",
+            "pulpo",
+            "mejillon"
+          ]
+        }
+      ],
+
+      "dificultad": [
+        {
+          "nivel": "Fácil",
+          "descripcion": "Preparaciones simples, pocos ingredientes, técnicas básicas",
+          "tiempo_max": "30min"
+        },
+        {
+          "nivel": "Medio",
+          "descripcion": "Requiere algo de experiencia, varias técnicas",
+          "tiempo_max": "60min"
+        },
+        {
+          "nivel": "Difícil",
+          "descripcion": "Técnicas avanzadas, timing preciso, múltiples pasos",
+          "tiempo_max": "120min+"
+        }
+      ],
+
+      "tipo_plato": [
+        "Entrada",
+        "Principal",
+        "Acompañamiento",
+        "Tapa",
+        "Ensalada",
+        "Sopa/Caldo",
+        "Conserva"
+      ]
+    },
+
+    "notas_de_mar": {
+      "categorias": [
+        {
+          "id": "compras",
+          "nombre": "Compras",
+          "descripcion": "Cómo elegir, reconocer frescura, almacenar",
+          "keywords": [
+            "fresco",
+            "comprar",
+            "elegir",
+            "conservar",
+            "almacenar",
+            "congelar",
+            "descongelar"
+          ],
+          "especies_aplicables": "todas"
+        },
+        {
+          "id": "preparacion",
+          "nombre": "Preparación",
+          "descripcion": "Técnicas de limpieza, corte, preparación previa",
+          "keywords": [
+            "limpiar",
+            "filetear",
+            "cortar",
+            "preparar",
+            "desespinar",
+            "pelar"
+          ],
+          "especies_aplicables": "todas"
+        },
+        {
+          "id": "coccion",
+          "nombre": "Cocción",
+          "descripcion": "Técnicas y secretos de cocción",
+          "keywords": ["cocinar", "temperatura", "tiempo", "punto", "técnica"],
+          "especies_aplicables": "todas"
+        },
+        {
+          "id": "sabores",
+          "nombre": "Sabores",
+          "descripcion": "Marinadas, condimentos, maridajes",
+          "keywords": [
+            "marinada",
+            "especias",
+            "condimento",
+            "sabor",
+            "adobo",
+            "maridaje",
+            "vino"
+          ],
+          "especies_aplicables": "todas"
+        },
+        {
+          "id": "tecnicas",
+          "nombre": "Técnicas",
+          "descripcion": "Técnicas culinarias específicas",
+          "keywords": ["técnica", "método", "truco", "profesional", "chef"],
+          "especies_aplicables": "todas"
+        },
+        {
+          "id": "conservacion",
+          "nombre": "Conservación",
+          "descripcion": "Escabeche, ahumado, salazón, conservas",
+          "keywords": [
+            "conservar",
+            "escabeche",
+            "ahumado",
+            "salazón",
+            "conserva",
+            "encurtido"
+          ],
+          "especies_aplicables": [
+            "anchoa",
+            "caballa",
+            "bonito",
+            "salmon",
+            "mejillon"
+          ]
+        }
+      ]
+    },
+
+    "salud": {
+      "categorias": [
+        {
+          "id": "nutricion",
+          "nombre": "Nutrición",
+          "descripcion": "Valores nutricionales, beneficios para la salud",
+          "keywords": [
+            "omega-3",
+            "proteína",
+            "vitaminas",
+            "minerales",
+            "calorías",
+            "nutrientes"
+          ],
+          "especies_destacadas": [
+            "salmon",
+            "bonito",
+            "caballa",
+            "anchoa",
+            "trucha"
+          ]
+        },
+        {
+          "id": "comparativas",
+          "nombre": "Comparativas",
+          "descripcion": "Comparación entre especies o con otras proteínas",
+          "keywords": ["vs", "comparación", "diferencias", "mejor", "elegir"],
+          "especies_aplicables": "todas"
+        },
+        {
+          "id": "familia",
+          "nombre": "Familia",
+          "descripcion": "Pescado para niños, recetas familiares",
+          "keywords": ["niños", "familia", "kids", "bebés", "infantil"],
+          "especies_recomendadas": [
+            "merluza",
+            "lenguado",
+            "corvina",
+            "salmon",
+            "trucha"
+          ]
+        },
+        {
+          "id": "embarazo",
+          "nombre": "Embarazo",
+          "descripcion": "Consumo seguro durante embarazo y lactancia",
+          "keywords": [
+            "embarazo",
+            "embarazada",
+            "lactancia",
+            "gestación",
+            "seguro",
+            "mercurio"
+          ],
+          "especies_seguras": [
+            "merluza",
+            "salmon",
+            "trucha",
+            "corvina",
+            "lenguado",
+            "langostino"
+          ],
+          "especies_evitar": ["bonito_grande", "cazones_grandes"]
+        },
+        {
+          "id": "deporte",
+          "nombre": "Deporte",
+          "descripcion": "Pescado para deportistas, recuperación muscular",
+          "keywords": [
+            "deporte",
+            "músculo",
+            "proteína",
+            "recuperación",
+            "fitness",
+            "rendimiento"
+          ],
+          "especies_ideales": [
+            "salmon",
+            "trucha",
+            "bonito",
+            "corvina",
+            "langostino"
+          ]
+        },
+        {
+          "id": "salud_cardiovascular",
+          "nombre": "Salud Cardiovascular",
+          "descripcion": "Beneficios para el corazón",
+          "keywords": [
+            "corazón",
+            "cardiovascular",
+            "colesterol",
+            "triglicéridos",
+            "presión"
+          ],
+          "especies_ideales": [
+            "salmon",
+            "caballa",
+            "bonito",
+            "anchoa",
+            "trucha"
+          ]
+        }
+      ]
+    }
+  },
+
+  "reglas_clasificacion": {
+    "recetas": {
+      "detectar_especie": {
+        "prioridad": ["titulo", "ingrediente_principal", "contenido"],
+        "umbral_confianza": 0.7
+      },
+      "detectar_metodo": {
+        "keywords_por_metodo": {
+          "horno": ["horno", "horneado", "gratinado", "asado"],
+          "plancha": ["plancha", "sartén", "sellado"],
+          "parrilla": ["parrilla", "grillado", "brasa", "bbq"],
+          "frito": ["frito", "fritura", "rebozado", "empanado", "milanesa"],
+          "vapor": ["vapor", "vaporera"],
+          "crudo": ["crudo", "ceviche", "tiradito", "sashimi", "carpaccio"],
+          "guiso": ["guiso", "estofado", "cazuela", "cocido"]
+        }
+      }
+    },
+
+    "notas_de_mar": {
+      "clasificar_por_keywords": true,
+      "keywords_peso": {
+        "titulo": 3,
+        "primeros_parrafos": 2,
+        "contenido_general": 1
+      }
+    },
+
+    "salud": {
+      "requiere_citas": true,
+      "detectar_beneficios": [
+        "omega-3",
+        "proteína",
+        "vitaminas",
+        "bajo en grasa",
+        "hierro",
+        "calcio",
+        "fósforo"
+      ]
+    }
+  },
+
+  "filtros_extraccion": {
+    "paginas_excluir": {
+      "sin_especies": true,
+      "sin_contenido_relevante": true,
+      "indices_tabla_contenidos": true
+    },
+
+    "longitud_minima": {
+      "receta_ingredientes": 2,
+      "receta_pasos": 2,
+      "nota_palabras": 50,
+      "salud_palabras": 100
+    },
+
+    "calidad_score": {
+      "tiene_especie_identificada": 30,
+      "tiene_metodo_coccion": 20,
+      "tiene_tiempo_preparacion": 10,
+      "tiene_ingredientes_completos": 20,
+      "tiene_pasos_detallados": 20
+    }
+  }
+}

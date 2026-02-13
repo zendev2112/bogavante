@@ -1,0 +1,2306 @@
+{
+  "book_full_name": "Favorite Fish and Seafood Recipes -- by John Davis; illustrated by Kevin Carter -- Winona Lake, IN, Indiana, 1995 -- Pinegrove Pub_; Pinegrove Pub",
+  "book_info": {
+    "full_name": "Favorite Fish and Seafood Recipes -- by John Davis; illustrated by Kevin Carter -- Winona Lake, IN, Indiana, 1995 -- Pinegrove Pub_; Pinegrove Pub",
+    "title": "Favorite Fish and Seafood Recipes",
+    "author": "by John Davis; illustrated by Kevin Carter",
+    "year": "Winona Lake, IN, Indiana, 1995",
+    "publisher": "Pinegrove Pub_; Pinegrove Pub"
+  },
+  "book_title": "los libros anteriores o copias adicionales de esta receta",
+  "table_of_contents": [
+    {
+      "title": "este tees",
+      "page": 18,
+      "toc_page": 7
+    },
+    {
+      "title": "o.sccctecsssanecs coenecereterariveedtces sos reetes",
+      "page": 67,
+      "toc_page": 7
+    },
+    {
+      "title": "tes stmeneiarenieechae evel stank",
+      "page": 135,
+      "toc_page": 7
+    },
+    {
+      "title": "le eeeeeretiameanet tern treses",
+      "page": 210,
+      "toc_page": 7
+    },
+    {
+      "title": "Gelssanceresoe eee mee eeestcetsar ee zesik",
+      "page": 213,
+      "toc_page": 7
+    },
+    {
+      "title": "CGE BBIGNKS csc cssrcsseccsecy ncubocssarerermerect herons saassvtvas",
+      "page": 221,
+      "toc_page": 7
+    }
+  ],
+  "detected_language": "en",
+  "language_name": "English",
+  "total_fish_recipes": 82,
+  "recipes": [
+    {
+      "title": "Una amplia variedad de mariscos ahora está disponible en",
+      "title_original": "A wide array of seafood is now available at",
+      "page": 10,
+      "pages_span": null,
+      "ingredients": [],
+      "steps": [],
+      "prep_time": null,
+      "difficulty": null,
+      "ingredients_count": null,
+      "qualifying_reason": [
+        "easy"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Una amplia variedad de mariscos ahora está disponible en \nsupermercados en todo el país, pero no todo es lo mejor \ncalidad o fresco. Te daremos algunos consejos básicos sobre \ncómo comprar pescados y mariscos para que los problemas de salud puedan ser \nprevenido.",
+      "full_text_original": "A wide array of seafood is now available at \nsupermarkets across the country, but not all is top \nquality or fresh. We will provide some basic tips on \nhow to buy fish and seafood so health problems can be \nprevented."
+    },
+    {
+      "title": "El pescado fresco no debe conservarse en el frigorífico.",
+      "title_original": "Fresh fish should not be kept in the refrigerator",
+      "page": 15,
+      "pages_span": null,
+      "ingredients": [
+        "El pescado fresco no debe conservarse en el frigorífico.",
+        "más de dos días. El almacenamiento de pescado a largo plazo suele",
+        "requiere congelación. Todo el pescado debe limpiarse antes"
+      ],
+      "steps": [],
+      "prep_time": null,
+      "difficulty": null,
+      "ingredients_count": 3,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "El pescado fresco no debe conservarse en el frigorífico. \nmás de dos días. El almacenamiento de pescado a largo plazo suele \nrequiere congelación. Todo el pescado debe limpiarse antes \ncongelación y cuanto más rápido sea, mejor.",
+      "full_text_original": "Fresh fish should not be kept in the refrigerator \nmore than two days. Long term storage of fish usually \nrequires freezing. All fish should be cleaned before \nfreezing and the quicker the freeze, the better."
+    },
+    {
+      "title": "Una excelente manera de determinar el tiempo de cocción.",
+      "title_original": "An excellent way to determine the cooking time",
+      "page": 17,
+      "pages_span": null,
+      "ingredients": [
+        "de pescado es medir el diámetro del pescado en su",
+        "Por ejemplo, si un salmón medía 2 pulgadas en su"
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 2,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Una excelente manera de determinar el tiempo de cocción. \nde pescado es medir el diámetro del pescado en su \npunto más ancho y deje 10 minutos de tiempo de cocción para \ncada pulgada o fracción de la misma. \nPor ejemplo, si un salmón medía 2 pulgadas en su \nEn el punto más ancho, el tiempo de cocción sería de 20 minutos.",
+      "full_text_original": "An excellent way to determine the cooking time \nof fish is to measure the diameter of the fish at its \nwidest point, and allow 10 minutes cooking time for \neach inch or fraction thereof. \nFor example, if a salmon measured 2-inches at its \nwidest point, the cooking time would be 20 minutes."
+    },
+    {
+      "title": "Este método a menudo se denomina Método Canadiense de",
+      "title_original": "This method is often called the Canadian Method of",
+      "page": 17,
+      "pages_span": [
+        17,
+        18
+      ],
+      "ingredients": [
+        "Tanto con pescado congelado como con pescado fresco. ellos",
+        "Sugerimos que el pescado no se descongele, sino que se cocine congelado.",
+        "en lugar de los 20 del pescado fresco. Freír congelado",
+        "No se recomienda el pescado.",
+        "ries: 1. Freír (hervir el pescado",
+        "en aceite o manteca de cerdo"
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 6,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Este método a menudo se denomina Método Canadiense de \ncocinar y es ampliamente utilizado por chefs y al aire libre \ngente. \nLa cocción debe realizarse a los 10 minutos por cada \npulgada en un horno a 450° F. \nSegún algunos chefs, este enfoque funciona. \nTanto con pescado congelado como con pescado fresco. ellos \nSugerimos que el pescado no se descongele, sino que se cocine congelado. \ncon el tiempo duplicado por pulgada de diámetro. Para examen- \n15 \n\nPor ejemplo, un diámetro de dos pulgadas se cocinará durante 40 minutos. \nen lugar de los 20 del pescado fresco. Freír congelado \nNo se recomienda el pescado. \nLos métodos de cocción se dividen en al menos cinco categorías. \nries: 1. Freír (hervir el pescado \nen aceite o manteca de cerdo \n375° F.), 2. Freír (freír, sofreír y freír) \nfreír), \n3. Cocción en seco (hornear, asar y hornear). \nfreír) 4. Cocción húmeda (cocer al vapor, estofar, escalfar) \ny 5. Microondas.",
+      "full_text_original": "This method is often called the Canadian Method of \ncooking and is widely used by chefs and outdoor \npeople. \nBaking should be done at 10 minutes for each \ninch in a 450° F. oven. \nAccording to some chefs, this approach works \njust as well with frozen fish as it does with fresh. They \nsuggest that the fish not be thawed, but cooked frozen \nwith the time doubled per inch of diameter. For exam- \n15 \n\nple, a two-inch diameter will be cooked for 40 minutes \nrather than the 20 for fresh fish. Deep frying frozen \nfish is not recommended. \nCooking methods fall into at least five catego- \nries: 1. Deep-frying (boiling the fish \nin oil or lard at \n375° F.), 2. Frying (pan-frying, stir-frying and pan- \nfrying), \n3. Dry Cooking (baking, broiling, and oven- \nfrying) 4. Wet Cooking (steaming, braising, poaching) \nand 5. Microwave."
+    },
+    {
+      "title": "Los siguientes son algunos de los métodos básicos de",
+      "title_original": "The following are some of the basic methods of",
+      "page": 18,
+      "pages_span": null,
+      "ingredients": [
+        "cocinar pescado:",
+        "Freír: El pescado se recubre con una masa y",
+        "sumergido en aceite calentado a 375° F. El tiempo de cocción suele ser",
+        "entre 425° F. y 450° F. El pescado se puede hornear sin-",
+        "Cubra la superficie donde se colocará el pescado con aceite."
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 5,
+      "qualifying_reason": [
+        "easy",
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Los siguientes son algunos de los métodos básicos de \ncocinar pescado: \nFreír: El pescado se recubre con una masa y \nsumergido en aceite calentado a 375° F. El tiempo de cocción suele ser \nunos 10 minutos por pulgada a esta temperatura. \nHornear: El horno debe precalentarse para que esté \nentre 425° F. y 450° F. El pescado se puede hornear sin- \nsin envolver o puede envolverse en papel o papel de aluminio para \nque se debería permitir una cantidad adicional de tiempo en \npara que el calor pueda penetrar el revestimiento. \nAsar: Antes de precalentar el asador, asegúrese de \nCubra la superficie donde se colocará el pescado con aceite.",
+      "full_text_original": "The following are some of the basic methods of \ncooking fish: \nDeep Frying: Fish are coated with a batter and \ndipped in oil heated to 375° F. Cooking time is usually \nabout 10 minutes per inch at this temperature. \nBaking: The oven should be pre-heated to be- \ntween 425° F. and 450° F. The fish can be baked with- \nout wrapping or it may be wrapped in paper or foil for \nwhich an extra amount of time should be allowed in \norder that the heat might penetrate the covering. \nBroiling: Before preheating the broiler, be sure to \ncoat the surface where the fish will be placed with oil."
+    },
+    {
+      "title": "El pescado debe colocarse entre tres y cuatro pulgadas",
+      "title_original": "The fish should positioned about three to four inches",
+      "page": 18,
+      "pages_span": [
+        18,
+        19
+      ],
+      "ingredients": [
+        "El pescado debe colocarse entre tres y cuatro pulgadas",
+        "nivel de 500° F a 525° F). Si el pescado está congelado o aliñado,",
+        "a menudo con aceite o mantequilla.",
+        "algunos grandes resultados. El pescado debe colocarse en una superficie bien",
+        "rejilla engrasada o un trozo de papel de aluminio y colocado no más cerca que",
+        "importante para evitar que el pescado se seque.",
+        "pulgada de mantequilla derretida o aceite en una sartén. el pescado esta frito",
+        "Coloque el pescado empanizado cerca de la parte superior del horno.",
+        "sartén ligeramente engrasada. Rocíe el pescado con mantequilla o aceite durante",
+        "el pescado que contiene. El momento es el mismo que con otros",
+        "un diente de ajo (cortado en tiras finas) en mantequilla durante aproximadamente",
+        "sartén y luego coloque el pescado encima. Vierta rojo o blanco."
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "El pescado debe colocarse entre tres y cuatro pulgadas \ndel calor (la mayoría de los asadores producirán calor a la \nnivel de 500° F a 525° F). Si el pescado está congelado o aliñado, \ncolóquelo a cinco pulgadas del fuego. Asegúrate de rociar \na menudo con aceite o mantequilla. \n16 \n\nAsar a la parrilla: este método de cocinar pescados y mariscos \nha ganado gran popularidad en los últimos años y produce \nalgunos grandes resultados. El pescado debe colocarse en una superficie bien \nrejilla engrasada o un trozo de papel de aluminio y colocado no más cerca que \nA quince centímetros de las llamas. Es importante hilvanar con frecuencia. \nimportante para evitar que el pescado se seque. \nFreír en sartén: este método generalmente requiere 1/4- \npulgada de mantequilla derretida o aceite en una sartén. el pescado esta frito \nhasta que esté dorado por un lado, luego se le da la vuelta. \nFreír en horno: Precaliente el horno a 500° F. y \nColoque el pescado empanizado cerca de la parte superior del horno. \nsartén ligeramente engrasada. Rocíe el pescado con mantequilla o aceite durante \nel tiempo de cocción. \nEscalfado: Poner a hervir leche o agua y colocar \nel pescado que contiene. El momento es el mismo que con otros \nMétodos: aproximadamente 10 minutos por pulgada de espesor. \nEstofado: Comience salteando zanahorias, cebollas y \nun diente de ajo (cortado en tiras finas) en mantequilla durante aproximadamente \ncinco minutos. Disponerlas en el fondo de una fritura. \nsartén y luego coloque el pescado encima. Vierta rojo o blanco. \nvino o una mezcla de vino y caldo de pescado hasta que \ncubre la mitad del pescado. Una vez que el líquido hierva, \ndeje 10 minutos de cocción por cada pulgada de espesor. \nCocer al vapor: coloque el pescado en un plato o rejilla encima \nagua hirviendo. Coloca una tapa sobre la olla o el wok. Cocinar \nEl tiempo seguirá el método canadiense descrito anteriormente. \n17",
+      "full_text_original": "The fish should positioned about three to four inches \nfrom the heat (Most broilers will produce heat at the \n500° F. to 525° F. level). If the fish is frozen or dressed, \nplace it five inches from the heat. Be sure to baste \noften with oil or butter. \n16 \n\nGrilling: This method of cooking fish and seafood \nhas gained great popularity in recent years and yields \nsome great results. Fish should be placed on a well- \noiled rack or piece of foil and positioned no closer than \nsix inches from the flames. Basting frequently is impor- \ntant to prevent the fish from drying out. \nPan Frying: This method usually requires 1/4- \ninch of melted butter or oil in a pan. The fish is fried \nuntil golden brown on one side, then it is turned. \nOven Frying: Preheat the oven to 500° F. and \nplaced breaded fish near the top of the oven ona \nlightly greased pan. Baste fish with butter or oil during \nthe cooking time. \nPoaching: Bring milk or water to a boil and place \nthe fish in it. The timing is the same as with other \nmethods---about 10 minutes per inch of thickness. \nBraising: Begin by sauteing carrots, onions and \na clove of garlic (cut in thin strips) in butter for about \nfive minutes. Arrange them on the bottom of a frying \npan then place the fish on top. Pour in red or white \nwine or a mixture of wine and fish bouillon until it \ncovers one-half the fish. Once the liquid reaches a boil, \nallow 10 minutes cooking time per inch of thickness. \nSteaming: Position fish on a plate or rack above \nboiling water. Place a lid over the pot or wok. Cooking \ntime will follow the Canadian Method described above. \n17"
+    },
+    {
+      "title": "Se puede aplicar con brocha sobre casi cualquier variedad de pescado mientras",
+      "title_original": "May be brushed on almost any variety of fish while",
+      "page": 26,
+      "pages_span": null,
+      "ingredients": [
+        "Se puede aplicar con brocha sobre casi cualquier variedad de pescado mientras",
+        "asar u hornear. Sin embargo, primero sazone el pescado con sal.",
+        "y pimienta. Ingredientes para aproximadamente 1 1/2 libras. filetes:",
+        "1/8 libra de mantequilla, derretida (1/2 barra)",
+        "2 cucharadas. salsa de soja",
+        "1 cucharadita ajo en polvo",
+        "1 cucharada. aceite de oliva",
+        "2 cucharadas. jugo de limon",
+        "para rociar el pescado (cada pocos minutos para asar, cada",
+        "Cortesía de Duane R. Lund, Salsas, condimentos y adobos para pescado y"
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 10,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Se puede aplicar con brocha sobre casi cualquier variedad de pescado mientras \nasar u hornear. Sin embargo, primero sazone el pescado con sal. \ny pimienta. Ingredientes para aproximadamente 1 1/2 libras. filetes: \n1/8 libra de mantequilla, derretida (1/2 barra) \n2 cucharadas. salsa de soja \n1 cucharadita ajo en polvo \n1 cucharada. aceite de oliva \n2 cucharadas. jugo de limon \n1. Licuar todos los ingredientes, mantener caliente y utilizar. \npara rociar el pescado (cada pocos minutos para asar, cada \n10 minutos para hornear). \nCortesía de Duane R. Lund, Salsas, condimentos y adobos para pescado y \nJuego salvaje.",
+      "full_text_original": "May be brushed on almost any variety of fish while \nbroiling or baking. Season fish first, however, with salt \nand pepper. Ingredients for about 1 1/2 lbs. fillets: \n1/8 lb. butter, melted (1/2 stick) \n2 Tbsp. soy sauce \n1 tsp. garlic powder \n1 Tbsp. olive oil \n2 Tbsp. lemon juice \n1. Blend together all ingredients, keep warm and use \nto baste fish (every few minutes for broiling, every \n10 minutes for baking). \nCourtesy Duane R. Lund, Sauces, Seasonings and Marinades for Fish and \nWild Game."
+    },
+    {
+      "title": "pizca de sal",
+      "title_original": "Dash of salt",
+      "page": 28,
+      "pages_span": null,
+      "ingredients": [
+        "pizca de sal",
+        "Suficiente mantequilla para sofreír la cebolla y el ajo.",
+        "1. Saltear la cebolla y el ajo hasta que la cebolla esté",
+        "para pescado y"
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 4,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "pizca de sal \nSuficiente mantequilla para sofreír la cebolla y el ajo. \n1. Saltear la cebolla y el ajo hasta que la cebolla esté \nclaro; tenga cuidado de no quemarse. \n2. Agregue todos los demás ingredientes. \n3. Deje cocinar a fuego lento durante 10 minutos, revolviendo \nregularmente para mezclar bien. \nCortesía de Duane R. Lund, Salsas, condimentos y adobos \npara pescado y \nJuego salvaje. \nde e228 2 ae 2 2 ae fe 2 \nae 9 2 oe 9k 2 2k aK 2K OK",
+      "full_text_original": "Dash of salt \nEnough butter to saute onion and garlic \n1. Saute the onion and garlic until the onion is \nclear; be careful not to burn. \n2. Add all other ingredients. \n3. Let simmer over low heat for 10 minutes, stirring \nregularly to blend thoroughly. \nCourtesy Duane R. Lund, Sauces, Seasonings, and Marinades \nfor Fish and \nWild Game. \nof e228 2 ae 2 2 ae fe 2 \nae 9 2 oe 9k 2 2k aK 2K OK"
+    },
+    {
+      "title": "El tiempo dependerá de la cantidad de pescado.",
+      "title_original": "The time will depend onthe amount of fish",
+      "page": 31,
+      "pages_span": null,
+      "ingredients": [
+        "El tiempo dependerá de la cantidad de pescado.",
+        "6. Vierta la leche o la nata sobre los filetes aproximadamente cada",
+        "Cortesía de Duane R. Lund, Salsas, condimentos y adobos para pescado y"
+      ],
+      "steps": [],
+      "prep_time": "30 \nminutes",
+      "difficulty": null,
+      "ingredients_count": 3,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "El tiempo dependerá de la cantidad de pescado. \ny líquido, pero \ncomience a verificar después de aproximadamente 30 \nminutos. \n6. Vierta la leche o la nata sobre los filetes aproximadamente cada \n10 minutos. \nCortesía de Duane R. Lund, Salsas, condimentos y adobos para pescado y \nJuego salvaje. \n29",
+      "full_text_original": "The time will depend onthe amount of fish \nand liquid, but \nbegin checking after about 30 \nminutes. \n6. Spoon the milk or cream over the fillets about every \n10 minutes. \nCourtesy Duane R. Lund, Sauces, Seasonings and Marinades for Fish and \nWild Game. \n29"
+    },
+    {
+      "title": "Salsa De Huevo",
+      "title_original": "Egg Sauce",
+      "page": 33,
+      "pages_span": null,
+      "ingredients": [
+        "1 cucharada. mantequilla",
+        "1 cucharada. harina",
+        "1 taza de caldo de pescado caliente*",
+        "Agregue el caldo de pescado caliente gradualmente y hierva 1 minuto."
+      ],
+      "steps": [],
+      "prep_time": "1 minute",
+      "difficulty": null,
+      "ingredients_count": 4,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Salsa De Huevo \n1 cucharada. mantequilla \n1 cucharada. harina \n1 taza de caldo de pescado caliente* \n1 huevo volk \n* Ver página 114 \n1. \nDerrita la mantequilla y agregue la harina. Mezclar bien. \n2. \nAgregue el caldo de pescado caliente gradualmente y hierva 1 minuto. \nrevolviendo constantemente. \n3.",
+      "full_text_original": "Egg Sauce \n1 Tbsp. butter \n1 Tbsp. flour \n1 cup hot fish stock* \n1 egg volk \n* See page 114 \n1. \nMelt butter and add flour. Mix well. \n2. \nAdd hot fish stock gradually and boil 1 minute \nstirring constantly. \n3."
+    },
+    {
+      "title": "Se ha observado que si los pescadores hablaran sólo",
+      "title_original": "It has been observed that if fishermen talked only",
+      "page": 42,
+      "pages_span": [
+        42,
+        43
+      ],
+      "ingredients": [],
+      "steps": [],
+      "prep_time": null,
+      "difficulty": null,
+      "ingredients_count": null,
+      "qualifying_reason": [
+        "easy"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Se ha observado que si los pescadores hablaran sólo \nsobre los peces que realmente pescaron, el silencio sería \ninsoportable. \n40 \n\nSalsa militar de Cooper \n\"La mejor salsa/dip de mariscos que he encontrado es una \nuno simple que me dio mi escuela de cocina del ejército \ninstructor hace más de 40 años.",
+      "full_text_original": "It has been observed that if fishermen talked only \nabout the fish they really caught, the silence would be \nunbearable. \n40 \n\nCooper's Army Sauce \n\"The best seafood sauce/dip I've come across is a \nsimple one given to me by my army cooking school \ninstructor more than 40 years ago."
+    },
+    {
+      "title": "Salsa Cremosa De Mostaza",
+      "title_original": "Creamy Mustard Sauce",
+      "page": 45,
+      "pages_span": null,
+      "ingredients": [
+        "Sirva sobre pescado asado o escalfado.",
+        "1 1/2 tazas de crema",
+        "4 cucharadas. mostaza",
+        "3/4 taza de cebolla o cebollino, finamente picado",
+        "sal y pimienta",
+        "Opcional: vino blanco (1/2 taza)",
+        "1. Si usas cebolla picada, saltea de 3 a 4 minutos.",
+        "en mantequilla hasta que la cebolla esté clara. Si usas cebollino,",
+        "una mezcla de cebolla y cebollino.",
+        "2. Si desea utilizar vino, agregue aproximadamente 1/2 taza al",
+        "para pescado y"
+      ],
+      "steps": [],
+      "prep_time": "4 minutes",
+      "difficulty": null,
+      "ingredients_count": 11,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Salsa Cremosa De Mostaza \nSirva sobre pescado asado o escalfado. \n1 1/2 tazas de crema \n4 cucharadas. mostaza \n3/4 taza de cebolla o cebollino, finamente picado \nsal y pimienta \nOpcional: vino blanco (1/2 taza) \n1. Si usas cebolla picada, saltea de 3 a 4 minutos. \nen mantequilla hasta que la cebolla esté clara. Si usas cebollino, \nno es necesario saltearlos. Puede optar por utilizar \nuna mezcla de cebolla y cebollino. \n2. Si desea utilizar vino, agregue aproximadamente 1/2 taza al \ncebollas y calentar hasta que se haya evaporado casi todo. \neditor; revuelva de vez en cuando para que las cebollas no \nquemar. \nCortesía de Duane R. Lund, Salsas, condimentos y adobos \npara pescado y \nJuego salvaje.",
+      "full_text_original": "Creamy Mustard Sauce \nServe over broiled or poached fish. \n1 1/2 cups of cream \n4 Tbsp. mustard \n3/4 cup onion or chives, finely chopped \nSalt and pepper \nOptional: white wine (1/2 cup) \n1. If you use chopped onion, saute for 3 to 4 minutes \nin butter until the onion is clear. If you use chives, \nthey need not be sautéed. You may choose to use \na mix of onion and chives. \n2. If you wish to use wine, add about 1/2 cup to the \nonions and heat until nearly all of it has evaporat- \ned; stir occasionally so that the onions do not \nburn. \nCourtesy Duane R. Lund, Sauces, Seasonings and Marinades \nfor Fish and \nWild Game."
+    },
+    {
+      "title": "Sal y pimienta al gusto",
+      "title_original": "Salt and pepper to taste",
+      "page": 49,
+      "pages_span": null,
+      "ingredients": [
+        "Sal y pimienta al gusto",
+        "1. Saltee los trozos de cebolla hasta que estén claros.",
+        "3. Agregue todos los demás ingredientes y sazone al gusto.",
+        "4. Sirva caliente sobre filetes, filetes o pescado al horno.",
+        "Cortesía de Duane R. Lund, Salsas, condimentos y adobos para pescado y"
+      ],
+      "steps": [],
+      "prep_time": "3 minutes",
+      "difficulty": null,
+      "ingredients_count": 5,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Sal y pimienta al gusto \n*Ver página 114 \n1. Saltee los trozos de cebolla hasta que estén claros. \n2. Agregue la harina y cocine por 3 minutos. \n3. Agregue todos los demás ingredientes y sazone al gusto. \n4. Sirva caliente sobre filetes, filetes o pescado al horno. \nCortesía de Duane R. Lund, Salsas, condimentos y adobos para pescado y \nJuego salvaje.",
+      "full_text_original": "Salt and pepper to taste \n*See page 114 \n1. Saute the onion pieces until clear. \n2. Stir in flour and cook for 3 minutes. \n3. Stir in all other ingredients, seasoning to taste. \n4. Serve hot over fillets, steaks or baked fish. \nCourtesy Duane R. Lund, Sauces, Seasonings and Marinades for Fish and \nWild Game."
+    },
+    {
+      "title": "Salsa inglesa un poco",
+      "title_original": "Dash Worcestershire sauce",
+      "page": 50,
+      "pages_span": [
+        50,
+        51
+      ],
+      "ingredients": [
+        "3. Unte parte del líquido sobre los filetes o filetes.",
+        "Adobos para pescado y caza silvestre por Duane R. Lund.",
+        "1/2 taza de mayonesa Kraft Real",
+        "1/2 taza de crema agria de leche",
+        "1/2 taza de pepino, finamente picado",
+        "2 cucharadas. cebolla, picada",
+        "1/2 cucharadita eneldo",
+        "2 cucharadas. cebolla picada muy fina",
+        "2 cucharadas. vinagre",
+        "1 cucharada. lechuga o perejil, picado",
+        "1 1/4 tazas de mayonesa",
+        "1 1/2 tazas de crema agria"
+      ],
+      "steps": [],
+      "prep_time": "20 minutes",
+      "difficulty": "medium",
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Salsa inglesa un poco \n1. A baño maría, derrita la mantequilla. \n2. Agregue todos los demás ingredientes y continúe. \nCalentar durante unos 20 minutos, revolviendo ocasionalmente. \n3. Unte parte del líquido sobre los filetes o filetes. \nmientras se asan y sirven \nequilibrio (caliente) con la comida. \nCortesía de Mary Hayenga, St. Cloud, Mn. Desde Salsas, Condimentos y \nAdobos para pescado y caza silvestre por Duane R. Lund. \n48 \n\nSalsa De Pepino - A \n1/2 taza de mayonesa Kraft Real \n1/2 taza de crema agria de leche \n1/2 taza de pepino, finamente picado \n2 cucharadas. cebolla, picada \n1/2 cucharadita eneldo \n1. Mezclar bien todos los ingredientes. \nSalsa De Pepino- B \n1 pepino mediano (con piel), rallado \n2 cucharadas. cebolla picada muy fina \n2 cucharadas. vinagre \n1 cucharada. lechuga o perejil, picado \n1 1/4 tazas de mayonesa \n1 1/2 tazas de crema agria",
+      "full_text_original": "Dash Worcestershire sauce \n1. Using a double boiler, melt the butter. \n2. Stir in all the other ingredients and continue \nheating for about 20 minutes, stirring occasionally. \n3. Brush part of the liquid on the fillets or steaks \nwhile they are broiling and serve the \nbalance (hot) with the meal. \nCourtesy Mary Hayenga, St. Cloud, Mn. From Sauces, Seasonings and \nMarinades for Fish and Wild Game by Duane R. Lund. \n48 \n\nCucumber Sauce - A \n1/2 cup Kraft Real Mayonnaise \n1/2 cup dairy sour cream \n1/2 cup cucumber, finely chopped \n2 Tbsp. onion, chopped \n1/2 tsp. dill weed \n1. Mix all ingredients well. \nCucumber Sauce- B \n1 medium cucumber (skin on), grated \n2 Tbsp. onion, chopped very fine \n2 Tbsp. vinegar \n1 Tbsp. lettuce or parsley, chopped \n1 1/4 cups mayonnaise \n1 1/2 cups sour cream"
+    },
+    {
+      "title": "Aderezo para ensalada de mariscos",
+      "title_original": "Seafood Salad Dressing",
+      "page": 58,
+      "pages_span": [
+        58,
+        59
+      ],
+      "ingredients": [
+        "2 tazas de mayonesa",
+        "1 1/2 tazas de salsa de chile",
+        "1/4 taza de pepinillos encurtidos, picados",
+        "1/4 taza de apio, picado",
+        "1 cucharadita jugo de limon",
+        "1 cucharadita rábano picante",
+        "1/2 cucharadita salsa inglesa",
+        "2 tazas de harina",
+        "1 1/2 cucharadita. sal",
+        "1 1/2 cucharadita. polvo para hornear",
+        "2/3 taza de aceite",
+        "1 taza de bisquick"
+      ],
+      "steps": [],
+      "prep_time": null,
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Aderezo para ensalada de mariscos \n2 tazas de mayonesa \n1 1/2 tazas de salsa de chile \n1/4 taza de pepinillos encurtidos, picados \n1/4 taza de apio, picado \n1 cucharadita jugo de limon \n1 cucharadita rábano picante \n1/2 cucharadita salsa inglesa \n56 \n\nBATEADORES \nBateador de bajo-A \n2 tazas de harina \n1 1/2 cucharadita. sal \n1 1/2 cucharadita. polvo para hornear \n2/3 taza de aceite \n1. Mezclar bien los ingredientes. \n2. Agregue agua para diluir y obtener la consistencia deseada. \n3. Sirva con salsa agridulce. \nBateador de bajo - B \n1 taza de bisquick \n1/2 taza de leche \n1 huevo",
+      "full_text_original": "Seafood Salad Dressing \n2 cups mayonnaise \n1 1/2 cups chili sauce \n1/4 cup sour pickles, chopped \n1/4 cup celery, chopped \n1 tsp. lemon juice \n1 tsp. horseradish \n1/2 tsp. Worcestershire sauce \n56 \n\nBATTERS \nBass Batter-A \n2 cups flour \n1 1/2 tsp. salt \n1 1/2 tsp. baking powder \n2/3 cup oil \n1. Mix ingredients well. \n2. Add water to thin to desired consistency. \n3. Serve with sweet-and-sour sauce. \nBass Batter - B \n1 cup Bisquick \n1/2 cup milk \n1 egg"
+    },
+    {
+      "title": "Sal y pimienta al gusto",
+      "title_original": "Salt and pepper to taste",
+      "page": 59,
+      "pages_span": [
+        59,
+        60
+      ],
+      "ingredients": [
+        "Sal y pimienta al gusto",
+        "2. Sumerja el pescado en la mezcla.",
+        "3. Enrollar en Bisquick mezclado con sal.",
+        "y pimienta.",
+        "2/3 taza de almidón de maíz",
+        "2/3 taza de harina de maíz",
+        "1/3 taza de harina",
+        "2 cucharaditas sal",
+        "4 cucharaditas polvo para hornear"
+      ],
+      "steps": [],
+      "prep_time": null,
+      "difficulty": null,
+      "ingredients_count": 9,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Sal y pimienta al gusto \n1. Batir la leche y los huevos. \n2. Sumerja el pescado en la mezcla. \n3. Enrollar en Bisquick mezclado con sal. \ny pimienta. \no7 \n\nBateador de bajo - C \n2/3 taza de almidón de maíz \n2/3 taza de harina de maíz \n1/3 taza de harina \n2 cucharaditas sal \n4 cucharaditas polvo para hornear \n1. Mezclar todos los ingredientes y agregar agua lentamente hasta \nSe alcanza la textura deseada.",
+      "full_text_original": "Salt and pepper to taste \n1. Beat milk and eggs. \n2. Dip fish in mixture. \n3. Roll in Bisquick which has been mixed with salt \nand pepper. \no7 \n\nBass Batter - C \n2/3 cup corn starch \n2/3 cup corn meal \n1/3 cup flour \n2 tsp. salt \n4 tsp. baking powder \n1. Mix all ingredients and add water slowly until \ndesired texture is reached."
+    },
+    {
+      "title": "sal de ajo",
+      "title_original": "Garlic salt",
+      "page": 66,
+      "pages_span": [
+        66,
+        67,
+        68
+      ],
+      "ingredients": [
+        "sal de ajo",
+        "pimienta",
+        "sal",
+        "1 cucharadita sal",
+        "1 cucharadita azúcar",
+        "1 cucharadita polvo para hornear",
+        "1 taza de harina",
+        "1 taza de cerveza (temperatura ambiente)",
+        "1 lata de cerveza ligera",
+        "1 taza de harina para todo uso",
+        "1 cucharada. sal",
+        "1 cucharada. pimienta"
+      ],
+      "steps": [],
+      "prep_time": null,
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "sal de ajo \npimienta \nsal \n1. Batir las claras hasta que queden esponjosas. \n2. Agregue los ingredientes restantes. \n2 ee ae 2 ee 2 ae 2 ae \n2 2 2 un 2 un2 \nSe volvió tan seco en el norte de Indiana, allá por los años 30, \nque había bajos de tres años que nunca habían \naprendió a nadar. \n64 \n\nMasa De Cerveza - B \n1 huevo batido \n1 cucharadita sal \n1 cucharadita azúcar \n1 cucharadita polvo para hornear \n1 taza de harina \n1 taza de cerveza (temperatura ambiente) \n1. Mezclar bien todos los ingredientes. \nMasa de cerveza - C \n1 lata de cerveza ligera \n1 taza de harina para todo uso \n1 cucharada. sal \n1 cucharada. pimienta \n1. Vierta la cerveza en un bol. \n2. Mezcle y tamice los ingredientes secos con la cerveza, revolviendo. \ncon un batidor hasta que la masa esté ligera y espumosa. \nOBR OS AE IS 26 IE, es decir, 2 2S IS oe eS he OS EK OE \nUn pulpo es un pez construido como una agencia gubernamental. \n65 \n\nMasa de cerveza - D \n1 taza de bisquick \n1/2 cucharadita sal \n1 huevo \n1 taza de cerveza \n1. \nCombine todos los ingredientes y luego cubra el pescado ligeramente.",
+      "full_text_original": "Garlic salt \nPepper \nSalt \n1. Beat egg whites until fluffy. \n2. Add remaining ingredients. \n2 ee ae 2 ee 2 ae 2 ae \n2 2 2 a 2 a2 \nIt got so dry in northern Indiana, back in the 30's, \nthat there were bass three years old that had never \nlearned to swim. \n64 \n\nBeer Batter - B \n1 egg, beaten \n1 tsp. salt \n1 tsp. sugar \n1 tsp. baking powder \n1 cup flour \n1 cup beer (room temperature) \n1. Mix all ingredients well. \nBeer Batter - C \n1 can light beer \n1 cup all-purpose flour \n1 Tbsp. salt \n1 Tbsp. pepper \n1. Pour beer into a bowl. \n2. Mix and sift dry ingredients into the beer, stirring \nwith a whisk until batter is light and frothy. \nOBR OS AE IS 26 IE Ie 2 2S IS oe eS he OS EK OE \nAn octopus is a fish built like a government agency. \n65 \n\nBeer Batter - D \n1 cup Bisquick \n1/2 tsp. salt \n1 egg \n1 cup beer \n1. \nCombine all ingredients then coat fish lightly."
+    },
+    {
+      "title": "Lubina plateada a la parrilla",
+      "title_original": "Barbecued Silver Bass",
+      "page": 72,
+      "pages_span": null,
+      "ingredients": [
+        "2 libras. filetes de lubina plateada",
+        "1/2 taza de aceite de cocina",
+        "1 cucharadita sal",
+        "pizca de pimienta",
+        "1 diente de ajo, picado",
+        "1 taza de queso cheddar, rallado",
+        "1 taza de migas de galleta.",
+        "1 taza de salsa barbacoa",
+        "Combine aceite, sal, pimienta y ajo.",
+        "Sumergir cada trozo de pescado en aceite, escurrir y enrollar.",
+        "Coloca el pescado en una fuente para horno bien engrasada.",
+        "pescado y mantener el resto caliente. Hornee el pescado y"
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Lubina plateada a la parrilla \n2 libras. filetes de lubina plateada \n1/2 taza de aceite de cocina \n1 cucharadita sal \npizca de pimienta \n1 diente de ajo, picado \n1 taza de queso cheddar, rallado \n1 taza de migas de galleta. \n1 taza de salsa barbacoa \n1. \n2. \nCombine aceite, sal, pimienta y ajo. \nMezclar el queso y las migas. \nSumergir cada trozo de pescado en aceite, escurrir y enrollar. \nmezcla de queso y migajas. \nColoca el pescado en una fuente para horno bien engrasada. \nHornee a 450°F durante 7 a 10 minutos. \nCalienta la salsa barbacoa. Vierta 1/2 de salsa encima \npescado y mantener el resto caliente. Hornee el pescado y \n5 minutos adicionales o hasta que se desmenuce fácilmente con un \ntenedor.",
+      "full_text_original": "Barbecued Silver Bass \n2 Ibs. silver bass fillets \n1/2 cup cooking oil \n1 tsp. salt \nDash pepper \n1 clove garlic, minced \n1 cup cheddar cheese, shredded \n1 cup cracker crumbs. \n1 cup barbecue sauce \n1. \n2. \nCombine oil, salt, pepper and garlic. \nMix cheese and crumbs. \nDip each piece of fish into oil, drain, and roll in \ncheese-crumb mixture. \nArrange fish in a well greased baking dish. \nBake at 450° F. for 7 to 10 minutes. \nHeat barbecue sauce. Spoon 1/2 of sauce over \nfish and keep remainder hot. Bake fish an addi- \ntional 5 minutes or until it flakes easily with a \nfork."
+    },
+    {
+      "title": "Lubina con suero de leche",
+      "title_original": "Buttermilk Bass",
+      "page": 74,
+      "pages_span": null,
+      "ingredients": [
+        "sal",
+        "pimienta",
+        "Aceite Wesson",
+        "1. Remoje el pescado durante 30 minutos en suero de leche.",
+        "2. Sazone bien la harina con sal y pimienta.",
+        "3. Sumerja el pescado en harina sazonada y fríalo unos pocos a la vez."
+      ],
+      "steps": [],
+      "prep_time": "30 minutes",
+      "difficulty": null,
+      "ingredients_count": 6,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Lubina con suero de leche \nsuero de leche \nHarina con levadura \nsal \npimienta \nAceite Wesson \n1. Remoje el pescado durante 30 minutos en suero de leche. \n2. Sazone bien la harina con sal y pimienta. \n3. Sumerja el pescado en harina sazonada y fríalo unos pocos a la vez.",
+      "full_text_original": "Buttermilk Bass \nButtermilk \nSelf-rising flour \nSalt \nPepper \nWesson Oil \n1. Soak fish 30 minutes in buttermilk. \n2. Season flour well with salt and pepper. \n3. Dip fish in seasoned flour and fry a few at a time."
+    },
+    {
+      "title": "Lubina a la parrilla con mostaza",
+      "title_original": "Mustard Grilled Bass",
+      "page": 74,
+      "pages_span": [
+        74,
+        75
+      ],
+      "ingredients": [
+        "1/4 taza de mostaza",
+        "1 cucharadita azúcar",
+        "1 1/2 a 2 libras. filetes de lubina",
+        "1/4 taza de aceite",
+        "1/2 cucharadita sal",
+        "1. Combine la mostaza, el aceite, el azúcar, la sal y la pimienta.",
+        "2. Envuelva el pescado con tocino y fíjelo con la comida."
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 7,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Lubina a la parrilla con mostaza \n1/4 taza de mostaza \n1 cucharadita azúcar \n1 1/2 a 2 libras. filetes de lubina \ntocino rebanado \n1/4 taza de aceite \n1/2 cucharadita sal \n1. Combine la mostaza, el aceite, el azúcar, la sal y la pimienta. \n2. Envuelva el pescado con tocino y fíjelo con la comida. \nselecciones. \n3. \nUnte con salsa de mostaza. \n72 \n\n4. Ase de 5 a 10 minutos. \n5. Voltee, unte con salsa y cocine a la parrilla de 5 a 10 minutos. \nmás tiempo.",
+      "full_text_original": "Mustard Grilled Bass \n1/4 cup mustard \n1 tsp. sugar \n1 1/2 to 2 lbs. bass fillets \nSliced bacon \n1/4 cup oil \n1/2 tsp. salt \n1. Combine mustard, oil, sugar, salt and pepper. \n2. Wrap bacon around fish and fasten with food \npicks. \n3. \nBrush with mustard sauce. \n72 \n\n4. Grill 5 to 10 minutes. \n5. Turn, brush with sauce and grill 5 to 10 minutes \nlonger."
+    },
+    {
+      "title": "Lubina asada con sésamo",
+      "title_original": "Sesame Broiled Bass",
+      "page": 76,
+      "pages_span": null,
+      "ingredients": [
+        "1 1/2 libras. filetes de lubina",
+        "1/2 taza de mantequilla, derretida",
+        "1 cucharada. jugo de limon",
+        "1/2 cucharadita eneldo",
+        "1 cucharada. semillas de sésamo",
+        "1. Coloque los filetes en una asadera ligeramente engrasada.",
+        "2. Rocíe el pescado con una mezcla de jugo de limón derretido.",
+        "4. Voltee los filetes y áselos por dos o más",
+        "para pescar palitos de pescado."
+      ],
+      "steps": [],
+      "prep_time": "4 minutes",
+      "difficulty": null,
+      "ingredients_count": 9,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Lubina asada con sésamo \n1 1/2 libras. filetes de lubina \n1/2 taza de mantequilla, derretida \n1 cucharada. jugo de limon \n1/2 cucharadita eneldo \n1 cucharada. semillas de sésamo \n1. Coloque los filetes en una asadera ligeramente engrasada. \n2. Rocíe el pescado con una mezcla de jugo de limón derretido. \nmantequilla y eneldo. \n3. Coloque la bandeja para asar a unas 4 pulgadas del \nfuente de calor y asar durante unos 3 o 4 minutos. \nen el primer lado. \n4. Voltee los filetes y áselos por dos o más \ntres minutos, luego retirar y espolvorear ligeramente \ncon semillas de sésamo. \n5. Regrese al asador durante aproximadamente un minuto. \nBIS 34S IE 3 IS 2 2S IS 2S OIE IE OIE Fie OIE IS OIE ES OIE 2 IE I \nAchish Featherbelt no es un gran pescador. solo \nla semana pasada preguntó qué tipo de cebo debería usar \npara pescar palitos de pescado. \n74",
+      "full_text_original": "Sesame Broiled Bass \n1 1/2 lbs. bass fillets \n1/2 cup butter, melted \n1 Tbsp. lemon juice \n1/2 tsp. dill weed \n1 Tbsp. sesame seeds \n1. Place fillets on a lightly greased broiler pan. \n2. Baste fish with a mixture of lemon juice, melted \nbutter and dill weed. \n3. Place the broiler pan about 4-inches from the \nheat source and broil for about 3 or 4 minutes \non the first side. \n4. Turn the fillets and broil for an additional two or \nthree minutes, then remove and sprinkle lightly \nwith sesame seeds. \n5. Return to the broiler for about one minute. \nBIS 34S IE 3 IS 2 2S IS 2S OIE IE OIE Fie OIE IS OIE IS OIE 2 IE I \nAchish Featherbelt is not much of a fisherman. Just \nlast week he asked what kind of bait he should use \nto catch fishsticks. \n74"
+    },
+    {
+      "title": "Bajo picante",
+      "title_original": "Spicy Bass",
+      "page": 77,
+      "pages_span": null,
+      "ingredients": [
+        "1 libra filetes de lubina",
+        "2 cucharadas. aceite",
+        "1/2 cucharadita salsa de pimiento picante",
+        "1/8 cucharadita. pimienta de cayena",
+        "1/2 cucharadita tomillo",
+        "1/2 cucharadita orégano",
+        "1/2 taza de pan rallado estilo italiano",
+        "1. En un tazón pequeño, combine el aceite y el pimiento picante.",
+        "migas, pimienta de cayena, tomillo y orégano.",
+        "3. Unte ligeramente ambos lados del pescado con la mezcla de aceite.",
+        "4. Coloque los filetes en una asadera. Ase de 4 a 5 pulgadas"
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 11,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Bajo picante \n1 libra filetes de lubina \n2 cucharadas. aceite \n1/2 cucharadita salsa de pimiento picante \n1/8 cucharadita. pimienta de cayena \n1/2 cucharadita tomillo \n1/2 cucharadita orégano \n1/2 taza de pan rallado estilo italiano \n1. En un tazón pequeño, combine el aceite y el pimiento picante. \nsalsa, reservar. \n2. Oná \nplato o plato poco profundo, combine el pan \nmigas, pimienta de cayena, tomillo y orégano. \n3. Unte ligeramente ambos lados del pescado con la mezcla de aceite. \ny luego sumergir en la mezcla de pan rallado. \n4. Coloque los filetes en una asadera. Ase de 4 a 5 pulgadas \ndel fuego durante 10 minutos o hasta que esté cocido. \nSEI a EI SE EK OE EK 2 EE EE OEE",
+      "full_text_original": "Spicy Bass \n1 Ib. bass fillets \n2 Tbsp. oil \n1/2 tsp. hot pepper sauce \n1/8 tsp. cayenne pepper \n1/2 tsp. thyme \n1/2 tsp. oregano \n1/2 cup Italian style bread crumbs \n1. In a small bowl, combine oil and hot pepper \nsauce, set aside. \n2. Ona \nshallow dish or platter, combine bread \ncrumbs, cayenne pepper, thyme and oregano. \n3. Lightly brush both sides of fish with oil mixture \nand then dip into bread crumb mixture. \n4. Place fillets on a broiler pan. Broil 4-to 5-inches \nfrom heat for 10 minutes or until done. \nSEI a EI SE EK OE EK 2 EE EE OEE"
+    },
+    {
+      "title": "Una respuesta a esta pregunta",
+      "title_original": "An answer to this question",
+      "page": 77,
+      "pages_span": [
+        77,
+        78
+      ],
+      "ingredients": [
+        "Pescado al horno Cedar Lodge",
+        "3 panecillos de hamburguesa, partidos en trozos pequeños",
+        "2 cucharadas. aceite",
+        "2 cucharadas. queso rallado",
+        "1 diente de ajo, finamente picado",
+        "1/2 cucharadita orégano",
+        "1 a 1 1/2 libras. filetes de lubina",
+        "2. Coloque los filetes de pescado en una fuente para hornear de 9\" por 13\".",
+        "5. Espolvorea con orégano y aproximadamente 2 cucharadas. de petróleo."
+      ],
+      "steps": [],
+      "prep_time": "25 minutes",
+      "difficulty": null,
+      "ingredients_count": 9,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Una respuesta a esta pregunta \nes lo que mucho deseo \n¿La pesca convierte a los hombres en mentirosos? \n¿O sólo pescan los mentirosos? \n75 \n\nPescado al horno Cedar Lodge \n3 panecillos de hamburguesa, partidos en trozos pequeños \n2 ramitas de perejil picado \n2 cucharadas. aceite \n2 cucharadas. queso rallado \n1 diente de ajo, finamente picado \n1/2 cucharadita orégano \n1/2 pimiento verde, picado \n1 a 1 1/2 libras. filetes de lubina \nLata de 8 onzas de salsa de tomate \n1. Combine los primeros 7 ingredientes en un tazón. \n2. Coloque los filetes de pescado en una fuente para hornear de 9\" por 13\". \n3. Cubra con la mezcla de pan. \n4. Vierta la salsa de tomate encima. \n5. Espolvorea con orégano y aproximadamente 2 cucharadas. de petróleo. \n6. Hornee en un horno a 400° F. durante 20 a 25 minutos. \n3 2K 2 2 25 3k 38 3s 2s Es Ik Es Es 2 2 246 2s 246 2s 26 26 \n76",
+      "full_text_original": "An answer to this question \nIs what I greatly wish \nDoes fishing make men liars--- \nOr do only liars fish? \n75 \n\nCedar Lodge Baked Fish \n3 hamburger rolls, broken into small pieces \n2 sprigs of parsley, chopped \n2 Tbsp. oil \n2 Tbsp. cheese, grated \n1 garlic clove, finely chopped \n1/2 tsp. oregano \n1/2 green pepper, chopped \n1 to 1 1/2 lbs. bass fillets \n8-ounce can tomato sauce \n1. Combine first 7 ingredients in a bowl. \n2. Place fish fillets in a 9\" by 13\" baking dish. \n3. Top with bread mixture. \n4. Pour tomato sauce on top. \n5. Sprinkle with oregano and about 2 Tbsp. of oil. \n6. Bake in a 400° F. oven for 20 to 25 minutes. \n3 2K 2 2 25 3k 38 3s 2s Is Ik Is Is 2 2 246 2s 246 2s 26 26 \n76"
+    },
+    {
+      "title": "sal y pimienta",
+      "title_original": "Salt and pepper",
+      "page": 79,
+      "pages_span": null,
+      "ingredients": [
+        "sal y pimienta",
+        "1. Hervir las agallas azules, el agua, el jugo de tomate y la sal y",
+        "pimienta lentamente durante 30 minutos.",
+        "2. Retire el pescado de las espinas y reserve.",
+        "3. Agrega el apio, la cebada, la cebolla, la albahaca, el tomillo y hierve."
+      ],
+      "steps": [],
+      "prep_time": "30 minutes",
+      "difficulty": null,
+      "ingredients_count": 5,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "sal y pimienta \n1. Hervir las agallas azules, el agua, el jugo de tomate y la sal y \npimienta lentamente durante 30 minutos. \n2. Retire el pescado de las espinas y reserve. \n3. Agrega el apio, la cebada, la cebolla, la albahaca, el tomillo y hierve. \nhasta que el apio esté tierno. \n4. Agregue el perejil, la okra y la carne de agallas azules y cocine a fuego lento 10 \nminutos. \nCortesía de Walt Such, Westvill, Illinois \nELLA aE ÉL EE 2 2 9K 2K 2 9K 2K 2K OK AK EK \n77",
+      "full_text_original": "Salt and pepper \n1. Boil bluegills, water, tomato juice and salt and \npepper slowly for 30 minutes. \n2. Remove fish from the bones and set aside. \n3. Add celery, barley, onion, basil, thyme and boil \nuntil celery is tender. \n4. Add parsley, okra and bluegill meat and simmer 10 \nminutes. \nCourtesy Walt Such, Westvill, Illinois \nSHEE aE HE EE 2 2 9K 2K 2 9K 2K 2K OK AK EK \n77"
+    },
+    {
+      "title": "Pescado Luna Al Horno",
+      "title_original": "Baked Sunfish",
+      "page": 82,
+      "pages_span": null,
+      "ingredients": [
+        "Pescado Luna Al Horno",
+        "Filetes de pez luna",
+        "Sal y pimienta del condimento de Lawry",
+        "2. Remojar el pescado sazonado en huevo y pan sazonado.",
+        "copos de pescado con tenedor."
+      ],
+      "steps": [],
+      "prep_time": "25 minutes",
+      "difficulty": null,
+      "ingredients_count": 5,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Pescado Luna Al Horno \nFiletes de pez luna \n1/2 barra de mantequilla \nSal y pimienta del condimento de Lawry \n1 huevo, bien batido \nPan rallado sazonado italiano \n1. Derrita la mantequilla en una fuente para hornear en el horno a 375° F. \n2. Remojar el pescado sazonado en huevo y pan sazonado. \nmigajas. \n3. Cocine en una fuente para horno durante 20 a 25 minutos o hasta que \ncopos de pescado con tenedor.",
+      "full_text_original": "Baked Sunfish \nSunfish fillets \n1/2 stick butter \nLawry's seasoning salt and pepper \n1 egg, well beaten \nItalian seasoned bread crumbs \n1. Melt butter in baking dish in 375° F. oven. \n2. Dip seasoned fish in egg and seasoned bread \ncrumbs. \n3. Cook in baking dish for 20 to 25 minutes or until \nfish flakes with fork."
+    },
+    {
+      "title": "Agallas azules fritas con tocino",
+      "title_original": "Bacon Fried Bluegills",
+      "page": 82,
+      "pages_span": [
+        82,
+        83
+      ],
+      "ingredients": [
+        "sal y pimienta",
+        "1. Mezclar sal, pimienta y harina.",
+        "2. Cubra bien el pescado por ambos lados.",
+        "4. Coloque el pescado en grasa de tocino caliente y fríalo durante aproximadamente"
+      ],
+      "steps": [],
+      "prep_time": "5 minutes",
+      "difficulty": null,
+      "ingredients_count": 4,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Agallas azules fritas con tocino \n8 - 10 agallas azules \nGoteo de tocino \nsal y pimienta \nHarina \n1. Mezclar sal, pimienta y harina. \n2. Cubra bien el pescado por ambos lados. \n3. Caliente 1/2 pulgada de grasa de tocino en una sartén. \n80 \n\n4. Coloque el pescado en grasa de tocino caliente y fríalo durante aproximadamente \naproximadamente de 3 a 5 minutos por cada lado. \n5. Escurrir sobre papel toalla antes de servir.",
+      "full_text_original": "Bacon Fried Bluegills \n8 - 10 bluegills \nBacon drippings \nSalt and pepper \nFlour \n1. Mix salt, pepper and flour. \n2. Coat fish well on both sides. \n3. Heat 1/2-inch bacon drippings in skillet. \n80 \n\n4. Place fish into hot bacon fat and fry for approxi- \nmately 3 to 5 minutes each side. \n5. Drain on paper towel before serving."
+    },
+    {
+      "title": "Deliciosos filetes de agallas azules",
+      "title_original": "Delicious Bluegill Fillets",
+      "page": 85,
+      "pages_span": null,
+      "ingredients": [
+        "Deliciosos filetes de agallas azules",
+        "8 - 10 filetes de agallas azules",
+        "Enrolle los filetes en galletas saladas.",
+        "minutos. Voltee los filetes a la mitad de su"
+      ],
+      "steps": [],
+      "prep_time": "15 \nminutes",
+      "difficulty": null,
+      "ingredients_count": 4,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Deliciosos filetes de agallas azules \n8 - 10 filetes de agallas azules \nGalletas Ritz, trituradas \nAderezo francés cremoso \nQueso cheddar rallado \neso \nth \n3 \n= \nEnrolle los filetes en galletas saladas. \nSumerja en aderezo francés. \n. \nEnrolle el queso. \nColóquelo en una fuente para horno engrasada. \nHornee sin tapar en un horno a 400° F. durante aproximadamente 15 \nminutos. Voltee los filetes a la mitad de su \ntiempo de horneado. \noye \nee ee ee \nHabía un joven llamado Fisher, \nQue pescaba peces en una fisura,",
+      "full_text_original": "Delicious Bluegill Fillets \n8 - 10 bluegill fillets \nRitz crackers, crushed \nCreamy French dressing \nCheddar cheese, grated \nit \nth \n3 \n= \nRoll fillets in crackers. \nDip in French dressing. \n. \nRoll in cheese. \nPlace in a greased baking dish. \nBake uncovered in a 400° F. oven for about 15 \nminutes. Turn fillets halfway through their \nbaking time. \nOe \nee ee ee \nThere was a young fellow named Fisher, \nWho was fishing for fish in a fissure,"
+    },
+    {
+      "title": "Un bacalao con una sonrisa",
+      "title_original": "A cod with a grin",
+      "page": 85,
+      "pages_span": [
+        85,
+        86
+      ],
+      "ingredients": [
+        "Un bacalao con una sonrisa",
+        "filetes de carpa",
+        "2 1/2 tazas de tomates enlatados o jugo de tomate",
+        "1 cebolla, rebanada",
+        "2 cucharadas. harina",
+        "1/2 cucharadita sal",
+        "1/4 cucharadita pimienta",
+        "2 cucharadas. mantequilla",
+        "1. Combine 2 1/2 tazas de tomates enlatados o tomates",
+        "jugo, 1/2 cucharadita. sal, 1/4 cucharadita. pimienta y en rodajas",
+        "cebolla.",
+        "3. Derrita 2 cucharadas. mantequilla y agregue 2 cucharadas. harina."
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Un bacalao con una sonrisa \nAtrajo al pescador \nAhora están pescando la fisura en busca de Fisher. \n83 \n\nCarpa Al Horno \nfiletes de carpa \n2 1/2 tazas de tomates enlatados o jugo de tomate \n1 cebolla, rebanada \n2 cucharadas. harina \n1/2 cucharadita sal \n1/4 cucharadita pimienta \n2 cucharadas. mantequilla \n1. Combine 2 1/2 tazas de tomates enlatados o tomates \njugo, 1/2 cucharadita. sal, 1/4 cucharadita. pimienta y en rodajas \ncebolla. \n2. Cocine durante 10 minutos y luego páselo por un colador. \n3. Derrita 2 cucharadas. mantequilla y agregue 2 cucharadas. harina. \n5. Agregue gradualmente la mezcla de tomate colada y revuelva. \nhasta que espese. \n6. Coloque los filetes de carpa en una fuente para horno. \n7. Vierta la mezcla sobre los filetes de carpa y hornee a 350°. \nEB. \n28 aE \n2 ae \n2 a 2 ak 2 ak 2 ak 2 ak 2 9k 2 aK A a AE \n84",
+      "full_text_original": "A cod with a grin \nPulled the fisherman in, \nNow they're fishing the fissure for Fisher. \n83 \n\nBaked Carp \nCarp fillets \n2 1/2 cups canned tomatoes or tomato juice \n1 onion, sliced \n2 Tbsp. flour \n1/2 tsp. salt \n1/4 tsp. pepper \n2 Tbsp. butter \n1. Combine 2 1/2 cups canned tomatoes or tomato \njuice, 1/2 tsp. salt, 1/4 tsp. pepper and sliced \nonion. \n2. Cook for 10 minutes then run through a sieve. \n3. Melt 2 Tbsp. butter and add 2 Tbsp. flour. \n5. Gradually add strained tomato mixture and stir \nuntil thickened. \n6. Place carp fillets in a baking dish. \n7. Pour mixture over carp steaks and bake at 350° \nEB. \n28 aE \n2 ae \n2 a 2 ak 2 ak 2 ak 2 ak 2 9k 2 aK A a AE \n84"
+    },
+    {
+      "title": "Y el pez que conseguí era más grande",
+      "title_original": "And the fish I got was bigger",
+      "page": 87,
+      "pages_span": [
+        88,
+        87
+      ],
+      "ingredients": [
+        "2 libras. filetes de bagre sin piel",
+        "1/4 taza de aderezo francés",
+        "3 cucharadas. salsa de soja",
+        "3/4 cucharadita jengibre, molido",
+        "1. Coloque los filetes en una sola capa, con la piel hacia abajo,",
+        "3. Vierta la salsa sobre los filetes y déjelos reposar 10 minutos.",
+        "4. Ase durante unos 10 a 15 minutos o hasta que los filetes se desmenucen."
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 7,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Y el pez que conseguí era más grande \nQue los peces que se escaparon. \n85 \n\nBagre de canal a la parrilla \n2 libras. filetes de bagre sin piel \n1/4 taza de aderezo francés \n3 cucharadas. salsa de soja \n3/4 cucharadita jengibre, molido \n1. Coloque los filetes en una sola capa, con la piel hacia abajo, \nen una fuente para hornear y servir, de 10 \"por 16\". \n2. Combine el aderezo francés, la salsa de soja y el jengibre. \n3. Vierta la salsa sobre los filetes y déjelos reposar 10 minutos. \n4. Ase durante unos 10 a 15 minutos o hasta que los filetes se desmenucen. \nfácilmente cuando se prueba con un tenedor. Hilvanar una vez durante \nasar con salsa en una sartén.",
+      "full_text_original": "And the fish I got was bigger \nThan the fish that got away. \n85 \n\nBroiled Channel Catfish \n2 Ibs. skinless catfish fillets \n1/4 cup French dressing \n3 Tbsp. soy sauce \n3/4 tsp. ginger, ground \n1. Place fillets in a single layer, skinned side down, \non a bake and serve platter, 10\" by 16.\" \n2. Combine French dressing, soy sauce, ginger. \n3. Pour sauce over fillets and let stand 10 minutes. \n4, Broil for about 10 to 15 minutes or until fillets flake \neasily when tested with a fork. Baste once during \nbroiling with sauce in pan."
+    },
+    {
+      "title": "Delicia de bagre al horno",
+      "title_original": "Baked Catfish Delight",
+      "page": 92,
+      "pages_span": [
+        92,
+        93
+      ],
+      "ingredients": [
+        "4 filetes de bagre",
+        "3 cucharadas. mostaza de dijon",
+        "2 cucharadas. leche",
+        "1 taza de nueces pecanas, molidas",
+        "2. Sumerja los filetes en la mezcla de mostaza y luego sumérjalos en tierra.",
+        "3. Coloque el pescado en una bandeja para hornear engrasada.",
+        "4. Hornee a 500° F. de 10 a 12 minutos o hasta que el pescado"
+      ],
+      "steps": [],
+      "prep_time": "12 minutes",
+      "difficulty": null,
+      "ingredients_count": 7,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Delicia de bagre al horno \n4 filetes de bagre \n3 cucharadas. mostaza de dijon \n2 cucharadas. leche \n1 taza de nueces pecanas, molidas \n1. Combine la mostaza y la leche en un tazón pequeño. \n2. Sumerja los filetes en la mezcla de mostaza y luego sumérjalos en tierra. \nnueces, cubriendo bien. Sacuda el exceso \nnueces. \n90 \n\n3. Coloque el pescado en una bandeja para hornear engrasada. \n4. Hornee a 500° F. de 10 a 12 minutos o hasta que el pescado \nse desmenuza fácilmente con un tenedor.",
+      "full_text_original": "Baked Catfish Delight \n4 catfish fillets \n3 Tbsp. Dijon mustard \n2 Tbsp. milk \n1 cup pecans, ground \n1. Combine mustard and milk in small bowl. \n2. Dip fillets in mustard mixture, then dip in ground \npecans, coating thoroughly. Shake off excess \nnuts. \n90 \n\n3. Place fish on greased baking sheet. \n4. Bake at 500° F. 10 to 12 minutes or until fish \nflakes easily with a fork."
+    },
+    {
+      "title": "Filetes De Bagre A La Parrilla",
+      "title_original": "Broiled Catfish Fillets",
+      "page": 93,
+      "pages_span": null,
+      "ingredients": [
+        "Filetes De Bagre A La Parrilla",
+        "4 filetes de bagre",
+        "1/2 cucharadita sal de ajo",
+        "1/2 cucharadita pimienta limon",
+        "1. Espolvoree los filetes con sal de ajo y pimienta con limón.",
+        "3. Coloque el pescado en una asadera. Ase alrededor de 4 a 6 minutos.",
+        "utes o hasta que el pescado se desmenuce fácilmente.",
+        "4. Sirva con rodajas de limón."
+      ],
+      "steps": [],
+      "prep_time": "5 minutes",
+      "difficulty": null,
+      "ingredients_count": 8,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Filetes De Bagre A La Parrilla \n4 filetes de bagre \n1/2 cucharadita sal de ajo \n1/2 cucharadita pimienta limon \ngajos de limon \n1. Espolvoree los filetes con sal de ajo y pimienta con limón. \n2. Precaliente la asadera durante 5 minutos y luego rocíe con \nrevestimiento antiadherente. \n3. Coloque el pescado en una asadera. Ase alrededor de 4 a 6 minutos. \nutes o hasta que el pescado se desmenuce fácilmente. \n4. Sirva con rodajas de limón.",
+      "full_text_original": "Broiled Catfish Fillets \n4 catfish fillets \n1/2 tsp. garlic salt \n1/2 tsp. lemon pepper \nLemon wedges \n1. Sprinkle fillets with garlic salt and lemon pepper. \n2. Preheat broiler pan 5 minutes then spray with \nnonstick coating. \n3. Place fish on broiler pan. Broil about 4 to 6 min- \nutes or until fish flakes easily. \n4. Serve with lemon wedges."
+    },
+    {
+      "title": "Combine los ingredientes restantes y vierta",
+      "title_original": "Combine the remaining ingredients and pour over",
+      "page": 94,
+      "pages_span": null,
+      "ingredients": [
+        "el pescado."
+      ],
+      "steps": [],
+      "prep_time": "25 minutes",
+      "difficulty": null,
+      "ingredients_count": 1,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Combine los ingredientes restantes y vierta \nel pescado. \nHornee por 25 minutos en horno a 350° F. \nPR IG A FG 2 Ae HE 6 es decir Is I 2 2 2 2 2 EE ee \nUn pescador es un idiota en un extremo de la línea esperando \npor un idiota al otro.",
+      "full_text_original": "Combine the remaining ingredients and pour over \nthe fish. \nBake for 25 minutes in 350° F. oven. \nPR IG A FG 2 Ae HE 6 ie Is I 2 2 2 2 2 EE ee \nA fisherman is a jerk at one end of the line waiting \nfor a jerk at the other."
+    },
+    {
+      "title": "mantequilla derretida",
+      "title_original": "Melted butter",
+      "page": 95,
+      "pages_span": null,
+      "ingredients": [
+        "1. Unte los filetes con mantequilla derretida.",
+        "4. Cubra los filetes y cocine durante 5 minutos por cada lado.",
+        "pescado muy sutil."
+      ],
+      "steps": [],
+      "prep_time": "5 minutes",
+      "difficulty": null,
+      "ingredients_count": 3,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "mantequilla derretida \n1. Unte los filetes con mantequilla derretida. \n2. Colóquelo en la parrilla a 3 a 4 pulgadas de las brasas. \n3. Combine los demás ingredientes y mezcle bien. \n4. Cubra los filetes y cocine durante 5 minutos por cada lado. \no hasta que esté listo. Unte con frecuencia con salsa. \nCortesía de Mary Bronson, Lexington, Kentucky. \nOe fe 3fe 2fe De fe detrás de 24k De Oe Ik 2k AI OE OIE Oe ie AIK OIE OIE OE \nLa carpa es la reina de los ríos: un majestuoso, \nun bueno y \npescado muy sutil.",
+      "full_text_original": "Melted butter \n1. Brush fillets with melted butter. \n2. Place on grill 3-to 4-inches from coals. \n3. Combine other ingredients and mix well. \n4. Coat fillets and cook for 5 minutes on each side \nor until done. Brush often with sauce. \nCourtesy Mary Bronson, Lexington, Kentucky. \nOe fe 3fe 2fe Of fe aft 24k Of Oe Ik 2k AI OE OIE Oe ie AIK OIE OIE OE \nThe carp is the queen of rivers: a stately, \na good and \nvery subtle fish."
+    },
+    {
+      "title": "Unte ambos lados del pescado con un poco del derretido.",
+      "title_original": "Brush both sides of fish with some of the melted",
+      "page": 96,
+      "pages_span": [
+        96,
+        97
+      ],
+      "ingredients": [
+        "Unte ambos lados del pescado con un poco del derretido.",
+        "Coloque los filetes rebozados en una sartén.",
+        "Rocíe aproximadamente 2 cucharaditas. de la mantequilla derretida sobre la",
+        "pescado.",
+        "Ase los filetes durante aproximadamente 2 1/2 a 3 minutos o",
+        "8. Voltee el pescado y rocíelo con 2 cucharaditas. del derretido",
+        "El pescado se desmenuza y se desmenuza fácilmente cuando se prueba con un tenedor."
+      ],
+      "steps": [],
+      "prep_time": "5 minutes",
+      "difficulty": null,
+      "ingredients_count": 7,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Unte ambos lados del pescado con un poco del derretido. \nmantequilla. \nCubra ambos lados con condimentos. \nPrecalienta la sartén 5 minutos o hasta que caiga una gota de \nel agua chisporrotea. \nColoque los filetes rebozados en una sartén. \nRocíe aproximadamente 2 cucharaditas. de la mantequilla derretida sobre la \npescado. \nAse los filetes durante aproximadamente 2 1/2 a 3 minutos o \nhasta que se ennegrezca. \nG4 \n\n8. Voltee el pescado y rocíelo con 2 cucharaditas. del derretido \nmantequilla. Ase otros 2 1/2 minutos hasta que se ennegrezca. \nEl pescado se desmenuza y se desmenuza fácilmente cuando se prueba con un tenedor.",
+      "full_text_original": "Brush both sides of fish with some of the melted \nbutter. \nCoat both sides with seasonings. \nPreheat the skillet 5 minutes or until a drop of \nwater sizzles. \nPlace the coated fillets in skillet. \nDrizzle about 2 tsp. of the melted butter over the \nfish. \nGrill the fillets for about 2 1/2 to 3 minutes or \nuntil blackened. \nG4 \n\n8. Turn fish and drizzle with 2 tsp. of the melted \nbutter. Grill another 2 1/2 minutes until blacken- \ned and fish flakes easily when tested with a fork."
+    },
+    {
+      "title": "Pescado Relleno De Limón",
+      "title_original": "Lemon Stuffed Fish",
+      "page": 101,
+      "pages_span": null,
+      "ingredients": [
+        "Pescado Relleno De Limón",
+        "4 filetes de pescado (1 1/2 libras cada uno)",
+        "1/2 taza de apio, finamente picado",
+        "1/4 taza de cebolla, picada",
+        "3 cucharadas. mantequilla",
+        "4 tazas de cubitos de pan seco o picatostes",
+        "1/2 cucharadita cáscara de limón, rallada",
+        "4 cucharaditas jugo de limon",
+        "1 cucharada. perejil, cortado",
+        "1 cucharada. mantequilla, derretida",
+        "1. Coloque 2 filetes en una fuente para horno engrasada.",
+        "2. Cocine el apio y la cebolla en 3 cucharadas. mantequilla hasta"
+      ],
+      "steps": [],
+      "prep_time": "25 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Pescado Relleno De Limón \n4 filetes de pescado (1 1/2 libras cada uno) \n1/2 taza de apio, finamente picado \n1/4 taza de cebolla, picada \n3 cucharadas. mantequilla \n4 tazas de cubitos de pan seco o picatostes \n1/2 cucharadita cáscara de limón, rallada \n4 cucharaditas jugo de limon \n1 cucharada. perejil, cortado \n1 cucharada. mantequilla, derretida \n1. Coloque 2 filetes en una fuente para horno engrasada. \n2. Cocine el apio y la cebolla en 3 cucharadas. mantequilla hasta \ntierno y crujiente. \n3. Vierta sobre el pan. \n4. Agregue la cáscara y el jugo de limón, el perejil, 1/2 cucharadita. sal y \nuna pizca de pimienta y luego mezcle. \n5. Vierta la mitad de la mezcla de relleno en cada filete en el \nsartén. \n6. Cubra con los dos trozos de pescado restantes, unte con \n1 cucharada. manteca. Espolvorear con sal y pimentón \ny hornee, tapado a 350° F. durante unos 25 minutos. \n99",
+      "full_text_original": "Lemon Stuffed Fish \n4 fish fillets (1 1/2 lbs. each) \n1/2 cup celery, finely chopped \n1/4 cup onion, chopped \n3 Tbsp. butter \n4 cups dry bread cubes or croutons \n1/2 tsp. lemon peel, grated \n4 tsp. lemon juice \n1 Tbsp. parsley, snipped \n1 Tbsp. butter, melted \n1. Place 2 fillets in a greased baking pan. \n2. Cook celery and onion in 3 Tbsp. butter until \ncrisp tender. \n3. Pour over bread. \n4. Add lemon peel and juice, parsley, 1/2 tsp. salt and \na dash of pepper, then toss together. \n5. Spoon half the stuffing mixture on each fillet in the \npan. \n6. Top with remaining two pieces of fish, brush with \n1 Tbsp. butter. Sprinkle with salt and paprika \nand bake, covered at 350° F. for about 25 minutes. \n99"
+    },
+    {
+      "title": "Filetes de tipo de pez escalfados",
+      "title_original": "Poached Crappie Fillets",
+      "page": 103,
+      "pages_span": null,
+      "ingredients": [
+        "Filetes de tipo de pez escalfados",
+        "4 filetes de tipo de pez (aproximadamente 1 a 1 1/2 libras)",
+        "1/2 taza de jugo de tomate",
+        "3 cucharadas. mantequilla, cortada en trozos de 1/4 de pulgada",
+        "2 cucharadas. cebolla verde, finamente picada",
+        "1/4 cucharadita sal",
+        "1/4 cucharadita pimienta",
+        "1. Doble los filetes por la mitad y colóquelos en una ronda de 10 pulgadas.",
+        "2. Vierta el jugo de tomate sobre el pescado.",
+        "3. Untar los filetes con mantequilla y espolvorear con la",
+        "cebolla picada, sal y pimienta.",
+        "hasta que el pescado se desmenuce fácilmente con un tenedor. deja el plato"
+      ],
+      "steps": [],
+      "prep_time": "2 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Filetes de tipo de pez escalfados \n4 filetes de tipo de pez (aproximadamente 1 a 1 1/2 libras) \n1/2 taza de jugo de tomate \n3 cucharadas. mantequilla, cortada en trozos de 1/4 de pulgada \n2 cucharadas. cebolla verde, finamente picada \n1/4 cucharadita sal \n1/4 cucharadita pimienta \n1. Doble los filetes por la mitad y colóquelos en una ronda de 10 pulgadas. \nfuente para hornear con \nlas porciones más gruesas que miran \nhacia afuera. \n2. Vierta el jugo de tomate sobre el pescado. \n3. Untar los filetes con mantequilla y espolvorear con la \ncebolla picada, sal y pimienta. \n4. Cubra con una envoltura de plástico transparente. \n5. Cocine en el microondas a potencia alta durante 5 a 7 1/2 minutos o \nhasta que el pescado se desmenuce fácilmente con un tenedor. deja el plato \ndéjelo tapado durante 4 minutos y luego verifique que \npunto de cocción. \nVER 2 VER EE A OEE OE EK OE ER EE",
+      "full_text_original": "Poached Crappie Fillets \n4 crappie fillets, (about 1 to 1 1/2 Ibs.) \n1/2 cup tomato juice \n3 Tbsp. butter, cut into 1/4-inch pieces \n2 Tbsp. green onion, finely chopped \n1/4 tsp. salt \n1/4 tsp. pepper \n1. Fold fillets in half and arrange in a 10-inch round \nbaking dish with \nthe thicker portions facing \noutward. \n2. Pour the tomato juice over the fish. \n3. Dot the fillets with butter and sprinkle with the \nchopped onion, salt and pepper. \n4. Cover with clear plastic wrap. \n5. Microwave on high power for 5 to 7 1/2 minutes or \nuntil fish flakes easily with a fork. Let the dish \nstand covered for 4 minutes then check for \ndoneness. \nSEE 2 SEE EE A OEE OE EK OE ER EE"
+    },
+    {
+      "title": "Nada crece más rápido que un pez entre el momento en que",
+      "title_original": "Nothing grows faster than a fish between the time it",
+      "page": 103,
+      "pages_span": [
+        104,
+        103
+      ],
+      "ingredients": [
+        "Cazuela De Tipo De Pescado",
+        "2 libras. filetes de tipo de pez",
+        "1/2 libra de queso cheddar suave"
+      ],
+      "steps": [],
+      "prep_time": null,
+      "difficulty": null,
+      "ingredients_count": 3,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Nada crece más rápido que un pez entre el momento en que \nmuerde el anzuelo y el momento en que se escapa. \n101 \n\nCazuela De Tipo De Pescado \n2 libras. filetes de tipo de pez \n1/2 libra de queso cheddar suave",
+      "full_text_original": "Nothing grows faster than a fish between the time it \ntakes the bait and the time it gets away. \n101 \n\nCrappie Casserole \n2 Ibs. crappie fillets \n1/2 lb. mild cheddar cheese"
+    },
+    {
+      "title": "Patatas fritas en bolsa pequeña",
+      "title_original": "Small bag potato chips",
+      "page": 104,
+      "pages_span": null,
+      "ingredients": [
+        "1. Cubra los filetes con aderezo para ensalada y colóquelos en la cacerola.",
+        "2. Espolvorea queso rallado sobre los filetes.",
+        "3. Triture las patatas fritas y espolvoréelas sobre el pescado."
+      ],
+      "steps": [],
+      "prep_time": "15 minutes",
+      "difficulty": null,
+      "ingredients_count": 3,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Patatas fritas en bolsa pequeña \n1 botella de aderezo ranch \n1. Cubra los filetes con aderezo para ensalada y colóquelos en la cacerola. \nplato de papel. \n2. Espolvorea queso rallado sobre los filetes. \n3. Triture las patatas fritas y espolvoréelas sobre el pescado. \n4. Hornee en horno precalentado a 350° F. durante 15 minutos.",
+      "full_text_original": "Small bag potato chips \n1 bottle ranch dressing \n1. Coat fillets with salad dressing, and place in casse- \nrole dish. \n2. Sprinkle grated cheese over the fillets. \n3. Crush potato chips and sprinkle over fish. \n4. Bake in preheated, 350° F. oven for 15 minutes."
+    },
+    {
+      "title": "Tipo de pez picante asado",
+      "title_original": "Zesty Broiled Crappie",
+      "page": 104,
+      "pages_span": [
+        104,
+        105
+      ],
+      "ingredients": [
+        "6 filetes grandes de tipo de pez",
+        "1/2 libra de mantequilla, derretida",
+        "Jugo de 6 limas",
+        "sal y pimienta",
+        "Pimienta negra molida",
+        "1. Mezcle 3/4 taza de mantequilla, el jugo de 4 limones, los camarones y",
+        "pimienta. Mezcla bien.",
+        "2. Coloque los filetes en la parrilla, vierta la salsa sobre el pescado y",
+        "3. Rocíe jugo de limón caliente sobre los platos calientes, coloque el pescado encima",
+        "con sal y pimienta al gusto."
+      ],
+      "steps": [],
+      "prep_time": "12 minutes",
+      "difficulty": null,
+      "ingredients_count": 10,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Tipo de pez picante asado \n6 filetes grandes de tipo de pez \n1/2 libra de mantequilla, derretida \nJugo de 6 limas \nsal y pimienta \n12 camarones crudos (pelados, desvenados y picados) \nPimienta negra molida \n1. Mezcle 3/4 taza de mantequilla, el jugo de 4 limones, los camarones y \npimienta. Mezcla bien. \n102 \n\n2. Coloque los filetes en la parrilla, vierta la salsa sobre el pescado y \nAse durante 12 minutos, rociando con salsa con frecuencia. \n3. Rocíe jugo de limón caliente sobre los platos calientes, coloque el pescado encima \nplatos, untar con mantequilla derretida caliente y espolvorear \ncon sal y pimienta al gusto.",
+      "full_text_original": "Zesty Broiled Crappie \n6 large crappie fillets \n1/2 lb. butter, melted \nJuice of 6 limes \nSalt and pepper \n12 raw shrimp (peeled, deveined and minced) \nBlack pepper, milled \n1. Mix 3/4 cup butter, juice of 4 limes, shrimp and \npepper. Blend well. \n102 \n\n2. Place fillets on broiler, spoon sauce over fish and \nbroil for 12 minutes, basting with sauce often. \n3. Sprinkle hot lime juice over hot plates, place fish on \nplates, brush with hot melted butter and sprinkle \nwith salt and pepper to taste."
+    },
+    {
+      "title": "sal y pimienta",
+      "title_original": "Salt and pepper",
+      "page": 106,
+      "pages_span": null,
+      "ingredients": [
+        "sal y pimienta",
+        "1. Unte los filetes con la mezcla de salsa de soja y limón.",
+        "2. Sazone con sal y pimienta.",
+        "filetes en la mezcla de migajas.",
+        "5. Coloque los filetes en una asadera y ase durante 5 a 10"
+      ],
+      "steps": [],
+      "prep_time": "10 \nminutes",
+      "difficulty": null,
+      "ingredients_count": 5,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "sal y pimienta \n1. Unte los filetes con la mezcla de salsa de soja y limón. \njugo. \n2. Sazone con sal y pimienta. \n3. Cubra ambos lados con crema agria. \n4. Combine las semillas de sésamo y los copos de maíz. enrollar el \nfiletes en la mezcla de migajas. \n5. Coloque los filetes en una asadera y ase durante 5 a 10 \nminutos. \nGirar una vez. \nBE FG ES 28 24S IE 2s 246 I 2S OIE ES 28 2S I 2 OIE OE OE \n\"Voy a pescar\", les dijo Simón Pedro, y \nDijeron: \"Iremos contigo\". Juan 21:3 (NVI) \n104",
+      "full_text_original": "Salt and pepper \n1. Brush fillets with mixture of soy sauce and lemon \njuice. \n2. Season with salt and pepper. \n3. Coat both sides with sour cream. \n4. Combine sesame seeds and corn flakes. Roll the \nfillets in crumb mixture. \n5. Place fillets on broiler pan and broil for 5 to 10 \nminutes. \nTurn once. \nBE FG IS 28 24S IE 2s 246 I 2S OIE IS 28 2S I 2 OIE OE OE \n\"I'm going out to fish,\" Simon Peter told them, and \nthey said, \"We'll go with you.\" John 21:3 (NIV) \n104"
+    },
+    {
+      "title": "sopa de pescado",
+      "title_original": "Fish Chowder",
+      "page": 109,
+      "pages_span": null,
+      "ingredients": [
+        "sopa de pescado",
+        "2 latas de almejas picadas o 1 Ib. de pescado deshuesado (fresco",
+        "1 litro de leche",
+        "Sal, pimienta y mantequilla al gusto",
+        "4. Ponga el pescado en una olla sopera con patatas, cebollas y ba-",
+        "5. Agregue suficiente agua para cubrir y cocine a fuego lento hasta que el pescado"
+      ],
+      "steps": [],
+      "prep_time": "15 minutes",
+      "difficulty": "medium",
+      "ingredients_count": 6,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "sopa de pescado \n6 rebanadas de tocino \n3 patatas grandes \n2 latas de almejas picadas o 1 Ib. de pescado deshuesado (fresco \no agua salada) \n2 cebollas medianas \n1 litro de leche \nSal, pimienta y mantequilla al gusto \n1. Freír el tocino crujiente. Desmoronarse. \n2. Cortar las patatas y las cebollas en dados. \n3. Saltee las cebollas en la grasa del tocino hasta que estén transparentes. \n4. Ponga el pescado en una olla sopera con patatas, cebollas y ba- \nestafa. Sazone ligeramente. \n5. Agregue suficiente agua para cubrir y cocine a fuego lento hasta que el pescado \ny las patatas están listas. \n6. Agregue la leche y cocine a fuego lento durante 15 minutos. No hervir. \n7. Agregue más condimentos si es necesario. Puede variar el sabor según \nagregando una pequeña cantidad de azúcar. Servir caliente. \nCortesía de Jack Cooper, Indianápolis, Indiana. \n107",
+      "full_text_original": "Fish Chowder \n6 slices bacon \n3 large potatoes \n2 cans minced clams or 1 Ib. of de-boned fish (fresh \nor saltwater) \n2 medium onions \n1 quart milk \nSalt, pepper and butter to taste \n1. Fry bacon crisp. Crumble. \n2. Dice potatoes and onions. \n3. Saute the onions in the bacon fat until transparent. \n4. Put fish in soup pot with potatoes, onions and ba- \ncon. Season lightly. \n5. Add enough water to cover and simmer until fish \nand potatoes are done. \n6. Add milk and simmer for 15 minutes. Do not boil. \n7. Add further seasoning if needed. Can vary taste by \nadding a small amount of sugar. Serve hot. \nCourtesy Jack Cooper, Indianapolis, Indiana. \n107"
+    },
+    {
+      "title": "pizca de pimienta",
+      "title_original": "Dash pepper",
+      "page": 111,
+      "pages_span": null,
+      "ingredients": [
+        "pizca de pimienta",
+        "1/4 cucharadita tomillo seco",
+        "2 cucharaditas hojuelas de perejil deshidratado",
+        "Corta el pescado en trozos de 1 pulgada.",
+        "Olla y agrega la cebolla y el apio.",
+        "3. Cocine las verduras picadas hasta que la cebolla esté blanda.",
+        "4. Añade el agua y luego las patatas cortadas en rodajas.",
+        "5. Añade la sal, la pimienta, el tomillo y el perejil y revuelve.",
+        "6. Agrega los trozos de pescado y tapa la olla. Cocine por 20",
+        "minutos, hasta que el pescado se desmenuce fácilmente."
+      ],
+      "steps": [],
+      "prep_time": "20 \nminutes",
+      "difficulty": null,
+      "ingredients_count": 10,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "pizca de pimienta \n1/4 cucharadita tomillo seco \n2 cucharaditas hojuelas de perejil deshidratado \n1. \nCorta el pescado en trozos de 1 pulgada. \n2. Caliente la grasa del tocino en una sartén grande de hierro o \nOlla y agrega la cebolla y el apio. \n3. Cocine las verduras picadas hasta que la cebolla esté blanda. \ny dorado. \n4. Añade el agua y luego las patatas cortadas en rodajas. \n5. Añade la sal, la pimienta, el tomillo y el perejil y revuelve. \n6. Agrega los trozos de pescado y tapa la olla. Cocine por 20 \nminutos, hasta que el pescado se desmenuce fácilmente. \n109",
+      "full_text_original": "Dash pepper \n1/4 tsp. dried thyme \n2 tsp. dehydrated parsley flakes \n1. \nCut the fish into 1-inch pieces. \n2. Heat the bacon fat in a large ironware skillet or \nDutch oven and add the onion and celery. \n3. Cook the chopped vegetables until the onion is limp \nand golden. \n4. Add the water, then the sliced potatoes. \n5. Add the salt, pepper, thyme and parsley, and stir. \n6. Add the fish pieces and cover the pot. Cook for 20 \nminutes, until the fish flakes easily. \n109"
+    },
+    {
+      "title": "tipo de pez espectacular",
+      "title_original": "Crappie Spectacular",
+      "page": 112,
+      "pages_span": null,
+      "ingredients": [
+        "3 libras. filetes grandes de tipo de pez",
+        "5 cucharadas. aceite de oliva o vegetal",
+        "1 1/2 tazas de cebolla, picada",
+        "1/2 taza de perejil, picado",
+        "2 tazas de tomates enlatados",
+        "1 cucharadita sal",
+        "2 dientes de ajo, picados",
+        "1/4 cucharadita pimienta",
+        "1/2 taza de vino blanco (opcional)",
+        "sal",
+        "pimienta",
+        "Sazone el pescado con sal y pimienta. Dejar reposar."
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "tipo de pez espectacular \n3 libras. filetes grandes de tipo de pez \n5 cucharadas. aceite de oliva o vegetal \n1 1/2 tazas de cebolla, picada \n1/2 taza de perejil, picado \n2 tazas de tomates enlatados \n1 cucharadita sal \n2 dientes de ajo, picados \n1/4 cucharadita pimienta \n1/2 taza de vino blanco (opcional) \nsal \npimienta \n1. \nSazone el pescado con sal y pimienta. Dejar reposar. \n2. \nSaltee las cebollas en aceite hasta que estén blandas. \n3. \nAgrega el ajo, los tomates, el perejil, la sal y la pimienta. \n4. \nCocine 10 minutos. \n5. \nVierta la mitad de la salsa de tomate en una fuente para hornear de 9\" por \nTS3a \n6. Coloque el pescado encima y cúbralo con la salsa restante. \n7. \nVierta el vino sobre el pescado. \n8. Hornee en el horno a 350° F. durante 40 minutos (o hasta que el pescado \ncopos con un tenedor). Hilvanar con frecuencia. \n110",
+      "full_text_original": "Crappie Spectacular \n3 Ib. large crappie fillets \n5 Tbsp. olive or vegetable oil \n1 1/2 cups onions, chopped \n1/2 cup parsley, chopped \n2 cups canned tomatoes \n1 tsp. salt \n2 cloves garlic, minced \n1/4 tsp. pepper \n1/2 cup white wine (optional) \nSalt \nPepper \n1. \nSeason fish with salt and pepper. Let stand. \n2. \nSaute onions in oil until soft. \n3. \nAdd garlic, tomatoes, parsley, salt and pepper. \n4. \nCook 10 minutes. \n5. \nPour half of tomato sauce in baking dish 9\" by \nTS3a \n6. Place fish on top, and cover with remaining sauce. \n7. \nPour wine over fish. \n8. Bake in oven at 350° F. for 40 minutes (or until fish \nflakes with a fork). Baste often. \n110"
+    },
+    {
+      "title": "Tipos de pez rebozados con cerveza",
+      "title_original": "Beer Batter Crappies",
+      "page": 113,
+      "pages_span": null,
+      "ingredients": [
+        "4 libras. filetes de tipo de pez",
+        "1 taza de harina",
+        "2/3 taza de cerveza",
+        "2 cucharadas. aceite",
+        "1/2 cucharadita tabasco",
+        "1/2 cucharadita sal",
+        "2. Sumerja los filetes de pescado en la masa y luego escúrralos.",
+        "3. Freír de 2 a 3 minutos en aceite caliente.",
+        "Cortar los filetes de lucio del norte en trozos pequeños.",
+        "Hervir 2 litros de agua sazonada con 2 cucharadas.",
+        "sal.",
+        "3. Coloque los trozos de pescado en el agua hirviendo y cocine."
+      ],
+      "steps": [],
+      "prep_time": "3 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Tipos de pez rebozados con cerveza \n4 libras. filetes de tipo de pez \n2 huevos, ligeramente batidos \n1 taza de harina \n2/3 taza de cerveza \n2 cucharadas. aceite \n1/2 cucharadita tabasco \n1/2 cucharadita sal \n1. Combine todos los ingredientes y mezcle bien. \n2. Sumerja los filetes de pescado en la masa y luego escúrralos. \n3. Freír de 2 a 3 minutos en aceite caliente. \nLangosta del pobre \n1. \nCortar los filetes de lucio del norte en trozos pequeños. \n2. \nHervir 2 litros de agua sazonada con 2 cucharadas. \nsal. \n3. Coloque los trozos de pescado en el agua hirviendo y cocine. \nhasta que el pescado se desmenuce fácilmente con un tenedor. \n4. Retirar, espolvorear con mantequilla derretida y limón. \njugo. Sal al gusto. \n111",
+      "full_text_original": "Beer Batter Crappies \n4 Ibs. crappie fillets \n2 eggs, slightly beaten \n1 cup flour \n2/3 cup beer \n2 Tbsp. oil \n1/2 tsp. Tabasco \n1/2 tsp. salt \n1. Combine all ingredients and mix well. \n2. Dip fish fillets into batter then drain. \n3. Fry 2 to 3 minutes in hot oil. \nPoor Man's Lobster \n1. \nCut northern pike fillets into bit-sized chunks. \n2. \nBoil 2 quarts of water seasoned with 2 Tbsp. \nsalt. \n3. Drop fish chunks into the boiling water and cook \nuntil the fish flakes easily with a fork. \n4. Remove, sprinkle with melted butter and lemon \njuice. Salt to taste. \n111"
+    },
+    {
+      "title": "Tempura de perca",
+      "title_original": "Perch Tempura",
+      "page": 119,
+      "pages_span": [
+        120,
+        119
+      ],
+      "ingredients": [
+        "2 libras. filetes de perca frescos",
+        "1 limón, partido por la mitad",
+        "1 cuarto de galón aceite vegetal",
+        "1. Cortar los filetes de pescado en trozos pequeños y escurrirlos bien.",
+        "2. Sazone con sal y exprima el jugo de limón sobre",
+        "pescado.",
+        "3. Ensartar trozos de pescado y sumergirlos en la masa, escurrir.",
+        "4. Freír en aceite calentado a 360° F. durante unos 5 minutos.",
+        "2 tazas de harina tamizada",
+        "2 tazas de agua helada",
+        "Cortesía de Duane R. Lund, 101 recetas favoritas de pescado de agua dulce."
+      ],
+      "steps": [],
+      "prep_time": "5 min",
+      "difficulty": null,
+      "ingredients_count": 11,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Tempura de perca \n2 libras. filetes de perca frescos \n1 limón, partido por la mitad \n1/2 receta de masa tempura* \n1 cuarto de galón aceite vegetal \n1. Cortar los filetes de pescado en trozos pequeños y escurrirlos bien. \nsobre papel toalla. \n2. Sazone con sal y exprima el jugo de limón sobre \npescado. \n3. Ensartar trozos de pescado y sumergirlos en la masa, escurrir. \nligeramente. \n4. Freír en aceite calentado a 360° F. durante unos 5 minutos. \nutes, volviéndose a dorarse uniformemente. \n*Rebozado de tempura \n2 tazas de harina tamizada \n3 yemas de huevo \n2 tazas de agua helada \n1. Tamizar la harina 3 veces. \n2. Combine las yemas de huevo y el agua en un tazón grande. \nsobre hielo y batir con un batidor hasta que esté bien mezclado. \n117 \n\n3. \nAgrega la harina poco a poco, revolviendo y volteando la \nmezcla desde el fondo con una cuchara. \n4. No mezcle demasiado. La harina debe quedar visible en la parte superior. \ndel bateador. Mantenga la masa sobre hielo mientras \nmojar y freír. \nCortesía de Duane R. Lund, 101 recetas favoritas de pescado de agua dulce. \n118",
+      "full_text_original": "Perch Tempura \n2 Ibs. fresh perch fillets \n1 lemon, halved \n1/2 Tempura batter* recipe \n1 qt. vegetable oil \n1. Cut fish fillets into bite-sized pieces and drain well \non paper toweling. \n2. Season with salt and squeeze lemon juice over the \nfish. \n3. Spear pieces of fish and dip in the batter, drain \nslightly. \n4. Fry in oil heated to 360° F. for about 5 min- \nutes, turning to brown evenly. \n*Tempura batter \n2 cups sifted flour \n3 egg yolks \n2 cups ice water \n1. Sift the flour 3 times. \n2. Combine the egg yolks and water in a large bowl \nover ice and beat with a whisk until well blended. \n117 \n\n3. \nAdd the flour gradually, stirring and turning the \nmixture from the bottom with a spoon. \n4. Donot over mix. The flour should be visible on top \nof the batter. Keep the batter over ice while \ndipping and frying. \nCourtesy Duane R. Lund, 101 Favorite Freshwater Fish Recipes. \n118"
+    },
+    {
+      "title": "Caliente la marinada restante y vierta sobre el pescado.",
+      "title_original": "Heat remaining marinade and spoon over fish",
+      "page": 121,
+      "pages_span": [
+        121,
+        122
+      ],
+      "ingredients": [
+        "Caliente la marinada restante y vierta sobre el pescado.",
+        "1 libra filetes de perca",
+        "3/4 taza de hojuelas de maíz",
+        "1 cucharada. semillas de sésamo",
+        "3/4 cucharadita jengibre molido",
+        "1 cucharada. salsa teriyaki",
+        "1/2 cucharadita aceite vegetal",
+        "Sumerja los filetes en la mezcla de huevo y luego en la mezcla de cereal.",
+        "5 Coloque los filetes en una bandeja para hornear que haya sido ligeramente",
+        "recubierto con aceite vegetal.",
+        "de filetes."
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 11,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Caliente la marinada restante y vierta sobre el pescado. \nantes de servir. \nCortesía de Duane R. Lund, 101 recetas favoritas de agua dulce. \n119 \n\nPerca del lago Winona al horno \n1 libra filetes de perca \n3/4 taza de hojuelas de maíz \n1 cucharada. semillas de sésamo \n3/4 cucharadita jengibre molido \n1 huevo \n1 cucharada. salsa teriyaki \n1/2 cucharadita aceite vegetal \n1. \nTriture el cereal hasta obtener una consistencia gruesa. \nAgrega las semillas de sésamo y el jengibre. \neo \nBatir el huevo y agregar la salsa teriyaki. \n4. \nSumerja los filetes en la mezcla de huevo y luego en la mezcla de cereal. \n5 Coloque los filetes en una bandeja para hornear que haya sido ligeramente \nrecubierto con aceite vegetal. \n6. Hornee a 450° F. 10 minutos por pulgada de espesor \nde filetes. \nHIE 246 Be 29s 2fe Be 24S 2fe Be 24e fe 2e 24s es decir 2s 24s 2 Be 2s 2s 2 \nLa esposa del pescador a su marido. \"Gastas tanto \ntiempo de pesca, quiero un visón.\" \n\"Claro\", dijo el pescador. \"Te conseguiré uno, pero tienes \n¡Tengo que mantener la jaula limpia!\" \n120",
+      "full_text_original": "Heat remaining marinade and spoon over fish \nbefore serving. \nCourtesy Duane R. Lund, 101 Favorite Freshwater Recipes. \n119 \n\nBaked Winona Lake Perch \n1 Ib. perch fillets \n3/4 cup corn flakes \n1 Tbsp. sesame seeds \n3/4 tsp. ground ginger \n1 egg \n1 Tbsp. teriyaki sauce \n1/2 tsp. vegetable oil \n1. \nCrush cereal to coarse consistency. \nAdd sesame seeds and ginger. \neo \nBeat egg and add teriyaki sauce. \n4. \nDip fillets in egg mixture, then in cereal mixture. \n5 Place fillets on baking pan that has been lightly \ncoated with vegetable oil. \n6. Bake at 450° F. 10 minutes per inch of thickness \nof fillets. \nHIE 246 Be 29s 2fe Be 24S 2fe Be 24e fe 2e 24s ie 2s 24s 2 Be 2s 2s 2 \nFisherman's wife to her husband. \"You spend so much \ntime on fishing, I want a mink.\" \n\"Sure,\" the angler said. \"I'll get you one, but you've \ngot to keep the cage clean!\" \n120"
+    },
+    {
+      "title": "Trucha arcoíris de Colorado",
+      "title_original": "Colorado Rainbow Trout",
+      "page": 126,
+      "pages_span": [
+        126,
+        127
+      ],
+      "ingredients": [
+        "6 filetes de trucha arcoiris",
+        "1/4 taza de aceite",
+        "1/4 taza de semillas de sésamo",
+        "2 cucharadas. jugo de limon",
+        "1/2 cucharadita sal,",
+        "pizca de pimienta",
+        "Coloque los filetes en una asadera bien engrasada.",
+        "Bañe el pescado con la salsa.",
+        "el pescado se desmenuza fácilmente con un tenedor."
+      ],
+      "steps": [],
+      "prep_time": "8 minutes",
+      "difficulty": null,
+      "ingredients_count": 9,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Trucha arcoíris de Colorado \n6 filetes de trucha arcoiris \n1/4 taza de aceite \n1/4 taza de semillas de sésamo \n2 cucharadas. jugo de limon \n1/2 cucharadita sal, \npizca de pimienta \n1. \nCombine todos los ingredientes excepto la trucha. \n2. \nColoque los filetes en una asadera bien engrasada. \n3. \nBañe el pescado con la salsa. \n124 \n\n4. Cocine aproximadamente 4 pulgadas a fuego moderadamente caliente durante \n5 a 8 minutos. \n5. \nVoltee y cocine de 5 a 8 minutos más o hasta que \nel pescado se desmenuza fácilmente con un tenedor. \nTrucha Frita Con Tocino",
+      "full_text_original": "Colorado Rainbow Trout \n6 rainbow trout fillets \n1/4 cup oil \n1/4 cup sesame seeds \n2 Tbsp. lemon juice \n1/2 tsp. salt, \nDash pepper \n1. \nCombine all ingredients except trout. \n2. \nPlace fillets on a well-greased broiler pan. \n3. \nBaste fish with sauce. \n124 \n\n4. Cook about 4-inches from moderately hot heat for \n5 to 8 minutes. \n5. \nTurn and cook for 5 to 8 minutes longer or until \nfish flakes easily with a fork. \nBacon-fried Trout"
+    },
+    {
+      "title": "Unte la trucha con mantequilla y espolvoree con sal y",
+      "title_original": "Rub trout with butter and sprinkle with salt and",
+      "page": 128,
+      "pages_span": null,
+      "ingredients": [
+        "Unte la trucha con mantequilla y espolvoree con sal y",
+        "pimienta recién molida.",
+        "Vierta jugo de limón sobre el pescado.",
+        "o hasta que el pescado se desmenuce fácilmente."
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 4,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Unte la trucha con mantequilla y espolvoree con sal y \npimienta recién molida. \n2. \nVierta jugo de limón sobre el pescado. \n3. \nColóquelo en una fuente para horno engrasada. \n4. \nHornee en un horno a 425° F. durante unos 10 minutos. \no hasta que el pescado se desmenuce fácilmente. \n5. \nMientras se hornea la trucha, derrita el resto de \nla mantequilla en un cazo y añadir las almendras \ny cocinar hasta que estén dorados. \n6.",
+      "full_text_original": "Rub trout with butter and sprinkle with salt and \nfreshly ground pepper. \n2. \nPour lemon juice over fish. \n3. \nPlace in a greased baking dish. \n4. \nBake in a 425° F. oven for about 10 minutes \nor until fish flakes easily. \n5. \nWhile the trout is baking, melt the rest of \nthe butter in a saucepan and add the almonds \nand cook until they are brown. \n6."
+    },
+    {
+      "title": "sal y pimienta",
+      "title_original": "Salt and pepper",
+      "page": 129,
+      "pages_span": [
+        129,
+        130
+      ],
+      "ingredients": [
+        "sal y pimienta",
+        "Cueza el pescado durante 20 minutos.",
+        "2. Enrollar el pescado en harina condimentada y freírlo en aceite o",
+        "mantequilla hasta que el pescado se desmenuce fácilmente.",
+        "3. Retirar el pescado, reservar y en la misma sartén sofreír.",
+        "4, Espolvorear el pescado con jugo de limón y dorar",
+        "1 libra filetes de lucioperca",
+        "1/2 taza de jugo de limón",
+        "1/2 cucharadita sal",
+        "1/4 taza de aceite para ensalada",
+        "1/2 cucharadita pimienta",
+        "2 cucharadas. cebolla, rallada"
+      ],
+      "steps": [],
+      "prep_time": "20 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "sal y pimienta \n1. Poner el jugo y la cáscara de limón en un plato y maridar. \nCueza el pescado durante 20 minutos. \n2. Enrollar el pescado en harina condimentada y freírlo en aceite o \nmantequilla hasta que el pescado se desmenuce fácilmente. \n3. Retirar el pescado, reservar y en la misma sartén sofreír. \nlos anacardos hasta que estén ligeramente dorados. \n4, Espolvorear el pescado con jugo de limón y dorar \nnueces. \n22 3 9 2 a 9 2 2 9 2 2 bien 2 2 9k 2K 2K aK KK \n127 \n\nLeucomas agridulces \n1 libra filetes de lucioperca \n1/2 taza de jugo de limón \n1/2 cucharadita sal \n1/4 taza de aceite para ensalada \n1/2 cucharadita pimienta \n2 cucharadas. cebolla, rallada \n1 cucharadita mostaza seca \n2 cucharadas. azúcar moreno \n1. \nMezcle todos los ingredientes (excepto los filetes), revolviendo hasta que \nel azúcar esté completamente disuelto. \n2. \nColoque el pescado en una fuente para asar resistente al calor y vierta \nsalsa por encima. \n3. \nPrecaliente la parrilla del horno y coloque los filetes alrededor de 4- \npulgadas del calor. \n4. \nAse unos 3 minutos, dé vuelta y ase unos 5 minutos. \nutes o hasta que el pescado se desmenuce fácilmente con un tenedor. hilvanar \nfrecuentemente durante el tiempo de cocción. \nOBS OFS I OFS O46 IS OFS IS SI 2S OIE OIE 2S SIE OIE OFS SI OS OE 2 \n¿Qué pescado hace sándwiches dulces? \n\"¡Medusa!\" \n128",
+      "full_text_original": "Salt and pepper \n1. Put the juice and rind of lemon in a dish and mari- \nnate the fish for 20 minutes. \n2. Roll the fish in seasoned flour and fry in oil or \nbutter until fish flakes easily. \n3. Remove the fish, set aside and in the same pan fry \nthe cashew nuts until lightly browned. \n4, Sprinkle the fish with lemon juice and the browned \nnuts. \n22 3 9 2 a 9 2 2 9 2 2 ok 2 2 9k 2K 2K aK KK \n127 \n\nSweet-and-Sour Walleye \n1 Ib. walleye fillets \n1/2 cup lemon juice \n1/2 tsp. salt \n1/4 cup salad oil \n1/2 tsp. pepper \n2 Tbsp. onion, grated \n1 tsp. dry mustard \n2 Tbsp. brown sugar \n1. \nMix all ingredients (except fillets), stirring until \nsugar is completely dissolved. \n2. \nPlace fish in heat-proof broiler platter and pour \nsauce over the top. \n3. \nPreheat oven broiler and place fillets about 4- \ninches from heat. \n4. \nBroil about 3 minutes, turn and broil about 5 min- \nutes or until fish flakes easily with a fork. Baste \nfrequently during cooking time. \nOBS OFS I OFS O46 IS OFS IS SI 2S OIE OIE 2S SIE OIE OFS SI OS OE 2 \nWhat fish makes sweet sandwiches? \n\"Jellyfish!\" \n128"
+    },
+    {
+      "title": "Sumergir los filetes en aceite vegetal y enrollarlos en la miga.",
+      "title_original": "Dip fillets in vegetable oil and roll in the crumb",
+      "page": 131,
+      "pages_span": [
+        131,
+        132
+      ],
+      "ingredients": [
+        "Sumergir los filetes en aceite vegetal y enrollarlos en la miga.",
+        "4. Coloque los filetes en una fuente para asar engrasada y ase hasta que",
+        "hojuelas de pescado.",
+        "6 filetes de lucioperca",
+        "2 tazas de agua",
+        "1/2 taza de vinagre",
+        "3 cebollas, cortadas en rodajas finas",
+        "2 limones, cortados en rodajas con cáscara",
+        "6 dientes de ajo",
+        "1. Coloque todos los ingredientes excepto los filetes en un recipiente hondo.",
+        "2. Coloque los filetes encima de los ingredientes.",
+        "4. Sal y pimienta al gusto."
+      ],
+      "steps": [],
+      "prep_time": "20 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Sumergir los filetes en aceite vegetal y enrollarlos en la miga. \nmezcla. \n4. Coloque los filetes en una fuente para asar engrasada y ase hasta que \nhojuelas de pescado. \nLeucomas cocidos a fuego lento \n6 filetes de lucioperca \n2 tazas de agua \n1/2 taza de vinagre \n3 cebollas, cortadas en rodajas finas \n2 limones, cortados en rodajas con cáscara \n1/2 barra de mantequilla \n6 dientes de ajo \n129 \n\n1. Coloque todos los ingredientes excepto los filetes en un recipiente hondo. \nplato de cocina. \n2. Coloque los filetes encima de los ingredientes. \n3. Cubra y cocine a fuego lento de 12 a 20 minutos. \n4. Sal y pimienta al gusto.",
+      "full_text_original": "Dip fillets in vegetable oil and roll in the crumb \nmixture. \n4. Place fillets on greased broiling pan and broil until \nfish flakes. \nSimmered Walleye \n6 walleye fillets \n2 cups water \n1/2 cup vinegar \n3 onions, sliced thin \n2 lemons, sliced with peel on \n1/2 stick butter \n6 cloves garlic \n129 \n\n1. Place all ingredients except the fillets in a deep \ncooking dish. \n2. Position the fillets on top of ingredients. \n3. Cover and simmer 12 to 20 minutes. \n4. Salt and pepper to taste."
+    },
+    {
+      "title": "Leucomas fritos",
+      "title_original": "Deep Fried Walleye",
+      "page": 135,
+      "pages_span": [
+        136,
+        135
+      ],
+      "ingredients": [
+        "2 libras de filetes de lucioperca",
+        "1 taza de harina",
+        "2 cucharadas. jugo de limon",
+        "2 cucharadas. leche",
+        "Espolvorea los filetes con harina.",
+        "Sumerge el pescado en la mezcla de huevo.",
+        "Cubra los filetes con migas de galleta.",
+        "Freír a 325° F. hasta que esté dorado o pescado.",
+        "Pescado En Escabeche - A",
+        "Filete el pescado y córtalo en trozos de 1 1/2 pulgada. Trae 4 tazas",
+        "de agua a hervir y 1 cucharadita. sal. Deje caer alrededor de 6 piezas de",
+        "pescado en agua hirviendo a la vez. Hervir 1 minuto. Drenar."
+      ],
+      "steps": [],
+      "prep_time": "1 minute",
+      "difficulty": "medium",
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Leucomas fritos \n2 libras de filetes de lucioperca \nGalletas Ritz \n4 huevos \n1 taza de harina \n2 cucharadas. jugo de limon \n2 cucharadas. leche \n1. \nEnrolle las galletas Ritz para hacer migajas. \n2. \nMezclar huevo, jugo de limón y leche. \n3. \nEspolvorea los filetes con harina. \n4. \nSumerge el pescado en la mezcla de huevo. \n5. \nCubra los filetes con migas de galleta. \n6. \nFreír a 325° F. hasta que esté dorado o pescado. \ncopos. \nCortesía de Gloria Bradway, Varsovia, Indiana. \nSe 2 eI a 2 9 2 EE OE IE AE IE EK \nMi amigo Achish Featherbelt dejó de pescar en el hielo. \nel año pasado. Para cuando hizo un gran agujero en el hielo \nsuficiente para poner su bote, estaba demasiado cansado para pescar. \n133 \n\nPescado En Escabeche - A \nFilete el pescado y córtalo en trozos de 1 1/2 pulgada. Trae 4 tazas \nde agua a hervir y 1 cucharadita. sal. Deje caer alrededor de 6 piezas de \npescado en agua hirviendo a la vez. Hervir 1 minuto. Drenar. \nLuego en arco de pyrex! capas alternas de pescado y en rodajas \ncebolla. Agregue a esto 1/2 cucharadita. especia entera para encurtir. traer \na hervir: 4 tazas de vinagre blanco, 2 tazas de agua, 1 taza \nazúcar, 1/2 taza más 1 cucharada. sal. Vierta esto sobre el pescado, deje \ndejar reposar hasta que se enfríe. Manténgase refrigerado. \nPescado En Escabeche-B \nColoque el pescado sobrante en un recipiente. En una sartén agrega 2 cucharadas. aceite, \ncebolla mediana en rodajas, 4 o 5 hojas de salvia y cocine a fuego lento \ndurante unos minutos hasta que la cebolla esté tierna. En una cacerola, \nCaliente 1 taza de vinagre de vino y 1 taza de agua. Cuando hace calor, \nvierta en la sartén y revuelva y luego vierta sobre el pescado. el \nEl líquido casi debe cubrir el pescado.",
+      "full_text_original": "Deep Fried Walleye \n2 lb. walleye fillets \nRitz Crackers \n4 eggs \n1 cup flour \n2 Tbsp. lemon juice \n2 Tbsp. milk \n1. \nRoll Ritz Crackers to make crumbs. \n2. \nMix egg, lemon juice and milk. \n3. \nDust fillets with flour. \n4. \nDip the fish into the egg mixture. \n5. \nCoat the fillets with cracker crumbs. \n6. \nDeep fry at 325° F. until golden brown or fish \nflakes. \nCourtesy Gloria Bradway, Warsaw, Indiana. \nSe 2 eI a 2 9 2 EE OE IE AE IE EK \nMy friend, Achish Featherbelt, gave up on ice fishing \nlast year. By the time he cut a hole in the ice big \nenough to put his boat in, he was too tired to fish. \n133 \n\nPickled Fish - A \nFillet fish and cut into 1 1/2-inch pieces. Bring 4 cups \nof water to boil and 1 tsp. salt. Drop about 6 pieces of \nfish into boiling water at a time. Boil 1 minute. Drain. \nThen in pyrex bow! alternate layers of fish and sliced \nonion. Add to this 1/2 tsp. whole pickling spice. Bring \nto a boil: 4 cups white vinegar, 2 cups water, 1 cup \nsugar, 1/2 cup plus 1 Tbsp. salt. Pour this over fish, let \nstand till cooled. Keep refrigerated. \nPickled Fish-B \nPlace left-over fish in bowl. In a skillet add 2 Tbsp. oil, \nmedium sliced onion, 4 or 5 leaves of sage and simmer \nfor a few minutes until onion is tender. In a sauce pan, \nheat 1 cup wine vinegar, and 1 cup water. When hot, \npour into skillet and stir and then pour over fish. The \nliquid should almost cover fish."
+    },
+    {
+      "title": "Pescado azul asado a la mostaza",
+      "title_original": "Mustard Broiled Bluefish",
+      "page": 140,
+      "pages_span": null,
+      "ingredients": [
+        "Pescado azul asado a la mostaza",
+        "2 filetes de pescado azul (1 libra cada uno)",
+        "1/4 taza de mostaza Dijon",
+        "1/4 taza de jugo de lima",
+        "3 cucharadas. agua",
+        "3 cucharadas. perejil fresco, picado",
+        "1/2 cucharadita salsa de pimiento picante",
+        "1/4 cucharadita ajo en polvo",
+        "2 cebollas grandes, cortadas en rodajas",
+        "Coloque los filetes en un plato de vidrio poco profundo.",
+        "salsa de pimienta y ajo en polvo; vierta sobre el pescado.",
+        "Coloque las rodajas de cebolla en una asadera engrasada."
+      ],
+      "steps": [],
+      "prep_time": "45 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Pescado azul asado a la mostaza \n2 filetes de pescado azul (1 libra cada uno) \n1/4 taza de mostaza Dijon \n1/4 taza de jugo de lima \n3 cucharadas. agua \n3 cucharadas. perejil fresco, picado \n1/2 cucharadita salsa de pimiento picante \n1/4 cucharadita ajo en polvo \n2 cebollas grandes, cortadas en rodajas \n1. \nmi \nColoque los filetes en un plato de vidrio poco profundo. \nCombine mostaza, jugo de limón, agua, perejil, caliente \nsalsa de pimienta y ajo en polvo; vierta sobre el pescado. \nCubra y refrigere por 45 minutos. \nColoque las rodajas de cebolla en una asadera engrasada. \nRetire el pescado de la marinada; coloque los filetes encima \nrodajas de cebolla y luego coloque más rodajas de cebolla \nparte superior de los filetes. \nAse durante 15 a 20 minutos o hasta que el pescado se desmenuce. \nfácilmente con un tenedor. \nOEE 2B fe fe I 3s 26 2k IE 3s 2S IE OE 2S I 2 IE IE 2 A 2 \n138",
+      "full_text_original": "Mustard Broiled Bluefish \n2 bluefish fillets (1 Ib. each) \n1/4 cup Dijon mustard \n1/4 cup lime juice \n3 Tbsp. water \n3 Tbsp. fresh parsley, chopped \n1/2 tsp. hot pepper sauce \n1/4 tsp. garlic powder \n2 large onions, sliced \n1. \ne \nPlace fillets in shallow glass dish. \nCombine mustard, lime juice, water, parsley, hot \npepper sauce and garlic powder; pour over fish. \nCover and refrigerate 45 minutes. \nPlace onion slices in greased broiler pan. \nRemove fish from marinade; place fillets on top of \nonion slices and then place more onion slices on \ntop of the fillets. \nBroil for 15 to 20 minutes or until fish flakes \neasily with fork. \nOEE 2B fe fe I 3s 26 2k IE 3s 2S IE OE 2S I 2 IE IE 2 A 2 \n138"
+    },
+    {
+      "title": "pizca de pimienta",
+      "title_original": "Dash pepper",
+      "page": 142,
+      "pages_span": [
+        142,
+        143
+      ],
+      "ingredients": [
+        "pizca de pimienta",
+        "Freír el tocino hasta que esté ligeramente dorado, agregar la cebolla.",
+        "1 litro de almejas y líquido",
+        "1 cebolla pequeña, picada",
+        "1/4 taza de pimiento verde, picado",
+        "1/2 taza de apio, cortado en cubitos",
+        "3 tazas de agua",
+        "1/2 taza de zanahorias, cortadas en cubitos",
+        "3 tazas de papas, cortadas en cubitos",
+        "1 cucharadita sal",
+        "3 tazas de tomates enlatados",
+        "1/8 cucharadita. tomillo"
+      ],
+      "steps": [],
+      "prep_time": "15 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "pizca de pimienta \nperejil \n1. \nEscurre las almejas y guarda el líquido. \n2. \nPicar las almejas. \n3. \nFreír el tocino hasta que esté ligeramente dorado, agregar la cebolla. \ny cocine hasta que estén tiernos. \n4. \nAgrega el líquido de las almejas, las patatas, los condimentos y las almejas. \n5. \nCocine unos 15 minutos o hasta que las patatas \nson tiernos. \n6. \nAgrega la leche y calienta. \n7. \nAdorne con perejil picado espolvoreado por encima. \n8. \nSi es necesario, se puede espesar ligeramente con \nmaicena mezclada con agua. \n140 \n\nSopa de almejas Manhattan - A \n1 litro de almejas y líquido \n1 cebolla pequeña, picada \n1/4 taza de pimiento verde, picado \n1/2 taza de apio, cortado en cubitos \n3 tazas de agua \n1/2 taza de zanahorias, cortadas en cubitos \n3 tazas de papas, cortadas en cubitos \n1 cucharadita sal \n3 tazas de tomates enlatados \n1/8 cucharadita. tomillo \n2 cucharadas. perejil, picado \n1. \nSaltee la cebolla, el pimiento y el apio. \n2. \nAgrega agua, zanahorias y patatas, sal, \ntomates y tomillo. \n3. \nCocine a fuego lento durante 20 minutos. \n4. \nAgregue las almejas y cocine a fuego lento 5 minutos más. \n5. \nEspolvorea con perejil. \nSESE EE",
+      "full_text_original": "Dash pepper \nParsley \n1. \nDrain clams and save liquid. \n2. \nChop clams. \n3. \nFry bacon until slightly brown, add onion \nand cook until tender. \n4. \nAdd clam liquid, potatoes, seasonings and clams. \n5. \nCook about 15 minutes or until potatoes \nare tender. \n6. \nAdd milk and heat. \n7. \nGarnish with chopped parsley sprinkled on top. \n8. \nIf needed, it can be thickened slightly with \ncornstarch mixed with water. \n140 \n\nManhattan Clam Chowder - A \n1 pint clams and liquid \n1 small onion, chopped \n1/4 cup green pepper, chopped \n1/2 cup celery, diced \n3 cups water \n1/2 cup carrots, diced \n3 cups potatoes, diced \n1 tsp. salt \n3 cups canned tomatoes \n1/8 tsp. thyme \n2 Tbsp. parsley, chopped \n1. \nSaute onion, pepper and celery. \n2. \nAdd water, carrots and potatoes, salt, \ntomatoes and thyme. \n3. \nSimmer 20 minutes. \n4. \nAdd clams and simmer 5 minutes longer. \n5. \nSprinkle with parsley. \nSESE EE"
+    },
+    {
+      "title": "VER DOLOR SI SI SI SI",
+      "title_original": "SEE ESE EE EEE EE EEE",
+      "page": 143,
+      "pages_span": [
+        144,
+        143
+      ],
+      "ingredients": [
+        "2 tazas de almejas, picadas",
+        "1/2 libra de cerdo salado, cortado en cubitos",
+        "3 tazas de agua",
+        "1 lata de tomates",
+        "1 cebolla grande, picada",
+        "1 taza de papas crudas, cortadas en cubitos",
+        "2 cucharaditas sal",
+        "1 taza de zanahorias crudas, cortadas en cubitos",
+        "1 taza de apio, cortado en cubitos",
+        "1/4 cucharadita de pimienta",
+        "1/2 taza de galleta molida fina",
+        "Agregue la cebolla y cocine hasta que esté dorada."
+      ],
+      "steps": [],
+      "prep_time": "5 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "VER ESE EE EEE EE EEE \nDado que nuestra Tierra es 2/3 de agua y sólo 1/3 de tierra, parece \nEs lógico que dediquemos 2/3 de nuestro tiempo \npescando y 1/3 trabajando. \n141 \n\nSopa de almejas Manhattan - B \n2 tazas de almejas, picadas \n1/2 libra de cerdo salado, cortado en cubitos \n3 tazas de agua \n1 lata de tomates \n1 cebolla grande, picada \n1 pimiento verde, cortado en cubitos \n1 taza de papas crudas, cortadas en cubitos \n2 cucharaditas sal \n: \n1 taza de zanahorias crudas, cortadas en cubitos \n1 taza de apio, cortado en cubitos \n1/4 cucharadita de pimienta \n1/2 taza de galleta molida fina \n1. \nCocine la carne de cerdo en una olla hasta que esté ligeramente dorada. \n2. \nAgregue la cebolla y cocine hasta que esté dorada. \n3. \nAgregue las verduras restantes, el agua y \ncondimentos. \n4. \nCubra y cocine a fuego lento durante 1 hora. \n5. \nAgrega las almejas y cocina 5 minutos. \n6. \nAgregue las migas de galleta. \n142",
+      "full_text_original": "SEE ESE EE EEE EE EEE \nSince our earth is 2/3 water and only 1/3 land, it seems \nonly logical that we should spend 2/3 of our time \nfishing and 1/3 working. \n141 \n\nManhattan Clam Chowder - B \n2 cups clams, minced \n1/2 lb. salt pork, diced \n3 cups water \n1 can tomatoes \n1 large onion, diced \n1 green pepper, diced \n1 cup raw potatoes, diced \n2 tsp. salt \n: \n1 cup raw carrots, diced \n1 cup celery, diced \n1/4 tsp pepper \n1/2 cup fine cracker crumbs \n1. \nCook pork in a Dutch oven until lightly brown. \n2. \nAdd onion and cook until golden brown. \n3. \nAdd remaining vegetables, water and \nseasonings. \n4. \nCover and simmer 1 hour. \n5. \nAdd clams and cook 5 minutes. \n6. \nAdd cracker crumbs. \n142"
+    },
+    {
+      "title": "Escurrir y servir con rodajas de limón y ramitas de",
+      "title_original": "Drain and serve with lemon wedges and sprigs of",
+      "page": 147,
+      "pages_span": [
+        147,
+        148
+      ],
+      "ingredients": [
+        "Escurrir y servir con rodajas de limón y ramitas de",
+        "2 cucharadas. mantequilla",
+        "2 cucharadas. harina",
+        "2 tazas de leche",
+        "1 cucharadita cebolla, rallada",
+        "1/2 cucharadita sal de apio",
+        "1/4 cucharadita pimentón"
+      ],
+      "steps": [],
+      "prep_time": "15 minutes",
+      "difficulty": null,
+      "ingredients_count": 7,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Escurrir y servir con rodajas de limón y ramitas de \nberros de agua crujiente. \n145 \n\nBisque de almejas \n15 o 20 almejas picadas \n1. \nCocine a fuego lento en jugo durante 15 minutos y desnate. \n2. \nHaga una salsa blanca de: \n2 cucharadas. mantequilla \n2 cucharadas. harina \n2 tazas de leche \n1 cucharadita cebolla, rallada \n1/2 cucharadita sal de apio \n1/4 cucharadita pimentón \nmamá \nao \noe \n3. Justo antes de servir, combine las mezclas y vuelva a \ncalentar hasta el punto de ebullición. No hervir.",
+      "full_text_original": "Drain and serve with lemon wedges and sprigs of \ncrisp water cress. \n145 \n\nClam Bisque \n15 or 20 clams, chopped \n1. \nSimmer in juice for 15 minutes and skim. \n2. \nMake a white sauce of: \n2 Tbsp. butter \n2 Tbsp. flour \n2 cups milk \n1 tsp. onion, grated \n1/2 tsp. celery salt \n1/4 tsp. paprika \nma \nao \noe \n3. Just before serving time, combine mixtures and re- \nheat to boiling point. Do not boil."
+    },
+    {
+      "title": "pizca de pimienta",
+      "title_original": "Dash of pepper",
+      "page": 150,
+      "pages_span": null,
+      "ingredients": [
+        "pizca de pimienta",
+        "Coloque los filetes en una sola capa en el fondo de un",
+        "Cocine el apio y la cebolla en grasa durante 5 minutos en una",
+        "Mezcla el apio y la cebolla con los condimentos y la leche.",
+        "Distribuir sobre el pescado.",
+        "cantando fuera de tono... y sabes lo difícil que es \"atún",
+        "¡Pescado!\""
+      ],
+      "steps": [],
+      "prep_time": "5 minutes",
+      "difficulty": "hard",
+      "ingredients_count": 7,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "pizca de pimienta \npimentón \n1. \nColoque los filetes en una sola capa en el fondo de un \nfuente para hornear engrasada. \n2. \nCocine el apio y la cebolla en grasa durante 5 minutos en una \ncacerola. \n3. \nMezcla el apio y la cebolla con los condimentos y la leche. \nDistribuir sobre el pescado. \n4. \nHornee a 350° F durante 25 a 30 minutos. \n5. \nEspolvorea con pimentón y decora con perejil. \n2H 2 2 2 2s 9 2 9 2 a aE a A a a a EE \nLe enseñé a cantar a mi pez mascota, pero últimamente ha estado \ncantando fuera de tono... y sabes lo difícil que es \"atún \n¡Pescado!\" \n148",
+      "full_text_original": "Dash of pepper \nPaprika \n1. \nPlace fillets in a single layer on the bottom of a \ngreased baking dish. \n2. \nCook celery and onion in fat for 5 minutes in a \nsaucepan. \n3. \nMix celery and onion with seasonings and milk. \nSpread over fish. \n4. \nBake at 350° F. for 25 to 30 minutes. \n5. \nSprinkle with paprika and garnish with parsley. \n2H 2 2 2 2s 9 2 9 2 a aE a A a a a EE \nI taught my pet fish to sing, but lately he's been \nsinging off key...and you know how hard it is to \"tuna \nfish!\" \n148"
+    },
+    {
+      "title": "Hamburguesas de cangrejo de Jersey",
+      "title_original": "Jersey Crab Burgers",
+      "page": 153,
+      "pages_span": null,
+      "ingredients": [
+        "1 libra carne de cangrejo",
+        "1/2 taza de cebolla, picada",
+        "1 cucharada. perejil, picado",
+        "Sal y pimienta al gusto",
+        "Agregue el huevo sin batir, la cebolla, el apio, el perejil y",
+        "nuestros gastos, ese pescado nos costó $600.\""
+      ],
+      "steps": [],
+      "prep_time": null,
+      "difficulty": null,
+      "ingredients_count": 6,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Hamburguesas de cangrejo de Jersey \n1 libra carne de cangrejo \n1 huevo \n1/2 taza de cebolla, picada \n1 tallo de apio, picado \n1 cucharada. perejil, picado \nSal y pimienta al gusto \nBisquick \n1. \nPon la carne de cangrejo en un bol. \n2. \nAgregue el huevo sin batir, la cebolla, el apio, el perejil y \ncondimentos. Licue con cuidado. \n3. \nAgregue suficiente Bisquick para cubrir la mezcla. \n4. \nEche cucharadas enteras en grasa caliente. \n5. \nServir en panecillos para hamburguesa. \nSe 2 ee 2 2 9 2 2 9 2 ae 9 2 ae 9 2% ak 2 2K ok \nWillie Woodchip, cuyo ascensor mental suele \nse detiene un piso antes de llegar a la cima, fue a pescar a Canadá \ndurante dos semanas con su amigo Hiram Hagood. ellos \nSólo pesqué un pez. \nCuando llegaron a casa, Hiram dijo: \"La forma en que yo \nfigura \nnuestros gastos, ese pescado nos costó $600.\" \n\"Bueno\", dijo Willie, \"a ese precio, es algo bueno. \nNo pescamos más.\" \n151",
+      "full_text_original": "Jersey Crab Burgers \n1 Ib. crab meat \n1 egg \n1/2 cup onion, chopped \n1 stalk celery, chopped \n1 Tbsp. parsley, chopped \nSalt and pepper to taste \nBisquick \n1. \nPut crab meat into a bowl. \n2. \nAdd unbeaten egg, onion, celery, parsley, and \nseasonings. Blend carefully. \n3. \nAdd just enough Bisquick to coat mixture. \n4. \nDrop full tablespoons into hot fat. \n5. \nServe in hamburger rolls. \nSe 2 ee 2 2 9 2 2 9 2 ae 9 2 ae 9 2% ak 2 2K ok \nWillie Woodchip, whose mental elevator usually \nstops one floor short of the top, went fishing in Canada \nfor two weeks with his friend, Hiram Hackood. They \ncaught only one fish. \nWhen they got home, Hiram said, \"The way I \nfigure \nour expenses, that fish cost us $600.\" \n\"Well,\" said Willie, \"at that price, it's a good thing \nwe didn't catch any more.\" \n151"
+    },
+    {
+      "title": "Ramitas de perejil fresco",
+      "title_original": "Fresh parsley sprigs",
+      "page": 156,
+      "pages_span": null,
+      "ingredients": [
+        "Coloque los filetes en una fuente para hornear de 9\" por 13\" ligeramente engrasada.",
+        "Untar sobre filetes.",
+        "Hornee a 375 °F durante 20 minutos o hasta que el pescado se desmenuce.",
+        "Coloque los filetes en una fuente para servir; espolvorear con",
+        "Es mucho más fácil tragar una espina de pescado que su último pescado."
+      ],
+      "steps": [],
+      "prep_time": "20 minutes",
+      "difficulty": null,
+      "ingredients_count": 5,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Ramitas de perejil fresco \n1. \nColoque los filetes en una fuente para hornear de 9\" por 13\" ligeramente engrasada. \nplato. \nCombine los ingredientes restantes, el pimentón. \ny el perejil en un tazón pequeño, revolviendo bien. \nUntar sobre filetes. \n3. \nHornee a 375 °F durante 20 minutos o hasta que el pescado se desmenuce. \nfácilmente con un tenedor. \n4. \nColoque los filetes en una fuente para servir; espolvorear con \npimentón y decorar con perejil. \nPescador: Un señor que, exageradamente, lo convierte en un \nEs mucho más fácil tragar una espina de pescado que su último pescado. \nhistoria. \nBIS 246 I OAS 2S 2S 2S 2S 2s 246 IE IE IS OS 26 Es 2S 26 2 OK \n154",
+      "full_text_original": "Fresh parsley sprigs \n1. \nPlace fillets in a lightly greased 9\" by 13\" baking \ndish. \nCombine remaining ingredients, paprika \nand parsley in a small mixing bowl, stirring well. \nSpread on fillets. \n3. \nBake at 375° F. for 20 minutes or until fish flakes \neasily with a fork. \n4. \nPlace fillets in a serving platter; sprinkle with \npaprika and garnish with parsley. \nFisherman: A gent who, by exaggeration, makes it a \nlot easier to swallow a fish bone than his latest fish \nstory. \nBIS 246 I OAS 2S 2S 2S 2S 2s 246 IE IE IS OS 26 Is 2S 26 2 OK \n154"
+    },
+    {
+      "title": "Platija Con Salsa De Eneldo",
+      "title_original": "Flounder With Dill Sauce",
+      "page": 159,
+      "pages_span": null,
+      "ingredients": [
+        "1/2 libra filetes de platija",
+        "1 lata de caldo de pollo",
+        "3 cucharadas. jugo de limon",
+        "1 cucharada. almidón de maíz",
+        "3 cucharadas. eneldo seco",
+        "En una sartén, a fuego medio-alto, calienta 1 1/4 tazas",
+        "Agrega el pescado; tape y cocine a fuego lento de 2 a 3 minutos",
+        "o hasta que el pescado se desmenuce fácilmente con un tenedor."
+      ],
+      "steps": [],
+      "prep_time": "3 minutes",
+      "difficulty": "medium",
+      "ingredients_count": 8,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Platija Con Salsa De Eneldo \n1/2 libra filetes de platija \n1 lata de caldo de pollo \n3 cucharadas. jugo de limon \n1 cucharada. almidón de maíz \n3 cucharadas. eneldo seco \n1. \nEn una sartén, a fuego medio-alto, calienta 1 1/4 tazas \ncaldo de pollo hasta que hierva; reducir el calor. \nAgrega el pescado; tape y cocine a fuego lento de 2 a 3 minutos \no hasta que el pescado se desmenuce fácilmente con un tenedor. \na",
+      "full_text_original": "Flounder With Dill Sauce \n1/2 lbs. flounder fillets \n1 can chicken broth \n3 Tbsp. lemon juice \n1 Tbsp. corn starch \n3 Tbsp. dried dill weed \n1. \nIn skillet, over medium-high heat, heat 1 1/4 cups \nchicken broth to a boil; reduce heat. \nAdd fish; cover and simmer 2 to 3 minutes \nor until fish flakes easily with fork. \na"
+    },
+    {
+      "title": "Retire con cuidado el pescado con una espumadera para calentarlo.",
+      "title_original": "Carefully remove fish with slotted spoon to heated",
+      "page": 159,
+      "pages_span": null,
+      "ingredients": [
+        "Retire con cuidado el pescado con una espumadera para calentarlo.",
+        "sobre pescado."
+      ],
+      "steps": [],
+      "prep_time": "1 minute",
+      "difficulty": "medium",
+      "ingredients_count": 2,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Retire con cuidado el pescado con una espumadera para calentarlo. \nplato para servir. \nMientras tanto, en una cacerola pequeña, mezcle el resto \ncaldo y jugo de limón en maicena. \nCocine a fuego medio-alto, revolviendo, hasta que se mezclen. \nLa tura se espesa y hierve. \nHervir 1 minuto; agregue el eneldo. Para servir, vierta la salsa \nsobre pescado. \n2 3 2 un 2 9 2 9 2s 9 26 \n2 2 2 a 2 ak 2 \n157",
+      "full_text_original": "Carefully remove fish with slotted spoon to heated \nserving platter. \nMeanwhile, in small saucepan, blend remaining \nbroth and lemon juice into cornstarch. \nCook over medium-high heat, stirring, until mix- \nture thickens and boils. \nBoil 1 minute; stir in dill. To serve, spoon sauce \nover fish. \n2 3 2 a 2 9 2 9 2s 9 26 \n2 2 2 a 2 ak 2 \n157"
+    },
+    {
+      "title": "Fletán frito",
+      "title_original": "Fried Halibut",
+      "page": 163,
+      "pages_span": [
+        163,
+        164
+      ],
+      "ingredients": [
+        "2 libras. filetes de fletán",
+        "1 cucharadita sal",
+        "pizca de pimienta",
+        "1 cucharada. leche",
+        "1 taza de galleta molida fina",
+        "Cortar los filetes en trozos para servir.",
+        "Espolvorea ambos lados con sal y pimienta.",
+        "Sumerja el pescado en huevo y enróllelo en migajas.",
+        "Freír el pescado en una canasta a aproximadamente 375 °F durante 3 a 5"
+      ],
+      "steps": [],
+      "prep_time": "5 \nminutes",
+      "difficulty": null,
+      "ingredients_count": 9,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Fletán frito \n2 libras. filetes de fletán \n1 cucharadita sal \npizca de pimienta \n1 huevo \n1 cucharada. leche \n1 taza de galleta molida fina \n1. \nCortar los filetes en trozos para servir. \n2. \nEspolvorea ambos lados con sal y pimienta. \n161 \n\n3. \nBatir ligeramente el huevo y mezclar con la leche. \n4. \nSumerja el pescado en huevo y enróllelo en migajas. \n5. \nFreír el pescado en una canasta a aproximadamente 375 °F durante 3 a 5 \nminutos.",
+      "full_text_original": "Fried Halibut \n2 Ibs. halibut fillets \n1 tsp. salt \nDash of pepper \n1 egg \n1 Tbsp. milk \n1 cup fine cracker crumbs \n1. \nCut fillets into serving pieces. \n2. \nSprinkle both sides with salt and pepper. \n161 \n\n3. \nBeat egg slightly and blend with milk. \n4. \nDip fish in egg and roll in crumbs. \n5. \nFry fish in a basket at about 375° F. for 3 to 5 \nminutes."
+    },
+    {
+      "title": "Coloca los aros de cebolla encima del pescado y la leche.",
+      "title_original": "Place the onion rings on top of the fish and milk",
+      "page": 164,
+      "pages_span": [
+        164,
+        165
+      ],
+      "ingredients": [
+        "Coloca los aros de cebolla encima del pescado y la leche.",
+        "copos de pescado con un tenedor.",
+        "1 libra fletán",
+        "1/2 taza de arroz de grano largo",
+        "1 cucharada. harina",
+        "ajo",
+        "Cortar el fletán en trozos pequeños.",
+        "Agrega el curry y el ajo."
+      ],
+      "steps": [],
+      "prep_time": "20 minutes",
+      "difficulty": null,
+      "ingredients_count": 8,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Coloca los aros de cebolla encima del pescado y la leche. \ny hornee a 350° F. durante 15 a 20 minutos o hasta \ncopos de pescado con un tenedor. \n\nSopa de fletán canadiense \n1 libra fletán \ncebollas \n1/2 taza de arroz de grano largo \n1 cucharada. harina \npatatas \napio \nrepollo \najo \ncurry \nZanahorias \n1. \nCocine las verduras y el arroz. \n2. \nCortar el fletán en trozos pequeños. \n3 \nCuando las verduras estén casi cocidas, agregue el fletán. \n_ \nAgrega el curry y el ajo. \n5.",
+      "full_text_original": "Place the onion rings on top of the fish and milk \nand bake at 350° F. for 15 to 20 minutes or until \nfish flakes with a fork. \n\nCanadian Halibut Chowder \n1 Ib. halibut \nOnions \n1/2 cup long grain rice \n1 Tbsp. flour \nPotatoes \nCelery \nCabbage \nGarlic \nCurry \nCarrots \n1. \nCook vegetables and rice. \n2. \nCut halibut into small pieces. \n3 \nWhen vegetables are nearly done, add halibut. \n_ \nAdd curry and garlic. \n5."
+    },
+    {
+      "title": "Sal y pimienta al gusto",
+      "title_original": "Salt and pepper to taste",
+      "page": 171,
+      "pages_span": null,
+      "ingredients": [
+        "Sal y pimienta al gusto",
+        "Corta cada filete en trozos de 1 1/2 pulgada.",
+        "pescado y luego sacudir el exceso.",
+        "Caliente el wok. Agrega el aceite y la mantequilla. cuando la mantequilla",
+        "se derrite y comienza a chisporrotear agregue unos trozos de pescado",
+        "Los trozos están ligeramente dorados por ambos lados.",
+        "Agregue el ajo al aceite y la mantequilla. Sofreír unos 15",
+        "Agrega el pescado, la sal, la pimienta, el perejil y el jugo de limón.",
+        "Mezcle el pescado brevemente con la mezcla."
+      ],
+      "steps": [],
+      "prep_time": null,
+      "difficulty": "medium",
+      "ingredients_count": 9,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Sal y pimienta al gusto \nGajos de limón, para decorar \n1. \n2. \nCorta cada filete en trozos de 1 1/2 pulgada. \nRebozar cada uno en harina, presionando la harina uniformemente \npescado y luego sacudir el exceso. \nCaliente el wok. Agrega el aceite y la mantequilla. cuando la mantequilla \nse derrite y comienza a chisporrotear agregue unos trozos de pescado \na la vez. \nCocine rápidamente a fuego medio, volteando hasta que \nLos trozos están ligeramente dorados por ambos lados. \nRetirar y reservar. \nAgregue el ajo al aceite y la mantequilla. Sofreír unos 15 \nsegundos. Retire el wok del fuego. \nAgrega el pescado, la sal, la pimienta, el perejil y el jugo de limón. \nMezcle el pescado brevemente con la mezcla. \n169",
+      "full_text_original": "Salt and pepper to taste \nLemon wedges, for garnish \n1. \n2. \nCut each fillet into 1 1/2-inch pieces. \nDredge each in flour, pressing flour evenly into \nfish, then shaking off excess. \nHeat wok. Add oil and butter. When butter \nmelts and begins to sizzle add a few fish pieces \nat a time. \nCook quickly over medium heat, turning until \npieces are lightly browned on both sides. \nRemove and set aside. \nAdd garlic to oil and butter. Stir-fry about 15 \nseconds. Kemove wok from heat. \nAdd fish, salt, pepper, parsley and lemon juice. \nToss fish briefly in mixture. \n169"
+    },
+    {
+      "title": "pizca de pimienta",
+      "title_original": "Dash pepper",
+      "page": 172,
+      "pages_span": null,
+      "ingredients": [
+        "pizca de pimienta",
+        "Escurrir el salmón; romper en trozos grandes.",
+        "Agregue mayonesa, perejil, cebolla, pimiento, limón.",
+        "el jugo y la pimienta se mezclan suavemente.",
+        "Incorpora 1/2 taza de queso.",
+        "Espolvorea el queso restante sobre la mezcla de salmón."
+      ],
+      "steps": [],
+      "prep_time": "4 minutes",
+      "difficulty": null,
+      "ingredients_count": 6,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "pizca de pimienta \n1. \nEscurrir el salmón; romper en trozos grandes. \n2. \nAgregue mayonesa, perejil, cebolla, pimiento, limón. \nel jugo y la pimienta se mezclan suavemente. \n3. \nIncorpora 1/2 taza de queso. \n4. \nUnte aproximadamente 1/4 de taza de la mezcla en cada rebanada de \npan. \n5. \nEspolvorea el queso restante sobre la mezcla de salmón. \n6. \nAse a unas 6 pulgadas del fuego de 3 a 4 minutos o \nhasta que el queso se derrita y la parte superior esté dorada. \nBIE 4S 28 58 BIE 24S 24S I 3S 2S ES IE 2S 2K 2S ES I 2 2k OE \nPescador: un engaño enteramente rodeado de mentirosos en el pasado \nropa. \n170",
+      "full_text_original": "Dash pepper \n1. \nDrain salmon; break into large chunks. \n2. \nAdd mayonnaise, parsley, onion, pimento, lemon \njuice and pepper toss gently to mix. \n3. \nFold in 1/2 cup cheese. \n4. \nSpread about 1/4 cup mixture on each slice of \nbread. \n5. \nSprinkle remaining cheese over salmon mixture. \n6. \nBroil about 6-inches from heat 3 to 4 minutes or \nuntil cheese melts and tops are golden. \nBIE 4S 28 58 BIE 24S 24S I 3S 2S IS IE 2S 2K 2S IS I 2 2k OE \nAngler: A delusion entirely surrounded by liars in old \nclothes. \n170"
+    },
+    {
+      "title": "Sopa De Salmón",
+      "title_original": "Salmon Soup",
+      "page": 173,
+      "pages_span": null,
+      "ingredients": [
+        "Sopa De Salmón",
+        "1 lata (14 1/2-0z) de salmón",
+        "1 litro de leche",
+        "1/2 cucharadita sal",
+        "2 cucharadas. mantequilla",
+        "pizca de pimienta",
+        "Agrega la leche, la sal, la pimienta.",
+        "Agregue el salmón y cocine a fuego lento durante 5 a 10 minutos."
+      ],
+      "steps": [],
+      "prep_time": "10 minutes",
+      "difficulty": null,
+      "ingredients_count": 8,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Sopa De Salmón \n1 lata (14 1/2-0z) de salmón \n1 litro de leche \n1/2 cucharadita sal \n2 cucharadas. mantequilla \npizca de pimienta \n1. Derrita la mantequilla en una sartén. \n2. \nAgrega la leche, la sal, la pimienta. \n3. \nAgregue el salmón y cocine a fuego lento durante 5 a 10 minutos. \nCortesía de Gloria Bradway, Varsovia, Indiana \n171",
+      "full_text_original": "Salmon Soup \n1 can (14 1/2-0z) salmon \n1 pint milk \n1/2 tsp. salt \n2 Tbsp. butter \nDash of pepper \n1. Melt butter in a pan. \n2. \nAdd milk, salt, pepper. \n3. \nAdd salmon and simmer for 5 to 10 minutes. \nCourtesy Gloria Bradway, Warsaw, Indiana \n171"
+    },
+    {
+      "title": "pizca de pimienta",
+      "title_original": "Dash pepper",
+      "page": 174,
+      "pages_span": null,
+      "ingredients": [
+        "pizca de pimienta",
+        "1 taza de pan rallado",
+        "1 1/2 taza de guisantes en salsa blanca",
+        "Dale un pescado a un hombre y comerá durante un día."
+      ],
+      "steps": [],
+      "prep_time": "25 minutes",
+      "difficulty": null,
+      "ingredients_count": 4,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "pizca de pimienta \n1 taza de pan rallado \n2 huevos grandes, ligeramente batidos \n1 1/2 taza de guisantes en salsa blanca \n1. \nEn un tazón pequeño, combine los primeros 3 ingredientes. \n2. \nAgregue los siguientes 4 ingredientes, agregue el pan rallado y \nhuevos. \n3. \nMezclar bien; forme un pan y colóquelo sobre 1 cuarto de galón engrasado. \nfuente para hornear. \n4. \nHornee durante 25 minutos en horno precalentado a 350° F. \n5. \nColoque los guisantes calientes sobre el pan. \nOS IS 248 O46 8 3S oft 2fe SIE Is 2k 248 24S Is Os Oe 2Ie 3h \nDale un pescado a un hombre y comerá durante un día. \nEnséñale a pescar a un hombre y el viejo buitre no quedará \ndando vueltas bajo los pies todo el tiempo.",
+      "full_text_original": "Dash pepper \n1 cup bread crumbs \n2 large eggs, slightly beaten \n1 1/2 cup peas in white sauce \n1. \nIn small bowl, combine first 3 ingredients. \n2. \nAdd next 4 ingredients, stir in bread crumbs and \neggs. \n3. \nMix well; shape into loaf, place on greased 1 qt. \nbaking dish. \n4. \nBake 25 minutes in preheated 350° F. oven. \n5. \nSpoon warm peas over loaf. \nOS IS 248 O46 8 3S oft 2fe SIE Is 2k 248 24S Is Os Oe 2Ie 3h \nGive a man a fish, and he'll eat for a day. \nTeach a man to fish, and the old buzzard won't be \nhanging around underfoot all the time."
+    },
+    {
+      "title": "Esposa de ejecutivo jubilado",
+      "title_original": "Wife of retired executive",
+      "page": 174,
+      "pages_span": [
+        174,
+        175
+      ],
+      "ingredients": [
+        "Croquetas De Salmón",
+        "1 4 oz. lata de salmón",
+        "1 cucharada. hojuelas de cebolla deshidratada",
+        "Sal y pimienta (al gusto)"
+      ],
+      "steps": [],
+      "prep_time": "20 minutes",
+      "difficulty": null,
+      "ingredients_count": 4,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Esposa de ejecutivo jubilado \n172 \n\nCroquetas De Salmón \n1 4 oz. lata de salmón \n1 rebanada de pan, desmenuzado en la licuadora \n3 onzas leche desnatada \nUna pizca de hojuelas de perejil \n1 cucharada. hojuelas de cebolla deshidratada \nSal y pimienta (al gusto) \n1. \nCombine todos los ingredientes; mezclar bien y darle forma \ncroquetas en forma de cono. \n2. \nHornee a 350° F. durante 20 minutos en una superficie antiadherente. \nbandeja para hornear galletas. Sirve 2 porciones para el almuerzo. \nOE 2 ES OE ES 2 ES OE OE IE 2 IE OE OE OK OE OK EE",
+      "full_text_original": "Wife of retired executive \n172 \n\nSalmon Croquettes \n1 4-o0z. can salmon \n1 slice bread, crumbled in blender \n3-oz. skim milk \nDash parsley flakes \n1 Tbsp. dehydrated onion flakes \nSalt and pepper (to taste) \n1. \nCombine all ingredients; mix well and shape into \ncone-shaped croquettes. \n2. \nBake at 350° F. for 20 minutes on a non-stick \ncookie sheet. Serves 2 for lunch. \nOE 2 IS OE IS 2 IS OE OE IE 2 IE OE OE OK OE OK EE"
+    },
+    {
+      "title": "Salmón Al Vapor A La Parrilla",
+      "title_original": "Grilled Steamed Salmon",
+      "page": 176,
+      "pages_span": null,
+      "ingredients": [
+        "Salmón Al Vapor A La Parrilla",
+        "3 a 5 libras. filetes de salmón",
+        "1/4 taza de agua",
+        "cebolla en rodajas",
+        "3 cucharadas. mantequilla",
+        "sal",
+        "pimienta",
+        "Coloque el salmón en una carpa de papel de aluminio resistente.",
+        "Agregue agua, cebollas en rodajas y mantequilla.",
+        "Espolvorea con sal, pimienta y pimentón al gusto.",
+        "Servir con limón, sal y pimienta."
+      ],
+      "steps": [],
+      "prep_time": "30 minutes",
+      "difficulty": null,
+      "ingredients_count": 11,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Salmón Al Vapor A La Parrilla \n3 a 5 libras. filetes de salmón \n1/4 taza de agua \ncebolla en rodajas \n3 cucharadas. mantequilla \nsal \npimienta \npimentón \n1. \nColoque el salmón en una carpa de papel de aluminio resistente. \n2. \nAgregue agua, cebollas en rodajas y mantequilla. \n3. \nEspolvorea con sal, pimienta y pimentón al gusto. \n4. \nSelle la carpa de aluminio y colóquela en la parrilla. \n5. \nAse durante unos 20 a 30 minutos. El vapor debería \npoder escapar un poco de la cima. \n6. \nServir con limón, sal y pimienta. \nCortesía de Wayne Kubek, Lansing, Illinois. \nA fe 26 2 fs I os 2 ois 2S I 2S 2S 2 OE 2 2K OK \nNo sirve de nada conducir 100 millas para pescar cuando \npuede resultar igualmente infructuoso cerca de casa. \n174",
+      "full_text_original": "Grilled Steamed Salmon \n3 to 5 lbs. salmon fillets \n1/4 cup water \nSliced onion \n3 Tbsp. butter \nSalt \nPepper \nPaprika \n1. \nPlace salmon in heavy duty aluminum foil tent. \n2. \nAdd water, sliced onions, butter. \n3. \nSprinkle with salt, pepper and paprika to taste. \n4. \nSeal the foil tent and place on the grill. \n5. \nGrill for about 20 to 30 minutes. Steam should \nbe able to escape a little from the top. \n6. \nServe with lemon, salt and pepper. \nCourtesy Wayne Kubek, Lansing, Illinois. \nA fe 26 2 fs I os 2 ois 2S I 2S 2S 2 OE 2 2K OK \nThere is no use in driving 100 miles to fish when you \ncan be just as unsuccessful near home. \n174"
+    },
+    {
+      "title": "Filete De Salmón En Papel De Aluminio",
+      "title_original": "Salmon Steak in Foil",
+      "page": 177,
+      "pages_span": null,
+      "ingredients": [
+        "Filete De Salmón En Papel De Aluminio",
+        "6 filetes de salmón de 1 pulgada",
+        "1 taza de aceite de oliva",
+        "2 cucharadas. cebolla, picada",
+        "2 cucharadas. perejil",
+        "2 cucharadas. jugo de limon",
+        "Sal y pimienta al gusto",
+        "6 lonchas finas de tocino",
+        "Mezcle la marinada de aceite, jugo de limón, cebolla y",
+        "Vierta sobre el salmón y déjelo en remojo durante la noche.",
+        "Engrase el papel de aluminio y agregue el salmón, las lonchas de tocino y"
+      ],
+      "steps": [],
+      "prep_time": "20 minutes",
+      "difficulty": null,
+      "ingredients_count": 11,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Filete De Salmón En Papel De Aluminio \n6 filetes de salmón de 1 pulgada \n1 taza de aceite de oliva \n2 cucharadas. cebolla, picada \n2 cucharadas. perejil \n2 cucharadas. jugo de limon \nSal y pimienta al gusto \n6 lonchas finas de tocino \n1. \nMezcle la marinada de aceite, jugo de limón, cebolla y \nperejil. \n2. \nVierta sobre el salmón y déjelo en remojo durante la noche. \n3. \nPrecalienta el horno a 425°F. \n4. \nEngrase el papel de aluminio y agregue el salmón, las lonchas de tocino y \nuna cucharada de marinada. \n5 \nCierre el papel de aluminio. Hornee unos 20 minutos.",
+      "full_text_original": "Salmon Steak in Foil \n6 1-inch salmon steaks \n1 cup olive oil \n2 Tbsp. onion, chopped \n2 Tbsp. parsley \n2 Tbsp. lemon juice \nSalt and pepper to taste \n6 thin slices of bacon \n1. \nMix marinade of oil, lemon juice, onion and \nparsley. \n2. \nPour over salmon and soak overnight. \n3. \nPre-heat oven to 425° F. \n4. \nGrease foil and add the salmon, bacon slices and \na tablespoon of marinade. \n5 \nClose foil. Bake about 20 minutes."
+    },
+    {
+      "title": "pizca de pimienta",
+      "title_original": "Dash of pepper",
+      "page": 183,
+      "pages_span": null,
+      "ingredients": [
+        "pizca de pimienta",
+        "1/4 libra de queso picante",
+        "Escurrir y desmenuzar el salmón.",
+        "en el centro de cada bola de pescado."
+      ],
+      "steps": [],
+      "prep_time": "4 minutes",
+      "difficulty": null,
+      "ingredients_count": 4,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "pizca de pimienta \n1/4 libra de queso picante \n1. \nv4 \nEscurrir y desmenuzar el salmón. \nCombine todos los ingredientes excepto el queso y mezcle. \na fondo. \nForme bolitas del tamaño de nueces. \nCorta el queso en 3/8 de pulgada. cubos e inserte un cubo \nen el centro de cada bola de pescado. \nDar forma a las bolitas y pasarlas por pan rallado. \nFreír en grasa profunda a 375° F. 3 - 4 minutos o hasta \nmarrón dorado. Adorne y sirva caliente, solo o \ncon salsa de mostaza. \nCortesía de Charles Badai, Anchorage, Alaska. \n181",
+      "full_text_original": "Dash of pepper \n1/4 lb. sharp cheese \n1. \nv4 \nDrain and flake salmon. \nCombine all ingredients except cheese and mix \nthoroughly. \nShape into balls the size of walnuts. \nCut cheese into 3/8-in. cubes and insert a cube \ninto the center of each fish ball. \nReshape balls and roll in bread crumbs. \nFry in deep fat at 375° F. 3 - 4 minutes or until \ngolden brown. Garnish and serve hot, plain or \nwith a mustard sauce. \nCourtesy Charles Badai, Anchorage, Alaska. \n181"
+    },
+    {
+      "title": "Sándwiches de sardinas tostadas",
+      "title_original": "Toasted Sardine Sandwiches",
+      "page": 189,
+      "pages_span": null,
+      "ingredients": [
+        "2 latas de sardinas",
+        "6 rebanadas de queso (1-0 oz cada una)",
+        "1/3 taza de mantequilla blanda o margarina"
+      ],
+      "steps": [],
+      "prep_time": "5 minutes",
+      "difficulty": null,
+      "ingredients_count": 3,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Sándwiches de sardinas tostadas \n2 latas de sardinas \n12 rebanadas de pan blanco \n6 rebanadas de queso (1-0 oz cada una) \n1/3 taza de mantequilla blanda o margarina \n1. \n2. \n3 \n= \nEscurre el líquido de las sardinas. \nCortar las sardinas por la mitad a lo largo. \nPon las sardinas sobre 6 rebanadas de pan. \nPon una loncha de queso encima de las sardinas. \nCubrir con una rebanada de pan. \nUnte mantequilla por fuera de los sándwiches. \nFríe los sándwiches de 4 a 5 minutos o hasta \nmarrón. \nVoltee los sándwiches con cuidado. Freír 4 a 5 \nminutos más o hasta que se dore. \nOO IE 24S 2S IE 2S HIE OIE I Es 2s 2 oe 2s 2h Oe OK 2K OK \n\"¿Los peces muerden hoy?\" \n\"Si lo son... ¡sólo el uno al otro!\" \n187",
+      "full_text_original": "Toasted Sardine Sandwiches \n2 cans sardines \n12 slices white bread \n6 slices cheese (1-0z. each) \n1/3 cup soft butter or margarine \n1. \n2. \n3 \n= \nDrain the liquid off the sardines. \nCut the sardines in half the long way. \nPut the sardines on 6 slices of bread. \nPut a slice of cheese on top of the sardines. \nCover with a slice of bread. \nSpread butter on the outside of the sandwiches. \nFry the sandwiches for 4 to 5 minutes or until \nbrown. \nTurn the sandwiches carefully. Fry 4 to 5 \nminutes more or until brown. \nOO IE 24S 2S IE 2S HIE OIE I Is 2s 2 oe 2s 2h Oe OK 2K OK \n\"Are the fish biting today?\" \n\"If they are---only one another!\" \n187"
+    },
+    {
+      "title": "hamburguesas marinas",
+      "title_original": "Seaburgers",
+      "page": 194,
+      "pages_span": null,
+      "ingredients": [
+        "1 7 onzas ¿Puede cada langosta, cangrejo, salmón y atún?",
+        "1/2 libra de queso picante procesado",
+        "1/4 taza de cebolla",
+        "1/2 taza de pepinillo dulce, picado",
+        "1/2 taza de salsa de tomate",
+        "1/4 taza de mayonesa",
+        "1 taza de apio, picado",
+        "2 cucharaditas sal",
+        "1/2 cucharadita pimienta",
+        "2 cucharadas. pimiento, picado"
+      ],
+      "steps": [],
+      "prep_time": "20 minutes",
+      "difficulty": null,
+      "ingredients_count": 10,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "hamburguesas marinas \n1 7 onzas ¿Puede cada langosta, cangrejo, salmón y atún? \n1/2 libra de queso picante procesado \n1/4 taza de cebolla \n1/2 taza de pepinillo dulce, picado \n1/2 taza de salsa de tomate \n1/4 taza de mayonesa \n1 taza de apio, picado \n2 cucharaditas sal \n1/2 cucharadita pimienta \n2 cucharadas. pimiento, picado \n12 bollos \n1. \nPrecalienta el horno a 350°F. \n2. \nMezclar todos los ingredientes. \n3. \nHornea por 20 minutos y sirve sobre panecillos. \nO16 246 38 2S 2S ES 26 ES 2S ES IE 2S 2 2S 26 2s 2S 2k 2s 2 2 \n\"Y creó Dios las grandes criaturas del mar y \ntodo ser vivo y móvil con el que el agua \nrebosa, según sus especies... Y vio Dios que \nestuvo bien.\" Génesis 1:21 (NVI) \n192",
+      "full_text_original": "Seaburgers \n1 7-oz. can each lobster, crab, salmon, and tuna \n1/2 lb. processed sharp cheese \n1/4 cup onion \n1/2 cup sweet pickle, chopped \n1/2 cup catsup \n1/4 cup mayonnaise \n1 cup celery, minced \n2 tsp. salt \n1/2 tsp. pepper \n2 Tbsp. pimento, minced \n12 buns \n1. \nPreheat oven to 350° F. \n2. \nMix all ingredients. \n3. \nBake for 20 minutes and serve on buns. \nO16 246 38 2S 2S IS 26 IS 2S IS IE 2S 2 2S 26 2s 2S 2k 2s 2 2 \n\"So God created the great creatures of the sea and \nevery living and moving thing with which the water \nteems, according to their kinds...And God saw that it \nwas good.\" Genesis 1:21 (NIV) \n192"
+    },
+    {
+      "title": "sopa de mariscos",
+      "title_original": "Seafood Soup",
+      "page": 195,
+      "pages_span": null,
+      "ingredients": [
+        "1/2 libra de camarones, pelados, desvenados y cortados por la mitad en forma transversal",
+        "1/2 libra de vieiras, picadas en trozos grandes",
+        "1 diente de ajo, machacado",
+        "1/4 taza de mantequilla o margarina",
+        "2/3 taza de harina para todo uso",
+        "1/2 cucharadita pimienta blanca molida",
+        "1 taza de crema ligera o mitad y mitad",
+        "camarones, vieiras, patatas y ajo en",
+        "caldo de pollo y pimienta. Calentar hasta que hierva,"
+      ],
+      "steps": [],
+      "prep_time": "1 minute",
+      "difficulty": "medium",
+      "ingredients_count": 9,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "sopa de mariscos \n1/2 libra de camarones, pelados, desvenados y cortados por la mitad en forma transversal \nsabio \n1/2 libra de vieiras, picadas en trozos grandes \n1 16-0z. latas de patatas nuevas enteras, escurridas y \ncortado en cubitos \n1 diente de ajo, machacado \n1/4 taza de mantequilla o margarina \n2/3 taza de harina para todo uso \n2 13 3/4 onzas líquidas. latas de caldo de pollo \n1/2 cucharadita pimienta blanca molida \n1 taza de crema ligera o mitad y mitad \n1. \nEn una cacerola grande, a fuego medio, cocine \ncamarones, vieiras, patatas y ajo en \nmargarina hasta que el marisco esté cocido. \n2. \nAgregue la harina hasta que se mezcle. agregue gradualmente \ncaldo de pollo y pimienta. Calentar hasta que hierva, \nrevolviendo constantemente. Hervir 1 minuto. \n3. \nAgrega la crema ligera; calentar a través. No hervir. \n2 aE 2 a2 9 2 2 2 2 a 2 9 2 a 2 a 2K aK",
+      "full_text_original": "Seafood Soup \n1/2 lb. shrimp, shelled, deveined and cut in half cross- \nwise \n1/2 lb. sea scallops, coarsely chopped \n1 16-0z. can whole new potatoes, drained and \ndiced \n1 clove garlic, crushed \n1/4 cup butter or margarine \n2/3 cup all-purpose flour \n2 13 3/4 fluid oz. cans chicken broth \n1/2 tsp. ground white pepper \n1 cup light cream or half-and-half \n1. \nIn large saucepan, over medium heat, cook \nshrimp, scallops, potatoes and garlic in \nmargarine until seafood is done. \n2. \nStir in flour until blended. Gradually add \nchicken broth and pepper. Heat to a boil, \nstirring constantly. Boil 1 minute. \n3. \nStir in light cream; heat through. Do not boil. \n2 aE 2 a2 9 2 2 2 2 a 2 9 2 a 2 a 2K aK"
+    },
+    {
+      "title": "Bisque de camarones de Maine",
+      "title_original": "Maine Shrimp Bisque",
+      "page": 197,
+      "pages_span": [
+        197,
+        198
+      ],
+      "ingredients": [
+        "1 libra camarones frescos",
+        "4 tazas de leche",
+        "2 rodajas de cebolla",
+        "1 taza de apio, cortado en cubitos",
+        "3 cucharadas. perejil, picado",
+        "1/3 taza de mantequilla",
+        "1/3 taza de harina",
+        "3/4 cucharadita sal",
+        "1/8 cucharadita. pimienta",
+        "poner en agua con sal hirviendo rápidamente; cubrir; hervir",
+        "Picar en trozos pequeños.",
+        "Vierta la leche en una cacerola; agregue la hoja de laurel, la cebolla"
+      ],
+      "steps": [],
+      "prep_time": "15 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Bisque de camarones de Maine \n1 libra camarones frescos \n4 tazas de leche \n1 hoja de laurel \n2 rodajas de cebolla \n1 taza de apio, cortado en cubitos \n3 cucharadas. perejil, picado \n1/3 taza de mantequilla \n1/3 taza de harina \n3/4 cucharadita sal \n1/8 cucharadita. pimienta \n1. \nLave bien los camarones con agua corriente fría; \nponer en agua con sal hirviendo rápidamente; cubrir; hervir \n15 minutos; drenar. \n2. \nRetirar del caparazón y quitar la vena negra. \nPicar en trozos pequeños. \n3. \nVierta la leche en una cacerola; agregue la hoja de laurel, la cebolla \nrodajas, apio y perejil. \n4. \nEscaldar la leche unos 2 minutos; no hervir. \n5. \nDerrita la mantequilla en una cacerola profunda a fuego lento; \nagregue la harina, la sal y la pimienta. \n195 \n\n6. \nCuando esté muy suave añadir poco a poco la leche escaldada, \nagregue los camarones revolviendo constantemente hasta que la mezcla \nhierve. Cocine 5 minutos, revolviendo constantemente.",
+      "full_text_original": "Maine Shrimp Bisque \n1 Ib. fresh shrimp \n4 cups milk \n1 bay leaf \n2 slices onion \n1 cup celery, diced \n3 Tbsp. parsley, chopped \n1/3 cup butter \n1/3 cup flour \n3/4 tsp. salt \n1/8 tsp. pepper \n1. \nWash shrimp thoroughly in cold running water; \nput into rapidly boiling salted water; cover; boil \n15 minutes; drain. \n2. \nRemove from shells and take out black vein. \nChop into tiny pieces. \n3. \nPour milk into saucepan; add bay leaf, onion \nslices, celery, and parsley. \n4. \nScald milk about 2 minutes; do not boil. \n5. \nMelt butter in deep saucepan over low flame; \nstir in flour, salt, and pepper. \n195 \n\n6. \nWhen very smooth, gradually add scalded milk, \nadd shrimp stirring constantly until mixture \nboils. Cook 5 minutes, stirring constantly."
+    },
+    {
+      "title": "Camarones Envueltos En Tocino",
+      "title_original": "Bacon Wrapped Shrimp",
+      "page": 198,
+      "pages_span": null,
+      "ingredients": [
+        "1 libra camarones",
+        "1/4 taza de salsa de soja",
+        "1 cucharada. azúcar",
+        "1 diente de ajo pequeño, picado",
+        "1 cucharadita raíz de jengibre, rallada",
+        "Combine salsa de soja, azúcar, ajo, raíz de jengibre,",
+        "y una pizca de pimienta; dejar reposar 1 hora a temperatura ambiente."
+      ],
+      "steps": [],
+      "prep_time": "15 minutes",
+      "difficulty": null,
+      "ingredients_count": 7,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Camarones Envueltos En Tocino \nAperitivos \n1 libra camarones \n1/4 taza de salsa de soja \n1 cucharada. azúcar \n1 diente de ajo pequeño, picado \n1 cucharadita raíz de jengibre, rallada \n7 - 8 rebanadas de tocino \n1. \nCombine salsa de soja, azúcar, ajo, raíz de jengibre, \ny una pizca de pimienta; dejar reposar 1 hora a temperatura ambiente. \ntemperatura. \n2. \nCorta las rebanadas de tocino en tercios. Envolver pedazo de \ntocino alrededor de cada camarón; brocheta para asegurar. \n3. \nAsa camarones envueltos en tocino sobre brasas \nunos 15 minutos o hasta que esté listo, volteando y \ncepillarse con mezcla de soja con frecuencia. \nOEE FG 6 OI 5 26 OFS ES 2S Es decir 2S ES I IE OIE OE 2 2 OE \n196",
+      "full_text_original": "Bacon Wrapped Shrimp \nSnacks \n1 Ib. shrimp \n1/4 cup soy sauce \n1 Tbsp. sugar \n1 small clove garlic, minced \n1 tsp. ginger root, grated \n7 - 8 slices bacon \n1. \nCombine soy sauce, sugar, garlic, ginger root, \nand dash pepper; let stand 1 hour at room tem- \nperature. \n2. \nCut bacon slices in thirds. Wrap piece of \nbacon around each shrimp; skewer to secure. \n3. \nGrill bacon-wrapped shrimp over hot coals \nabout 15 minutes or till done, turning and \nbrushing with soy mixture frequently. \nOEE FG 6 OI 5 26 OFS IS 2S Ie 2S IS I IE OIE OE 2 2 OE \n196"
+    },
+    {
+      "title": "sal al gusto",
+      "title_original": "Salt to taste",
+      "page": 201,
+      "pages_span": null,
+      "ingredients": [
+        "sal al gusto"
+      ],
+      "steps": [],
+      "prep_time": "5 minutes",
+      "difficulty": "medium",
+      "ingredients_count": 1,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "sal al gusto \n1. \nCaliente el wok. Agregue la mantequilla y derrita a fuego medio. \ncalor alto. \n2. \nCuando la mantequilla comience a chisporrotear, agregue los camarones. Revolver- \nfreír unos 5 minutos hasta que los camarones estén firmes y \nrosa. \n3.",
+      "full_text_original": "Salt to taste \n1. \nHeat wok. Add butter and melt over medium \nhigh heat. \n2. \nWhen butter begins to sizzle, add shrimp. Stir- \nfry about 5 minutes until shrimp are firm and \npink. \n3."
+    },
+    {
+      "title": "Mezclar todos los ingredientes excepto los camarones y el limón.",
+      "title_original": "Mix all ingredients except shrimp and lemon",
+      "page": 202,
+      "pages_span": null,
+      "ingredients": [
+        "Coloque los camarones y las rodajas de limón en capas."
+      ],
+      "steps": [],
+      "prep_time": "20 minutes",
+      "difficulty": "hard",
+      "ingredients_count": 1,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Mezclar todos los ingredientes excepto los camarones y el limón. \nrebanadas. \n3. \nVierta la mitad de la salsa en el fondo del molde para hornear. \n4, \nColoque los camarones y las rodajas de limón en capas. \n5. \nVierta la salsa restante encima. \n6. \nHornee descubierto durante 15 a 20 minutos revolviendo. \nuna o dos veces. \n7. \nSirva con pan duro para mojar en salsa. \nCortesía de Dolly Chapel, Varsovia, Indiana. \n200",
+      "full_text_original": "Mix all ingredients except shrimp and lemon \nslices. \n3. \nPour 1/2 of sauce in bottom of baking pan. \n4, \nArrange shrimp and lemon slices in layers. \n5. \nPour remaining sauce on top. \n6. \nBake uncovered for 15 to 20 minutes stirring \nonce or twice. \n7. \nServe with hard crust bread to dip in sauce. \nCourtesy Dolly Chapel, Warsaw, Indiana. \n200"
+    },
+    {
+      "title": "Camarones A La Parrilla",
+      "title_original": "Barbecued Shrimp",
+      "page": 203,
+      "pages_span": null,
+      "ingredients": [
+        "1 1/2 libras. camarones, lavados y pelados",
+        "1 cucharadita sal",
+        "pizca de pimienta",
+        "1 diente de ajo, picado",
+        "1/2 taza de perejil, picado",
+        "1/3 taza de aceite de oliva o vegetal",
+        "1 cucharada. vinagre de vino",
+        "1 taza de salsa de tomate",
+        "1/2 taza de agua",
+        "Saltear la cebolla, el apio y los condimentos en aceite de oliva.",
+        "Agregue vinagre de vino o 4 cucharadas. vino blanco,"
+      ],
+      "steps": [],
+      "prep_time": "15 minutes",
+      "difficulty": null,
+      "ingredients_count": 11,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Camarones A La Parrilla \n1 1/2 libras. camarones, lavados y pelados \n2 cebollas picadas \n2 ramitas de apio, finamente picadas \n1 cucharadita sal \npizca de pimienta \n1 diente de ajo, picado \n1/2 taza de perejil, picado \n1/3 taza de aceite de oliva o vegetal \n1 cucharada. vinagre de vino \n1 taza de salsa de tomate \n1/2 taza de agua \n1. \nSaltear la cebolla, el apio y los condimentos en aceite de oliva. \nrevolviendo constantemente hasta que esté suave y dorado. \n2. \nAgregue los camarones y revuelva a fuego moderado hasta que \nse absorbe la humedad. \n3. \nAgregue vinagre de vino o 4 cucharadas. vino blanco, \nluego salsa de tomate y agua. \n4. \nCocine unos 15 minutos. (Una hoja de laurel puede ser \nañadido para darle más sabor). \nEe 9 2 2 9 2 eK 2 a 2 2 a RE aK EE \n201",
+      "full_text_original": "Barbecued Shrimp \n1 1/2 Ibs. shrimp, washed and shelled \n2 onions, chopped \n2 sprigs celery, chopped fine \n1 tsp. salt \nDash of pepper \n1 clove garlic, minced \n1/2 cup parsley, chopped \n1/3 cup olive or vegetable oil \n1 Tbsp. wine vinegar \n1 cup tomato sauce \n1/2 cup water \n1. \nSaute onion, celery and seasonings in olive oil, \nstirring constantly until soft and golden. \n2. \nAdd shrimp, and stir over moderate heat until \nmoisture is absorbed. \n3. \nAdd wine vinegar, or 4 Tbsp. white wine, \nthen tomato sauce and water. \n4. \nCook about 15 minutes. (A bay leaf may be \nadded for extra flavor). \nEe 9 2 2 9 2 eK 2 a 2 2 a RE aK EE \n201"
+    },
+    {
+      "title": "Hojaldres De Crema Y Camarones",
+      "title_original": "Cream Puffs and Shrimp",
+      "page": 204,
+      "pages_span": null,
+      "ingredients": [
+        "1 libra camarones frescos y sin cáscara",
+        "1/2 taza de apio, picado",
+        "1/3 taza de mayonesa",
+        "1 1/2 cucharadita. jugo de limon",
+        "sal y pimienta"
+      ],
+      "steps": [],
+      "prep_time": "5 minutes",
+      "difficulty": null,
+      "ingredients_count": 5,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Hojaldres De Crema Y Camarones \n1 libra camarones frescos y sin cáscara \n1/2 taza de apio, picado \n1/3 taza de mayonesa \n1 1/2 cucharadita. jugo de limon \nsal y pimienta \n1. \nHornee bocanadas oblongas de 4 pulgadas. \n2. \nHierva los camarones de 3 a 5 minutos o hasta que estén cocidos. \n3, \nEnfriar los camarones. \n4. \nMezclar los camarones con todos los ingredientes. \n5.",
+      "full_text_original": "Cream Puffs and Shrimp \n1 Ib. fresh, shelled shrimp \n1/2 cup celery, chopped \n1/3 cup mayonnaise \n1 1/2 tsp. lemon juice \nSalt and pepper \n1. \nBake 4-inch oblong puffs. \n2. \nBoil shrimp 3 - 5 minutes or until done. \n3, \nChill shrimp. \n4. \nMix shrimp with all ingredients. \n5."
+    },
+    {
+      "title": "Cubra los bollitos de crema con lechuga y luego agregue los camarones.",
+      "title_original": "Line cream puffs with lettuce then add shrimp",
+      "page": 204,
+      "pages_span": [
+        204,
+        205
+      ],
+      "ingredients": [
+        "El camarero sirvió el plato principal de pescado. El comensal tomó",
+        "El camarero dijo: \"Filete de lenguado, señor\".",
+        "2 libras pescado blanco de carne firme (bacalao, eglefino o fletán).",
+        "pero), cortado en trozos grandes",
+        "2 cucharadas. aceite vegetal",
+        "3 tazas de agua",
+        "1/2 cucharadita cada uno: pimiento rojo y pimienta negra",
+        "1 taza de perejil, finamente picado",
+        "1/3 taza de vino blanco seco",
+        "1/2 cucharadita sal",
+        "Espolvorea el pescado con 1/2 cucharadita. sal; dejar reposar 1 hora.",
+        "Mientras tanto, dore ligeramente la cebolla en aceite caliente;"
+      ],
+      "steps": [],
+      "prep_time": "20 minutes",
+      "difficulty": null,
+      "ingredients_count": 12,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Cubra los bollitos de crema con lechuga y luego agregue los camarones. \nmezcla. \nCortesía de Dolly Chapel, Varsovia, Indiana. \nIEE 4S fe fe 24S Oe 24S 24S 2k 2s 2S 2 2s 2s 2s Es decir, Ke OK 3 \nEl camarero sirvió el plato principal de pescado. El comensal tomó \nun bocado y preguntó: \"¿Qué es esto?\" \nEl camarero dijo: \"Filete de lenguado, señor\". \n\"Bueno\", respondió el comensal, \"llévatelo y mira si \n¡Puedes conseguirme una parte más suave del zapato!\" \n202 \n\nEstofado de marinero \n2 libras pescado blanco de carne firme (bacalao, eglefino o fletán). \npero), cortado en trozos grandes \n2 cebollas, rebanadas \n2 cucharadas. aceite vegetal \n3 6-0z. latas de pasta de tomate Hunt's \n3 tazas de agua \n1/2 cucharadita cada uno: pimiento rojo y pimienta negra \n1 taza de perejil, finamente picado \n1/3 taza de vino blanco seco \n6 rebanadas de pan italiano (tostado, si se desea) \n1/2 cucharadita sal \n1. \nEspolvorea el pescado con 1/2 cucharadita. sal; dejar reposar 1 hora. \n2. \nMientras tanto, dore ligeramente la cebolla en aceite caliente; \ndrenar. \n3. \nAgregue el agua, la pasta de tomate Hunt's, el pimiento rojo, \npimienta negra, 1 1/2 cucharadita. sal, perejil y vino. \n4. \nCocine a fuego lento durante 20 minutos. \n5. \nAgregue el pescado y cocine a fuego lento unos 10 minutos más o \nhasta que el pescado se desmenuce fácilmente con un tenedor. \n6. \nPara servir, coloque una rebanada de pan en cada sopa. \ncuenco; sirva la sopa con un cucharón. \n203",
+      "full_text_original": "Line cream puffs with lettuce then add shrimp \nmixture. \nCourtesy Dolly Chapel, Warsaw, Indiana. \nIEE 4S fe fe 24S Oe 24S 24S 2k 2s 2S 2 2s 2s 2s Ie Ke OK 3 \nThe waiter served the fish entree. The diner took \none bite and asked, \"What is this?\" \nThe waiter said, \"Filet of sole, sir.\" \n\"Well,\" the diner replied, \"take it back and see if \nyou can get me a softer part of the shoe!\" \n202 \n\nSeaman's Stew \n2 lbs. firm-fleshed white fish (cod, haddock or hali- \nbut), cut in large chunks \n2 onions, sliced \n2 Tbsp. vegetable oil \n3 6-0z. cans Hunt's Tomato Paste \n3 cups water \n1/2 tsp. each: red pepper and black pepper \n1 cup parsley, finely chopped \n1/3 cup dry white wine \n6 slices of Italian bread (toasted, if desired) \n1/2 tsp. salt \n1. \nSprinkle fish with 1/2 tsp. salt; let stand 1 hour. \n2. \nMeanwhile, lightly brown onion in hot oil; \ndrain. \n3. \nStir in water, Hunt's Tomato Paste, red pepper, \nblack pepper, 1 1/2 tsp. salt, parsley and wine. \n4. \nSimmer 20 minutes. \n5. \nAdd fish, simmer about 10 minutes longer or \njust until fish flakes easily with a fork. \n6. \nTo serve, place a slice of bread in each soup \nbowl; ladle soup over. \n203"
+    },
+    {
+      "title": "Hamburguesas De Atún",
+      "title_original": "Tuna Burgers",
+      "page": 209,
+      "pages_span": null,
+      "ingredients": [
+        "Hamburguesas De Atún",
+        "1 7 onzas lata de atún",
+        "3/4 taza de apio, finamente picado",
+        "1/2 taza de queso amarillo, cortado en cubitos",
+        "1 cebolla pequeña, picada",
+        "1/3 taza de mayonesa",
+        "Sal y pimienta al gusto",
+        "Rellena los panecillos untados con mantequilla con atún."
+      ],
+      "steps": [],
+      "prep_time": "15 minutes",
+      "difficulty": null,
+      "ingredients_count": 8,
+      "qualifying_reason": [
+        "under_30_minutes"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Hamburguesas De Atún \n1 7 onzas lata de atún \n3/4 taza de apio, finamente picado \n1/2 taza de queso amarillo, cortado en cubitos \n1 cebolla pequeña, picada \n1/3 taza de mayonesa \nSal y pimienta al gusto \n1. \nMezclar todos los ingredientes. \n2. \nRellena los panecillos untados con mantequilla con atún. \n3. \nEnvolver en papel aluminio y colocar en el horno durante 15 minutos a \n350°F.",
+      "full_text_original": "Tuna Burgers \n1 7-oz. can tuna \n3/4 cup celery, finely chopped \n1/2 cup yellow cheese, diced \n1 small onion, chopped \n1/3 cup mayonnaise \nSalt and pepper to taste \n1. \nMix all ingredients. \n2. \nFill buttered buns with tuna. \n3. \nWrap in foil and place in oven for 15 minutes at \n350° F."
+    },
+    {
+      "title": "Filetes De Bagre Fritos",
+      "title_original": "Fried Catfish Fillets",
+      "page": 218,
+      "pages_span": null,
+      "ingredients": [
+        "Filetes De Bagre Fritos",
+        "Bolas de patata y pescado frito con mucha grasa",
+        "Filetes De Bagre A La Parrilla"
+      ],
+      "steps": [],
+      "prep_time": null,
+      "difficulty": "easy",
+      "ingredients_count": 3,
+      "qualifying_reason": [
+        "easy"
+      ],
+      "recipe_type": "fish/seafood",
+      "original_language": "en",
+      "full_text": "Filetes De Bagre Fritos \n86 \nBolas de patata y pescado frito con mucha grasa \n87 \nBagre rebozado con cerveza \n89 \nBagre asado fácil \n90 \nDelicia de bagre al horno \n90 \nFiletes De Bagre A La Parrilla \n91",
+      "full_text_original": "Fried Catfish Fillets \n86 \nDeep Fat Fried Fish and Potato Balls \n87 \nBeer Batter Catfish \n89 \nEasy Broiled Catfish \n90 \nBaked Catfish Delight \n90 \nBroiled Catfish Fillets \n91"
+    }
+  ]
+}

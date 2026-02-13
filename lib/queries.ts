@@ -1,0 +1,154 @@
+import { supabase, ContentEntry } from './supabase'
+
+// ============================================================================
+// RECETAS
+// ============================================================================
+
+export async function getRecetas(limit?: number): Promise<ContentEntry[]> {
+  let query = supabase
+    .from('recetas')
+    .select('*')
+    .order('quality_score', { ascending: false })
+
+  if (limit) query = query.limit(limit)
+
+  const { data, error } = await query
+  if (error) throw error
+  return data || []
+}
+
+export async function getRecetaBySlug(
+  slug: string,
+): Promise<ContentEntry | null> {
+  const { data, error } = await supabase
+    .from('recetas')
+    .select('*')
+    .eq('slug', slug)
+    .single()
+
+  if (error) return null
+  return data
+}
+
+export async function getRecetasBySpecies(
+  stockProduct: string,
+): Promise<ContentEntry[]> {
+  const { data, error } = await supabase
+    .from('recetas')
+    .select('*')
+    .contains('featured_species', [{ stockProduct }])
+    .order('quality_score', { ascending: false })
+
+  if (error) throw error
+  return data || []
+}
+
+// ============================================================================
+// NOTAS DE MAR
+// ============================================================================
+
+export async function getNotasDeMar(limit?: number): Promise<ContentEntry[]> {
+  let query = supabase
+    .from('notas_de_mar')
+    .select('*')
+    .order('quality_score', { ascending: false })
+
+  if (limit) query = query.limit(limit)
+
+  const { data, error } = await query
+  if (error) throw error
+  return data || []
+}
+
+export async function getNotaDeMarBySlug(
+  slug: string,
+): Promise<ContentEntry | null> {
+  const { data, error } = await supabase
+    .from('notas_de_mar')
+    .select('*')
+    .eq('slug', slug)
+    .single()
+
+  if (error) return null
+  return data
+}
+
+// ============================================================================
+// SALUD
+// ============================================================================
+
+export async function getSaludArticles(
+  limit?: number,
+): Promise<ContentEntry[]> {
+  let query = supabase
+    .from('salud')
+    .select('*')
+    .order('quality_score', { ascending: false })
+
+  if (limit) query = query.limit(limit)
+
+  const { data, error } = await query
+  if (error) throw error
+  return data || []
+}
+
+export async function getSaludBySlug(
+  slug: string,
+): Promise<ContentEntry | null> {
+  const { data, error } = await supabase
+    .from('salud')
+    .select('*')
+    .eq('slug', slug)
+    .single()
+
+  if (error) return null
+  return data
+}
+
+// ============================================================================
+// CROSS-TABLE: Search by species across all tables
+// ============================================================================
+
+export async function getContentBySpecies(stockProduct: string) {
+  const [recetas, notas, salud] = await Promise.all([
+    supabase
+      .from('recetas')
+      .select('*')
+      .contains('featured_species', [{ stockProduct }]),
+    supabase
+      .from('notas_de_mar')
+      .select('*')
+      .contains('featured_species', [{ stockProduct }]),
+    supabase
+      .from('salud')
+      .select('*')
+      .contains('featured_species', [{ stockProduct }]),
+  ])
+
+  return {
+    recetas: recetas.data || [],
+    notas_de_mar: notas.data || [],
+    salud: salud.data || [],
+  }
+}
+
+// ============================================================================
+// Get all unique species across all content
+// ============================================================================
+
+export async function getAllSpecies(): Promise<string[]> {
+  const { data, error } = await supabase
+    .from('recetas')
+    .select('featured_species')
+
+  if (error || !data) return []
+
+  const species = new Set<string>()
+  data.forEach((entry: any) => {
+    entry.featured_species?.forEach((s: any) => {
+      species.add(s.stockProduct)
+    })
+  })
+
+  return Array.from(species).sort()
+}
