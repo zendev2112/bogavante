@@ -41,7 +41,13 @@ export default function HomeClient({
 
   // Get unique species from all entries
   const allSpecies = Array.from(
-    new Set(allEntries.flatMap((entry) => entry.featured_species || [])),
+    new Set(
+      allEntries.flatMap((entry) =>
+        (entry.featured_species || []).map((s) =>
+          typeof s === 'string' ? s : s.stockProduct
+        )
+      )
+    )
   ).sort()
 
   // Filter by selected species
@@ -189,8 +195,9 @@ export default function HomeClient({
 
 function hasSpecies(entry: ContentWithType, species: string): boolean {
   return (
-    entry.featured_species?.some(
-      (s) => s.toLowerCase() === species.toLowerCase(),
-    ) ?? false
+    entry.featured_species?.some((s) => {
+      const stockProduct = typeof s === 'string' ? s : s.stockProduct
+      return stockProduct.toLowerCase() === species.toLowerCase()
+    }) ?? false
   )
 }
