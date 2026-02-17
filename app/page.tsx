@@ -1,9 +1,6 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import { getRecetas, getNotasDeMar, getSaludArticles } from '@/lib/queries'
 import HomeClient from './HomeClient'
 
-// Server component: fetch data at build/request time
 export default async function HomePage() {
   const [recetas, notasDeMar, saludArticles] = await Promise.all([
     getRecetas(12),
@@ -15,7 +12,7 @@ export default async function HomePage() {
     <HomeClient
       recetas={recetas}
       notasDeMar={notasDeMar}
-      saludArticles={saludArticles}
+      salud={saludArticles}
     />
   )
 }
