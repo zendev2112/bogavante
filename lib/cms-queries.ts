@@ -95,7 +95,7 @@ export async function getContentById(
 
   if (error || !data) return null
 
-  return { ...data, contentType }
+  return { ...(data as ContentEntry), contentType }
 }
 
 /**
