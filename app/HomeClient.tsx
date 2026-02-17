@@ -64,6 +64,19 @@ const mariscos = [
   { value: 'Vieira', label: 'Vieira' },
 ]
 
+// Cooking methods from metadata.json
+const metodosCoccion = [
+  { value: 'Horno', label: '🔥 Horno', icon: '🔥' },
+  { value: 'Plancha', label: '🍳 Plancha', icon: '🍳' },
+  { value: 'Parrilla', label: '🍖 Parrilla', icon: '🍖' },
+  { value: 'Frito', label: '🍤 Frito', icon: '🍤' },
+  { value: 'Vapor', label: '♨️ Vapor', icon: '♨️' },
+  { value: 'Hervido', label: '🥘 Hervido', icon: '🥘' },
+  { value: 'Escabeche', label: '🥗 Escabeche', icon: '🥗' },
+  { value: 'Crudo', label: '🍣 Crudo', icon: '🍣' },
+  { value: 'Guisado', label: '🍲 Guisado', icon: '🍲' },
+]
+
 interface HomeClientProps {
   recetas: ContentEntry[]
   notasDeMar: ContentEntry[]
@@ -95,11 +108,22 @@ export default function HomeClient({
   saludArticles,
 }: HomeClientProps) {
   const [selectedSpecies, setSelectedSpecies] = useState<string>('todos')
+  const [selectedCookingMethod, setSelectedCookingMethod] =
+    useState<string>('todos')
 
-  const filteredRecetas =
+  // Filter by species
+  let filteredRecetas =
     selectedSpecies === 'todos'
       ? recetas
       : recetas.filter((r) => hasSpecies(r, selectedSpecies))
+
+  // Further filter by cooking method (search in title and content)
+  if (selectedCookingMethod !== 'todos') {
+    filteredRecetas = filteredRecetas.filter((r) => {
+      const textToSearch = (r.title + ' ' + r.content).toLowerCase()
+      return textToSearch.includes(selectedCookingMethod.toLowerCase())
+    })
+  }
 
   return (
     <div>
@@ -159,6 +183,38 @@ export default function HomeClient({
             Encontrá recetas sencillas y deliciosas para preparar pescado y
             mariscos frescos
           </p>
+
+          {/* Cooking Methods Filter */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-slate-700 mb-3 text-center">
+              Métodos de Cocción
+            </h3>
+            <div className="flex flex-wrap justify-center gap-2">
+              <button
+                onClick={() => setSelectedCookingMethod('todos')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedCookingMethod === 'todos'
+                    ? 'bg-orange-600 text-white'
+                    : 'bg-orange-100 text-orange-700 hover:bg-orange-200'
+                }`}
+              >
+                ✨ Todos
+              </button>
+              {metodosCoccion.map((metodo) => (
+                <button
+                  key={metodo.value}
+                  onClick={() => setSelectedCookingMethod(metodo.value)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    selectedCookingMethod === metodo.value
+                      ? 'bg-orange-600 text-white'
+                      : 'bg-orange-100 text-orange-700 hover:bg-orange-200'
+                  }`}
+                >
+                  {metodo.label}
+                </button>
+              ))}
+            </div>
+          </div>
 
           {/* Species Filters */}
           <div className="mb-8">
@@ -246,7 +302,7 @@ export default function HomeClient({
             {filteredRecetas.map((receta) => (
               <Link
                 key={receta.id}
-                href={`/blogs/recipes/${receta.slug}`}
+                href={`/recetas/${receta.slug}`}
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow group"
               >
                 {/* IMAGE */}
@@ -277,7 +333,7 @@ export default function HomeClient({
                     {receta.title}
                   </h3>
                   <p className="text-slate-600 text-sm mb-3 line-clamp-3">
-                    {receta.content.slice(0, 150)}...
+                    {receta.resumen || receta.content.slice(0, 150) + '...'}
                   </p>
                   <div className="flex items-center justify-between text-xs text-slate-500">
                     <span>{receta.featured_species?.[0]?.categoria}</span>

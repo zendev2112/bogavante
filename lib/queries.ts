@@ -73,6 +73,9 @@ export async function getNotaDeMarBySlug(
   return data
 }
 
+// Alias for consistency
+export const getNotaBySlug = getNotaDeMarBySlug
+
 // ============================================================================
 // SALUD
 // ============================================================================
@@ -104,6 +107,9 @@ export async function getSaludBySlug(
   if (error) return null
   return data
 }
+
+// Alias for consistency
+export const getSaludArticleBySlug = getSaludBySlug
 
 // ============================================================================
 // CROSS-TABLE: Search by species across all tables

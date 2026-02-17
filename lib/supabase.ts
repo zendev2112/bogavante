@@ -23,8 +23,9 @@ export interface ContentEntry {
   title: string
   slug: string
   content: string
+  resumen: string | null
   quality_score: number
-  image_url: string | null // ← ADDED
+  image_url: string | null
   featured_species: FeaturedSpecies[]
   source_book: string
   source_authors: string[]
@@ -34,6 +35,7 @@ export interface ContentEntry {
   language: string
   created_at: string
   updated_at: string
+  published: boolean
 }
 
 export interface FeaturedSpecies {

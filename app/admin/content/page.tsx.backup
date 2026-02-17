@@ -1,0 +1,456 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog'
+import { Textarea } from '@/components/ui/textarea'
+import { Label } from '@/components/ui/label'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+import { Search, Edit, Trash2, Save, X, Plus } from 'lucide-react'
+import { ContentWithType, ContentType } from '@/lib/cms-queries'
+
+export default function ContentCMSPage() {
+  const [contents, setContents] = useState<ContentWithType[]>([])
+  const [loading, setLoading] = useState(true)
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedType, setSelectedType] = useState<ContentType | 'all'>('all')
+  const [editingContent, setEditingContent] = useState<ContentWithType | null>(
+    null,
+  )
+  const [stats, setStats] = useState({ recetas: 0, salud: 0, notas_de_mar: 0 })
+  const [page, setPage] = useState(1)
+  const [total, setTotal] = useState(0)
+  const pageSize = 20
+
+  useEffect(() => {
+    loadContent()
+    loadStats()
+  }, [page, selectedType, searchTerm])
+
+  const loadContent = async () => {
+    setLoading(true)
+    try {
+      const response = await fetch(
+        `/api/cms/content?page=${page}&pageSize=${pageSize}&contentType=${selectedType}&searchTerm=${searchTerm}`,
+      )
+      const result = await response.json()
+      setContents(result.data || [])
+      setTotal(result.total || 0)
+    } catch (error) {
+      console.error('Error loading content:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const loadStats = async () => {
+    try {
+      const response = await fetch('/api/cms/stats')
+      const data = await response.json()
+      setStats(data)
+    } catch (error) {
+      console.error('Error loading stats:', error)
+    }
+  }
+
+  const handleEdit = (content: ContentWithType) => {
+    setEditingContent(content)
+  }
+
+  const handleSave = async () => {
+    if (!editingContent) return
+
+    try {
+      const response = await fetch('/api/cms/content', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: editingContent.id,
+          contentType: editingContent.contentType,
+          updates: {
+            title: editingContent.title,
+            content: editingContent.content,
+            quality_score: editingContent.quality_score,
+            image_url: editingContent.image_url,
+          },
+        }),
+      })
+
+      if (response.ok) {
+        setEditingContent(null)
+        loadContent()
+      } else {
+        alert('Error saving content')
+      }
+    } catch (error) {
+      console.error('Error saving:', error)
+      alert('Error saving content')
+    }
+  }
+
+  const handleDelete = async (id: string, contentType: ContentType) => {
+    if (!confirm('¿Estás seguro de que quieres eliminar este contenido?'))
+      return
+
+    try {
+      const response = await fetch('/api/cms/content', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, contentType }),
+      })
+
+      if (response.ok) {
+        loadContent()
+        loadStats()
+      } else {
+        alert('Error deleting content')
+      }
+    } catch (error) {
+      console.error('Error deleting:', error)
+      alert('Error deleting content')
+    }
+  }
+
+  const totalPages = Math.ceil(total / pageSize)
+
+  return (
+    <div className="container mx-auto p-6 space-y-6">
+      <div className="flex justify-between items-center">
+        <div>
+          <h1 className="text-3xl font-bold">Content Management System</h1>
+          <p className="text-muted-foreground">
+            Gestiona todo el contenido de Bogavante
+          </p>
+        </div>
+        <Button>
+          <Plus className="mr-2 h-4 w-4" />
+          Nuevo Contenido
+        </Button>
+      </div>
+
+      {/* Stats Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-sm font-medium">Total</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">
+              {stats.recetas + stats.salud + stats.notas_de_mar}
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-sm font-medium">Recetas</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{stats.recetas}</div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-sm font-medium">Salud</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{stats.salud}</div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-sm font-medium">Notas de Mar</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{stats.notas_de_mar}</div>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Filters */}
+      <Card>
+        <CardContent className="pt-6">
+          <div className="flex gap-4">
+            <div className="flex-1 relative">
+              <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+              <Input
+                placeholder="Buscar por título o contenido..."
+                value={searchTerm}
+                onChange={(e) => {
+                  setSearchTerm(e.target.value)
+                  setPage(1)
+                }}
+                className="pl-10"
+              />
+            </div>
+            <Select
+              value={selectedType}
+              onValueChange={(value) => {
+                setSelectedType(value as ContentType | 'all')
+                setPage(1)
+              }}
+            >
+              <SelectTrigger className="w-[200px]">
+                <SelectValue placeholder="Tipo de contenido" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">Todos</SelectItem>
+                <SelectItem value="recetas">Recetas</SelectItem>
+                <SelectItem value="salud">Salud</SelectItem>
+                <SelectItem value="notas_de_mar">Notas de Mar</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Content Table */}
+      <Card>
+        <CardContent className="pt-6">
+          {loading ? (
+            <div className="text-center py-8">Cargando...</div>
+          ) : contents.length === 0 ? (
+            <div className="text-center py-8 text-muted-foreground">
+              No se encontró contenido
+            </div>
+          ) : (
+            <>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Título</TableHead>
+                    <TableHead>Tipo</TableHead>
+                    <TableHead>Calidad</TableHead>
+                    <TableHead>Especies</TableHead>
+                    <TableHead>Actualizado</TableHead>
+                    <TableHead className="text-right">Acciones</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {contents.map((content) => (
+                    <TableRow key={content.id}>
+                      <TableCell className="font-medium max-w-md truncate">
+                        {content.title}
+                      </TableCell>
+                      <TableCell>
+                        <Badge variant="outline">
+                          {content.contentType === 'recetas' && '🍽️ Receta'}
+                          {content.contentType === 'salud' && '💚 Salud'}
+                          {content.contentType === 'notas_de_mar' && '🌊 Nota'}
+                        </Badge>
+                      </TableCell>
+                      <TableCell>
+                        <Badge
+                          variant={
+                            content.quality_score >= 80
+                              ? 'default'
+                              : content.quality_score >= 60
+                                ? 'secondary'
+                                : 'outline'
+                          }
+                        >
+                          {content.quality_score}
+                        </Badge>
+                      </TableCell>
+                      <TableCell>
+                        {content.featured_species?.length || 0}
+                      </TableCell>
+                      <TableCell>
+                        {new Date(content.updated_at).toLocaleDateString(
+                          'es-ES',
+                        )}
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <div className="flex justify-end gap-2">
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() => handleEdit(content)}
+                          >
+                            <Edit className="h-4 w-4" />
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() =>
+                              handleDelete(content.id, content.contentType)
+                            }
+                          >
+                            <Trash2 className="h-4 w-4" />
+                          </Button>
+                        </div>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+
+              {/* Pagination */}
+              <div className="flex items-center justify-between mt-4">
+                <div className="text-sm text-muted-foreground">
+                  Mostrando {(page - 1) * pageSize + 1} a{' '}
+                  {Math.min(page * pageSize, total)} de {total} resultados
+                </div>
+                <div className="flex gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setPage(page - 1)}
+                    disabled={page === 1}
+                  >
+                    Anterior
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setPage(page + 1)}
+                    disabled={page >= totalPages}
+                  >
+                    Siguiente
+                  </Button>
+                </div>
+              </div>
+            </>
+          )}
+        </CardContent>
+      </Card>
+
+      {/* Edit Dialog */}
+      <Dialog
+        open={!!editingContent}
+        onOpenChange={() => setEditingContent(null)}
+      >
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Editar Contenido</DialogTitle>
+            <DialogDescription>
+              Realiza cambios al contenido y guarda para actualizar la base de
+              datos.
+            </DialogDescription>
+          </DialogHeader>
+
+          {editingContent && (
+            <div className="space-y-4">
+              <div>
+                <Label htmlFor="title">Título</Label>
+                <Input
+                  id="title"
+                  value={editingContent.title}
+                  onChange={(e) =>
+                    setEditingContent({
+                      ...editingContent,
+                      title: e.target.value,
+                    })
+                  }
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="content">Contenido</Label>
+                <Textarea
+                  id="content"
+                  value={editingContent.content}
+                  onChange={(e) =>
+                    setEditingContent({
+                      ...editingContent,
+                      content: e.target.value,
+                    })
+                  }
+                  rows={15}
+                  className="font-mono text-sm"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="quality">Calidad (0-100)</Label>
+                  <Input
+                    id="quality"
+                    type="number"
+                    min="0"
+                    max="100"
+                    value={editingContent.quality_score}
+                    onChange={(e) =>
+                      setEditingContent({
+                        ...editingContent,
+                        quality_score: parseInt(e.target.value),
+                      })
+                    }
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="image">URL de Imagen</Label>
+                  <Input
+                    id="image"
+                    value={editingContent.image_url || ''}
+                    onChange={(e) =>
+                      setEditingContent({
+                        ...editingContent,
+                        image_url: e.target.value,
+                      })
+                    }
+                    placeholder="https://..."
+                  />
+                </div>
+              </div>
+
+              <div>
+                <Label>Especies Destacadas</Label>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {editingContent.featured_species?.map((species, idx) => (
+                    <Badge key={idx} variant="secondary">
+                      {species.stockProduct}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex justify-end gap-2 pt-4">
+                <Button
+                  variant="outline"
+                  onClick={() => setEditingContent(null)}
+                >
+                  <X className="mr-2 h-4 w-4" />
+                  Cancelar
+                </Button>
+                <Button onClick={handleSave}>
+                  <Save className="mr-2 h-4 w-4" />
+                  Guardar Cambios
+                </Button>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+    </div>
+  )
+}
