@@ -32,9 +32,11 @@ export default async function SaludPage({
           {articulo.featured_species &&
             articulo.featured_species.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-6">
-                {articulo.featured_species.map((species) => (
-                  <Badge key={species} variant="secondary">
-                    {species}
+                {articulo.featured_species.map((species, idx) => (
+                  <Badge key={idx} variant="secondary">
+                    {typeof species === 'string'
+                      ? species
+                      : species.stockProduct}
                   </Badge>
                 ))}
               </div>

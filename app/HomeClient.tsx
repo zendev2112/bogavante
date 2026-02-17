@@ -44,10 +44,10 @@ export default function HomeClient({
     new Set(
       allEntries.flatMap((entry) =>
         (entry.featured_species || []).map((s) =>
-          typeof s === 'string' ? s : s.stockProduct
-        )
-      )
-    )
+          typeof s === 'string' ? s : s.stockProduct,
+        ),
+      ),
+    ),
   ).sort()
 
   // Filter by selected species

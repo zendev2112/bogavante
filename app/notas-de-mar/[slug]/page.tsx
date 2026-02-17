@@ -29,9 +29,9 @@ export default async function NotaDeMarPage({
           {/* Featured Species */}
           {nota.featured_species && nota.featured_species.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-6">
-              {nota.featured_species.map((species) => (
-                <Badge key={species} variant="secondary">
-                  {species}
+              {nota.featured_species.map((species, idx) => (
+                <Badge key={idx} variant="secondary">
+                  {typeof species === 'string' ? species : species.stockProduct}
                 </Badge>
               ))}
             </div>

@@ -51,9 +51,9 @@ export default async function RecetaPage({
           {/* Featured Species */}
           {receta.featured_species && receta.featured_species.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-6">
-              {receta.featured_species.map((species) => (
-                <Badge key={species} variant="secondary">
-                  {species}
+              {receta.featured_species.map((species, idx) => (
+                <Badge key={idx} variant="secondary">
+                  {typeof species === 'string' ? species : species.stockProduct}
                 </Badge>
               ))}
             </div>
