@@ -1,14 +1,11 @@
-import { supabaseAdmin, ContentEntry } from './supabase'
+import { supabaseAdmin } from './supabase'
+import type { ContentEntry } from './supabase'
 
 export type ContentType = 'recetas' | 'notas_de_mar' | 'salud'
 
 export type ContentWithType = ContentEntry & {
   contentType: ContentType
 }
-
-// ============================================================================
-// CMS QUERIES - For admin panel
-// ============================================================================
 
 /**
  * Get all content from all tables with pagination
@@ -17,39 +14,47 @@ export async function getAllContent(
   page: number = 1,
   pageSize: number = 20,
   contentType: ContentType | 'all' = 'all',
-  searchTerm: string = ''
+  searchTerm: string = '',
 ) {
   const offset = (page - 1) * pageSize
-  const tables: ContentType[] = contentType === 'all' 
-    ? ['recetas', 'notas_de_mar', 'salud']
-    : [contentType]
+  const tables: ContentType[] =
+    contentType === 'all' ? ['recetas', 'notas_de_mar', 'salud'] : [contentType]
 
   try {
     const results = await Promise.all(
       tables.map(async (table) => {
-        let query = (supabaseAdmin
-          .from(table) as any)
+        let query = (supabaseAdmin as any)
+          .from(table)
           .select('*', { count: 'exact' })
           .order('created_at', { ascending: false })
 
         if (searchTerm) {
-          query = query.or(`title.ilike.%${searchTerm}%,content.ilike.%${searchTerm}%`)
+          query = query.or(
+            `title.ilike.%${searchTerm}%,content.ilike.%${searchTerm}%`,
+          )
         }
 
-        const { data, error, count } = await query.range(offset, offset + pageSize - 1)
+        const { data, error, count } = await query.range(
+          offset,
+          offset + pageSize - 1,
+        )
 
-        if (error) throw error
+        if (error) {
+          console.error(`Error fetching ${table}:`, error)
+          throw error
+        }
 
         return {
           contentType: table,
           data: data || [],
           count: count || 0,
         }
-      })
+      }),
     )
 
-    const allData: ContentWithType[] = results.flatMap(({ contentType, data }) =>
-      data.map((item: any) => ({ ...item, contentType }))
+    const allData: ContentWithType[] = results.flatMap(
+      ({ contentType, data }) =>
+        data.map((item: any) => ({ ...item, contentType })),
     )
 
     const totalCount = results.reduce((sum, { count }) => sum + count, 0)
@@ -74,38 +79,34 @@ export async function getAllContent(
 }
 
 /**
- * Get single content entry by ID and type
+ * Get content by slug
  */
-export async function getContentById(
-  id: string,
-  contentType: ContentType,
-): Promise<ContentWithType | null> {
-  const { data, error } = await (supabaseAdmin
-    .from(contentType) as any)
+export async function getContentBySlug(contentType: ContentType, slug: string) {
+  const { data, error } = await (supabaseAdmin as any)
+    .from(contentType)
     .select('*')
-    .eq('id', id)
+    .eq('slug', slug)
     .single()
 
   if (error || !data) return null
 
-  return { ...(data as any), contentType } as ContentWithType
+  return { ...data, contentType } as ContentWithType
 }
 
 /**
- * Update content entry
+ * Update content item
  */
 export async function updateContent(
   contentType: ContentType,
   id: string,
-  updates: Partial<ContentEntry>,
+  updates: Partial<Omit<ContentEntry, 'id' | 'created_at' | 'updated_at'>>,
 ) {
-  const updateData = {
-    ...updates,
-    updated_at: new Date().toISOString(),
-  }
-  const { error } = await (supabaseAdmin
-    .from(contentType) as any)
-    .update(updateData)
+  const { error } = await (supabaseAdmin as any)
+    .from(contentType)
+    .update({
+      ...updates,
+      updated_at: new Date().toISOString(),
+    })
     .eq('id', id)
 
   if (error) {
@@ -117,58 +118,73 @@ export async function updateContent(
 }
 
 /**
- * Delete content entry
+ * Delete content item
  */
-export async function deleteContent(
-  id: string,
-  contentType: ContentType,
-): Promise<{ success: boolean; error?: string }> {
-  const { error } = await (supabaseAdmin.from(contentType) as any).delete().eq('id', id)
+export async function deleteContent(contentType: ContentType, id: string) {
+  const { error } = await (supabaseAdmin as any)
+    .from(contentType)
+    .delete()
+    .eq('id', id)
 
   if (error) {
-    return { success: false, error: error.message }
+    console.error(`Error deleting ${contentType}:`, error)
+    return { success: false, error }
   }
 
   return { success: true }
 }
 
 /**
- * Create new content entry
+ * Create new content item
  */
 export async function createContent(
   contentType: ContentType,
-  content: Partial<ContentEntry>,
-): Promise<{ success: boolean; error?: string; id?: string }> {
-  const { data, error } = await (supabaseAdmin
-    .from(contentType) as any)
+  content: Omit<ContentEntry, 'created_at' | 'updated_at'>,
+) {
+  const { data, error } = await (supabaseAdmin as any)
+    .from(contentType)
     .insert(content)
     .select()
     .single()
 
   if (error) {
-    return { success: false, error: error.message }
+    console.error(`Error creating ${contentType}:`, error)
+    return { success: false, error }
   }
 
-  return { success: true, id: data?.id }
+  return { success: true, data }
 }
 
 /**
  * Get content statistics
  */
 export async function getContentStats() {
-  const tables: ContentType[] = ['recetas', 'salud', 'notas_de_mar']
-  const stats: Record<ContentType, number> = {
-    recetas: 0,
-    salud: 0,
-    notas_de_mar: 0,
-  }
+  try {
+    const tables: ContentType[] = ['recetas', 'notas_de_mar', 'salud']
 
-  for (const table of tables) {
-    const { count } = await (supabaseAdmin
-      .from(table) as any)
-      .select('*', { count: 'exact', head: true })
-    stats[table] = count || 0
-  }
+    const results = await Promise.all(
+      tables.map(async (table) => {
+        const { count } = await (supabaseAdmin as any)
+          .from(table)
+          .select('*', { count: 'exact', head: true })
 
-  return stats
+        return { contentType: table, count: count || 0 }
+      }),
+    )
+
+    const stats: Record<string, number> = results.reduce(
+      (acc, { contentType, count }) => {
+        acc[contentType] = count
+        return acc
+      },
+      {} as Record<string, number>,
+    )
+
+    stats.total = results.reduce((sum, { count }) => sum + count, 0)
+
+    return stats
+  } catch (error) {
+    console.error('Error fetching stats:', error)
+    return { recetas: 0, notas_de_mar: 0, salud: 0, total: 0 }
+  }
 }
