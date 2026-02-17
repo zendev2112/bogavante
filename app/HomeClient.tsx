@@ -337,7 +337,6 @@ export default function HomeClient({
                   </p>
                   <div className="flex items-center justify-between text-xs text-slate-500">
                     <span>{receta.featured_species?.[0]?.categoria}</span>
-                    {receta.source_page && <span>p. {receta.source_page}</span>}
                   </div>
                 </div>
               </Link>
