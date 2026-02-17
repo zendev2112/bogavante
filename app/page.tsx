@@ -12,7 +12,7 @@ export default async function HomePage() {
     <HomeClient
       recetas={recetas}
       notasDeMar={notasDeMar}
-      salud={saludArticles}
+      saludArticles={saludArticles}
     />
   )
 }
