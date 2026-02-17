@@ -8,9 +8,10 @@ import { Clock, ChefHat } from 'lucide-react'
 export default async function RecetaPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const receta = await getContentBySlug('recetas', params.slug)
+  const { slug } = await params
+  const receta = await getContentBySlug('recetas', slug)
 
   if (!receta) {
     notFound()

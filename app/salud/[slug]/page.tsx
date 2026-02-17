@@ -7,9 +7,10 @@ import { Badge } from '@/components/ui/badge'
 export default async function SaludPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const articulo = await getContentBySlug('salud', params.slug)
+  const { slug } = await params
+  const articulo = await getContentBySlug('salud', slug)
 
   if (!articulo) {
     notFound()

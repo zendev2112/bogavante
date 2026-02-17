@@ -7,9 +7,10 @@ import { Badge } from '@/components/ui/badge'
 export default async function NotaDeMarPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const nota = await getContentBySlug('notas_de_mar', params.slug)
+  const { slug } = await params
+  const nota = await getContentBySlug('notas_de_mar', slug)
 
   if (!nota) {
     notFound()
