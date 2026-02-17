@@ -103,7 +103,7 @@ export default function ContentCMSPage() {
       )
       const result = await response.json()
       setContents(result.data || [])
-      setTotal(result.total || 0)
+      setTotal(result.totalCount || 0)
     } catch (error) {
       console.error('Error loading content:', error)
     } finally {

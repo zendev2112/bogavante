@@ -1,10 +1,8 @@
-import { supabaseAdmin } from './supabase'
-import { ContentEntry } from './supabase'
+import { supabaseAdmin, ContentEntry } from './supabase'
 
-// Type for content across all tables
-export type ContentType = 'recetas' | 'salud' | 'notas_de_mar'
+export type ContentType = 'recetas' | 'notas_de_mar' | 'salud'
 
-export interface ContentWithType extends ContentEntry {
+export type ContentWithType = ContentEntry & {
   contentType: ContentType
 }
 
@@ -15,68 +13,63 @@ export interface ContentWithType extends ContentEntry {
 /**
  * Get all content from all tables with pagination
  */
-export async function getAllContent(options?: {
-  page?: number
-  pageSize?: number
-  contentType?: ContentType
-  searchTerm?: string
-  sortBy?: 'created_at' | 'updated_at' | 'quality_score' | 'title'
-  sortOrder?: 'asc' | 'desc'
-}): Promise<{ data: ContentWithType[]; total: number }> {
-  const {
-    page = 1,
-    pageSize = 20,
-    contentType,
-    searchTerm,
-    sortBy = 'updated_at',
-    sortOrder = 'desc',
-  } = options || {}
+export async function getAllContent(
+  page: number = 1,
+  pageSize: number = 20,
+  contentType: ContentType | 'all' = 'all',
+  searchTerm: string = ''
+) {
+  const offset = (page - 1) * pageSize
+  const tables: ContentType[] = contentType === 'all' 
+    ? ['recetas', 'notas_de_mar', 'salud']
+    : [contentType]
 
-  const tables: ContentType[] = contentType
-    ? [contentType]
-    : ['recetas', 'salud', 'notas_de_mar']
+  try {
+    const results = await Promise.all(
+      tables.map(async (table) => {
+        let query = (supabaseAdmin
+          .from(table) as any)
+          .select('*', { count: 'exact' })
+          .order('created_at', { ascending: false })
 
-  const allResults: ContentWithType[] = []
-  let totalCount = 0
+        if (searchTerm) {
+          query = query.or(`title.ilike.%${searchTerm}%,content.ilike.%${searchTerm}%`)
+        }
 
-  for (const table of tables) {
-    let query = supabaseAdmin.from(table).select('*', { count: 'exact' })
+        const { data, error, count } = await query.range(offset, offset + pageSize - 1)
 
-    // Search filter
-    if (searchTerm) {
-      query = query.or(
-        `title.ilike.%${searchTerm}%,content.ilike.%${searchTerm}%`,
-      )
+        if (error) throw error
+
+        return {
+          contentType: table,
+          data: data || [],
+          count: count || 0,
+        }
+      })
+    )
+
+    const allData: ContentWithType[] = results.flatMap(({ contentType, data }) =>
+      data.map((item: any) => ({ ...item, contentType }))
+    )
+
+    const totalCount = results.reduce((sum, { count }) => sum + count, 0)
+
+    return {
+      data: allData,
+      totalCount,
+      page,
+      pageSize,
+      totalPages: Math.ceil(totalCount / pageSize),
     }
-
-    // Sorting
-    query = query.order(sortBy, { ascending: sortOrder === 'asc' })
-
-    const { data, error, count } = await query
-
-    if (error) {
-      console.error(`Error fetching from ${table}:`, error)
-      continue
+  } catch (error) {
+    console.error('Error fetching content:', error)
+    return {
+      data: [],
+      totalCount: 0,
+      page,
+      pageSize,
+      totalPages: 0,
     }
-
-    if (data) {
-      const dataWithType = data.map((item: any) => ({
-        ...item,
-        contentType: table as ContentType,
-      }))
-      allResults.push(...dataWithType)
-      totalCount += count || 0
-    }
-  }
-
-  // Client-side pagination after combining all tables
-  const start = (page - 1) * pageSize
-  const end = start + pageSize
-  const paginatedResults = allResults.slice(start, end)
-
-  return {
-    data: paginatedResults,
-    total: totalCount,
   }
 }
 
@@ -87,35 +80,37 @@ export async function getContentById(
   id: string,
   contentType: ContentType,
 ): Promise<ContentWithType | null> {
-  const { data, error } = await supabaseAdmin
-    .from(contentType)
+  const { data, error } = await (supabaseAdmin
+    .from(contentType) as any)
     .select('*')
     .eq('id', id)
     .single()
 
   if (error || !data) return null
 
-  return { ...(data as ContentEntry), contentType }
+  return { ...(data as any), contentType } as ContentWithType
 }
 
 /**
  * Update content entry
  */
 export async function updateContent(
-  id: string,
   contentType: ContentType,
+  id: string,
   updates: Partial<ContentEntry>,
-): Promise<{ success: boolean; error?: string }> {
-  const { error } = await supabaseAdmin
-    .from(contentType)
-    .update({
-      ...updates,
-      updated_at: new Date().toISOString(),
-    })
+) {
+  const updateData = {
+    ...updates,
+    updated_at: new Date().toISOString(),
+  }
+  const { error } = await (supabaseAdmin
+    .from(contentType) as any)
+    .update(updateData)
     .eq('id', id)
 
   if (error) {
-    return { success: false, error: error.message }
+    console.error(`Error updating ${contentType}:`, error)
+    return { success: false, error }
   }
 
   return { success: true }
@@ -128,7 +123,7 @@ export async function deleteContent(
   id: string,
   contentType: ContentType,
 ): Promise<{ success: boolean; error?: string }> {
-  const { error } = await supabaseAdmin.from(contentType).delete().eq('id', id)
+  const { error } = await (supabaseAdmin.from(contentType) as any).delete().eq('id', id)
 
   if (error) {
     return { success: false, error: error.message }
@@ -142,10 +137,10 @@ export async function deleteContent(
  */
 export async function createContent(
   contentType: ContentType,
-  content: Omit<ContentEntry, 'created_at' | 'updated_at'>,
+  content: Partial<ContentEntry>,
 ): Promise<{ success: boolean; error?: string; id?: string }> {
-  const { data, error } = await supabaseAdmin
-    .from(contentType)
+  const { data, error } = await (supabaseAdmin
+    .from(contentType) as any)
     .insert(content)
     .select()
     .single()
@@ -169,8 +164,8 @@ export async function getContentStats() {
   }
 
   for (const table of tables) {
-    const { count } = await supabaseAdmin
-      .from(table)
+    const { count } = await (supabaseAdmin
+      .from(table) as any)
       .select('*', { count: 'exact', head: true })
     stats[table] = count || 0
   }

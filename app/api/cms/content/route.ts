@@ -1,11 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import {
   getAllContent,
-  getContentById,
   updateContent,
   deleteContent,
-  ContentType,
 } from '@/lib/cms-queries'
+import type { ContentType } from '@/lib/cms-queries'
 
 // GET - Fetch content with filters
 export async function GET(request: NextRequest) {
@@ -13,17 +12,10 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams
     const page = parseInt(searchParams.get('page') || '1')
     const pageSize = parseInt(searchParams.get('pageSize') || '20')
-    const contentType = searchParams.get('contentType') as ContentType | 'all'
+    const contentType = (searchParams.get('contentType') || 'all') as ContentType | 'all'
     const searchTerm = searchParams.get('searchTerm') || ''
 
-    const result = await getAllContent({
-      page,
-      pageSize,
-      contentType: contentType === 'all' ? undefined : contentType,
-      searchTerm: searchTerm || undefined,
-      sortBy: 'updated_at',
-      sortOrder: 'desc',
-    })
+    const result = await getAllContent(page, pageSize, contentType, searchTerm)
 
     return NextResponse.json(result)
   } catch (error) {
@@ -48,7 +40,7 @@ export async function PUT(request: NextRequest) {
       )
     }
 
-    const result = await updateContent(id, contentType, updates)
+    const result = await updateContent(contentType, id, updates)
 
     if (!result.success) {
       return NextResponse.json({ error: result.error }, { status: 500 })
