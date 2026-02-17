@@ -25,8 +25,22 @@ export default function HomeClient({
   salud,
 }: HomeClientProps) {
   const [selectedSpecies, setSelectedSpecies] = useState<string>('all')
+  const [selectedCookingMethod, setSelectedCookingMethod] =
+    useState<string>('all')
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 6
+
+  const cookingMethods = [
+    { label: 'Horneado', value: 'horneado', emoji: '🔥' },
+    { label: 'Al Vapor', value: 'vapor', emoji: '💨' },
+    { label: 'Frito', value: 'frito', emoji: '🍳' },
+    { label: 'Hervido', value: 'hervido', emoji: '🌊' },
+    { label: 'A la Parrilla', value: 'parrilla', emoji: '🔥' },
+    { label: 'Ahumado', value: 'ahumado', emoji: '🚬' },
+    { label: 'Crudo', value: 'crudo', emoji: '🥢' },
+    { label: 'Encurtido', value: 'encurtido', emoji: '🥒' },
+    { label: 'Mixto', value: 'mixto', emoji: '🍲' },
+  ]
 
   // Combine all entries with their type
   const allEntries: ContentWithType[] = [
@@ -50,11 +64,24 @@ export default function HomeClient({
     ),
   ).sort()
 
-  // Filter by selected species
-  const filteredEntries =
-    selectedSpecies === 'all'
-      ? allEntries
-      : allEntries.filter((entry) => hasSpecies(entry, selectedSpecies))
+  // Filter by selected species and cooking method
+  let filteredEntries = allEntries
+
+  if (selectedSpecies !== 'all') {
+    filteredEntries = filteredEntries.filter((entry) =>
+      hasSpecies(entry, selectedSpecies),
+    )
+  }
+
+  if (selectedCookingMethod !== 'all') {
+    filteredEntries = filteredEntries.filter(
+      (entry) =>
+        entry.type === 'recetas' &&
+        entry.cooking_method
+          ?.toLowerCase()
+          .includes(selectedCookingMethod.toLowerCase()),
+    )
+  }
 
   // Pagination
   const totalPages = Math.ceil(filteredEntries.length / itemsPerPage)
@@ -64,10 +91,10 @@ export default function HomeClient({
     startIndex + itemsPerPage,
   )
 
-  // Reset to page 1 when species filter changes
+  // Reset to page 1 when filters change
   useEffect(() => {
     setCurrentPage(1)
-  }, [selectedSpecies])
+  }, [selectedSpecies, selectedCookingMethod])
 
   const getTypeLabel = (type: string) => {
     switch (type) {
@@ -97,6 +124,32 @@ export default function HomeClient({
 
   return (
     <div className="container mx-auto px-4 py-8">
+      {/* Cooking Method Filter */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">
+          Filtrar por Método de Cocción
+        </h2>
+        <div className="flex flex-wrap gap-2">
+          <Button
+            variant={selectedCookingMethod === 'all' ? 'default' : 'outline'}
+            onClick={() => setSelectedCookingMethod('all')}
+          >
+            Todos
+          </Button>
+          {cookingMethods.map((method) => (
+            <Button
+              key={method.value}
+              variant={
+                selectedCookingMethod === method.value ? 'default' : 'outline'
+              }
+              onClick={() => setSelectedCookingMethod(method.value)}
+            >
+              {method.emoji} {method.label}
+            </Button>
+          ))}
+        </div>
+      </div>
+
       {/* Species Filter */}
       <div className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Filtrar por Especie</h2>
