@@ -6,8 +6,13 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 
 export const supabase = createClient<Database>(supabaseUrl, supabaseAnonKey)
 
-// Admin client factory function - creates client on demand
-function getSupabaseAdmin() {
+// Cached admin client instance
+let adminClient: ReturnType<typeof createClient<Database>> | null = null
+
+// Admin client getter - creates client only when called
+export function getSupabaseAdmin() {
+  if (adminClient) return adminClient
+
   const serviceKey = process.env.SUPABASE_SERVICE_KEY
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL
 
@@ -19,12 +24,14 @@ function getSupabaseAdmin() {
     throw new Error('Missing Supabase admin credentials')
   }
 
-  return createClient<Database>(url, serviceKey, {
+  adminClient = createClient<Database>(url, serviceKey, {
     auth: {
       autoRefreshToken: false,
       persistSession: false,
     },
   })
+
+  return adminClient
 }
 
 // Export a getter function instead of direct client
@@ -43,6 +50,4 @@ export const supabaseAdmin = new Proxy(
   },
 )
 
-export type ContentEntry = Database['public']['Tables']['recetas']['Row'] &
-  Database['public']['Tables']['notas_de_mar']['Row'] &
-  Database['public']['Tables']['salud']['Row']
+export type ContentEntry = Database['public']['Tables']['recetas']['Row']

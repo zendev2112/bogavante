@@ -1,4 +1,4 @@
-import { supabaseAdmin } from './supabase'
+import { getSupabaseAdmin } from './supabase'
 import type { ContentEntry } from './supabase'
 
 export type ContentType = 'recetas' | 'notas_de_mar' | 'salud'
@@ -21,6 +21,8 @@ export async function getAllContent(
     contentType === 'all' ? ['recetas', 'notas_de_mar', 'salud'] : [contentType]
 
   try {
+    const supabaseAdmin = getSupabaseAdmin()
+
     const results = await Promise.all(
       tables.map(async (table) => {
         let query = (supabaseAdmin as any)
@@ -82,6 +84,8 @@ export async function getAllContent(
  * Get content by slug
  */
 export async function getContentBySlug(contentType: ContentType, slug: string) {
+  const supabaseAdmin = getSupabaseAdmin()
+
   const { data, error } = await (supabaseAdmin as any)
     .from(contentType)
     .select('*')
@@ -101,6 +105,8 @@ export async function updateContent(
   id: string,
   updates: Partial<Omit<ContentEntry, 'id' | 'created_at' | 'updated_at'>>,
 ) {
+  const supabaseAdmin = getSupabaseAdmin()
+
   const { error } = await (supabaseAdmin as any)
     .from(contentType)
     .update({
@@ -121,6 +127,8 @@ export async function updateContent(
  * Delete content item
  */
 export async function deleteContent(contentType: ContentType, id: string) {
+  const supabaseAdmin = getSupabaseAdmin()
+
   const { error } = await (supabaseAdmin as any)
     .from(contentType)
     .delete()
@@ -141,6 +149,8 @@ export async function createContent(
   contentType: ContentType,
   content: Omit<ContentEntry, 'created_at' | 'updated_at'>,
 ) {
+  const supabaseAdmin = getSupabaseAdmin()
+
   const { data, error } = await (supabaseAdmin as any)
     .from(contentType)
     .insert(content)
@@ -160,6 +170,7 @@ export async function createContent(
  */
 export async function getContentStats() {
   try {
+    const supabaseAdmin = getSupabaseAdmin()
     const tables: ContentType[] = ['recetas', 'notas_de_mar', 'salud']
 
     const results = await Promise.all(
