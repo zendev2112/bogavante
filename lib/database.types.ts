@@ -6,6 +6,16 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 
+export interface FeaturedSpecies {
+  bookName: string
+  stockProduct: string
+  categoria: string
+  subcategoria: string
+  presentations: string[]
+  matchedIn: string
+  confidence: number
+}
+
 export interface Database {
   public: {
     Tables: {
@@ -17,7 +27,7 @@ export interface Database {
           content: string
           resumen: string | null
           quality_score: number
-          featured_species: string[]
+          featured_species: FeaturedSpecies[]
           images: string[]
           source_book: string | null
           source_authors: string | null
@@ -37,7 +47,7 @@ export interface Database {
           content: string
           resumen?: string | null
           quality_score?: number
-          featured_species?: string[]
+          featured_species?: FeaturedSpecies[]
           images?: string[]
           source_book?: string | null
           source_authors?: string | null
@@ -57,7 +67,7 @@ export interface Database {
           content?: string
           resumen?: string | null
           quality_score?: number
-          featured_species?: string[]
+          featured_species?: FeaturedSpecies[]
           images?: string[]
           source_book?: string | null
           source_authors?: string | null
@@ -79,7 +89,7 @@ export interface Database {
           content: string
           resumen: string | null
           quality_score: number
-          featured_species: string[]
+          featured_species: FeaturedSpecies[]
           images: string[]
           source_book: string | null
           source_authors: string | null
@@ -99,7 +109,7 @@ export interface Database {
           content: string
           resumen?: string | null
           quality_score?: number
-          featured_species?: string[]
+          featured_species?: FeaturedSpecies[]
           images?: string[]
           source_book?: string | null
           source_authors?: string | null
@@ -119,7 +129,7 @@ export interface Database {
           content?: string
           resumen?: string | null
           quality_score?: number
-          featured_species?: string[]
+          featured_species?: FeaturedSpecies[]
           images?: string[]
           source_book?: string | null
           source_authors?: string | null
@@ -141,7 +151,7 @@ export interface Database {
           content: string
           resumen: string | null
           quality_score: number
-          featured_species: string[]
+          featured_species: FeaturedSpecies[]
           images: string[]
           source_book: string | null
           source_authors: string | null
@@ -161,7 +171,7 @@ export interface Database {
           content: string
           resumen?: string | null
           quality_score?: number
-          featured_species?: string[]
+          featured_species?: FeaturedSpecies[]
           images?: string[]
           source_book?: string | null
           source_authors?: string | null
@@ -181,7 +191,7 @@ export interface Database {
           content?: string
           resumen?: string | null
           quality_score?: number
-          featured_species?: string[]
+          featured_species?: FeaturedSpecies[]
           images?: string[]
           source_book?: string | null
           source_authors?: string | null

@@ -141,12 +141,14 @@ export default function HomeClient({
                 {entry.featured_species &&
                   entry.featured_species.length > 0 && (
                     <div className="mt-3 flex flex-wrap gap-2">
-                      {entry.featured_species.map((species) => (
+                      {entry.featured_species.map((species, idx) => (
                         <span
-                          key={species}
+                          key={idx}
                           className="text-xs bg-primary/10 text-primary px-2 py-1 rounded"
                         >
-                          {species}
+                          {typeof species === 'string'
+                            ? species
+                            : (species as any).stockProduct}
                         </span>
                       ))}
                     </div>
