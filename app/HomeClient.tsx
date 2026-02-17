@@ -110,20 +110,42 @@ export default function HomeClient({
   const [selectedSpecies, setSelectedSpecies] = useState<string>('todos')
   const [selectedCookingMethod, setSelectedCookingMethod] =
     useState<string>('todos')
+  const [selectedNotasCategory, setSelectedNotasCategory] =
+    useState<string>('todos')
+  const [selectedSaludCategory, setSelectedSaludCategory] =
+    useState<string>('todos')
 
-  // Filter by species
+  // Filter Recetas by species
   let filteredRecetas =
     selectedSpecies === 'todos'
       ? recetas
       : recetas.filter((r) => hasSpecies(r, selectedSpecies))
 
-  // Further filter by cooking method (search in title and content)
+  // Further filter Recetas by cooking method
   if (selectedCookingMethod !== 'todos') {
     filteredRecetas = filteredRecetas.filter((r) => {
       const textToSearch = (r.title + ' ' + r.content).toLowerCase()
       return textToSearch.includes(selectedCookingMethod.toLowerCase())
     })
   }
+
+  // Filter Notas de Mar by category
+  let filteredNotasDeMar =
+    selectedNotasCategory === 'todos'
+      ? notasDeMar
+      : notasDeMar.filter((n) => {
+          const textToSearch = (n.title + ' ' + n.content).toLowerCase()
+          return textToSearch.includes(selectedNotasCategory.toLowerCase())
+        })
+
+  // Filter Salud articles by category
+  let filteredSaludArticles =
+    selectedSaludCategory === 'todos'
+      ? saludArticles
+      : saludArticles.filter((s) => {
+          const textToSearch = (s.title + ' ' + s.content).toLowerCase()
+          return textToSearch.includes(selectedSaludCategory.toLowerCase())
+        })
 
   return (
     <div>
@@ -364,12 +386,68 @@ export default function HomeClient({
       {/* ================================================================ */}
       <section id="notas-de-mar" className="py-16 bg-slate-50">
         <div className="potluck-container">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">
-            Notas de Mar
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-8">
+            🐟 Notas de Mar
           </h2>
 
+          {/* Notas de Mar Category Filters */}
+          <div className="mb-8">
+            <div className="flex flex-wrap justify-center gap-2">
+              <button
+                onClick={() => setSelectedNotasCategory('todos')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedNotasCategory === 'todos'
+                    ? 'bg-cyan-600 text-white'
+                    : 'bg-cyan-100 text-cyan-700 hover:bg-cyan-200'
+                }`}
+              >
+                Todas
+              </button>
+              <button
+                onClick={() => setSelectedNotasCategory('productos')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedNotasCategory === 'productos'
+                    ? 'bg-cyan-600 text-white'
+                    : 'bg-cyan-100 text-cyan-700 hover:bg-cyan-200'
+                }`}
+              >
+                Productos
+              </button>
+              <button
+                onClick={() => setSelectedNotasCategory('consejos')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedNotasCategory === 'consejos'
+                    ? 'bg-cyan-600 text-white'
+                    : 'bg-cyan-100 text-cyan-700 hover:bg-cyan-200'
+                }`}
+              >
+                Consejos
+              </button>
+              <button
+                onClick={() => setSelectedNotasCategory('origen')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedNotasCategory === 'origen'
+                    ? 'bg-cyan-600 text-white'
+                    : 'bg-cyan-100 text-cyan-700 hover:bg-cyan-200'
+                }`}
+              >
+                Origen
+              </button>
+              <button
+                onClick={() => setSelectedNotasCategory('curiosidades')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedNotasCategory === 'curiosidades'
+                    ? 'bg-cyan-600 text-white'
+                    : 'bg-cyan-100 text-cyan-700 hover:bg-cyan-200'
+                }`}
+              >
+                Curiosidades
+              </button>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {notasDeMar.map((nota) => (
+            {filteredNotasDeMar.map((nota) => (
               <Link
                 key={nota.id}
                 href={`/notas-de-mar/${nota.slug}`}
@@ -404,6 +482,20 @@ export default function HomeClient({
               </Link>
             ))}
           </div>
+
+          {filteredNotasDeMar.length === 0 && (
+            <div className="text-center py-8">
+              <p className="text-slate-500">
+                No se encontraron notas para esta categoría.
+              </p>
+              <button
+                onClick={() => setSelectedNotasCategory('todos')}
+                className="text-cyan-600 hover:underline mt-2"
+              >
+                Ver todas las notas
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -412,12 +504,68 @@ export default function HomeClient({
       {/* ================================================================ */}
       <section id="salud" className="py-16 bg-white">
         <div className="potluck-container">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">
-            Pescado y Salud
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-8">
+            🥗 Pescado y Salud
           </h2>
 
+          {/* Salud Category Filters */}
+          <div className="mb-8">
+            <div className="flex flex-wrap justify-center gap-2">
+              <button
+                onClick={() => setSelectedSaludCategory('todos')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedSaludCategory === 'todos'
+                    ? 'bg-green-600 text-white'
+                    : 'bg-green-100 text-green-700 hover:bg-green-200'
+                }`}
+              >
+                Todas
+              </button>
+              <button
+                onClick={() => setSelectedSaludCategory('beneficios')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedSaludCategory === 'beneficios'
+                    ? 'bg-green-600 text-white'
+                    : 'bg-green-100 text-green-700 hover:bg-green-200'
+                }`}
+              >
+                Beneficios
+              </button>
+              <button
+                onClick={() => setSelectedSaludCategory('nutrición')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedSaludCategory === 'nutrición'
+                    ? 'bg-green-600 text-white'
+                    : 'bg-green-100 text-green-700 hover:bg-green-200'
+                }`}
+              >
+                Nutrición
+              </button>
+              <button
+                onClick={() => setSelectedSaludCategory('dietas')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedSaludCategory === 'dietas'
+                    ? 'bg-green-600 text-white'
+                    : 'bg-green-100 text-green-700 hover:bg-green-200'
+                }`}
+              >
+                Dietas
+              </button>
+              <button
+                onClick={() => setSelectedSaludCategory('mitos')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedSaludCategory === 'mitos'
+                    ? 'bg-green-600 text-white'
+                    : 'bg-green-100 text-green-700 hover:bg-green-200'
+                }`}
+              >
+                Mitos y verdades
+              </button>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {saludArticles.map((article) => (
+            {filteredSaludArticles.map((article) => (
               <Link
                 key={article.id}
                 href={`/salud/${article.slug}`}
@@ -452,6 +600,20 @@ export default function HomeClient({
               </Link>
             ))}
           </div>
+
+          {filteredSaludArticles.length === 0 && (
+            <div className="text-center py-8">
+              <p className="text-slate-500">
+                No se encontraron artículos para esta categoría.
+              </p>
+              <button
+                onClick={() => setSelectedSaludCategory('todos')}
+                className="text-green-600 hover:underline mt-2"
+              >
+                Ver todos los artículos
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </div>
