@@ -6,16 +6,37 @@ export const supabase = createClient(
 )
 
 // For server-side operations (imports, admin actions)
-export const supabaseAdmin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_KEY!,
-  {
+// Lazy-loaded to ensure env vars are available at runtime
+let _supabaseAdmin: ReturnType<typeof createClient> | null = null
+
+const getSupabaseAdmin = () => {
+  if (_supabaseAdmin) return _supabaseAdmin
+
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const serviceKey = process.env.SUPABASE_SERVICE_KEY
+
+  if (!url || !serviceKey) {
+    throw new Error('Missing Supabase environment variables')
+  }
+
+  _supabaseAdmin = createClient(url, serviceKey, {
     auth: {
       autoRefreshToken: false,
       persistSession: false,
     },
+  })
+
+  return _supabaseAdmin
+}
+
+// Export a proxy that lazily initializes the admin client
+export const supabaseAdmin = new Proxy({} as ReturnType<typeof createClient>, {
+  get(target, prop) {
+    const client = getSupabaseAdmin()
+    const value = client[prop as keyof typeof client]
+    return typeof value === 'function' ? value.bind(client) : value
   },
-)
+})
 
 // Types matching your Supabase tables
 export interface ContentEntry {

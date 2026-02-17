@@ -60,7 +60,7 @@ export async function getAllContent(options?: {
     }
 
     if (data) {
-      const dataWithType = data.map((item) => ({
+      const dataWithType = data.map((item: any) => ({
         ...item,
         contentType: table as ContentType,
       }))
