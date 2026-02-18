@@ -9,13 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        background: '#F8F9FB',
+        foreground: '#1F2937',
         navy: '#2B2E78',
         'lobster-red': '#E23C4B',
         teal: '#00B3A4',
         sky: '#4DA8DA',
         'app-bg': '#F8F9FB',
         'card-bg': '#FFFFFF',
-        border: '#E5E7EB',
         'text-primary': '#1F2937',
         'text-secondary': '#6B7280',
       },

@@ -13,6 +13,8 @@
     --border: #E5E7EB;
     --text-primary: #1F2937;
     --text-secondary: #6B7280;
+    --background: #F8F9FB;
+    --foreground: #1F2937;
   }
 
   html {
@@ -33,18 +35,58 @@
   }
 }
 
+@layer components {
+  .potluck-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-[#E23C4B] hover:bg-[#C83240] text-white font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-[#00B3A4] hover:bg-[#009688] text-white font-semibold px-6 py-3 rounded-full transition-all duration-200;
+  }
+
+  .btn-ghost {
+    @apply border-2 border-[#2B2E78] text-[#2B2E78] hover:bg-[#2B2E78] hover:text-white font-semibold px-6 py-3 rounded-full transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-[#E5E7EB] shadow-sm hover:shadow-lg transition-all duration-300;
+  }
+
+  .tag-teal {
+    @apply bg-[#00B3A4]/10 text-[#00B3A4] border border-[#00B3A4]/20 px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .tag-navy {
+    @apply bg-[#2B2E78]/10 text-[#2B2E78] border border-[#2B2E78]/20 px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .filter-btn {
+    @apply px-4 py-2 rounded-full text-sm font-medium border border-[#E5E7EB] bg-white text-[#6B7280] hover:border-[#00B3A4] hover:text-[#00B3A4] transition-all duration-200;
+  }
+
+  .filter-btn-active {
+    @apply px-4 py-2 rounded-full text-sm font-medium bg-[#00B3A4] text-white border border-[#00B3A4] transition-all duration-200;
+  }
+
+  .section-label {
+    @apply text-xs font-bold uppercase tracking-widest text-[#00B3A4];
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-[#1F2937];
+  }
+}
+
 /* Added custom Potluck brand colors and styles */
 :root {
   --potluck-yellow: #f5e6a3;
   --potluck-pink: #f4c2c2;
   --potluck-brown: #8b4513;
   --potluck-darkText: #2c1810;
-}
-
-.potluck-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .bg-potluck-yellow {
