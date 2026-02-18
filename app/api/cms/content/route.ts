@@ -1,11 +1,33 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 
+export const runtime = 'nodejs'
+export const dynamic = 'force-dynamic'
+
 export async function GET(request: NextRequest) {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!,
-  )
+  // Debug: log environment variables
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+
+  console.log('Environment check:', {
+    hasUrl: !!supabaseUrl,
+    hasKey: !!supabaseKey,
+    urlValue: supabaseUrl,
+    keyLength: supabaseKey?.length,
+  })
+
+  if (!supabaseUrl || !supabaseKey) {
+    return NextResponse.json(
+      {
+        error: 'Missing environment variables',
+        hasUrl: !!supabaseUrl,
+        hasKey: !!supabaseKey,
+      },
+      { status: 500 },
+    )
+  }
+
+  const supabase = createClient(supabaseUrl, supabaseKey)
 
   const searchParams = request.nextUrl.searchParams
   const page = parseInt(searchParams.get('page') || '1')
@@ -15,7 +37,6 @@ export async function GET(request: NextRequest) {
   const to = from + pageSize - 1
 
   try {
-    // Just get all from all tables
     const [recetas, notas, salud] = await Promise.all([
       supabase.from('recetas').select('*').range(from, to),
       supabase.from('notas_de_mar').select('*').range(from, to),
@@ -40,11 +61,14 @@ export async function GET(request: NextRequest) {
 }
 
 export async function PUT(request: NextRequest) {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!,
-  )
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
 
+  if (!supabaseUrl || !supabaseKey) {
+    return NextResponse.json({ error: 'Missing env vars' }, { status: 500 })
+  }
+
+  const supabase = createClient(supabaseUrl, supabaseKey)
   const { id, contentType, updates } = await request.json()
 
   const { error } = await supabase
@@ -60,11 +84,14 @@ export async function PUT(request: NextRequest) {
 }
 
 export async function DELETE(request: NextRequest) {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!,
-  )
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
 
+  if (!supabaseUrl || !supabaseKey) {
+    return NextResponse.json({ error: 'Missing env vars' }, { status: 500 })
+  }
+
+  const supabase = createClient(supabaseUrl, supabaseKey)
   const { id, contentType } = await request.json()
 
   const { error } = await supabase.from(contentType).delete().eq('id', id)
