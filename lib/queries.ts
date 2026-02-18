@@ -1,5 +1,6 @@
 import { supabase } from './supabase'
 import type { ContentEntry } from './supabase'
+import type { Oferta } from './types'
 
 // ============================================================================
 // RECETAS
@@ -26,7 +27,7 @@ export async function getRecetas(
     return []
   }
 
-  return data || []
+  return (data || []) as ContentEntry[]
 }
 
 export async function getRecetaBySlug(
@@ -80,7 +81,7 @@ export async function getNotasDeMar(
     return []
   }
 
-  return data || []
+  return (data || []) as ContentEntry[]
 }
 
 export async function getNotaDeMarBySlug(
@@ -124,7 +125,7 @@ export async function getSaludArticles(
     return []
   }
 
-  return data || []
+  return (data || []) as ContentEntry[]
 }
 
 export async function getSaludBySlug(
@@ -189,4 +190,17 @@ export async function getAllSpecies(): Promise<string[]> {
   })
 
   return Array.from(species).sort()
+}
+
+export async function getOfertas(): Promise<Oferta[]> {
+  const { data, error } = await supabase
+    .from('ofertas')
+    .select('*')
+    .eq('active', true)
+    .order('created_at', { ascending: false })
+  if (error) {
+    console.error('Error fetching ofertas:', error)
+    return []
+  }
+  return (data || []) as Oferta[]
 }
