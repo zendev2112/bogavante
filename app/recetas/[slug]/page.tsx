@@ -1,9 +1,25 @@
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import { getContentBySlug } from '@/lib/cms-queries'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Clock, ChefHat } from 'lucide-react'
+import { supabase } from '@/lib/supabase'
+import type { ContentEntry } from '@/lib/supabase'
+
+async function getContentBySlug(
+  table: string,
+  slug: string,
+): Promise<ContentEntry | null> {
+  const { data, error } = await supabase
+    .from(table)
+    .select('*')
+    .eq('slug', slug)
+    .eq('published', true)
+    .single()
+
+  if (error || !data) {
+    return null
+  }
+
+  return data as ContentEntry
+}
 
 export default async function RecetaPage({
   params,
@@ -19,110 +35,41 @@ export default async function RecetaPage({
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <article className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">{receta.title}</h1>
-          {receta.resumen && (
-            <p className="text-xl text-muted-foreground mb-6">
-              {receta.resumen}
-            </p>
-          )}
+      <article className="max-w-3xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4">{receta.title}</h1>
 
-          {/* Recipe Meta */}
-          <div className="flex flex-wrap gap-4 mb-6">
-            {receta.preparation_time && (
-              <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5" />
-                <span>{receta.preparation_time} min</span>
-              </div>
-            )}
-            {receta.difficulty && (
-              <div className="flex items-center gap-2">
-                <ChefHat className="h-5 w-5" />
-                <span>{receta.difficulty}</span>
-              </div>
-            )}
-            {receta.cooking_method && (
-              <Badge variant="outline">{receta.cooking_method}</Badge>
-            )}
+        {receta.image_url && (
+          <div className="relative w-full h-96 mb-8">
+            <Image
+              src={receta.image_url}
+              alt={receta.title}
+              fill
+              className="object-cover rounded-lg"
+            />
           </div>
-
-          {/* Featured Species */}
-          {receta.featured_species && receta.featured_species.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-6">
-              {receta.featured_species.map((species, idx) => (
-                <Badge key={idx} variant="secondary">
-                  {typeof species === 'string' ? species : species.stockProduct}
-                </Badge>
-              ))}
-            </div>
-          )}
-
-          {/* Featured Image */}
-          {receta.image_url && (
-            <div className="relative w-full h-96 mb-8 rounded-lg overflow-hidden">
-              <Image
-                src={receta.image_url}
-                alt={receta.title}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          )}
-        </div>
-
-        {/* Content */}
-        <Card className="mb-8">
-          <CardContent className="prose prose-lg max-w-none pt-6">
-            <div dangerouslySetInnerHTML={{ __html: receta.content }} />
-          </CardContent>
-        </Card>
-
-        {/* Nutritional Info */}
-        {receta.nutritional_info && (
-          <Card className="mb-8">
-            <CardContent className="pt-6">
-              <h2 className="text-xl font-semibold mb-4">
-                Información Nutricional
-              </h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {Object.entries(receta.nutritional_info).map(([key, value]) => (
-                  <div key={key} className="text-center">
-                    <div className="text-2xl font-bold">{String(value)}</div>
-                    <div className="text-sm text-muted-foreground">{key}</div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
         )}
 
-        {/* Metadata */}
-        <Card>
-          <CardContent className="pt-6">
-            <h2 className="text-xl font-semibold mb-4">Información</h2>
-            <div className="space-y-2 text-sm">
-              {receta.source_book && (
-                <p>
-                  <span className="font-medium">Fuente:</span>{' '}
-                  {receta.source_book}
-                </p>
-              )}
-              {receta.source_authors && (
-                <p>
-                  <span className="font-medium">Autores:</span>{' '}
-                  {receta.source_authors}
-                </p>
-              )}
-              <p>
-                <span className="font-medium">Puntuación de calidad:</span>{' '}
-                {receta.quality_score}/10
-              </p>
+        <div className="prose prose-lg max-w-none mb-8">{receta.content}</div>
+
+        {receta.resumen && (
+          <div className="bg-blue-50 p-4 rounded-lg mb-8">
+            <p className="text-slate-700">{receta.resumen}</p>
+          </div>
+        )}
+
+        {receta.featured_species && receta.featured_species.length > 0 && (
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold mb-4">Especies Destacadas</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {receta.featured_species.map((species, idx) => (
+                <div key={idx} className="bg-gray-50 p-4 rounded-lg">
+                  <p className="font-semibold">{species.stockProduct}</p>
+                  <p className="text-sm text-gray-600">{species.categoria}</p>
+                </div>
+              ))}
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        )}
       </article>
     </div>
   )
