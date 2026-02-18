@@ -6,11 +6,10 @@ import { useState, useEffect } from 'react'
 import { ContentEntry } from '@/lib/supabase'
 import type { Oferta } from '@/lib/types'
 
-// ── Constants ────────────────────────────────────────────────────────────────
-const HERO_VIDEO_URL = '' // 👈 Replace with your Cloudinary URL
+const HERO_VIDEO_URL =
+  'https://res.cloudinary.com/dwhu22onh/video/upload/v1771435910/Dise%C3%B1o_sin_t%C3%ADtulo_1_atum2o.mp4'
 const HERO_FALLBACK_IMAGE = '/shop.jpg'
 
-// 👇 Replace these with your real Cloudinary image URLs
 const PESCADERIA_IMAGES = [
   {
     src: 'https://placehold.co/800x600/2B2E78/white?text=La+Pescadería+1',
@@ -27,6 +26,53 @@ const PESCADERIA_IMAGES = [
   {
     src: 'https://placehold.co/800x600/2B2E78/white?text=La+Pescadería+4',
     alt: 'La Pescadería - Vista 4',
+  },
+]
+
+const OFERTAS_PLACEHOLDER: Oferta[] = [
+  {
+    id: 'p1',
+    title: 'Merluza Fresca',
+    description: 'Por kg, recién llegada',
+    price: 2500,
+    original_price: 3200,
+    image_url: 'https://placehold.co/600x400/2B2E78/white?text=Merluza',
+    active: true,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
+  {
+    id: 'p2',
+    title: 'Langostinos',
+    description: 'Bolsa 500g',
+    price: 4800,
+    original_price: 6000,
+    image_url: 'https://placehold.co/600x400/00B3A4/white?text=Langostinos',
+    active: true,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
+  {
+    id: 'p3',
+    title: 'Salmón Blanco',
+    description: 'Filete por kg',
+    price: 5500,
+    original_price: 7000,
+    image_url: 'https://placehold.co/600x400/E23C4B/white?text=Salmón',
+    active: true,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
+  {
+    id: 'p4',
+    title: 'Corvina',
+    description: 'Entera por kg',
+    price: 3200,
+    original_price: 4000,
+    image_url: 'https://placehold.co/600x400/4DA8DA/white?text=Corvina',
+    active: true,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
   },
 ]
 
@@ -122,7 +168,6 @@ const NAV_LINKS = [
   { href: '#salud', label: 'Salud' },
 ]
 
-// ── Types ─────────────────────────────────────────────────────────────────────
 interface HomeClientProps {
   recetas: ContentEntry[]
   notasDeMar: ContentEntry[]
@@ -130,7 +175,6 @@ interface HomeClientProps {
   ofertas: Oferta[]
 }
 
-// ── Helpers ───────────────────────────────────────────────────────────────────
 function hasSpecies(entry: ContentEntry, species: string): boolean {
   return (
     entry.featured_species?.some(
@@ -139,7 +183,6 @@ function hasSpecies(entry: ContentEntry, species: string): boolean {
   )
 }
 
-// ── Sub-components ────────────────────────────────────────────────────────────
 function FilterButton({
   active,
   onClick,
@@ -163,14 +206,12 @@ function ImageSlider({ images }: { images: { src: string; alt: string }[] }) {
   const [current, setCurrent] = useState(0)
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length)
-    }, 4000)
+    const timer = setInterval(
+      () => setCurrent((prev) => (prev + 1) % images.length),
+      4000,
+    )
     return () => clearInterval(timer)
   }, [images.length])
-
-  const prev = () => setCurrent((c) => (c - 1 + images.length) % images.length)
-  const next = () => setCurrent((c) => (c + 1) % images.length)
 
   return (
     <div className="relative w-full h-full rounded-3xl overflow-hidden group">
@@ -182,10 +223,10 @@ function ImageSlider({ images }: { images: { src: string; alt: string }[] }) {
           <Image src={img.src} alt={img.alt} fill className="object-cover" />
         </div>
       ))}
-
-      {/* Arrows */}
       <button
-        onClick={prev}
+        onClick={() =>
+          setCurrent((c) => (c - 1 + images.length) % images.length)
+        }
         className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10"
       >
         <svg
@@ -203,7 +244,7 @@ function ImageSlider({ images }: { images: { src: string; alt: string }[] }) {
         </svg>
       </button>
       <button
-        onClick={next}
+        onClick={() => setCurrent((c) => (c + 1) % images.length)}
         className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-9 h-9 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10"
       >
         <svg
@@ -220,8 +261,6 @@ function ImageSlider({ images }: { images: { src: string; alt: string }[] }) {
           />
         </svg>
       </button>
-
-      {/* Dots */}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
         {images.map((_, idx) => (
           <button
@@ -243,11 +282,10 @@ function OfertasSlider({
   whatsappNumber: string
 }) {
   const [current, setCurrent] = useState(0)
-  const visible = 3
-  const max = Math.max(0, ofertas.length - visible)
 
-  const prev = () => setCurrent((c) => Math.max(0, c - 1))
-  const next = () => setCurrent((c) => Math.min(max, c + 1))
+  // Responsive: 1 on mobile, 3 on desktop — we use CSS for display, JS for sliding
+  const itemsPerPage = 3
+  const max = Math.max(0, ofertas.length - itemsPerPage)
 
   return (
     <div className="relative">
@@ -255,16 +293,13 @@ function OfertasSlider({
         <div
           className="flex gap-6 transition-transform duration-500"
           style={{
-            transform: `translateX(calc(-${current * (100 / visible)}% - ${(current * 24) / visible}px))`,
+            transform: `translateX(calc(-${current * (100 / itemsPerPage)}% - ${current * 8}px))`,
           }}
         >
           {ofertas.map((oferta) => (
             <div
               key={oferta.id}
-              className="card flex-shrink-0 overflow-hidden relative group"
-              style={{
-                width: `calc(${100 / visible}% - ${(24 * (visible - 1)) / visible}px)`,
-              }}
+              className="card flex-shrink-0 overflow-hidden relative group w-[85vw] sm:w-[45vw] md:w-[calc(33.333%-16px)]"
             >
               {oferta.original_price && oferta.price && (
                 <div className="absolute top-3 left-3 z-10 bg-[#E23C4B] text-white text-xs font-black px-3 py-1 rounded-full shadow">
@@ -319,15 +354,7 @@ function OfertasSlider({
                   rel="noopener noreferrer"
                   className="btn-secondary w-full flex items-center justify-center gap-2 text-sm"
                 >
-                  <svg
-                    className="w-4 h-4"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.882l6.198-1.448A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.5-5.207-1.378l-.374-.222-3.878.906.945-3.773-.244-.389A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
-                  </svg>
-                  Consultar
+                  Consultar por WhatsApp
                 </a>
               </div>
             </div>
@@ -335,11 +362,10 @@ function OfertasSlider({
         </div>
       </div>
 
-      {/* Slider controls */}
-      {ofertas.length > visible && (
+      {ofertas.length > itemsPerPage && (
         <div className="flex items-center justify-center gap-4 mt-8">
           <button
-            onClick={prev}
+            onClick={() => setCurrent((c) => Math.max(0, c - 1))}
             disabled={current === 0}
             className="w-10 h-10 rounded-full border-2 border-[#2B2E78] text-[#2B2E78] flex items-center justify-center hover:bg-[#2B2E78] hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed"
           >
@@ -357,11 +383,17 @@ function OfertasSlider({
               />
             </svg>
           </button>
-          <span className="text-sm text-[#6B7280]">
-            {current + 1} / {max + 1}
-          </span>
+          <div className="flex gap-2">
+            {Array.from({ length: max + 1 }).map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrent(idx)}
+                className={`rounded-full transition-all duration-300 ${idx === current ? 'w-5 h-2 bg-[#2B2E78]' : 'w-2 h-2 bg-[#2B2E78]/30'}`}
+              />
+            ))}
+          </div>
           <button
-            onClick={next}
+            onClick={() => setCurrent((c) => Math.min(max, c + 1))}
             disabled={current === max}
             className="w-10 h-10 rounded-full border-2 border-[#2B2E78] text-[#2B2E78] flex items-center justify-center hover:bg-[#2B2E78] hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed"
           >
@@ -385,7 +417,6 @@ function OfertasSlider({
   )
 }
 
-// ── Main Component ─────────────────────────────────────────────────────────────
 export default function HomeClient({
   recetas,
   notasDeMar,
@@ -401,31 +432,32 @@ export default function HomeClient({
   const [selectedSaludCategory, setSelectedSaludCategory] =
     useState<string>('todos')
 
-  // ── Filter logic (untouched) ─────────────────────────────────────────
+  // Use real ofertas if available, otherwise show placeholders
+  const displayOfertas =
+    ofertas.length > 0 ? ofertas.slice(0, 6) : OFERTAS_PLACEHOLDER
+
   let filteredRecetas =
     selectedSpecies === 'todos'
       ? recetas
       : recetas.filter((r) => hasSpecies(r, selectedSpecies))
-
   if (selectedCookingMethod !== 'todos') {
-    filteredRecetas = filteredRecetas.filter((r) => {
-      const textToSearch = (r.title + ' ' + r.content).toLowerCase()
-      return textToSearch.includes(selectedCookingMethod.toLowerCase())
-    })
+    filteredRecetas = filteredRecetas.filter((r) =>
+      (r.title + ' ' + r.content)
+        .toLowerCase()
+        .includes(selectedCookingMethod.toLowerCase()),
+    )
   }
 
   const filteredNotasDeMar =
     selectedNotasCategory === 'todos'
       ? notasDeMar
       : notasDeMar.filter((n) => (n as any).category === selectedNotasCategory)
-
   const filteredSaludArticles =
     selectedSaludCategory === 'todos'
       ? saludArticles
       : saludArticles.filter(
           (s) => (s as any).category === selectedSaludCategory,
         )
-  // ────────────────────────────────────────────────────────────────────
 
   const whatsappNumber = '5491100000000'
   const whatsappMessage = encodeURIComponent(
@@ -434,29 +466,25 @@ export default function HomeClient({
 
   return (
     <div className="bg-[#F8F9FB]">
-      {/* ════════════════════════════════════════════════════════
-          NAVBAR
-      ════════════════════════════════════════════════════════ */}
+      {/* ══ NAVBAR ══════════════════════════════════════════════ */}
       <header className="bg-[#2B2E78] sticky top-0 z-50 shadow-lg">
-        <div className="potluck-container flex items-center justify-between h-16">
-          {/* Logo */}
+        <div className="potluck-container flex items-center justify-between h-20">
+          {/* Logo — just image + name, clean */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            <div className="bg-white rounded-xl p-1.5">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/el_bogavante_logo_mejorado-removebg-preview-NfJrF1t6XnPsXcJj7ZlKfwyYScYxAe.png"
-                alt="El Bogavante"
-                width={44}
-                height={44}
-              />
-            </div>
-            <div>
-              <p className="font-playfair text-xl font-bold">El Bogavante</p>
-              <p className="text-white/40 text-xs">Desde 2002</p>
-            </div>
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/el_bogavante_logo_mejorado-removebg-preview-NfJrF1t6XnPsXcJj7ZlKfwyYScYxAe.png"
+              alt="El Bogavante"
+              width={56}
+              height={56}
+              className="drop-shadow-lg"
+            />
+            <span className="font-playfair text-white text-xl font-bold tracking-wide">
+              El Bogavante
+            </span>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
@@ -468,7 +496,7 @@ export default function HomeClient({
             ))}
           </nav>
 
-          {/* Mobile hamburger */}
+          {/* Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg hover:bg-white/10 transition-colors"
@@ -486,70 +514,47 @@ export default function HomeClient({
           </button>
         </div>
 
-        {/* Mobile dropdown */}
+        {/* Mobile dropdown — links only, no address clutter */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${menuOpen ? 'max-h-80 border-t border-white/10' : 'max-h-0'}`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${menuOpen ? 'max-h-72 border-t border-white/10' : 'max-h-0'}`}
         >
-          <nav className="potluck-container py-3 flex flex-col gap-1">
+          <nav className="potluck-container py-3 flex flex-col">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-white/80 hover:text-[#00B3A4] py-2.5 px-4 rounded-lg hover:bg-white/5 text-sm font-medium transition-all"
+                className="text-white/80 hover:text-[#00B3A4] py-3 px-2 text-sm font-medium transition-colors border-b border-white/5 last:border-0"
               >
                 {link.label}
               </a>
             ))}
-            <div className="px-4 pt-2 pb-3 border-t border-white/10 mt-1">
-              <p className="text-white/40 text-xs">
-                📍 Mitre 944, Coronel Suárez
-              </p>
-            </div>
           </nav>
         </div>
       </header>
 
-      {/* ════════════════════════════════════════════════════════
-          HERO
-      ════════════════════════════════════════════════════════ */}
+      {/* ══ HERO ════════════════════════════════════════════════ */}
       <section className="relative min-h-[90vh] bg-[#2B2E78] overflow-hidden flex items-center">
-        {/* Video OR image background */}
-        {HERO_VIDEO_URL ? (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-60"
-          >
-            <source src={HERO_VIDEO_URL} type="video/mp4" />
-          </video>
-        ) : (
-          <div className="absolute inset-0">
-            <Image
-              src={HERO_FALLBACK_IMAGE}
-              alt="El Bogavante"
-              fill
-              className="object-cover opacity-40"
-              priority
-            />
-          </div>
-        )}
+        {/* Video background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={HERO_VIDEO_URL} type="video/mp4" />
+        </video>
 
-        {/* Lighter overlay so video is visible */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#2B2E78]/80 via-[#2B2E78]/60 to-transparent" />
-
-        {/* Accent blobs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#00B3A4]/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-20 left-20 w-64 h-64 bg-[#E23C4B]/10 rounded-full blur-3xl pointer-events-none" />
+        {/* Overlay — left side darker for text, right side transparent to show video */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2B2E78]/85 via-[#2B2E78]/50 to-[#2B2E78]/10" />
 
         <div className="potluck-container relative z-10 w-full">
-          <div className="max-w-2xl py-24 md:py-32">
+          <div className="max-w-xl py-24 md:py-32">
             <span className="inline-block bg-[#00B3A4]/20 text-[#00B3A4] text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 border border-[#00B3A4]/30">
               Pescadería Artesanal · Desde 2002
             </span>
-            <h1 className="font-playfair text-6xl sm:text-7xl lg:text-8xl font-bold text-white leading-none mb-4 drop-shadow-lg">
+            <h1 className="font-playfair text-7xl sm:text-8xl lg:text-9xl font-bold text-white leading-none mb-4 drop-shadow-xl">
               El
               <br />
               <span className="text-[#00B3A4]">Bogavante</span>
@@ -557,9 +562,9 @@ export default function HomeClient({
             <p className="text-white/90 text-xl font-playfair italic mb-3">
               Del Mar a Tu Mesa
             </p>
-            <p className="text-white/60 text-base leading-relaxed mb-8 max-w-md">
-              Más de 20 años trayendo el mejor pescado fresco y mariscos de
-              temporada a Coronel Suárez.
+            <p className="text-white/70 text-base leading-relaxed mb-8 max-w-md">
+              Más de 20 años trayendo el mejor pescado fresco y mariscos a
+              Coronel Suárez.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#ofertas" className="btn-primary">
@@ -572,8 +577,6 @@ export default function HomeClient({
                 La Pescadería
               </a>
             </div>
-
-            {/* Stats */}
             <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10 max-w-xs">
               {[
                 { value: '20+', label: 'Años' },
@@ -591,7 +594,6 @@ export default function HomeClient({
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 animate-bounce">
           <span className="text-xs uppercase tracking-widest">Scroll</span>
           <svg
@@ -610,20 +612,16 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════
-          LA PESCADERÍA
-      ════════════════════════════════════════════════════════ */}
+      {/* ══ LA PESCADERÍA ════════════════════════════════════════ */}
       <section id="pescaderia" className="py-20 bg-white">
         <div className="potluck-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            {/* Image Slider */}
             <div className="relative h-80 md:h-[480px]">
               <div className="absolute -top-4 -left-4 w-full h-full bg-[#00B3A4]/10 rounded-3xl" />
               <div className="relative h-full shadow-2xl border border-[#E5E7EB] rounded-3xl overflow-hidden">
                 <ImageSlider images={PESCADERIA_IMAGES} />
               </div>
             </div>
-
             <div>
               <span className="section-label">Quiénes Somos</span>
               <h2 className="section-title mt-3 mb-2">La Pescadería</h2>
@@ -682,30 +680,24 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════
-          OFERTAS — Slider
-      ════════════════════════════════════════════════════════ */}
-      {ofertas.length > 0 && (
-        <section id="ofertas" className="py-20 bg-[#F8F9FB]">
-          <div className="potluck-container">
-            <div className="text-center mb-12">
-              <span className="section-label">Promociones</span>
-              <h2 className="section-title mt-3">Ofertas de la Semana</h2>
-              <p className="text-[#6B7280] mt-3 max-w-xl mx-auto">
-                Aprovechá nuestras promociones con los mejores productos del mar
-              </p>
-            </div>
-            <OfertasSlider
-              ofertas={ofertas.slice(0, 6)}
-              whatsappNumber={whatsappNumber}
-            />
+      {/* ══ OFERTAS ══════════════════════════════════════════════ */}
+      <section id="ofertas" className="py-20 bg-[#F8F9FB]">
+        <div className="potluck-container">
+          <div className="text-center mb-12">
+            <span className="section-label">Promociones</span>
+            <h2 className="section-title mt-3">Ofertas de la Semana</h2>
+            <p className="text-[#6B7280] mt-3 max-w-xl mx-auto">
+              Aprovechá nuestras promociones con los mejores productos del mar
+            </p>
           </div>
-        </section>
-      )}
+          <OfertasSlider
+            ofertas={displayOfertas}
+            whatsappNumber={whatsappNumber}
+          />
+        </div>
+      </section>
 
-      {/* ════════════════════════════════════════════════════════
-          RECETAS
-      ════════════════════════════════════════════════════════ */}
+      {/* ══ RECETAS ══════════════════════════════════════════════ */}
       <section id="recetas" className="py-20 bg-white">
         <div className="potluck-container">
           <div className="text-center mb-12">
@@ -715,8 +707,6 @@ export default function HomeClient({
               Inspirate con nuestras recetas cuidadosamente seleccionadas
             </p>
           </div>
-
-          {/* Cooking Method Filter */}
           <div className="mb-6">
             <p className="text-xs font-bold uppercase tracking-widest text-[#6B7280] mb-3 text-center">
               Método de Cocción
@@ -739,8 +729,6 @@ export default function HomeClient({
               ))}
             </div>
           </div>
-
-          {/* Species Filter */}
           <div className="mb-10 p-6 bg-[#F8F9FB] rounded-2xl border border-[#E5E7EB]">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
@@ -799,7 +787,6 @@ export default function HomeClient({
               </div>
             </div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredRecetas.slice(0, 6).map((receta) => (
               <Link
@@ -853,7 +840,6 @@ export default function HomeClient({
               </Link>
             ))}
           </div>
-
           {filteredRecetas.length === 0 && (
             <div className="text-center py-16">
               <p className="text-6xl mb-4">🔍</p>
@@ -874,9 +860,7 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════
-          NOTAS DE MAR
-      ════════════════════════════════════════════════════════ */}
+      {/* ══ NOTAS DE MAR ═════════════════════════════════════════ */}
       <section id="notas-de-mar" className="py-20 bg-[#F8F9FB]">
         <div className="potluck-container">
           <div className="text-center mb-12">
@@ -970,9 +954,7 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════
-          SALUD
-      ════════════════════════════════════════════════════════ */}
+      {/* ══ SALUD ════════════════════════════════════════════════ */}
       <section id="salud" className="py-20 bg-white">
         <div className="potluck-container">
           <div className="text-center mb-12">
@@ -1066,23 +1048,19 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════
-          FOOTER
-      ════════════════════════════════════════════════════════ */}
+      {/* ══ FOOTER ═══════════════════════════════════════════════ */}
       <footer className="bg-[#2B2E78] text-white">
         <div className="potluck-container py-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {/* Brand */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-white rounded-xl p-1.5">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/el_bogavante_logo_mejorado-removebg-preview-NfJrF1t6XnPsXcJj7ZlKfwyYScYxAe.png"
-                    alt="El Bogavante"
-                    width={44}
-                    height={44}
-                  />
-                </div>
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/el_bogavante_logo_mejorado-removebg-preview-NfJrF1t6XnPsXcJj7ZlKfwyYScYxAe.png"
+                  alt="El Bogavante"
+                  width={52}
+                  height={52}
+                  className="drop-shadow-lg"
+                />
                 <div>
                   <p className="font-playfair text-xl font-bold">
                     El Bogavante
@@ -1092,11 +1070,9 @@ export default function HomeClient({
               </div>
               <p className="text-white/60 text-sm leading-relaxed">
                 Pescadería artesanal con más de 20 años de experiencia en
-                Coronel Suárez. Calidad y frescura garantizadas.
+                Coronel Suárez.
               </p>
             </div>
-
-            {/* Navigation */}
             <div>
               <h4 className="font-playfair font-bold text-lg mb-4">
                 Navegación
@@ -1114,8 +1090,6 @@ export default function HomeClient({
                 ))}
               </ul>
             </div>
-
-            {/* Contact */}
             <div>
               <h4 className="font-playfair font-bold text-lg mb-4">Contacto</h4>
               <div className="space-y-3">
@@ -1152,7 +1126,6 @@ export default function HomeClient({
             </div>
           </div>
         </div>
-
         <div className="border-t border-white/10">
           <div className="potluck-container py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
             <p className="text-white/40 text-xs">
@@ -1166,9 +1139,7 @@ export default function HomeClient({
         </div>
       </footer>
 
-      {/* ════════════════════════════════════════════════════════
-          WHATSAPP FLOATING BUTTON
-      ════════════════════════════════════════════════════════ */}
+      {/* ══ WHATSAPP FLOAT ═══════════════════════════════════════ */}
       <a
         href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
         target="_blank"
