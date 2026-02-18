@@ -7,13 +7,13 @@ export type Json =
   | Json[]
 
 export interface FeaturedSpecies {
-  bookName: string
   stockProduct: string
   categoria: string
-  subcategoria: string
-  presentations: string[]
-  matchedIn: string
-  confidence: number
+  subcategoria?: string
+  imagenUrl?: string
+  descripcion?: string
+  temporada?: string
+  origen?: string
 }
 
 export interface Database {
