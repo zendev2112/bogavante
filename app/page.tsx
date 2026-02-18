@@ -1,6 +1,9 @@
 import { getRecetas, getNotasDeMar, getSaludArticles } from '@/lib/queries'
 import HomeClient from './HomeClient'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 export default async function HomePage() {
   const [recetas, notasDeMar, saludArticles] = await Promise.all([
     getRecetas(12, true), // Only published
