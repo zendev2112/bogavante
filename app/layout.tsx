@@ -1,36 +1,33 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import "./globals.css"
-import MainLayout from "./MainLayout"
+import type React from 'react'
+import type { Metadata } from 'next'
+import { Playfair_Display, Inter } from 'next/font/google'
+import './globals.css'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  display: 'swap',
 })
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: "Potluck | All-natural Korean staples",
-  description:
-    "Explore all-natural Korean staples for your pantry at Potluck. Shop now for high-quality ingredients and flavors.",
-    generator: 'v0.app'
+  title: 'El Bogavante',
+  description: 'Pescado y Mariscos Frescos',
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body suppressHydrationWarning className="antialiased">
-        <MainLayout>{children}</MainLayout>
-      </body>
+    <html lang="es" className={`${playfair.variable} ${inter.variable}`}>
+      <body className="font-inter bg-[#F8F9FB] text-[#1F2937]">{children}</body>
     </html>
   )
 }
