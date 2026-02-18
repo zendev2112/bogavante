@@ -40,6 +40,20 @@ function generateSlug(title: string): string {
     .replace(/-+/g, '-')
 }
 
+const NOTAS_CATEGORIES = [
+  { value: 'productos', label: 'Productos' },
+  { value: 'consejos', label: 'Consejos' },
+  { value: 'origen', label: 'Origen' },
+  { value: 'curiosidades', label: 'Curiosidades' },
+]
+
+const SALUD_CATEGORIES = [
+  { value: 'beneficios', label: 'Beneficios' },
+  { value: 'nutricion', label: 'Nutrición' },
+  { value: 'dietas', label: 'Dietas' },
+  { value: 'mitos', label: 'Mitos y verdades' },
+]
+
 export default function ContentCMSPage() {
   const [contents, setContents] = useState<ContentWithType[]>([])
   const [totalCount, setTotalCount] = useState(0)
@@ -106,6 +120,7 @@ export default function ContentCMSPage() {
             source_book: editingContent.source_book,
             source_authors: editingContent.source_authors,
             published: editingContent.published,
+            category: (editingContent as any).category || null,
           },
         }),
       })
@@ -138,6 +153,21 @@ export default function ContentCMSPage() {
   }
 
   const totalPages = Math.ceil(totalCount / pageSize)
+
+  const getCategoryLabel = (contentType: string, category: string | null) => {
+    if (!category) return '-'
+    if (contentType === 'notas_de_mar') {
+      return (
+        NOTAS_CATEGORIES.find((c) => c.value === category)?.label || category
+      )
+    }
+    if (contentType === 'salud') {
+      return (
+        SALUD_CATEGORIES.find((c) => c.value === category)?.label || category
+      )
+    }
+    return '-'
+  }
 
   return (
     <div className="container mx-auto p-6">
@@ -190,6 +220,7 @@ export default function ContentCMSPage() {
             <TableRow>
               <TableHead>Título</TableHead>
               <TableHead>Tipo</TableHead>
+              <TableHead>Categoría</TableHead>
               <TableHead>Slug</TableHead>
               <TableHead>Calidad</TableHead>
               <TableHead>Publicado</TableHead>
@@ -204,6 +235,12 @@ export default function ContentCMSPage() {
                   {content.contentType === 'recetas' && 'Receta'}
                   {content.contentType === 'notas_de_mar' && 'Nota de Mar'}
                   {content.contentType === 'salud' && 'Salud'}
+                </TableCell>
+                <TableCell>
+                  {getCategoryLabel(
+                    content.contentType,
+                    (content as any).category,
+                  )}
                 </TableCell>
                 <TableCell className="text-sm text-muted-foreground">
                   {content.slug}
@@ -299,6 +336,60 @@ export default function ContentCMSPage() {
                   }
                 />
               </div>
+
+              {/* Category Dropdown - Only for Notas de Mar and Salud */}
+              {editingContent.contentType === 'notas_de_mar' && (
+                <div>
+                  <Label>Categoría</Label>
+                  <Select
+                    value={(editingContent as any).category || ''}
+                    onValueChange={(value) =>
+                      setEditingContent({
+                        ...editingContent,
+                        category: value,
+                      } as any)
+                    }
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Seleccionar categoría" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {NOTAS_CATEGORIES.map((cat) => (
+                        <SelectItem key={cat.value} value={cat.value}>
+                          {cat.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              )}
+
+              {editingContent.contentType === 'salud' && (
+                <div>
+                  <Label>Categoría</Label>
+                  <Select
+                    value={(editingContent as any).category || ''}
+                    onValueChange={(value) =>
+                      setEditingContent({
+                        ...editingContent,
+                        category: value,
+                      } as any)
+                    }
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Seleccionar categoría" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {SALUD_CATEGORIES.map((cat) => (
+                        <SelectItem key={cat.value} value={cat.value}>
+                          {cat.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              )}
+
               <div>
                 <Label>Resumen</Label>
                 <Input

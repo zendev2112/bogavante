@@ -3,9 +3,9 @@ import HomeClient from './HomeClient'
 
 export default async function HomePage() {
   const [recetas, notasDeMar, saludArticles] = await Promise.all([
-    getRecetas(12),
-    getNotasDeMar(6),
-    getSaludArticles(6),
+    getRecetas(12, true), // Only published
+    getNotasDeMar(6, true), // Only published
+    getSaludArticles(6, true), // Only published
   ])
 
   return (

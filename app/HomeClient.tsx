@@ -129,23 +129,19 @@ export default function HomeClient({
     })
   }
 
-  // Filter Notas de Mar by category
+  // Filter Notas de Mar by category from database
   let filteredNotasDeMar =
     selectedNotasCategory === 'todos'
       ? notasDeMar
-      : notasDeMar.filter((n) => {
-          const textToSearch = (n.title + ' ' + n.content).toLowerCase()
-          return textToSearch.includes(selectedNotasCategory.toLowerCase())
-        })
+      : notasDeMar.filter((n) => (n as any).category === selectedNotasCategory)
 
-  // Filter Salud articles by category
+  // Filter Salud articles by category from database
   let filteredSaludArticles =
     selectedSaludCategory === 'todos'
       ? saludArticles
-      : saludArticles.filter((s) => {
-          const textToSearch = (s.title + ' ' + s.content).toLowerCase()
-          return textToSearch.includes(selectedSaludCategory.toLowerCase())
-        })
+      : saludArticles.filter(
+          (s) => (s as any).category === selectedSaludCategory,
+        )
 
   return (
     <div>

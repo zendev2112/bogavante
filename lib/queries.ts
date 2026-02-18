@@ -1,19 +1,31 @@
-import { supabase, ContentEntry } from './supabase'
+import { supabase } from './supabase'
+import type { ContentEntry } from './supabase'
 
 // ============================================================================
 // RECETAS
 // ============================================================================
 
-export async function getRecetas(limit?: number): Promise<ContentEntry[]> {
+export async function getRecetas(
+  limit: number = 10,
+  publishedOnly: boolean = true,
+): Promise<ContentEntry[]> {
   let query = supabase
     .from('recetas')
     .select('*')
-    .order('quality_score', { ascending: false })
+    .order('created_at', { ascending: false })
+    .limit(limit)
 
-  if (limit) query = query.limit(limit)
+  if (publishedOnly) {
+    query = query.eq('published', true)
+  }
 
   const { data, error } = await query
-  if (error) throw error
+
+  if (error) {
+    console.error('Error fetching recetas:', error)
+    return []
+  }
+
   return data || []
 }
 
@@ -47,16 +59,27 @@ export async function getRecetasBySpecies(
 // NOTAS DE MAR
 // ============================================================================
 
-export async function getNotasDeMar(limit?: number): Promise<ContentEntry[]> {
+export async function getNotasDeMar(
+  limit: number = 10,
+  publishedOnly: boolean = true,
+): Promise<ContentEntry[]> {
   let query = supabase
     .from('notas_de_mar')
     .select('*')
-    .order('quality_score', { ascending: false })
+    .order('created_at', { ascending: false })
+    .limit(limit)
 
-  if (limit) query = query.limit(limit)
+  if (publishedOnly) {
+    query = query.eq('published', true)
+  }
 
   const { data, error } = await query
-  if (error) throw error
+
+  if (error) {
+    console.error('Error fetching notas de mar:', error)
+    return []
+  }
+
   return data || []
 }
 
@@ -81,17 +104,26 @@ export const getNotaBySlug = getNotaDeMarBySlug
 // ============================================================================
 
 export async function getSaludArticles(
-  limit?: number,
+  limit: number = 10,
+  publishedOnly: boolean = true,
 ): Promise<ContentEntry[]> {
   let query = supabase
     .from('salud')
     .select('*')
-    .order('quality_score', { ascending: false })
+    .order('created_at', { ascending: false })
+    .limit(limit)
 
-  if (limit) query = query.limit(limit)
+  if (publishedOnly) {
+    query = query.eq('published', true)
+  }
 
   const { data, error } = await query
-  if (error) throw error
+
+  if (error) {
+    console.error('Error fetching salud articles:', error)
+    return []
+  }
+
   return data || []
 }
 

@@ -2,11 +2,16 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import type { ContentType } from '@/lib/cms-queries'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
+function getSupabaseClient() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+  const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
 
-// Create untyped client to avoid TypeScript issues with dynamic tables
-const supabase = createClient(supabaseUrl, supabaseServiceRoleKey)
+  if (!supabaseUrl || !supabaseServiceRoleKey) {
+    throw new Error('Missing Supabase environment variables')
+  }
+
+  return createClient(supabaseUrl, supabaseServiceRoleKey)
+}
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
@@ -15,6 +20,7 @@ export async function GET(request: NextRequest) {
   const contentType = searchParams.get('contentType') || 'all'
   const searchTerm = searchParams.get('searchTerm') || ''
 
+  const supabase = getSupabaseClient()
   const from = (page - 1) * pageSize
   const to = from + pageSize - 1
 
@@ -75,6 +81,8 @@ export async function PUT(request: NextRequest) {
     const body = await request.json()
     const { id, contentType, updates } = body
 
+    const supabase = getSupabaseClient()
+
     const updatePayload = {
       ...updates,
       updated_at: new Date().toISOString(),
@@ -106,6 +114,8 @@ export async function DELETE(request: NextRequest) {
   try {
     const body = await request.json()
     const { id, contentType } = body
+
+    const supabase = getSupabaseClient()
 
     const { error } = await supabase.from(contentType).delete().eq('id', id)
 
