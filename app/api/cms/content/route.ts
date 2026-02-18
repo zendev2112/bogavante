@@ -1,132 +1,77 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
-import type { ContentType } from '@/lib/cms-queries'
-
-function getSupabaseClient() {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-  const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
-
-  if (!supabaseUrl || !supabaseServiceRoleKey) {
-    throw new Error('Missing Supabase environment variables')
-  }
-
-  return createClient(supabaseUrl, supabaseServiceRoleKey)
-}
 
 export async function GET(request: NextRequest) {
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+  )
+
   const searchParams = request.nextUrl.searchParams
   const page = parseInt(searchParams.get('page') || '1')
   const pageSize = parseInt(searchParams.get('pageSize') || '20')
-  const contentType = searchParams.get('contentType') || 'all'
-  const searchTerm = searchParams.get('searchTerm') || ''
 
-  const supabase = getSupabaseClient()
   const from = (page - 1) * pageSize
   const to = from + pageSize - 1
 
   try {
-    const tables: ContentType[] =
-      contentType === 'all'
-        ? ['recetas', 'notas_de_mar', 'salud']
-        : [contentType as ContentType]
+    // Just get all from all tables
+    const [recetas, notas, salud] = await Promise.all([
+      supabase.from('recetas').select('*').range(from, to),
+      supabase.from('notas_de_mar').select('*').range(from, to),
+      supabase.from('salud').select('*').range(from, to),
+    ])
 
-    const results = await Promise.all(
-      tables.map(async (table) => {
-        let query = supabase
-          .from(table)
-          .select('*', { count: 'exact' })
-          .order('created_at', { ascending: false })
-
-        if (searchTerm) {
-          query = query.or(
-            `title.ilike.%${searchTerm}%,content.ilike.%${searchTerm}%`,
-          )
-        }
-
-        const { data, error, count } = await query.range(from, to)
-
-        if (error) throw error
-
-        return {
-          data:
-            data?.map((item) => ({
-              ...item,
-              contentType: table,
-            })) || [],
-          count: count || 0,
-        }
-      }),
-    )
-
-    const allData = results.flatMap((r) => r.data)
-    const totalCount = results.reduce((sum, r) => sum + r.count, 0)
+    const allData = [
+      ...(recetas.data || []).map((d) => ({ ...d, contentType: 'recetas' })),
+      ...(notas.data || []).map((d) => ({ ...d, contentType: 'notas_de_mar' })),
+      ...(salud.data || []).map((d) => ({ ...d, contentType: 'salud' })),
+    ]
 
     return NextResponse.json({
       data: allData,
-      totalCount,
+      totalCount: allData.length,
       page,
       pageSize,
     })
   } catch (error) {
-    console.error('Error fetching content:', error)
-    return NextResponse.json(
-      { error: 'Failed to fetch content' },
-      { status: 500 },
-    )
+    return NextResponse.json({ error: String(error) }, { status: 500 })
   }
 }
 
 export async function PUT(request: NextRequest) {
-  try {
-    const body = await request.json()
-    const { id, contentType, updates } = body
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+  )
 
-    const supabase = getSupabaseClient()
+  const { id, contentType, updates } = await request.json()
 
-    const updatePayload = {
-      ...updates,
-      updated_at: new Date().toISOString(),
-    }
+  const { error } = await supabase
+    .from(contentType)
+    .update({ ...updates, updated_at: new Date().toISOString() })
+    .eq('id', id)
 
-    const { data, error } = await supabase
-      .from(contentType)
-      .update(updatePayload)
-      .eq('id', id)
-      .select()
-      .single()
-
-    if (error) {
-      console.error('Supabase update error:', error)
-      throw error
-    }
-
-    return NextResponse.json({ success: true, data })
-  } catch (error) {
-    console.error('Error updating content:', error)
-    return NextResponse.json(
-      { error: 'Failed to update content', details: error },
-      { status: 500 },
-    )
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 })
   }
+
+  return NextResponse.json({ success: true })
 }
 
 export async function DELETE(request: NextRequest) {
-  try {
-    const body = await request.json()
-    const { id, contentType } = body
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+  )
 
-    const supabase = getSupabaseClient()
+  const { id, contentType } = await request.json()
 
-    const { error } = await supabase.from(contentType).delete().eq('id', id)
+  const { error } = await supabase.from(contentType).delete().eq('id', id)
 
-    if (error) throw error
-
-    return NextResponse.json({ success: true })
-  } catch (error) {
-    console.error('Error deleting content:', error)
-    return NextResponse.json(
-      { error: 'Failed to delete content' },
-      { status: 500 },
-    )
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 })
   }
+
+  return NextResponse.json({ success: true })
 }
