@@ -99,6 +99,7 @@ export interface Database {
           nutritional_info: Json | null
           image_url: string | null
           published: boolean
+          category: string | null
           created_at: string
           updated_at: string
         }
@@ -119,6 +120,7 @@ export interface Database {
           nutritional_info?: Json | null
           image_url?: string | null
           published?: boolean
+          category?: string | null
           created_at?: string
           updated_at?: string
         }
@@ -139,6 +141,7 @@ export interface Database {
           nutritional_info?: Json | null
           image_url?: string | null
           published?: boolean
+          category?: string | null
           created_at?: string
           updated_at?: string
         }
@@ -161,6 +164,7 @@ export interface Database {
           nutritional_info: Json | null
           image_url: string | null
           published: boolean
+          category: string | null
           created_at: string
           updated_at: string
         }
@@ -181,6 +185,7 @@ export interface Database {
           nutritional_info?: Json | null
           image_url?: string | null
           published?: boolean
+          category?: string | null
           created_at?: string
           updated_at?: string
         }
@@ -201,6 +206,7 @@ export interface Database {
           nutritional_info?: Json | null
           image_url?: string | null
           published?: boolean
+          category?: string | null
           created_at?: string
           updated_at?: string
         }
