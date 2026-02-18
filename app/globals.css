@@ -4,17 +4,13 @@
 
 @layer base {
   :root {
+    --background: #F8F9FB;
+    --foreground: #1F2937;
+    --border-color: #E5E7EB;
     --navy: #2B2E78;
     --red: #E23C4B;
     --teal: #00B3A4;
     --sky: #4DA8DA;
-    --bg: #F8F9FB;
-    --card: #FFFFFF;
-    --border: #E5E7EB;
-    --text-primary: #1F2937;
-    --text-secondary: #6B7280;
-    --background: #F8F9FB;
-    --foreground: #1F2937;
   }
 
   html {
@@ -23,8 +19,8 @@
 
   body {
     font-family: var(--font-inter), sans-serif;
-    background-color: var(--bg);
-    color: var(--text-primary);
+    background-color: var(--background);
+    color: var(--foreground);
   }
 
   h1,
@@ -204,10 +200,10 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-[#E5E7EB];
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#F8F9FB] text-[#1F2937];
   }
 }

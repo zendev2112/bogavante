@@ -61,10 +61,10 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-[#E5E7EB];
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#F8F9FB] text-[#1F2937];
     font-family: 'Arial', sans-serif; /* Approximating their sans-serif font */
   }
 }
