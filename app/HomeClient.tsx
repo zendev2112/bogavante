@@ -90,6 +90,19 @@ const SALUD_CATEGORIES = [
   { value: 'mitos', label: 'Mitos y verdades' },
 ]
 
+const NAV_LINKS = [
+  { href: '#nosotros', label: 'Quiénes Somos' },
+  { href: '#ofertas', label: 'Ofertas' },
+  { href: '#recetas', label: 'Recetas' },
+  { href: '#notas-de-mar', label: 'Notas de Mar' },
+  { href: '#salud', label: 'Salud' },
+]
+
+// 👇 Replace with your Cloudinary URL once you upload the video
+const HERO_VIDEO_URL =
+  'https://res.cloudinary.com/dwhu22onh/video/upload/v1771435910/Dise%C3%B1o_sin_t%C3%ADtulo_1_atum2o.mp4'
+const HERO_FALLBACK_IMAGE = '/shop.jpg'
+
 interface HomeClientProps {
   recetas: ContentEntry[]
   notasDeMar: ContentEntry[]
@@ -130,6 +143,7 @@ export default function HomeClient({
   saludArticles,
   ofertas,
 }: HomeClientProps) {
+  const [menuOpen, setMenuOpen] = useState(false)
   const [selectedSpecies, setSelectedSpecies] = useState<string>('todos')
   const [selectedCookingMethod, setSelectedCookingMethod] =
     useState<string>('todos')
@@ -174,132 +188,166 @@ export default function HomeClient({
       {/* ══════════════════════════════════════════════════════════════════
           NAVBAR
       ══════════════════════════════════════════════════════════════════ */}
-      <header className="bg-[#2B2E78] sticky top-0 z-40 shadow-lg">
+      <header className="bg-[#2B2E78] sticky top-0 z-50 shadow-lg">
         <div className="potluck-container flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-3">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/el_bogavante_logo_mejorado-removebg-preview-NfJrF1t6XnPsXcJj7ZlKfwyYScYxAe.png"
               alt="El Bogavante"
-              width={40}
-              height={40}
+              width={36}
+              height={36}
               className="drop-shadow"
             />
-            <span className="font-playfair text-white text-xl font-bold tracking-wide hidden sm:block">
+            <span className="font-playfair text-white text-lg font-bold tracking-wide">
               El Bogavante
             </span>
           </Link>
-          <nav className="flex items-center gap-6">
-            <a
-              href="#ofertas"
-              className="text-white/80 hover:text-white text-sm font-medium transition-colors"
-            >
-              Ofertas
-            </a>
-            <a
-              href="#recetas"
-              className="text-white/80 hover:text-white text-sm font-medium transition-colors"
-            >
-              Recetas
-            </a>
-            <a
-              href="#notas-de-mar"
-              className="text-white/80 hover:text-white text-sm font-medium transition-colors"
-            >
-              Notas de Mar
-            </a>
-            <a
-              href="#salud"
-              className="text-white/80 hover:text-white text-sm font-medium transition-colors"
-            >
-              Salud
-            </a>
+
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-6">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-white/80 hover:text-white text-sm font-medium transition-colors hover:text-[#00B3A4]"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg hover:bg-white/10 transition-colors"
+            aria-label="Abrir menú"
+          >
+            <span
+              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}
+            />
+            <span
+              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`}
+            />
+            <span
+              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}
+            />
+          </button>
+        </div>
+
+        {/* Mobile menu dropdown */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? 'max-h-96 border-t border-white/10' : 'max-h-0'}`}
+        >
+          <nav className="potluck-container py-4 flex flex-col gap-1">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-white/80 hover:text-[#00B3A4] py-2.5 px-4 rounded-lg hover:bg-white/5 text-sm font-medium transition-all"
+              >
+                {link.label}
+              </a>
+            ))}
           </nav>
         </div>
       </header>
 
       {/* ══════════════════════════════════════════════════════════════════
-          HERO
+          HERO — Video background (falls back to image if no video)
       ══════════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[90vh] bg-[#2B2E78] overflow-hidden flex items-center">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-              backgroundSize: '40px 40px',
-            }}
-          />
-        </div>
-        {/* Accent blobs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#00B3A4]/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-64 h-64 bg-[#E23C4B]/10 rounded-full blur-3xl" />
+        {/* Video OR image background */}
+        {HERO_VIDEO_URL ? (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-30"
+          >
+            <source src={HERO_VIDEO_URL} type="video/mp4" />
+          </video>
+        ) : (
+          <div className="absolute inset-0">
+            <Image
+              src={HERO_FALLBACK_IMAGE}
+              alt="El Bogavante"
+              fill
+              className="object-cover opacity-20"
+              priority
+            />
+          </div>
+        )}
 
-        <div className="potluck-container relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20">
-            <div>
-              <span className="inline-block bg-[#00B3A4]/20 text-[#00B3A4] text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 border border-[#00B3A4]/30">
-                Pescadería Artesanal · Desde 1994
-              </span>
-              <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-                Del Mar
-                <br />
-                <span className="text-[#00B3A4]">a Tu Mesa</span>
-              </h1>
-              <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-lg">
-                La mejor selección de pescado fresco y mariscos de temporada.
-                Calidad que se siente en cada bocado.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a href="#ofertas" className="btn-primary">
-                  Ver Ofertas
-                </a>
-                <a
-                  href="#nosotros"
-                  className="btn-ghost border-white/30 text-white hover:bg-white/10 hover:text-white"
-                >
-                  Quiénes Somos
-                </a>
-              </div>
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10">
-                {[
-                  { value: '30+', label: 'Años' },
-                  { value: '50+', label: 'Especies' },
-                  { value: '100%', label: 'Fresco' },
-                ].map((stat) => (
-                  <div key={stat.label}>
-                    <p className="font-playfair text-3xl font-bold text-[#E23C4B]">
-                      {stat.value}
-                    </p>
-                    <p className="text-white/50 text-sm mt-1">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2B2E78] via-[#2B2E78]/90 to-[#2B2E78]/50" />
+
+        {/* Accent blobs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#00B3A4]/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-20 left-20 w-64 h-64 bg-[#E23C4B]/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="potluck-container relative z-10 w-full">
+          <div className="max-w-2xl py-24 md:py-32">
+            <span className="inline-block bg-[#00B3A4]/20 text-[#00B3A4] text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 border border-[#00B3A4]/30">
+              Pescadería Artesanal · Desde 1994
+            </span>
+            <h1 className="font-playfair text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+              Del Mar
+              <br />
+              <span className="text-[#00B3A4]">a Tu Mesa</span>
+            </h1>
+            <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-lg">
+              La mejor selección de pescado fresco y mariscos de temporada.
+              Calidad que se siente en cada bocado.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a href="#ofertas" className="btn-primary">
+                Ver Ofertas
+              </a>
+              <a
+                href="#nosotros"
+                className="inline-flex items-center border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-full transition-all duration-200"
+              >
+                Quiénes Somos
+              </a>
             </div>
-            <div className="relative hidden lg:block">
-              <div className="relative w-full aspect-square max-w-lg mx-auto">
-                <div className="absolute inset-4 bg-[#00B3A4]/10 rounded-3xl rotate-3" />
-                <div className="absolute inset-4 bg-white/5 rounded-3xl -rotate-2" />
-                <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl h-full">
-                  <Image
-                    src="/shop.jpg"
-                    alt="El Bogavante"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2B2E78]/60 to-transparent" />
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10 max-w-sm">
+              {[
+                { value: '30+', label: 'Años' },
+                { value: '50+', label: 'Especies' },
+                { value: '100%', label: 'Fresco' },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <p className="font-playfair text-3xl font-bold text-[#E23C4B]">
+                    {stat.value}
+                  </p>
+                  <p className="text-white/50 text-sm mt-1">{stat.label}</p>
                 </div>
-                {/* Floating badge */}
-                <div className="absolute -bottom-4 -left-4 bg-[#E23C4B] text-white px-5 py-3 rounded-2xl shadow-xl">
-                  <p className="font-playfair text-2xl font-bold">Fresco</p>
-                  <p className="text-xs text-white/80">Todos los días</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 animate-bounce">
+          <span className="text-xs uppercase tracking-widest">Scroll</span>
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
         </div>
       </section>
 
@@ -645,7 +693,6 @@ export default function HomeClient({
               Conocé más sobre los productos del mar, su origen y curiosidades
             </p>
           </div>
-
           <div className="flex flex-wrap justify-center gap-2 mb-10">
             <FilterButton
               active={selectedNotasCategory === 'todos'}
@@ -663,7 +710,6 @@ export default function HomeClient({
               </FilterButton>
             ))}
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredNotasDeMar.map((nota) => (
               <Link
@@ -714,7 +760,6 @@ export default function HomeClient({
               </Link>
             ))}
           </div>
-
           {filteredNotasDeMar.length === 0 && (
             <div className="text-center py-16">
               <p className="text-6xl mb-4">🌊</p>
@@ -744,7 +789,6 @@ export default function HomeClient({
               Descubrí los beneficios de incorporar pescado a tu dieta
             </p>
           </div>
-
           <div className="flex flex-wrap justify-center gap-2 mb-10">
             <FilterButton
               active={selectedSaludCategory === 'todos'}
@@ -762,7 +806,6 @@ export default function HomeClient({
               </FilterButton>
             ))}
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredSaludArticles.map((articulo) => (
               <Link
@@ -813,7 +856,6 @@ export default function HomeClient({
               </Link>
             ))}
           </div>
-
           {filteredSaludArticles.length === 0 && (
             <div className="text-center py-16">
               <p className="text-6xl mb-4">💚</p>
@@ -837,7 +879,6 @@ export default function HomeClient({
       <footer className="bg-[#2B2E78] text-white">
         <div className="potluck-container py-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {/* Brand */}
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <Image
@@ -855,20 +896,12 @@ export default function HomeClient({
                 frescura y pasión por el mar.
               </p>
             </div>
-
-            {/* Navigation */}
             <div>
               <h4 className="font-playfair font-bold text-lg mb-4">
                 Navegación
               </h4>
               <ul className="space-y-2">
-                {[
-                  { href: '#nosotros', label: 'Quiénes Somos' },
-                  { href: '#ofertas', label: 'Ofertas' },
-                  { href: '#recetas', label: 'Recetas' },
-                  { href: '#notas-de-mar', label: 'Notas de Mar' },
-                  { href: '#salud', label: 'Salud y Nutrición' },
-                ].map((link) => (
+                {NAV_LINKS.map((link) => (
                   <li key={link.href}>
                     <a
                       href={link.href}
@@ -880,8 +913,6 @@ export default function HomeClient({
                 ))}
               </ul>
             </div>
-
-            {/* Contact */}
             <div>
               <h4 className="font-playfair font-bold text-lg mb-4">Contacto</h4>
               <div className="space-y-3">
@@ -906,8 +937,6 @@ export default function HomeClient({
             </div>
           </div>
         </div>
-
-        {/* Bottom bar */}
         <div className="border-t border-white/10">
           <div className="potluck-container py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
             <p className="text-white/40 text-xs">
