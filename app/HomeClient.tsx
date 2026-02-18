@@ -469,18 +469,15 @@ export default function HomeClient({
       {/* ══ NAVBAR ══════════════════════════════════════════════ */}
       <header className="bg-[#2B2E78] sticky top-0 z-50 shadow-lg">
         <div className="potluck-container flex items-center justify-between h-20">
-          {/* Logo — just image + name, clean */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
+          {/* Logo only — no text */}
+          <Link href="/" className="flex items-center flex-shrink-0">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/el_bogavante_logo_mejorado-removebg-preview-NfJrF1t6XnPsXcJj7ZlKfwyYScYxAe.png"
               alt="El Bogavante"
-              width={56}
-              height={56}
+              width={72}
+              height={72}
               className="drop-shadow-lg"
             />
-            <span className="font-playfair text-white text-xl font-bold tracking-wide">
-              El Bogavante
-            </span>
           </Link>
 
           {/* Desktop nav */}
@@ -489,7 +486,7 @@ export default function HomeClient({
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white/80 hover:text-[#00B3A4] text-sm font-medium transition-colors"
+                className="text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase"
               >
                 {link.label}
               </a>
@@ -499,7 +496,7 @@ export default function HomeClient({
           {/* Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg hover:bg-white/10 transition-colors"
+            className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5"
             aria-label="Abrir menú"
           >
             <span
@@ -514,7 +511,7 @@ export default function HomeClient({
           </button>
         </div>
 
-        {/* Mobile dropdown — links only, no address clutter */}
+        {/* Mobile dropdown */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${menuOpen ? 'max-h-72 border-t border-white/10' : 'max-h-0'}`}
         >
@@ -524,7 +521,7 @@ export default function HomeClient({
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-white/80 hover:text-[#00B3A4] py-3 px-2 text-sm font-medium transition-colors border-b border-white/5 last:border-0"
+                className="text-white/70 hover:text-white py-3 px-2 text-sm font-medium tracking-wide uppercase transition-colors border-b border-white/5 last:border-0"
               >
                 {link.label}
               </a>
@@ -534,35 +531,55 @@ export default function HomeClient({
       </header>
 
       {/* ══ HERO ════════════════════════════════════════════════ */}
-      <section className="relative min-h-[90vh] bg-[#2B2E78] overflow-hidden flex items-center">
-        {/* Video background */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+      <section
+        className="relative bg-[#0d0f2e] overflow-hidden"
+        style={{ minHeight: '90vh' }}
+      >
+        {/* Video — mobile ratio, centered, not stretched */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div
+            className="relative h-full"
+            style={{ aspectRatio: '9/16', maxHeight: '100%' }}
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover"
+            >
+              <source src={HERO_VIDEO_URL} type="video/mp4" />
+            </video>
+            {/* Soft fade on video edges */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0d0f2e] via-transparent to-[#0d0f2e]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0d0f2e]/40 via-transparent to-[#0d0f2e]/60" />
+          </div>
+        </div>
+
+        {/* Dark flanks that fill the space beside the video */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0f2e] via-transparent to-[#0d0f2e] pointer-events-none" />
+
+        {/* Content — left aligned over the dark area */}
+        <div
+          className="potluck-container relative z-10 w-full flex items-center"
+          style={{ minHeight: '90vh' }}
         >
-          <source src={HERO_VIDEO_URL} type="video/mp4" />
-        </video>
-
-        {/* Overlay — left side darker for text, right side transparent to show video */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#2B2E78]/85 via-[#2B2E78]/50 to-[#2B2E78]/10" />
-
-        <div className="potluck-container relative z-10 w-full">
-          <div className="max-w-xl py-24 md:py-32">
-            <span className="inline-block bg-[#00B3A4]/20 text-[#00B3A4] text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 border border-[#00B3A4]/30">
+          <div className="max-w-lg py-24 md:py-32">
+            <span className="inline-block text-[#00B3A4]/80 text-xs font-bold uppercase tracking-[0.3em] mb-8">
               Pescadería Artesanal · Desde 2002
             </span>
-            <h1 className="font-playfair text-7xl sm:text-8xl lg:text-9xl font-bold text-white leading-none mb-4 drop-shadow-xl">
+            <h1 className="font-playfair text-7xl sm:text-8xl lg:text-9xl font-bold text-white leading-none mb-6 drop-shadow-xl">
               El
               <br />
               <span className="text-[#00B3A4]">Bogavante</span>
             </h1>
-            <p className="text-white/90 text-xl font-playfair italic mb-3">
+            <p className="text-white/60 font-playfair italic text-xl mb-8">
               Del Mar a Tu Mesa
             </p>
-            <p className="text-white/70 text-base leading-relaxed mb-8 max-w-md">
+
+            <div className="w-12 h-px bg-[#00B3A4]/50 mb-8" />
+
+            <p className="text-white/50 text-sm leading-relaxed mb-10 max-w-xs">
               Más de 20 años trayendo el mejor pescado fresco y mariscos a
               Coronel Suárez.
             </p>
@@ -572,12 +589,13 @@ export default function HomeClient({
               </a>
               <a
                 href="#pescaderia"
-                className="inline-flex items-center border-2 border-white/40 text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-full transition-all duration-200"
+                className="inline-flex items-center border border-white/20 text-white/70 hover:text-white hover:border-white/40 font-medium px-6 py-3 rounded-full transition-all duration-200 text-sm tracking-wide"
               >
                 La Pescadería
               </a>
             </div>
-            <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10 max-w-xs">
+
+            <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-white/10 max-w-xs">
               {[
                 { value: '20+', label: 'Años' },
                 { value: '50+', label: 'Especies' },
@@ -587,14 +605,17 @@ export default function HomeClient({
                   <p className="font-playfair text-3xl font-bold text-[#E23C4B]">
                     {stat.value}
                   </p>
-                  <p className="text-white/50 text-sm mt-1">{stat.label}</p>
+                  <p className="text-white/40 text-xs uppercase tracking-widest mt-1">
+                    {stat.label}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 animate-bounce">
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30 animate-bounce">
           <span className="text-xs uppercase tracking-widest">Scroll</span>
           <svg
             className="w-4 h-4"
