@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
   Select,
   SelectContent,
@@ -25,7 +26,9 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import { Pencil, Trash2, Search } from 'lucide-react'
+import { Pencil, Trash2, Search, X, Plus } from 'lucide-react'
+import { MarkdownEditor } from './components/MarkdownEditor'
+import { MarkdownPreview } from './components/MarkdownPreview'
 import type { ContentWithType, ContentType } from '@/lib/cms-queries'
 
 // Helper function to generate slug from title
@@ -66,6 +69,7 @@ export default function ContentCMSPage() {
     ContentType | 'all'
   >('all')
   const [searchTerm, setSearchTerm] = useState('')
+  const [imagePreview, setImagePreview] = useState<string>('')
 
   const pageSize = 20
 
@@ -95,6 +99,7 @@ export default function ContentCMSPage() {
 
   const handleEdit = (content: ContentWithType) => {
     setEditingContent(content)
+    setImagePreview(content.image_url || '')
     setIsEditDialogOpen(true)
   }
 
@@ -304,40 +309,42 @@ export default function ContentCMSPage() {
 
       {/* Edit Dialog */}
       <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>Editar Contenido</DialogTitle>
           </DialogHeader>
           {editingContent && (
             <div className="space-y-4">
-              <div>
-                <Label>Título</Label>
-                <Input
-                  value={editingContent.title}
-                  onChange={(e) => {
-                    const newTitle = e.target.value
-                    setEditingContent({
-                      ...editingContent,
-                      title: newTitle,
-                      slug: generateSlug(newTitle),
-                    })
-                  }}
-                />
-              </div>
-              <div>
-                <Label>Slug</Label>
-                <Input
-                  value={editingContent.slug}
-                  onChange={(e) =>
-                    setEditingContent({
-                      ...editingContent,
-                      slug: e.target.value,
-                    })
-                  }
-                />
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <Label>Título</Label>
+                  <Input
+                    value={editingContent.title}
+                    onChange={(e) => {
+                      const newTitle = e.target.value
+                      setEditingContent({
+                        ...editingContent,
+                        title: newTitle,
+                        slug: generateSlug(newTitle),
+                      })
+                    }}
+                  />
+                </div>
+                <div>
+                  <Label>Slug</Label>
+                  <Input
+                    value={editingContent.slug}
+                    onChange={(e) =>
+                      setEditingContent({
+                        ...editingContent,
+                        slug: e.target.value,
+                      })
+                    }
+                  />
+                </div>
               </div>
 
-              {/* Category Dropdown - Only for Notas de Mar and Salud */}
+              {/* Category Dropdowns */}
               {editingContent.contentType === 'notas_de_mar' && (
                 <div>
                   <Label>Categoría</Label>
@@ -402,56 +409,180 @@ export default function ContentCMSPage() {
                   }
                 />
               </div>
+
+              {/* Rich Markdown Editor with Preview */}
               <div>
-                <Label>Contenido</Label>
-                <textarea
-                  className="w-full min-h-[300px] p-3 border rounded-md"
-                  value={editingContent.content}
-                  onChange={(e) =>
-                    setEditingContent({
-                      ...editingContent,
-                      content: e.target.value,
-                    })
-                  }
-                />
+                <Label className="font-semibold mb-2 block">Contenido</Label>
+                <Tabs defaultValue="editor" className="w-full">
+                  <TabsList>
+                    <TabsTrigger value="editor">Editor</TabsTrigger>
+                    <TabsTrigger value="preview">Vista previa</TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="editor">
+                    <MarkdownEditor
+                      value={editingContent.content}
+                      onChange={(content) =>
+                        setEditingContent({
+                          ...editingContent,
+                          content,
+                        })
+                      }
+                      placeholder="Escribe en Markdown: **negrita**, _cursiva_, ## encabezados, etc."
+                    />
+                  </TabsContent>
+                  <TabsContent value="preview">
+                    <MarkdownPreview content={editingContent.content} />
+                  </TabsContent>
+                </Tabs>
               </div>
-              <div>
-                <Label>URL de Imagen</Label>
-                <Input
-                  value={editingContent.image_url || ''}
-                  onChange={(e) =>
-                    setEditingContent({
-                      ...editingContent,
-                      image_url: e.target.value,
-                    })
-                  }
-                />
+
+              {/* Primary Image */}
+              <div className="border-t pt-4">
+                <Label className="font-semibold mb-2 block">
+                  Imagen Principal
+                </Label>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <Label className="text-sm">URL de Imagen</Label>
+                    <Input
+                      value={editingContent.image_url || ''}
+                      onChange={(e) => {
+                        setEditingContent({
+                          ...editingContent,
+                          image_url: e.target.value,
+                        })
+                        setImagePreview(e.target.value)
+                      }}
+                      placeholder="https://ejemplo.com/imagen.jpg"
+                    />
+                  </div>
+                  <div>
+                    {imagePreview && (
+                      <div className="relative w-full h-40 rounded-md overflow-hidden border">
+                        <img
+                          src={imagePreview}
+                          alt="Preview"
+                          className="w-full h-full object-cover"
+                          onError={() => setImagePreview('')}
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
-              <div>
-                <Label>Libro Fuente</Label>
-                <Input
-                  value={editingContent.source_book || ''}
-                  onChange={(e) =>
-                    setEditingContent({
-                      ...editingContent,
-                      source_book: e.target.value,
-                    })
-                  }
-                />
+
+              {/* Additional Images Gallery */}
+              <div className="border-t pt-4">
+                <Label className="font-semibold mb-2 block">
+                  Galería de Imágenes Adicionales
+                </Label>
+                <div className="space-y-3">
+                  {(editingContent.images || []).map(
+                    (img: any, idx: number) => (
+                      <div key={idx} className="flex gap-2 items-end">
+                        <div className="flex-1">
+                          <Input
+                            value={img.url || ''}
+                            onChange={(e) => {
+                              const newImages = [
+                                ...(editingContent.images || []),
+                              ]
+                              newImages[idx] = { ...img, url: e.target.value }
+                              setEditingContent({
+                                ...editingContent,
+                                images: newImages,
+                              })
+                            }}
+                            placeholder="URL de imagen"
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <Input
+                            value={img.caption || ''}
+                            onChange={(e) => {
+                              const newImages = [
+                                ...(editingContent.images || []),
+                              ]
+                              newImages[idx] = {
+                                ...img,
+                                caption: e.target.value,
+                              }
+                              setEditingContent({
+                                ...editingContent,
+                                images: newImages,
+                              })
+                            }}
+                            placeholder="Descripción (opcional)"
+                          />
+                        </div>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          onClick={() => {
+                            const newImages = (
+                              editingContent.images || []
+                            ).filter((_: any, i: number) => i !== idx)
+                            setEditingContent({
+                              ...editingContent,
+                              images: newImages,
+                            })
+                          }}
+                        >
+                          <X className="h-4 w-4" />
+                        </Button>
+                      </div>
+                    ),
+                  )}
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => {
+                      const newImages = [
+                        ...(editingContent.images || []),
+                        { url: '', caption: '' },
+                      ]
+                      setEditingContent({
+                        ...editingContent,
+                        images: newImages,
+                      })
+                    }}
+                  >
+                    <Plus className="h-4 w-4 mr-2" />
+                    Agregar Imagen
+                  </Button>
+                </div>
               </div>
-              <div>
-                <Label>Autores</Label>
-                <Input
-                  value={editingContent.source_authors || ''}
-                  onChange={(e) =>
-                    setEditingContent({
-                      ...editingContent,
-                      source_authors: e.target.value,
-                    })
-                  }
-                />
+
+              {/* Source Information */}
+              <div className="border-t pt-4 grid grid-cols-2 gap-4">
+                <div>
+                  <Label>Libro Fuente</Label>
+                  <Input
+                    value={editingContent.source_book || ''}
+                    onChange={(e) =>
+                      setEditingContent({
+                        ...editingContent,
+                        source_book: e.target.value,
+                      })
+                    }
+                  />
+                </div>
+                <div>
+                  <Label>Autores</Label>
+                  <Input
+                    value={editingContent.source_authors || ''}
+                    onChange={(e) =>
+                      setEditingContent({
+                        ...editingContent,
+                        source_authors: e.target.value,
+                      })
+                    }
+                  />
+                </div>
               </div>
-              <div className="flex items-center gap-2">
+
+              {/* Publish Status */}
+              <div className="border-t pt-4 flex items-center gap-2">
                 <input
                   type="checkbox"
                   id="published"
@@ -465,7 +596,9 @@ export default function ContentCMSPage() {
                 />
                 <Label htmlFor="published">Publicado</Label>
               </div>
-              <div className="flex gap-2 justify-end">
+
+              {/* Action Buttons */}
+              <div className="flex gap-2 justify-end border-t pt-4">
                 <Button
                   variant="outline"
                   onClick={() => setIsEditDialogOpen(false)}

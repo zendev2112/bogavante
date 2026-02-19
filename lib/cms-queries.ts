@@ -3,8 +3,21 @@ import type { ContentEntry } from './supabase'
 
 export type ContentType = 'recetas' | 'notas_de_mar' | 'salud'
 
-export type ContentWithType = ContentEntry & {
+export interface ContentWithType {
+  id: string
+  title: string
+  slug: string
+  content: string
+  resumen?: string
+  quality_score?: number
+  featured_species?: string
+  image_url?: string
+  images?: Array<{ url: string; caption: string }> // Change this line
+  source_book?: string
+  source_authors?: string
+  published: boolean
   contentType: ContentType
+  category?: string
 }
 
 /**
