@@ -309,17 +309,15 @@ export default function ContentCMSPage() {
 
       {/* Edit Dialog */}
       <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
-        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto bg-white dark:bg-slate-950 z-50 text-foreground">
+        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto bg-white dark:bg-slate-950 z-50">
           <DialogHeader>
-            <DialogTitle className="text-foreground">
-              Editar Contenido
-            </DialogTitle>
+            <DialogTitle>Editar Contenido</DialogTitle>
           </DialogHeader>
           {editingContent && (
-            <div className="space-y-4 text-foreground">
+            <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label>Título</Label>
+                  <Label className="text-black dark:text-white">Título</Label>
                   <Input
                     value={editingContent.title}
                     onChange={(e) => {
@@ -330,10 +328,11 @@ export default function ContentCMSPage() {
                         slug: generateSlug(newTitle),
                       })
                     }}
+                    className="text-black dark:text-white"
                   />
                 </div>
                 <div>
-                  <Label>Slug</Label>
+                  <Label className="text-black dark:text-white">Slug</Label>
                   <Input
                     value={editingContent.slug}
                     onChange={(e) =>
@@ -342,6 +341,7 @@ export default function ContentCMSPage() {
                         slug: e.target.value,
                       })
                     }
+                    className="text-black dark:text-white"
                   />
                 </div>
               </div>
@@ -349,7 +349,9 @@ export default function ContentCMSPage() {
               {/* Category Dropdowns */}
               {editingContent.contentType === 'notas_de_mar' && (
                 <div>
-                  <Label>Categoría</Label>
+                  <Label className="text-black dark:text-white">
+                    Categoría
+                  </Label>
                   <Select
                     value={(editingContent as any).category || ''}
                     onValueChange={(value) =>
@@ -359,7 +361,7 @@ export default function ContentCMSPage() {
                       } as any)
                     }
                   >
-                    <SelectTrigger>
+                    <SelectTrigger className="text-black dark:text-white">
                       <SelectValue placeholder="Seleccionar categoría" />
                     </SelectTrigger>
                     <SelectContent>
@@ -375,7 +377,9 @@ export default function ContentCMSPage() {
 
               {editingContent.contentType === 'salud' && (
                 <div>
-                  <Label>Categoría</Label>
+                  <Label className="text-black dark:text-white">
+                    Categoría
+                  </Label>
                   <Select
                     value={(editingContent as any).category || ''}
                     onValueChange={(value) =>
@@ -385,7 +389,7 @@ export default function ContentCMSPage() {
                       } as any)
                     }
                   >
-                    <SelectTrigger>
+                    <SelectTrigger className="text-black dark:text-white">
                       <SelectValue placeholder="Seleccionar categoría" />
                     </SelectTrigger>
                     <SelectContent>
@@ -400,7 +404,7 @@ export default function ContentCMSPage() {
               )}
 
               <div>
-                <Label>Resumen</Label>
+                <Label className="text-black dark:text-white">Resumen</Label>
                 <Input
                   value={editingContent.resumen || ''}
                   onChange={(e) =>
@@ -409,12 +413,15 @@ export default function ContentCMSPage() {
                       resumen: e.target.value,
                     })
                   }
+                  className="text-black dark:text-white"
                 />
               </div>
 
               {/* Rich Markdown Editor with Preview */}
               <div>
-                <Label className="font-semibold mb-2 block">Contenido</Label>
+                <Label className="font-semibold mb-2 block text-black dark:text-white">
+                  Contenido
+                </Label>
                 <Tabs defaultValue="editor" className="w-full">
                   <TabsList>
                     <TabsTrigger value="editor">Editor</TabsTrigger>
@@ -440,12 +447,14 @@ export default function ContentCMSPage() {
 
               {/* Primary Image */}
               <div className="border-t pt-4">
-                <Label className="font-semibold mb-2 block">
+                <Label className="font-semibold mb-2 block text-black dark:text-white">
                   Imagen Principal
                 </Label>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label className="text-sm">URL de Imagen</Label>
+                    <Label className="text-sm text-black dark:text-white">
+                      URL de Imagen
+                    </Label>
                     <Input
                       value={editingContent.image_url || ''}
                       onChange={(e) => {
@@ -456,6 +465,7 @@ export default function ContentCMSPage() {
                         setImagePreview(e.target.value)
                       }}
                       placeholder="https://ejemplo.com/imagen.jpg"
+                      className="text-black dark:text-white"
                     />
                   </div>
                   <div>
@@ -475,7 +485,7 @@ export default function ContentCMSPage() {
 
               {/* Additional Images Gallery */}
               <div className="border-t pt-4">
-                <Label className="font-semibold mb-2 block">
+                <Label className="font-semibold mb-2 block text-black dark:text-white">
                   Galería de Imágenes Adicionales
                 </Label>
                 <div className="space-y-3">
@@ -496,6 +506,7 @@ export default function ContentCMSPage() {
                               })
                             }}
                             placeholder="URL de imagen"
+                            className="text-black dark:text-white"
                           />
                         </div>
                         <div className="flex-1">
@@ -515,6 +526,7 @@ export default function ContentCMSPage() {
                               })
                             }}
                             placeholder="Descripción (opcional)"
+                            className="text-black dark:text-white"
                           />
                         </div>
                         <Button
@@ -556,9 +568,11 @@ export default function ContentCMSPage() {
               </div>
 
               {/* Source Information */}
-              <div className="border-t pt-4 grid grid-cols-2 gap-4">
+              <div className="border-t pt-4 grid grid-cols-3 gap-4">
                 <div>
-                  <Label>Libro Fuente</Label>
+                  <Label className="text-black dark:text-white">
+                    Libro Fuente
+                  </Label>
                   <Input
                     value={editingContent.source_book || ''}
                     onChange={(e) =>
@@ -567,10 +581,11 @@ export default function ContentCMSPage() {
                         source_book: e.target.value,
                       })
                     }
+                    className="text-black dark:text-white"
                   />
                 </div>
                 <div>
-                  <Label>Autores</Label>
+                  <Label className="text-black dark:text-white">Autores</Label>
                   <Input
                     value={editingContent.source_authors || ''}
                     onChange={(e) =>
@@ -579,6 +594,24 @@ export default function ContentCMSPage() {
                         source_authors: e.target.value,
                       })
                     }
+                    className="text-black dark:text-white"
+                  />
+                </div>
+                <div>
+                  <Label className="text-black dark:text-white">Página</Label>
+                  <Input
+                    type="number"
+                    value={(editingContent as any).page_number || ''}
+                    onChange={(e) =>
+                      setEditingContent({
+                        ...editingContent,
+                        page_number: e.target.value
+                          ? parseInt(e.target.value)
+                          : null,
+                      } as any)
+                    }
+                    placeholder="Número de página"
+                    className="text-black dark:text-white"
                   />
                 </div>
               </div>
@@ -596,7 +629,12 @@ export default function ContentCMSPage() {
                     })
                   }
                 />
-                <Label htmlFor="published">Publicado</Label>
+                <Label
+                  htmlFor="published"
+                  className="text-black dark:text-white"
+                >
+                  Publicado
+                </Label>
               </div>
 
               {/* Action Buttons */}
