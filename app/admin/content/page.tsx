@@ -309,7 +309,7 @@ export default function ContentCMSPage() {
 
       {/* Edit Dialog */}
       <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
-        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto bg-white dark:bg-slate-950 z-50">
           <DialogHeader>
             <DialogTitle>Editar Contenido</DialogTitle>
           </DialogHeader>
