@@ -124,6 +124,7 @@ export default function ContentCMSPage() {
             image_url: editingContent.image_url,
             source_book: editingContent.source_book,
             source_authors: editingContent.source_authors,
+            source_page: (editingContent as any).source_page || null,
             published: editingContent.published,
             category: (editingContent as any).category || null,
           },
@@ -601,11 +602,11 @@ export default function ContentCMSPage() {
                   <Label className="text-black dark:text-white">Página</Label>
                   <Input
                     type="number"
-                    value={(editingContent as any).page_number || ''}
+                    value={(editingContent as any).source_page || ''}
                     onChange={(e) =>
                       setEditingContent({
                         ...editingContent,
-                        page_number: e.target.value
+                        source_page: e.target.value
                           ? parseInt(e.target.value)
                           : null,
                       } as any)
