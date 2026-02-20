@@ -309,12 +309,14 @@ export default function ContentCMSPage() {
 
       {/* Edit Dialog */}
       <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
-        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto bg-white dark:bg-slate-950 z-50">
+        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto bg-white dark:bg-slate-950 z-50 text-foreground">
           <DialogHeader>
-            <DialogTitle>Editar Contenido</DialogTitle>
+            <DialogTitle className="text-foreground">
+              Editar Contenido
+            </DialogTitle>
           </DialogHeader>
           {editingContent && (
-            <div className="space-y-4">
+            <div className="space-y-4 text-foreground">
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <Label>Título</Label>
