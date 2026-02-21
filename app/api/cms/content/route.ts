@@ -68,19 +68,43 @@ export async function PUT(request: NextRequest) {
     return NextResponse.json({ error: 'Missing env vars' }, { status: 500 })
   }
 
-  const supabase = createClient(supabaseUrl, supabaseKey)
-  const { id, contentType, updates } = await request.json()
+  try {
+    const body = await request.json()
+    const { id, contentType, updates } = body
 
-  const { error } = await supabase
-    .from(contentType)
-    .update({ ...updates, updated_at: new Date().toISOString() })
-    .eq('id', id)
+    console.log('PUT request:', {
+      id,
+      contentType,
+      updatesKeys: Object.keys(updates),
+    })
 
-  if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 })
+    if (!id || !contentType) {
+      return NextResponse.json(
+        { error: 'Missing id or contentType' },
+        { status: 400 },
+      )
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseKey)
+
+    const { data, error } = await supabase
+      .from(contentType)
+      .update({ ...updates, updated_at: new Date().toISOString() })
+      .eq('id', id)
+      .select()
+
+    console.log('Supabase response:', { data, error })
+
+    if (error) {
+      console.error('Supabase error:', error)
+      return NextResponse.json({ error: error.message }, { status: 500 })
+    }
+
+    return NextResponse.json({ success: true, data })
+  } catch (error) {
+    console.error('PUT error:', error)
+    return NextResponse.json({ error: String(error) }, { status: 500 })
   }
-
-  return NextResponse.json({ success: true })
 }
 
 export async function DELETE(request: NextRequest) {
