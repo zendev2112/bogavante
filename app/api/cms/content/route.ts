@@ -87,9 +87,15 @@ export async function PUT(request: NextRequest) {
 
     const supabase = createClient(supabaseUrl, supabaseKey)
 
+    // Remove 'images' field for recetas table
+    const cleanUpdates = { ...updates }
+    if (contentType === 'recetas' && 'images' in cleanUpdates) {
+      delete cleanUpdates.images
+    }
+
     const { data, error } = await supabase
       .from(contentType)
-      .update({ ...updates, updated_at: new Date().toISOString() })
+      .update({ ...cleanUpdates, updated_at: new Date().toISOString() })
       .eq('id', id)
       .select()
 
