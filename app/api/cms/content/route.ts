@@ -87,11 +87,71 @@ export async function PUT(request: NextRequest) {
 
     const supabase = createClient(supabaseUrl, supabaseKey)
 
-    // Remove 'images' field for recetas table
-    const cleanUpdates = { ...updates }
-    if (contentType === 'recetas' && 'images' in cleanUpdates) {
-      delete cleanUpdates.images
+    // Define valid columns per table
+    const validColumns = {
+      recetas: [
+        'title',
+        'slug',
+        'content',
+        'quality_score',
+        'featured_species',
+        'image_url',
+        'source_book',
+        'source_authors',
+        'source_publisher',
+        'source_year',
+        'source_page',
+        'language',
+        'cooking_method',
+        'category',
+        'published',
+      ],
+      notas_de_mar: [
+        'title',
+        'slug',
+        'content',
+        'resumen',
+        'quality_score',
+        'featured_species',
+        'images',
+        'image_url',
+        'source_book',
+        'source_authors',
+        'source_page',
+        'language',
+        'category',
+        'published',
+      ],
+      salud: [
+        'title',
+        'slug',
+        'content',
+        'resumen',
+        'quality_score',
+        'featured_species',
+        'images',
+        'image_url',
+        'source_book',
+        'source_authors',
+        'source_page',
+        'language',
+        'category',
+        'published',
+      ],
     }
+
+    // Filter updates to only valid columns
+    const cleanUpdates: Record<string, any> = {}
+    const validCols =
+      validColumns[contentType as keyof typeof validColumns] || []
+
+    Object.keys(updates).forEach((key) => {
+      if (validCols.includes(key)) {
+        cleanUpdates[key] = updates[key]
+      }
+    })
+
+    console.log('Cleaned updates:', { cleanUpdates })
 
     const { data, error } = await supabase
       .from(contentType)
