@@ -472,7 +472,7 @@ export default function HomeClient({
           {/* Logo only — no text */}
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/el_bogavante_logo_mejorado-removebg-preview-NfJrF1t6XnPsXcJj7ZlKfwyYScYxAe.png"
+              src="https://res.cloudinary.com/dwhu22onh/image/upload/v1771969604/el_bogavante_logo_mejorado_1_xb2l8d.png"
               alt="El Bogavante"
               width={72}
               height={72}
@@ -1076,7 +1076,7 @@ export default function HomeClient({
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/el_bogavante_logo_mejorado-removebg-preview-NfJrF1t6XnPsXcJj7ZlKfwyYScYxAe.png"
+                  src="https://res.cloudinary.com/dwhu22onh/image/upload/v1771969604/el_bogavante_logo_mejorado_1_xb2l8d.png"
                   alt="El Bogavante"
                   width={52}
                   height={52}
