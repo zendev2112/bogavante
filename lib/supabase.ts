@@ -50,4 +50,22 @@ export const supabaseAdmin = new Proxy(
   },
 )
 
-export type ContentEntry = Database['public']['Tables']['recetas']['Row']
+export type ContentEntry = {
+  id: string
+  title: string
+  slug: string
+  content: string
+  resumen?: string // Add this line
+  quality_score?: number
+  featured_species?: Array<{ stockProduct: string; categoria?: string }>
+  source_book?: string
+  source_authors?: any
+  source_page?: number
+  image_url?: string
+  category?: string
+  published?: boolean
+  created_at?: string
+  updated_at?: string
+  cooking_method?: string
+  // ...other fields
+}
