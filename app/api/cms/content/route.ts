@@ -101,6 +101,7 @@ export async function PUT(request: NextRequest) {
         'cooking_method',
         'category',
         'published',
+        'tags',
       ],
       notas_de_mar: [
         'title',
@@ -119,6 +120,7 @@ export async function PUT(request: NextRequest) {
         'language',
         'category',
         'published',
+        'tags',
       ],
       salud: [
         'title',
@@ -137,6 +139,7 @@ export async function PUT(request: NextRequest) {
         'language',
         'category',
         'published',
+        'tags',
       ],
     }
     // Filter updates to only valid columns

@@ -132,6 +132,7 @@ export default function ContentCMSPage() {
             source_page: editingContent.source_page,
             published: editingContent.published,
             category: editingContent.category,
+            tags: (editingContent as any).tags || [],
           },
         }),
       })
@@ -703,6 +704,28 @@ export default function ContentCMSPage() {
                 >
                   Publicado
                 </Label>
+              </div>
+
+              {/* Tags Editor */}
+              <div className="border-t pt-4">
+                <Label className="font-semibold mb-2 block text-black dark:text-white">
+                  Etiquetas (Tags)
+                </Label>
+                <TagsEditor
+                  tags={(editingContent as any).tags || []}
+                  onChange={(newTags) =>
+                    setEditingContent({
+                      ...editingContent,
+                      tags: newTags,
+                    } as any)
+                  }
+                  contentType={editingContent.contentType}
+                  category={(editingContent as any).category}
+                  contentText={editingContent.content}
+                  featuredSpecies={editingContent.featured_species?.map(
+                    (s: { stockProduct: string }) => s.stockProduct,
+                  )}
+                />
               </div>
 
               {/* Action Buttons */}
