@@ -127,7 +127,7 @@ export default async function NotaDeMarPage({
           </div>
         )}
 
-        {/* ── MAIN CONTENT (Markdown) ── */}
+        {/* ── MAIN CONTENT WITH INTERCALATED IMAGES ── */}
         <div className="bg-white rounded-3xl shadow-sm border border-[#E5E7EB] p-6 md:p-10 mb-8">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
@@ -152,6 +152,29 @@ export default async function NotaDeMarPage({
                   {children}
                 </p>
               ),
+              img: (props: any) => {
+                const src = props.src as string | undefined
+                const alt = props.alt as string | undefined
+
+                if (!src) return null
+                return (
+                  <div className="my-6 rounded-2xl overflow-hidden border border-[#E5E7EB] shadow-sm">
+                    <div className="relative w-full h-64 sm:h-96 bg-[#0d0f2e]">
+                      <Image
+                        src={src}
+                        alt={alt || 'Imagen'}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    {alt && (
+                      <p className="text-xs text-[#6B7280] p-3 bg-[#F8F9FB] italic">
+                        {alt}
+                      </p>
+                    )}
+                  </div>
+                )
+              },
               strong: ({ children }) => (
                 <strong className="font-bold text-[#1F2937]">{children}</strong>
               ),
@@ -187,39 +210,6 @@ export default async function NotaDeMarPage({
             {nota.content}
           </ReactMarkdown>
         </div>
-
-        {/* ── IMAGES GALLERY ── */}
-        {nota.images && nota.images.length > 0 && (
-          <div className="bg-white rounded-3xl border border-[#E5E7EB] p-6 mb-8 shadow-sm">
-            <h2 className="font-playfair text-lg font-bold text-[#2B2E78] mb-4">
-              📸 Más imágenes
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {nota.images.map((img, idx) => (
-                <div
-                  key={idx}
-                  className="group relative overflow-hidden rounded-2xl bg-[#F8F9FB] border border-[#E5E7EB]"
-                >
-                  <div className="relative w-full h-48 bg-[#0d0f2e]">
-                    <Image
-                      src={img.url}
-                      alt={img.caption || `Imagen ${idx + 1}`}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-200"
-                    />
-                  </div>
-                  {img.caption && (
-                    <div className="p-3">
-                      <p className="text-xs text-[#6B7280] line-clamp-2">
-                        {img.caption}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
         {/* ── FEATURED SPECIES ── */}
         {nota.featured_species && nota.featured_species.length > 0 && (

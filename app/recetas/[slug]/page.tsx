@@ -59,7 +59,6 @@ export default async function RecetaPage({
       <div className="max-w-3xl mx-auto px-4 py-6 md:py-10">
         {/* ── HEADER CARD ── */}
         <div className="bg-white rounded-3xl shadow-sm border border-[#E5E7EB] overflow-hidden mb-8">
-          {/* Image - fixed compact height */}
           {receta.image_url && (
             <div className="relative w-full h-48 sm:h-64 bg-[#0d0f2e]">
               <Image
@@ -73,9 +72,7 @@ export default async function RecetaPage({
             </div>
           )}
 
-          {/* Title block */}
           <div className="p-6 md:p-8">
-            {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
               {(receta as any).cooking_method && (
                 <span className="bg-[#E23C4B]/10 text-[#E23C4B] text-xs font-bold px-3 py-1 rounded-full border border-[#E23C4B]/20">
@@ -96,7 +93,6 @@ export default async function RecetaPage({
               {receta.title}
             </h1>
 
-            {/* Meta row */}
             <div className="flex flex-wrap items-center gap-4 text-sm text-[#6B7280]">
               {receta.quality_score && (
                 <span className="flex items-center gap-1">
@@ -131,7 +127,7 @@ export default async function RecetaPage({
           </div>
         )}
 
-        {/* ── MAIN CONTENT (Markdown) ── */}
+        {/* ── MAIN CONTENT WITH INTERCALATED IMAGES ── */}
         <div className="bg-white rounded-3xl shadow-sm border border-[#E5E7EB] p-6 md:p-10 mb-8">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
@@ -156,6 +152,29 @@ export default async function RecetaPage({
                   {children}
                 </p>
               ),
+              img: (props: any) => {
+                const src = props.src as string | undefined
+                const alt = props.alt as string | undefined
+
+                if (!src) return null
+                return (
+                  <div className="my-6 rounded-2xl overflow-hidden border border-[#E5E7EB] shadow-sm">
+                    <div className="relative w-full h-64 sm:h-96 bg-[#0d0f2e]">
+                      <Image
+                        src={src}
+                        alt={alt || 'Imagen'}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    {alt && (
+                      <p className="text-xs text-[#6B7280] p-3 bg-[#F8F9FB] italic">
+                        {alt}
+                      </p>
+                    )}
+                  </div>
+                )
+              },
               strong: ({ children }) => (
                 <strong className="font-bold text-[#1F2937]">{children}</strong>
               ),
@@ -191,39 +210,6 @@ export default async function RecetaPage({
             {receta.content}
           </ReactMarkdown>
         </div>
-
-        {/* ── IMAGES GALLERY ── */}
-        {receta.images && receta.images.length > 0 && (
-          <div className="bg-white rounded-3xl border border-[#E5E7EB] p-6 mb-8 shadow-sm">
-            <h2 className="font-playfair text-lg font-bold text-[#2B2E78] mb-4">
-              📸 Más imágenes
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {receta.images.map((img, idx) => (
-                <div
-                  key={idx}
-                  className="group relative overflow-hidden rounded-2xl bg-[#F8F9FB] border border-[#E5E7EB]"
-                >
-                  <div className="relative w-full h-48 bg-[#0d0f2e]">
-                    <Image
-                      src={img.url}
-                      alt={img.caption || `Imagen ${idx + 1}`}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-200"
-                    />
-                  </div>
-                  {img.caption && (
-                    <div className="p-3">
-                      <p className="text-xs text-[#6B7280] line-clamp-2">
-                        {img.caption}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
         {/* ── FEATURED SPECIES ── */}
         {receta.featured_species && receta.featured_species.length > 0 && (
