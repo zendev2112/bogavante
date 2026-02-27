@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
 import { supabase } from '@/lib/supabase'
 import type { ContentEntry } from '@/lib/supabase'
 
@@ -131,6 +132,7 @@ export default async function RecetaPage({
         <div className="bg-white rounded-3xl shadow-sm border border-[#E5E7EB] p-6 md:p-10 mb-8">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
             components={{
               h1: ({ children }) => (
                 <h1 className="font-playfair text-2xl font-bold text-[#2B2E78] mt-8 mb-4 first:mt-0">
@@ -165,6 +167,7 @@ export default async function RecetaPage({
                         alt={alt || 'Imagen'}
                         fill
                         className="object-cover"
+                        unoptimized
                       />
                     </div>
                     {alt && (
