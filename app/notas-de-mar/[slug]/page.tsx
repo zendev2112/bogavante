@@ -32,9 +32,11 @@ export default async function NotaDeMarPage({
 
   if (!nota) notFound()
 
+  const images: { url: string; caption?: string }[] = nota.images || []
+  const sections = nota.content.split(/(?=^## )/m)
+
   return (
     <div className="bg-[#F8F9FB] min-h-screen">
-      {/* ── BACK BUTTON ── */}
       <div className="max-w-3xl mx-auto px-4 pt-6">
         <Link
           href="/#notas-de-mar"
@@ -61,15 +63,16 @@ export default async function NotaDeMarPage({
         {/* ── HEADER CARD ── */}
         <div className="bg-white rounded-3xl shadow-sm border border-[#E5E7EB] overflow-hidden mb-8">
           {nota.image_url && (
-            <div className="relative w-full h-48 sm:h-64 bg-[#0d0f2e]">
+            <div className="w-full bg-[#0d0f2e]">
               <Image
                 src={nota.image_url}
                 alt={nota.title}
-                fill
-                className="object-cover"
+                width={900}
+                height={600}
+                className="w-full h-auto object-contain"
                 priority
+                unoptimized
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
             </div>
           )}
 
@@ -128,119 +131,94 @@ export default async function NotaDeMarPage({
           </div>
         )}
 
-        {/* ── MAIN CONTENT ── */}
+        {/* ── MAIN CONTENT WITH INTERCALATED IMAGES ── */}
         <div className="bg-white rounded-3xl shadow-sm border border-[#E5E7EB] p-6 md:p-10 mb-8">
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw]}
-            components={{
-              h1: ({ children }) => (
-                <h1 className="font-playfair text-2xl font-bold text-[#2B2E78] mt-8 mb-4 first:mt-0">
-                  {children}
-                </h1>
-              ),
-              h2: ({ children }) => (
-                <h2 className="font-playfair text-xl font-bold text-[#2B2E78] mt-7 mb-3">
-                  {children}
-                </h2>
-              ),
-              h3: ({ children }) => (
-                <h3 className="font-playfair text-lg font-semibold text-[#2B2E78] mt-6 mb-2">
-                  {children}
-                </h3>
-              ),
-              p: ({ children }) => (
-                <p className="text-[#374151] leading-relaxed mb-4">
-                  {children}
-                </p>
-              ),
-              img: (props: any) => {
-                const src = props.src as string | undefined
-                const alt = props.alt as string | undefined
+          {sections.map((section, sectionIdx) => (
+            <div key={sectionIdx}>
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+                components={{
+                  h1: ({ children }) => (
+                    <h1 className="font-playfair text-2xl font-bold text-[#2B2E78] mt-8 mb-4 first:mt-0">
+                      {children}
+                    </h1>
+                  ),
+                  h2: ({ children }) => (
+                    <h2 className="font-playfair text-xl font-bold text-[#2B2E78] mt-7 mb-3">
+                      {children}
+                    </h2>
+                  ),
+                  h3: ({ children }) => (
+                    <h3 className="font-playfair text-lg font-semibold text-[#2B2E78] mt-6 mb-2">
+                      {children}
+                    </h3>
+                  ),
+                  p: ({ children }) => (
+                    <p className="text-[#374151] leading-relaxed mb-4">
+                      {children}
+                    </p>
+                  ),
+                  strong: ({ children }) => (
+                    <strong className="font-bold text-[#1F2937]">
+                      {children}
+                    </strong>
+                  ),
+                  em: ({ children }) => (
+                    <em className="italic text-[#4B5563]">{children}</em>
+                  ),
+                  ul: ({ children }) => (
+                    <ul className="list-disc list-inside space-y-1 mb-4 text-[#374151]">
+                      {children}
+                    </ul>
+                  ),
+                  ol: ({ children }) => (
+                    <ol className="list-decimal list-inside space-y-1 mb-4 text-[#374151]">
+                      {children}
+                    </ol>
+                  ),
+                  li: ({ children }) => (
+                    <li className="text-[#374151] ml-2">{children}</li>
+                  ),
+                  blockquote: ({ children }) => (
+                    <blockquote className="border-l-4 border-[#4DA8DA] pl-4 italic text-[#6B7280] my-4">
+                      {children}
+                    </blockquote>
+                  ),
+                  hr: () => <hr className="border-[#E5E7EB] my-6" />,
+                  a: ({ href, children }) => (
+                    <a href={href} className="text-[#4DA8DA] hover:underline">
+                      {children}
+                    </a>
+                  ),
+                }}
+              >
+                {section}
+              </ReactMarkdown>
 
-                if (!src) return null
-                return (
-                  <div className="my-6 rounded-2xl overflow-hidden border border-[#E5E7EB] shadow-sm">
-                    <div className="relative w-full h-64 sm:h-96 bg-[#0d0f2e]">
-                      <Image
-                        src={src}
-                        alt={alt || 'Imagen'}
-                        fill
-                        className="object-cover"
-                        unoptimized
-                      />
-                    </div>
-                    {alt && (
-                      <p className="text-xs text-[#6B7280] p-3 bg-[#F8F9FB] italic">
-                        {alt}
-                      </p>
-                    )}
+              {images[sectionIdx] && (
+                <div className="my-6 rounded-2xl overflow-hidden border border-[#E5E7EB] shadow-sm">
+                  <div className="w-full bg-[#0d0f2e]">
+                    <Image
+                      src={images[sectionIdx].url}
+                      alt={
+                        images[sectionIdx].caption || `Imagen ${sectionIdx + 1}`
+                      }
+                      width={900}
+                      height={600}
+                      className="w-full h-auto object-contain"
+                      unoptimized
+                    />
                   </div>
-                )
-              },
-              strong: ({ children }) => (
-                <strong className="font-bold text-[#1F2937]">{children}</strong>
-              ),
-              em: ({ children }) => (
-                <em className="italic text-[#4B5563]">{children}</em>
-              ),
-              ul: ({ children }) => (
-                <ul className="list-disc list-inside space-y-1 mb-4 text-[#374151]">
-                  {children}
-                </ul>
-              ),
-              ol: ({ children }) => (
-                <ol className="list-decimal list-inside space-y-1 mb-4 text-[#374151]">
-                  {children}
-                </ol>
-              ),
-              li: ({ children }) => (
-                <li className="text-[#374151] ml-2">{children}</li>
-              ),
-              blockquote: ({ children }) => (
-                <blockquote className="border-l-4 border-[#4DA8DA] pl-4 italic text-[#6B7280] my-4">
-                  {children}
-                </blockquote>
-              ),
-              hr: () => <hr className="border-[#E5E7EB] my-6" />,
-              a: ({ href, children }) => (
-                <a href={href} className="text-[#4DA8DA] hover:underline">
-                  {children}
-                </a>
-              ),
-            }}
-          >
-            {nota.content}
-          </ReactMarkdown>
-
-          {/* ── INTERCALATED IMAGES FROM GALLERY ── */}
-          {nota.images && nota.images.length > 0 && (
-            <div className="mt-8 space-y-6">
-              {nota.images.map(
-                (img: { url: string; caption?: string }, idx: number) => (
-                  <div
-                    key={idx}
-                    className="rounded-2xl overflow-hidden border border-[#E5E7EB] shadow-sm"
-                  >
-                    <div className="relative w-full h-64 sm:h-96 bg-[#0d0f2e]">
-                      <Image
-                        src={img.url}
-                        alt={img.caption || `Imagen ${idx + 1}`}
-                        fill
-                        className="object-cover"
-                        unoptimized
-                      />
-                    </div>
-                    {img.caption && (
-                      <p className="text-xs text-[#6B7280] p-3 bg-[#F8F9FB] italic text-center">
-                        {img.caption}
-                      </p>
-                    )}
-                  </div>
-                ),
+                  {images[sectionIdx].caption && (
+                    <p className="text-xs text-[#6B7280] p-3 bg-[#F8F9FB] italic text-center">
+                      {images[sectionIdx].caption}
+                    </p>
+                  )}
+                </div>
               )}
             </div>
-          )}
+          ))}
         </div>
 
         {/* ── FEATURED SPECIES ── */}
