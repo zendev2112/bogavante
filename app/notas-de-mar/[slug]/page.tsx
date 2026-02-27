@@ -128,7 +128,7 @@ export default async function NotaDeMarPage({
           </div>
         )}
 
-        {/* ── MAIN CONTENT WITH INTERCALATED IMAGES ── */}
+        {/* ── MAIN CONTENT ── */}
         <div className="bg-white rounded-3xl shadow-sm border border-[#E5E7EB] p-6 md:p-10 mb-8">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
@@ -212,6 +212,35 @@ export default async function NotaDeMarPage({
           >
             {nota.content}
           </ReactMarkdown>
+
+          {/* ── INTERCALATED IMAGES FROM GALLERY ── */}
+          {nota.images && nota.images.length > 0 && (
+            <div className="mt-8 space-y-6">
+              {nota.images.map(
+                (img: { url: string; caption?: string }, idx: number) => (
+                  <div
+                    key={idx}
+                    className="rounded-2xl overflow-hidden border border-[#E5E7EB] shadow-sm"
+                  >
+                    <div className="relative w-full h-64 sm:h-96 bg-[#0d0f2e]">
+                      <Image
+                        src={img.url}
+                        alt={img.caption || `Imagen ${idx + 1}`}
+                        fill
+                        className="object-cover"
+                        unoptimized
+                      />
+                    </div>
+                    {img.caption && (
+                      <p className="text-xs text-[#6B7280] p-3 bg-[#F8F9FB] italic text-center">
+                        {img.caption}
+                      </p>
+                    )}
+                  </div>
+                ),
+              )}
+            </div>
+          )}
         </div>
 
         {/* ── FEATURED SPECIES ── */}
