@@ -10,14 +10,22 @@ export interface ContentWithType {
   content: string
   resumen?: string
   quality_score?: number
-  featured_species?: string
-  image_url?: string
-  images?: Array<{ url: string; caption: string }> // Change this line
+  featured_species?: any
   source_book?: string
-  source_authors?: string
+  source_authors?: any
+  source_page?: number
+  source_publisher?: string
+  source_year?: string
+  image_url?: string
+  images?: Array<{ url: string; caption: string }>
   published: boolean
   contentType: ContentType
   category?: string
+  cooking_method?: string
+  language?: string
+  created_at?: string
+  updated_at?: string
+  originalContentType?: ContentType
 }
 
 /**

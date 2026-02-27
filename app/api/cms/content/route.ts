@@ -70,13 +70,7 @@ export async function PUT(request: NextRequest) {
 
   try {
     const body = await request.json()
-    const { id, contentType, updates } = body
-
-    console.log('PUT request:', {
-      id,
-      contentType,
-      updatesKeys: Object.keys(updates),
-    })
+    const { id, contentType, originalContentType, updates } = body
 
     if (!id || !contentType) {
       return NextResponse.json(
@@ -97,6 +91,7 @@ export async function PUT(request: NextRequest) {
         'quality_score',
         'featured_species',
         'image_url',
+        'images',
         'source_book',
         'source_authors',
         'source_publisher',
@@ -115,6 +110,7 @@ export async function PUT(request: NextRequest) {
         'quality_score',
         'featured_species',
         'image_url',
+        'images',
         'source_book',
         'source_authors',
         'source_publisher',
@@ -132,6 +128,7 @@ export async function PUT(request: NextRequest) {
         'quality_score',
         'featured_species',
         'image_url',
+        'images',
         'source_book',
         'source_authors',
         'source_publisher',
@@ -142,7 +139,6 @@ export async function PUT(request: NextRequest) {
         'published',
       ],
     }
-
     // Filter updates to only valid columns
     const cleanUpdates: Record<string, any> = {}
     const validCols =
@@ -154,15 +150,60 @@ export async function PUT(request: NextRequest) {
       }
     })
 
-    console.log('Cleaned updates:', { cleanUpdates })
+    // If content type changed, need to move the record
+    if (originalContentType && originalContentType !== contentType) {
+      // Get the original record
+      const { data: originalData, error: fetchError } = await supabase
+        .from(originalContentType)
+        .select('*')
+        .eq('id', id)
+        .single()
 
+      if (fetchError || !originalData) {
+        return NextResponse.json(
+          { error: 'Could not find original record' },
+          { status: 404 },
+        )
+      }
+
+      // Create new record in new table
+      const { error: insertError } = await supabase.from(contentType).insert([
+        {
+          ...originalData,
+          ...cleanUpdates,
+          updated_at: new Date().toISOString(),
+        },
+      ])
+
+      if (insertError) {
+        return NextResponse.json(
+          { error: insertError.message },
+          { status: 500 },
+        )
+      }
+
+      // Delete from old table
+      const { error: deleteError } = await supabase
+        .from(originalContentType)
+        .delete()
+        .eq('id', id)
+
+      if (deleteError) {
+        return NextResponse.json(
+          { error: deleteError.message },
+          { status: 500 },
+        )
+      }
+
+      return NextResponse.json({ success: true, moved: true })
+    }
+
+    // Normal update within same table
     const { data, error } = await supabase
       .from(contentType)
       .update({ ...cleanUpdates, updated_at: new Date().toISOString() })
       .eq('id', id)
       .select()
-
-    console.log('Supabase response:', { data, error })
 
     if (error) {
       console.error('Supabase error:', error)

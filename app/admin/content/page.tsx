@@ -98,7 +98,10 @@ export default function ContentCMSPage() {
   }, [currentPage, contentTypeFilter, searchTerm])
 
   const handleEdit = (content: ContentWithType) => {
-    setEditingContent(content)
+    setEditingContent({
+      ...content,
+      originalContentType: content.contentType,
+    })
     setImagePreview(content.image_url || '')
     setIsEditDialogOpen(true)
   }
@@ -113,6 +116,7 @@ export default function ContentCMSPage() {
         body: JSON.stringify({
           id: editingContent.id,
           contentType: editingContent.contentType,
+          originalContentType: editingContent.originalContentType,
           updates: {
             title: editingContent.title,
             slug: editingContent.slug,
@@ -120,23 +124,29 @@ export default function ContentCMSPage() {
             resumen: editingContent.resumen,
             quality_score: editingContent.quality_score,
             featured_species: editingContent.featured_species,
-            images: editingContent.images,
             image_url: editingContent.image_url,
+            images: editingContent.images || [],
             source_book: editingContent.source_book,
             source_authors: editingContent.source_authors,
-            source_page: (editingContent as any).source_page || null,
+            source_page: editingContent.source_page,
             published: editingContent.published,
-            category: (editingContent as any).category || null,
+            category: editingContent.category,
           },
         }),
       })
 
-      if (response.ok) {
-        setIsEditDialogOpen(false)
-        fetchContent()
+      if (!response.ok) {
+        const error = await response.text()
+        console.error('API error:', error)
+        alert('Error al guardar: ' + error)
+        return
       }
+
+      setIsEditDialogOpen(false)
+      await fetchContent()
     } catch (error) {
       console.error('Error saving content:', error)
+      alert('Error al guardar: ' + String(error))
     }
   }
 
@@ -347,7 +357,65 @@ export default function ContentCMSPage() {
                 </div>
               </div>
 
-              {/* Category Dropdowns */}
+              {/* Content Type Selector */}
+              <div>
+                <Label className="text-black dark:text-white">
+                  Tipo de Contenido
+                </Label>
+                <Select
+                  value={editingContent.contentType}
+                  onValueChange={(value) =>
+                    setEditingContent({
+                      ...editingContent,
+                      contentType: value as ContentType,
+                    })
+                  }
+                >
+                  <SelectTrigger className="text-black dark:text-white">
+                    <SelectValue placeholder="Seleccionar tipo" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="recetas">🍳 Recetas</SelectItem>
+                    <SelectItem value="notas_de_mar">
+                      🌊 Notas de Mar
+                    </SelectItem>
+                    <SelectItem value="salud">💚 Salud</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Category Dropdowns - Now conditional by content type */}
+              {editingContent.contentType === 'recetas' && (
+                <div>
+                  <Label className="text-black dark:text-white">
+                    Categoría
+                  </Label>
+                  <Select
+                    value={(editingContent as any).category || ''}
+                    onValueChange={(value) =>
+                      setEditingContent({
+                        ...editingContent,
+                        category: value,
+                      } as any)
+                    }
+                  >
+                    <SelectTrigger className="text-black dark:text-white">
+                      <SelectValue placeholder="Seleccionar categoría" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="recetas">Recetas</SelectItem>
+                      <SelectItem value="desayunos">Desayunos</SelectItem>
+                      <SelectItem value="platos_principales">
+                        Platos Principales
+                      </SelectItem>
+                      <SelectItem value="acompañamientos">
+                        Acompañamientos
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              )}
+
               {editingContent.contentType === 'notas_de_mar' && (
                 <div>
                   <Label className="text-black dark:text-white">
@@ -366,11 +434,10 @@ export default function ContentCMSPage() {
                       <SelectValue placeholder="Seleccionar categoría" />
                     </SelectTrigger>
                     <SelectContent>
-                      {NOTAS_CATEGORIES.map((cat) => (
-                        <SelectItem key={cat.value} value={cat.value}>
-                          {cat.label}
-                        </SelectItem>
-                      ))}
+                      <SelectItem value="productos">Productos</SelectItem>
+                      <SelectItem value="consejos">Consejos</SelectItem>
+                      <SelectItem value="origen">Origen</SelectItem>
+                      <SelectItem value="curiosidades">Curiosidades</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -394,11 +461,10 @@ export default function ContentCMSPage() {
                       <SelectValue placeholder="Seleccionar categoría" />
                     </SelectTrigger>
                     <SelectContent>
-                      {SALUD_CATEGORIES.map((cat) => (
-                        <SelectItem key={cat.value} value={cat.value}>
-                          {cat.label}
-                        </SelectItem>
-                      ))}
+                      <SelectItem value="beneficios">Beneficios</SelectItem>
+                      <SelectItem value="nutricion">Nutrición</SelectItem>
+                      <SelectItem value="dietas">Dietas</SelectItem>
+                      <SelectItem value="mitos">Mitos y verdades</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
