@@ -55,17 +55,20 @@ export type ContentEntry = {
   title: string
   slug: string
   content: string
-  resumen?: string // Add this line
+  resumen?: string
   quality_score?: number
   featured_species?: Array<{ stockProduct: string; categoria?: string }>
   source_book?: string
   source_authors?: any
   source_page?: number
+  source_publisher?: string
+  source_year?: string
   image_url?: string
+  images?: Array<{ url: string; caption?: string }>
   category?: string
   published?: boolean
   created_at?: string
   updated_at?: string
   cooking_method?: string
-  // ...other fields
+  language?: string
 }

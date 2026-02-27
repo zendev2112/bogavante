@@ -192,6 +192,39 @@ export default async function RecetaPage({
           </ReactMarkdown>
         </div>
 
+        {/* ── IMAGES GALLERY ── */}
+        {receta.images && receta.images.length > 0 && (
+          <div className="bg-white rounded-3xl border border-[#E5E7EB] p-6 mb-8 shadow-sm">
+            <h2 className="font-playfair text-lg font-bold text-[#2B2E78] mb-4">
+              📸 Más imágenes
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {receta.images.map((img, idx) => (
+                <div
+                  key={idx}
+                  className="group relative overflow-hidden rounded-2xl bg-[#F8F9FB] border border-[#E5E7EB]"
+                >
+                  <div className="relative w-full h-48 bg-[#0d0f2e]">
+                    <Image
+                      src={img.url}
+                      alt={img.caption || `Imagen ${idx + 1}`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-200"
+                    />
+                  </div>
+                  {img.caption && (
+                    <div className="p-3">
+                      <p className="text-xs text-[#6B7280] line-clamp-2">
+                        {img.caption}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* ── FEATURED SPECIES ── */}
         {receta.featured_species && receta.featured_species.length > 0 && (
           <div className="bg-white rounded-3xl border border-[#E5E7EB] p-6 mb-8 shadow-sm">
