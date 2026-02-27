@@ -140,9 +140,9 @@ export default async function RecetaPage({
             {((receta as any).tags as string[]).map((tag) => (
               <span
                 key={tag}
-                className="bg-[#2B2E78]/10 text-[#2B2E78] text-xs font-semibold px-3 py-1 rounded-full border border-[#2B2E78]/20"
+                className="bg-[#2B2E78]/10 text-[#2B2E78] text-xs font-semibold px-3 py-1 rounded-full border border-[#2B2E78]/20 uppercase"
               >
-                #{tag}
+                {tag}
               </span>
             ))}
           </div>

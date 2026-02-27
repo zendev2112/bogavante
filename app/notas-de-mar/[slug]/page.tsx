@@ -137,9 +137,9 @@ export default async function NotaDeMarPage({
             {((nota as any).tags as string[]).map((tag) => (
               <span
                 key={tag}
-                className="bg-[#4DA8DA]/10 text-[#4DA8DA] text-xs font-semibold px-3 py-1 rounded-full border border-[#4DA8DA]/20"
+                className="bg-[#4DA8DA]/10 text-[#4DA8DA] text-xs font-semibold px-3 py-1 rounded-full border border-[#4DA8DA]/20 uppercase"
               >
-                #{tag}
+                {tag}
               </span>
             ))}
           </div>

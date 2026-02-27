@@ -139,9 +139,9 @@ export default async function SaludPage({
             {((articulo as any).tags as string[]).map((tag) => (
               <span
                 key={tag}
-                className="bg-[#00B3A4]/10 text-[#00B3A4] text-xs font-semibold px-3 py-1 rounded-full border border-[#00B3A4]/20"
+                className="bg-[#00B3A4]/10 text-[#00B3A4] text-xs font-semibold px-3 py-1 rounded-full border border-[#00B3A4]/20 uppercase"
               >
-                #{tag}
+                {tag}
               </span>
             ))}
           </div>
