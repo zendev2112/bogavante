@@ -134,6 +134,20 @@ export default async function RecetaPage({
           </div>
         )}
 
+        {/* ── TAGS ── */}
+        {(receta as any).tags && (receta as any).tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-8">
+            {((receta as any).tags as string[]).map((tag) => (
+              <span
+                key={tag}
+                className="bg-[#2B2E78]/10 text-[#2B2E78] text-xs font-semibold px-3 py-1 rounded-full border border-[#2B2E78]/20"
+              >
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
+
         {/* ── MAIN CONTENT WITH INTERCALATED IMAGES ── */}
         <div className="bg-white rounded-3xl shadow-sm border border-[#E5E7EB] p-6 md:p-10 mb-8">
           {sections.map((section, sectionIdx) => (

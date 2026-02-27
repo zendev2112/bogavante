@@ -29,6 +29,7 @@ import {
 import { Pencil, Trash2, Search, X, Plus } from 'lucide-react'
 import { MarkdownEditor } from './components/MarkdownEditor'
 import { MarkdownPreview } from './components/MarkdownPreview'
+import { TagsEditor } from './components/TagsEditor'
 import type { ContentWithType, ContentType } from '@/lib/cms-queries'
 
 // Helper function to generate slug from title

@@ -131,6 +131,20 @@ export default async function NotaDeMarPage({
           </div>
         )}
 
+        {/* ── TAGS ── */}
+        {(nota as any).tags && (nota as any).tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-8">
+            {((nota as any).tags as string[]).map((tag) => (
+              <span
+                key={tag}
+                className="bg-[#4DA8DA]/10 text-[#4DA8DA] text-xs font-semibold px-3 py-1 rounded-full border border-[#4DA8DA]/20"
+              >
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
+
         {/* ── MAIN CONTENT WITH INTERCALATED IMAGES ── */}
         <div className="bg-white rounded-3xl shadow-sm border border-[#E5E7EB] p-6 md:p-10 mb-8">
           {sections.map((section, sectionIdx) => (
