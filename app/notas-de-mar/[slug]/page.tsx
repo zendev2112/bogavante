@@ -83,14 +83,6 @@ export default async function NotaDeMarPage({
                   {(nota as any).category}
                 </span>
               )}
-              {nota.featured_species?.slice(0, 2).map((s, idx) => (
-                <span
-                  key={idx}
-                  className="bg-[#2B2E78]/10 text-[#2B2E78] text-xs font-bold px-3 py-1 rounded-full border border-[#2B2E78]/20"
-                >
-                  {s.stockProduct}
-                </span>
-              ))}
             </div>
 
             <h1 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F2937] leading-tight mb-4">
@@ -230,23 +222,6 @@ export default async function NotaDeMarPage({
                 className="bg-[#4DA8DA]/10 text-[#4DA8DA] text-xs font-semibold px-3 py-1 rounded-full border border-[#4DA8DA]/20 uppercase"
               >
                 {tag}
-              </span>
-            ))}
-          </div>
-        )}
-
-        {/* ── FEATURED SPECIES ── */}
-        {nota.featured_species && nota.featured_species.length > 0 && (
-          <div className="bg-white rounded-3xl border border-[#E5E7EB] p-6 mb-8 shadow-sm">
-            <h2 className="font-playfair text-lg font-bold text-[#2B2E78] mb-4">
-              🌊 Especies mencionadas
-            </h2>
-            {nota.featured_species.map((s, idx) => (
-              <span
-                key={idx}
-                className="bg-[#2B2E78]/10 text-[#2B2E78] text-xs font-bold px-3 py-1 rounded-full border border-[#2B2E78]/20"
-              >
-                {s.stockProduct}
               </span>
             ))}
           </div>

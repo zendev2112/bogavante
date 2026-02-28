@@ -239,35 +239,6 @@ export default async function RecetaPage({
           ))}
         </div>
 
-        {/* ── FEATURED SPECIES ── */}
-        {receta.featured_species && receta.featured_species.length > 0 && (
-          <div className="bg-white rounded-3xl border border-[#E5E7EB] p-6 mb-8 shadow-sm">
-            <h2 className="font-playfair text-lg font-bold text-[#2B2E78] mb-4">
-              🐟 Especies en esta receta
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {receta.featured_species.map((species, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-2 bg-[#F8F9FB] rounded-xl p-3 border border-[#E5E7EB]"
-                >
-                  <span className="w-2 h-2 rounded-full bg-[#00B3A4] flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-[#1F2937] text-xs">
-                      {species.stockProduct}
-                    </p>
-                    {species.categoria && (
-                      <p className="text-xs text-[#9CA3AF]">
-                        {species.categoria}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
         {/* ── SOURCE ── */}
         {(receta as any).source_book && (
           <div className="bg-[#2B2E78]/5 rounded-2xl p-5 border border-[#2B2E78]/10 mb-8">
