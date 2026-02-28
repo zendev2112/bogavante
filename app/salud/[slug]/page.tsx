@@ -133,20 +133,6 @@ export default async function SaludPage({
           </div>
         )}
 
-        {/* ── TAGS ── */}
-        {(articulo as any).tags && (articulo as any).tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-8">
-            {((articulo as any).tags as string[]).map((tag) => (
-              <span
-                key={tag}
-                className="bg-[#00B3A4]/10 text-[#00B3A4] text-xs font-semibold px-3 py-1 rounded-full border border-[#00B3A4]/20 uppercase"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
-
         {/* ── MAIN CONTENT WITH INTERCALATED IMAGES ── */}
         <div className="bg-white rounded-3xl shadow-sm border border-[#E5E7EB] p-6 md:p-10 mb-8">
           {sections.map((section, sectionIdx) => (
@@ -237,32 +223,34 @@ export default async function SaludPage({
           ))}
         </div>
 
-        {/* ── FEATURED SPECIES ── */}
+        {/* ── TAGS ── */}
+        {(articulo as any).tags && (articulo as any).tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-8">
+            {((articulo as any).tags as string[]).map((tag) => (
+              <span
+                key={tag}
+                className="bg-[#00B3A4]/10 text-[#00B3A4] text-xs font-semibold px-3 py-1 rounded-full border border-[#00B3A4]/20 uppercase"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* ── BENEFICIOS DESTACADOS ── */}
         {articulo.featured_species && articulo.featured_species.length > 0 && (
           <div className="bg-white rounded-3xl border border-[#E5E7EB] p-6 mb-8 shadow-sm">
             <h2 className="font-playfair text-lg font-bold text-[#2B2E78] mb-4">
               💚 Beneficios destacados
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {articulo.featured_species.map((species, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-2 bg-[#F8F9FB] rounded-xl p-3 border border-[#E5E7EB]"
-                >
-                  <span className="w-2 h-2 rounded-full bg-[#00B3A4] flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-[#1F2937] text-xs">
-                      {species.stockProduct}
-                    </p>
-                    {species.categoria && (
-                      <p className="text-xs text-[#9CA3AF]">
-                        {species.categoria}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
+            {articulo.featured_species.map((s, idx) => (
+              <span
+                key={idx}
+                className="bg-[#2B2E78]/10 text-[#2B2E78] text-xs font-bold px-3 py-1 rounded-full border border-[#2B2E78]/20"
+              >
+                {s.stockProduct}
+              </span>
+            ))}
           </div>
         )}
 
