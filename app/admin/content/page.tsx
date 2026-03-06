@@ -111,6 +111,7 @@ export default function ContentCMSPage() {
     if (!editingContent) return
 
     try {
+      // AFTER - ADD cooking_method:
       const response = await fetch('/api/cms/content', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -132,6 +133,7 @@ export default function ContentCMSPage() {
             source_page: editingContent.source_page,
             published: editingContent.published,
             category: editingContent.category,
+            cooking_method: (editingContent as any).cooking_method, // ADD THIS LINE
             tags: (editingContent as any).tags || [],
           },
         }),
@@ -415,6 +417,130 @@ export default function ContentCMSPage() {
                       </SelectItem>
                     </SelectContent>
                   </Select>
+                </div>
+              )}
+
+              {/* ADD THIS BLOCK HERE - Cooking Method for Recetas */}
+              {editingContent.contentType === 'recetas' && (
+                <div>
+                  <Label className="text-black dark:text-white">
+                    Método de Cocción
+                  </Label>
+                  <Select
+                    value={(editingContent as any).cooking_method || ''}
+                    onValueChange={(value) =>
+                      setEditingContent({
+                        ...editingContent,
+                        cooking_method: value,
+                      } as any)
+                    }
+                  >
+                    <SelectTrigger className="text-black dark:text-white">
+                      <SelectValue placeholder="Seleccionar método" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Horno">🔥 Horno</SelectItem>
+                      <SelectItem value="Plancha">🍳 Plancha</SelectItem>
+                      <SelectItem value="Parrilla">🍖 Parrilla</SelectItem>
+                      <SelectItem value="Frito">🍤 Frito</SelectItem>
+                      <SelectItem value="Vapor">♨️ Vapor</SelectItem>
+                      <SelectItem value="Hervido">🥘 Hervido</SelectItem>
+                      <SelectItem value="Escabeche">🥗 Escabeche</SelectItem>
+                      <SelectItem value="Crudo">🍣 Crudo</SelectItem>
+                      <SelectItem value="Guisado">🍲 Guisado</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              )}
+
+              {/* ADD THIS BLOCK HERE - Featured Species Editor */}
+              {editingContent.contentType === 'recetas' && (
+                <div className="border-t pt-4">
+                  <Label className="font-semibold mb-2 block text-black dark:text-white">
+                    Especies Destacadas (Pescados/Mariscos)
+                  </Label>
+                  <div className="space-y-3">
+                    {((editingContent as any).featured_species || []).map(
+                      (species: any, idx: number) => (
+                        <div key={idx} className="flex gap-2 items-end">
+                          <div className="flex-1">
+                            <Input
+                              value={species.stockProduct || ''}
+                              onChange={(e) => {
+                                const newSpecies = [
+                                  ...((editingContent as any)
+                                    .featured_species || []),
+                                ]
+                                newSpecies[idx] = {
+                                  ...species,
+                                  stockProduct: e.target.value,
+                                }
+                                setEditingContent({
+                                  ...editingContent,
+                                  featured_species: newSpecies,
+                                } as any)
+                              }}
+                              placeholder="Ej: Salmón, Merluza, Langostinos"
+                              className="text-black dark:text-white"
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <Input
+                              value={species.categoria || ''}
+                              onChange={(e) => {
+                                const newSpecies = [
+                                  ...((editingContent as any)
+                                    .featured_species || []),
+                                ]
+                                newSpecies[idx] = {
+                                  ...species,
+                                  categoria: e.target.value,
+                                }
+                                setEditingContent({
+                                  ...editingContent,
+                                  featured_species: newSpecies,
+                                } as any)
+                              }}
+                              placeholder="Ej: Pescados, Mariscos"
+                              className="text-black dark:text-white"
+                            />
+                          </div>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => {
+                              const newSpecies = (
+                                (editingContent as any).featured_species || []
+                              ).filter((_: any, i: number) => i !== idx)
+                              setEditingContent({
+                                ...editingContent,
+                                featured_species: newSpecies,
+                              } as any)
+                            }}
+                          >
+                            <X className="h-4 w-4" />
+                          </Button>
+                        </div>
+                      ),
+                    )}
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => {
+                        const newSpecies = [
+                          ...((editingContent as any).featured_species || []),
+                          { stockProduct: '', categoria: '' },
+                        ]
+                        setEditingContent({
+                          ...editingContent,
+                          featured_species: newSpecies,
+                        } as any)
+                      }}
+                    >
+                      <Plus className="h-4 w-4 mr-2" />
+                      Agregar Especie
+                    </Button>
+                  </div>
                 </div>
               )}
 
