@@ -5,16 +5,8 @@ export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
 export async function GET(request: NextRequest) {
-  // Debug: log environment variables
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
   const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY
-
-  console.log('Environment check:', {
-    hasUrl: !!supabaseUrl,
-    hasKey: !!supabaseKey,
-    urlValue: supabaseUrl,
-    keyLength: supabaseKey?.length,
-  })
 
   if (!supabaseUrl || !supabaseKey) {
     return NextResponse.json(
@@ -32,28 +24,65 @@ export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
   const page = parseInt(searchParams.get('page') || '1')
   const pageSize = parseInt(searchParams.get('pageSize') || '20')
-
-  const from = (page - 1) * pageSize
-  const to = from + pageSize - 1
+  const contentType = searchParams.get('contentType') || 'all'
+  const searchTerm = searchParams.get('searchTerm') || ''
 
   try {
-    const [recetas, notas, salud] = await Promise.all([
-      supabase.from('recetas').select('*').range(from, to),
-      supabase.from('notas_de_mar').select('*').range(from, to),
-      supabase.from('salud').select('*').range(from, to),
-    ])
+    const tables =
+      contentType === 'all'
+        ? ['recetas', 'notas_de_mar', 'salud']
+        : [contentType]
 
-    const allData = [
-      ...(recetas.data || []).map((d) => ({ ...d, contentType: 'recetas' })),
-      ...(notas.data || []).map((d) => ({ ...d, contentType: 'notas_de_mar' })),
-      ...(salud.data || []).map((d) => ({ ...d, contentType: 'salud' })),
-    ]
+    // Fetch ALL rows - NO .range() here
+    const results = await Promise.all(
+      tables.map(async (table) => {
+        let query = supabase
+          .from(table)
+          .select('*')
+          .order('created_at', { ascending: false })
+
+        if (searchTerm) {
+          query = query.or(
+            `title.ilike.%${searchTerm}%,content.ilike.%${searchTerm}%`,
+          )
+        }
+
+        const { data, error } = await query
+
+        if (error) {
+          console.error(`Error fetching ${table}:`, error)
+          return { table, data: [] }
+        }
+
+        return { table, data: data || [] }
+      }),
+    )
+
+    // Combine all tables
+    const allData = results.flatMap(({ table, data }) =>
+      data.map((d) => ({ ...d, contentType: table })),
+    )
+
+    // Sort by created_at
+    allData.sort(
+      (a, b) =>
+        new Date(b.created_at || 0).getTime() -
+        new Date(a.created_at || 0).getTime(),
+    )
+
+    // Total count BEFORE paginating
+    const totalCount = allData.length
+
+    // Paginate AFTER combining
+    const from = (page - 1) * pageSize
+    const paginated = allData.slice(from, from + pageSize)
 
     return NextResponse.json({
-      data: allData,
-      totalCount: allData.length,
+      data: paginated,
+      totalCount,
       page,
       pageSize,
+      totalPages: Math.ceil(totalCount / pageSize),
     })
   } catch (error) {
     return NextResponse.json({ error: String(error) }, { status: 500 })
@@ -81,7 +110,6 @@ export async function PUT(request: NextRequest) {
 
     const supabase = createClient(supabaseUrl, supabaseKey)
 
-    // Define valid columns per table
     const validColumns = {
       recetas: [
         'title',
@@ -142,20 +170,15 @@ export async function PUT(request: NextRequest) {
         'tags',
       ],
     }
-    // Filter updates to only valid columns
+
     const cleanUpdates: Record<string, any> = {}
     const validCols =
       validColumns[contentType as keyof typeof validColumns] || []
-
     Object.keys(updates).forEach((key) => {
-      if (validCols.includes(key)) {
-        cleanUpdates[key] = updates[key]
-      }
+      if (validCols.includes(key)) cleanUpdates[key] = updates[key]
     })
 
-    // If content type changed, need to move the record
     if (originalContentType && originalContentType !== contentType) {
-      // Get the original record
       const { data: originalData, error: fetchError } = await supabase
         .from(originalContentType)
         .select('*')
@@ -169,7 +192,6 @@ export async function PUT(request: NextRequest) {
         )
       }
 
-      // Create new record in new table
       const { error: insertError } = await supabase.from(contentType).insert([
         {
           ...originalData,
@@ -185,7 +207,6 @@ export async function PUT(request: NextRequest) {
         )
       }
 
-      // Delete from old table
       const { error: deleteError } = await supabase
         .from(originalContentType)
         .delete()
@@ -201,7 +222,6 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ success: true, moved: true })
     }
 
-    // Normal update within same table
     const { data, error } = await supabase
       .from(contentType)
       .update({ ...cleanUpdates, updated_at: new Date().toISOString() })
