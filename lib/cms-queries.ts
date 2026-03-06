@@ -29,7 +29,7 @@ export interface ContentWithType {
 }
 
 /**
- * Get all content from all tables with pagination
+ * Get all content from all tables with pagination applied AFTER combining
  */
 export async function getAllContent(
   page: number = 1,
@@ -37,18 +37,18 @@ export async function getAllContent(
   contentType: ContentType | 'all' = 'all',
   searchTerm: string = '',
 ) {
-  const offset = (page - 1) * pageSize
   const tables: ContentType[] =
     contentType === 'all' ? ['recetas', 'notas_de_mar', 'salud'] : [contentType]
 
   try {
     const supabaseAdmin = getSupabaseAdmin()
 
+    // Step 1: Fetch ALL items from ALL tables (no pagination yet)
     const results = await Promise.all(
       tables.map(async (table) => {
         let query = (supabaseAdmin as any)
           .from(table)
-          .select('*', { count: 'exact' })
+          .select('*')
           .order('created_at', { ascending: false })
 
         if (searchTerm) {
@@ -57,10 +57,7 @@ export async function getAllContent(
           )
         }
 
-        const { data, error, count } = await query.range(
-          offset,
-          offset + pageSize - 1,
-        )
+        const { data, error } = await query
 
         if (error) {
           console.error(`Error fetching ${table}:`, error)
@@ -70,20 +67,33 @@ export async function getAllContent(
         return {
           contentType: table,
           data: data || [],
-          count: count || 0,
         }
       }),
     )
 
+    // Step 2: Combine ALL tables into one array
     const allData: ContentWithType[] = results.flatMap(
       ({ contentType, data }) =>
         data.map((item: any) => ({ ...item, contentType })),
     )
 
-    const totalCount = results.reduce((sum, { count }) => sum + count, 0)
+    // Step 3: Sort combined data by created_at
+    allData.sort(
+      (a, b) =>
+        new Date(b.created_at || 0).getTime() -
+        new Date(a.created_at || 0).getTime(),
+    )
+
+    // Step 4: Get total BEFORE paginating
+    const totalCount = allData.length
+
+    // Step 5: Apply pagination AFTER combining all tables
+    const from = (page - 1) * pageSize
+    const to = from + pageSize
+    const paginated = allData.slice(from, to)
 
     return {
-      data: allData,
+      data: paginated,
       totalCount,
       page,
       pageSize,
