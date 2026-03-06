@@ -441,10 +441,10 @@ export default function HomeClient({
       ? recetas
       : recetas.filter((r) => hasSpecies(r, selectedSpecies))
   if (selectedCookingMethod !== 'todos') {
-    filteredRecetas = filteredRecetas.filter((r) =>
-      (r.title + ' ' + r.content)
-        .toLowerCase()
-        .includes(selectedCookingMethod.toLowerCase()),
+    filteredRecetas = filteredRecetas.filter(
+      (r) =>
+        (r as any).cooking_method?.toLowerCase() ===
+        selectedCookingMethod.toLowerCase(),
     )
   }
 
@@ -829,6 +829,18 @@ export default function HomeClient({
                 </div>
                 <div className="p-5">
                   <div className="flex flex-wrap gap-1 mb-3">
+                    {/* COOKING METHOD PILL */}
+                    {(receta as any).cooking_method && (
+                      <span className="tag-navy uppercase text-xs font-bold">
+                        {metodosCoccion.find(
+                          (m) =>
+                            m.value.toLowerCase() ===
+                            (receta as any).cooking_method?.toLowerCase(),
+                        )?.label || (receta as any).cooking_method}
+                      </span>
+                    )}
+
+                    {/* FISH/SEAFOOD PILLS */}
                     {receta.featured_species?.slice(0, 2).map((s, idx) => (
                       <span key={idx} className="tag-teal">
                         {s.stockProduct}
