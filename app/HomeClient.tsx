@@ -78,7 +78,7 @@ const OFERTAS_PLACEHOLDER: Oferta[] = [
 
 const pescados = [
   { value: 'Abadejo', label: 'Abadejo' },
-  { value: 'Anchoa de banco', label: 'Anchoa' },
+  { value: 'Anchoa', label: 'Anchoa' },
   { value: 'Anchoíta', label: 'Anchoíta' },
   { value: 'Besugo', label: 'Besugo' },
   { value: 'Bonito', label: 'Bonito' },
