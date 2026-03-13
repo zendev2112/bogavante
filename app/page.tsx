@@ -11,7 +11,7 @@ export const revalidate = 0
 
 export default async function HomePage() {
   const [recetas, notasDeMar, saludArticles, ofertas] = await Promise.all([
-    getRecetas(12, true), // Only published
+    getRecetas(200, true), // Only published
     getNotasDeMar(6, true), // Only published
     getSaludArticles(6, true), // Only published
     getOfertas(), // Only published
